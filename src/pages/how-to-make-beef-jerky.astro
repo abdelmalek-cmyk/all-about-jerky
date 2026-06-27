@@ -1,0 +1,107 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const canonical = 'https://allaboutjerky.com/how-to-make-beef-jerky/';
+
+const faqs = [
+  { question: 'How do you make tender beef jerky?', answer: 'To make tender beef jerky: (1) slice with the grain instead of against it — this keeps muscle fibers long and produces a softer chew; (2) cut slightly thicker (3/8 inch instead of 1/4 inch); (3) add a tenderizing ingredient like pineapple juice or kiwi puree to the marinade; (4) remove from the dehydrator slightly earlier — just past the bend-without-snapping stage.' },
+  { question: 'How do you soften beef jerky that is too hard?', answer: 'To soften beef jerky that has become too hard: place strips in a sealed zip-lock bag with 1 tablespoon of water per 4 oz of jerky. Seal and let sit at room temperature for 2–4 hours. The jerky will absorb the moisture and soften. Alternatively, microwave strips for 20–30 seconds with a damp paper towel over them. Eat within 24 hours — softened jerky has very short shelf life.' },
+  { question: 'How do you rehydrate beef jerky?', answer: 'Rehydrate beef jerky by submerging strips in warm beef broth, water, or beer for 30–60 minutes. This is particularly useful for jerky you want to cook with — in stir-fries, stews, or omelets. Rehydrated jerky won\'t taste exactly like fresh beef, but it adds a concentrated beefy flavor to any dish it\'s added to.' },
+  { question: 'How do you eat beef jerky chew?', answer: 'Beef jerky chew (the shredded tobacco-style beef jerky product) is eaten by placing a small pinch between your cheek and gum, similar to chewing tobacco. The flavor releases slowly as you chew lightly. It\'s a novelty product designed to mimic the experience of chewing tobacco without the health risks.' },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'How Long Does Jerky Last?', href: '/guides/how-long-does-beef-jerky-last/' },
+  { label: 'Is Beef Jerky Healthy?', href: '/guides/is-beef-jerky-healthy/' },
+];
+---
+<PillarLayout
+  title="How to Make Beef Jerky — Complete Beginner Guide"
+  description="How to make beef jerky at home from start to finish. Choosing meat, marinating, drying methods, doneness test, and storage — the complete beginner guide."
+  {canonical}
+  breadcrumbs={[{ label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  dateModified="June 2024"
+>
+  <h1>How to Make Beef Jerky</h1>
+
+  <div class="answer-box">
+    <p>Making beef jerky has four steps: <strong>slice</strong> lean beef 1/4 inch thin, <strong>marinate</strong> 8–24 hours in soy sauce and spices, <strong>dry</strong> at 160°F for 4–6 hours (dehydrator) or 175°F for 3–5 hours (oven), then <strong>test</strong> with the bend test. Cool completely before storing. The whole process is simple — the hardest part is waiting.</p>
+  </div>
+
+  <h2>Step 1: Choose the Right Meat</h2>
+  <p>The best beef for jerky is <strong>eye of round</strong> or <strong>top round</strong> — lean, affordable, and easy to slice. Buy a single muscle roast, not pre-cut steaks. Trim every visible strip of fat before slicing — fat goes rancid and shortens shelf life dramatically.</p>
+  <p>See our complete <a href="/best-meat-for-beef-jerky/">guide to the best meat for beef jerky</a> for a full cut comparison.</p>
+
+  <img src="/images/beef-jerky-slicing.jpg" alt="Lean beef being sliced paper-thin against the grain on a dark cutting board for jerky making" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Step 2: Slice the Beef</h2>
+  <p>Freeze the roast for 1–2 hours until firm but not solid. This makes hand-slicing much easier. Slice <strong>1/4 inch thick</strong>:</p>
+  <ul>
+    <li><strong>Against the grain</strong> = chewy, standard jerky texture (recommended)</li>
+    <li><strong>With the grain</strong> = stringy, tender, pull-apart texture</li>
+  </ul>
+
+  <h2>Step 3: Make the Marinade</h2>
+  <div class="recipe-section">
+    <p><strong>Classic Homemade Beef Jerky Marinade (for 2 lbs beef):</strong></p>
+    <ul>
+      <li>1/3 cup soy sauce</li>
+      <li>2 tablespoons Worcestershire sauce</li>
+      <li>1 teaspoon garlic powder</li>
+      <li>1 teaspoon onion powder</li>
+      <li>1 teaspoon black pepper</li>
+      <li>1/2 teaspoon smoked paprika</li>
+      <li>Optional: 1/4 tsp Prague Powder No. 1 for longer shelf life</li>
+    </ul>
+  </div>
+  <p>Combine everything in a zip-lock bag, add the beef strips, remove excess air, seal, and refrigerate 8–24 hours. For flavor variations, see our <a href="/beef-jerky-marinade/">complete marinade guide</a>.</p>
+
+  <h2>Step 4: Dry the Beef Jerky</h2>
+  <p>Remove strips from the marinade and <strong>pat completely dry</strong> with paper towels. Then choose your drying method:</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th>Method</th><th>Temp</th><th>Time</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Food dehydrator</td><td>160°F</td><td>4–6 hrs</td><td>Best, most consistent</td></tr>
+      <tr><td>Oven</td><td>175°F</td><td>3–5 hrs</td><td>Prop door open 1 inch</td></tr>
+      <tr><td>Smoker</td><td>160–175°F</td><td>4–6 hrs</td><td>Best flavor</td></tr>
+      <tr><td>Air fryer</td><td>160°F</td><td>2–4 hrs</td><td>Fastest; small batches only</td></tr>
+    </tbody>
+  </table>
+
+  <img src="/images/beef-jerky-done.jpg" alt="Finished homemade beef jerky strips in rich dark mahogany color ready to eat" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Step 5: Test for Doneness</h2>
+  <p>The <strong>bend test</strong> is the most reliable doneness check. Remove a strip from the heat, cool 2–3 minutes, then bend it sharply at 90°:</p>
+  <ul>
+    <li>✅ <strong>Done:</strong> Cracks and bends; feels firm and dry; no moist areas</li>
+    <li>❌ <strong>Not done:</strong> Bends without cracking; feels rubbery or soft</li>
+    <li>⚠️ <strong>Overdone:</strong> Snaps in two; very hard and brittle</li>
+  </ul>
+
+  <h2>Step 6: Cool and Store</h2>
+  <p>Spread finished jerky on a wire rack and cool to room temperature — at least 1 hour. Never seal hot jerky in a container; condensation will make it soggy and accelerate mold.</p>
+  <p>Store in an airtight zip-lock bag or container: 1–2 weeks at room temperature, 1 month refrigerated, 6 months frozen. See our full <a href="/guides/how-long-does-beef-jerky-last/">beef jerky storage guide</a> for shelf life details.</p>
+
+  <h2>How to Make Beef Jerky More Tender</h2>
+  <p>For tender beef jerky:</p>
+  <ol>
+    <li>Slice <strong>with the grain</strong> (not against it) — long fibers produce a pull-apart, tender chew</li>
+    <li>Slice slightly thicker: <strong>3/8 inch</strong> instead of 1/4 inch</li>
+    <li>Add <strong>1/4 cup pineapple juice</strong> to the marinade — bromelain naturally tenderizes beef</li>
+    <li>Pull the jerky <strong>just as it passes the bend test</strong> — not after it starts getting hard</li>
+  </ol>
+
+  <h2>How to Make Beef Jerky Softer After Drying</h2>
+  <p>If your jerky came out too hard: seal strips in a zip-lock bag with 1 tablespoon of water, squeeze out air, and let sit 2–4 hours at room temperature. The jerky will reabsorb moisture and soften. Use softened jerky within 24–48 hours — it won't have the shelf life of properly dried jerky.</p>
+
+  <h2>How to Make Crispy Beef Jerky</h2>
+  <p>For crispy jerky: slice against the grain at <strong>1/8 inch</strong> (very thin), skip sugary ingredients in the marinade, and dehydrate 1–2 hours longer than standard. The result is a chip-like crunch rather than a chew. Great for crushing into seasoning or trail mix.</p>
+</PillarLayout>

@@ -1,0 +1,100 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const canonical = 'https://allaboutjerky.com/venison-jerky/';
+
+const faqs = [
+  { question: 'How do you make deer beef jerky?', answer: 'Venison jerky is made the same way as beef jerky: slice 1/4 inch thin against the grain, marinate 12–24 hours, then dehydrate at 160°F for 4–6 hours. Venison is leaner than beef — trim every visible piece of fat and sinew before marinating. The lack of fat means venison jerky has a longer shelf life than most beef jerky.' },
+  { question: 'What is the best marinade for venison beef jerky?', answer: 'The best venison jerky marinade uses soy sauce, Worcestershire, garlic powder, onion powder, and black pepper as the base — identical to beef jerky. Many hunters add juniper berries, rosemary, or a splash of red wine to complement the wild game flavor. Teriyaki also works beautifully with venison, as the sweetness balances the gamey notes.' },
+  { question: 'How do I make Wild Bill\'s beef jerky at home?', answer: 'Wild Bill\'s copycat beef jerky uses a sweet-smoky marinade: soy sauce, brown sugar, liquid smoke, garlic powder, onion powder, and a touch of cayenne. The signature thin, crispy texture comes from slicing at 1/8 inch and dehydrating longer than standard (7–8 hours at 160°F). The key distinguishing feature is the high sugar-to-salt ratio creating that sweet-then-smoky finish.' },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'Teriyaki Beef Jerky', href: '/recipes/teriyaki-beef-jerky/' },
+  { label: 'Smoked Beef Jerky', href: '/smoked-beef-jerky/' },
+];
+---
+<PillarLayout
+  title="Venison & Wild Game Jerky — Deer Jerky Recipes"
+  description="Deer jerky recipe: how to make venison beef jerky, ground venison jerky, and Wild Bill's copycat. Best marinade for wild game and dehydrator settings."
+  {canonical}
+  breadcrumbs={[{ label: 'Venison Jerky', href: '/venison-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  dateModified="June 2024"
+>
+  <h1>Venison & Wild Game Jerky</h1>
+
+  <div class="answer-box">
+    <p>Venison jerky is made exactly like beef jerky — slice 1/4 inch thin, marinate 12–24 hours, dehydrate at 160°F for 4–6 hours. Deer meat is leaner than beef, making it ideal for jerky with an even longer shelf life. Trim all fat and sinew carefully before marinating, as deer fat has a strong, tallow-like flavor that carries through to the finished jerky.</p>
+  </div>
+
+  <img src="/images/venison-jerky-rustic.jpg" alt="Dark brown venison jerky strips on rustic wooden board with herbs and wild game aesthetic" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Classic Deer Beef Jerky Recipe</h2>
+  <div class="recipe-section">
+    <p><strong>Ingredients (2 lbs venison):</strong></p>
+    <ul>
+      <li>2 lbs venison roast (hindquarter, backstrap, or top round), all fat and sinew removed</li>
+      <li>1/3 cup soy sauce</li>
+      <li>2 tablespoons Worcestershire sauce</li>
+      <li>1 tablespoon brown sugar</li>
+      <li>1 teaspoon garlic powder</li>
+      <li>1 teaspoon onion powder</li>
+      <li>1 teaspoon black pepper</li>
+      <li>1/2 teaspoon smoked paprika</li>
+      <li>1/4 teaspoon Prague Powder No. 1 (strongly recommended)</li>
+    </ul>
+    <p>Slice 1/4 inch against the grain. Marinate 12–24 hours. Dehydrate at 160°F for 4–6 hours.</p>
+  </div>
+
+  <h2>Venison vs. Beef for Jerky — Key Differences</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Venison</th><th>Beef</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fat content</td><td>Very low (1–2%)</td><td>Low-medium (3–8%)</td></tr>
+      <tr><td>Shelf life</td><td>Longer (less fat)</td><td>Standard</td></tr>
+      <tr><td>Flavor</td><td>Gamey, slightly earthy</td><td>Neutral, savory</td></tr>
+      <tr><td>Texture when dried</td><td>Slightly tougher</td><td>Softer, more pliable</td></tr>
+      <tr><td>Cost</td><td>Free (if you hunt)</td><td>$5–10/lb</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Venison Beef Jerky Marinade Variations</h2>
+  <h3>Teriyaki Venison Jerky</h3>
+  <p>Add 3 tablespoons brown sugar, 2 tablespoons honey, 1 teaspoon sesame oil, and 1/2 teaspoon grated ginger to the base marinade. The sweetness of teriyaki works beautifully to balance the game flavor of venison. This is the most popular style among hunters.</p>
+
+  <h3>Spicy Venison Jerky</h3>
+  <p>Add 1 teaspoon cayenne, 1 tablespoon sriracha, and 1/2 teaspoon red chili flakes to the base marinade. The heat cuts through any gamey undertones and produces a bold, fiery jerky.</p>
+
+  <h3>Wild Game Herb Marinade</h3>
+  <p>For a more rustic, forest-influenced flavor: add 1 tablespoon red wine, 1/2 teaspoon dried rosemary (crushed), 1/4 teaspoon dried thyme, and 2 crushed juniper berries to the base marinade. This pairs the natural earthiness of wild game with classic complementary herbs.</p>
+
+  <h2>Ground Venison Beef Jerky</h2>
+  <p>Ground venison makes excellent jerky sticks. Use the same technique as <a href="/ground-beef-jerky/">ground beef jerky</a>: mix 1 lb ground venison with seasoning and Prague Powder, pipe through a jerky gun, and dehydrate at 160°F for 5–7 hours. Ground venison is extremely lean — add 10% ground beef fat (ask your butcher) if you want a softer, more pliable finished product.</p>
+
+  <h2>Wild Bill's Teriyaki Beef Jerky Copycat</h2>
+  <p>Wild Bill's is known for their thin, sweet-smoky teriyaki jerky. To replicate at home:</p>
+  <ul>
+    <li>1/3 cup soy sauce, 3 tbsp brown sugar, 1 tbsp honey</li>
+    <li>1 tsp liquid smoke, 1/2 tsp garlic powder, 1/2 tsp ginger powder</li>
+    <li>Slice very thin: 1/8 inch</li>
+    <li>Dehydrate 6–8 hours at 160°F for the signature thin, crispy texture</li>
+  </ul>
+
+  <img src="/images/beef-jerky-done.jpg" alt="Finished venison jerky strips in deep mahogany brown laid out on dark slate after dehydrating" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Food Safety for Wild Game Jerky</h2>
+  <p>Wild venison can harbor parasites (Trichinella) and bacteria not present in commercially raised beef. For maximum safety with wild game jerky:</p>
+  <ol>
+    <li>Always use Prague Powder No. 1 in the marinade</li>
+    <li>Freeze venison at -4°F (-20°C) for 3 days before processing — this kills Trichinella</li>
+    <li>Ensure the internal temperature reaches 160°F during dehydrating</li>
+    <li>Consider the USDA post-dehydration oven step: 10 minutes at 275°F after dehydrating</li>
+  </ol>
+</PillarLayout>

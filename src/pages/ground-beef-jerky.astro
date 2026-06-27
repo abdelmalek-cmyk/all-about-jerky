@@ -1,0 +1,104 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const canonical = 'https://allaboutjerky.com/ground-beef-jerky/';
+
+const faqs = [
+  { question: 'How do you make ground beef jerky?', answer: 'To make ground beef jerky: (1) Mix 1 lb lean ground beef (90/10 or leaner) with seasoning and curing salt. (2) Load into a jerky gun or press through a piping bag. (3) Pipe 4-inch strips onto dehydrator trays or wire racks. (4) Dehydrate at 160°F for 5–7 hours. Ground beef jerky should be firm and dry throughout with no soft or flexible sections.' },
+  { question: 'What is a jerky gun and do I need one?', answer: 'A jerky gun (also called a jerky press or shooter) is a device like a caulk gun that forces seasoned ground meat through a shaped nozzle to create uniform strips or sticks. It\'s not required — you can use a zip-lock bag with a corner cut off as a piping bag — but it produces much more uniform strips that dry more evenly.' },
+  { question: 'Ground beef jerky vs beef strips — which is better?', answer: 'Sliced beef strip jerky has better texture, chewier bite, and cleaner flavor. Ground beef jerky is more affordable (ground beef is cheaper than whole cuts), easier to make (no slicing required), and the flavor is more consistent throughout. Ground beef jerky is also easier to control for fat content by choosing 93/7 or 96/4 lean ground beef.' },
+  { question: 'How much curing salt for ground beef jerky?', answer: 'Use 1 level teaspoon of Prague Powder No. 1 per 5 lbs of ground beef, or 1/4 teaspoon per 1 lb. Ground beef jerky should always use curing salt because the grinding process distributes bacteria throughout the meat (unlike whole muscle cuts where bacteria are only on the surface). Curing salt is especially important for food safety in ground meat.' },
+  { question: 'How do you tell when ground beef jerky is done?', answer: 'Ground beef jerky is done when strips are firm and dry throughout with no soft, flexible, or springy sections. Press the thickest part of a strip — there should be no give. Bend a strip: it should crack or break rather than bend flexibly. Ground beef jerky typically takes 5–7 hours at 160°F in a dehydrator.' },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Oven Beef Jerky', href: '/beef-jerky-in-oven/' },
+  { label: 'Spicy Beef Jerky Recipe', href: '/recipes/spicy-beef-jerky/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+];
+---
+<PillarLayout
+  title="Ground Beef Jerky — Jerky Gun Recipes & Techniques"
+  description="Ground beef jerky made with a jerky gun: lean hamburger, seasoned and dehydrated. Full recipe, seasoning guide, curing salt ratios, and doneness tips."
+  {canonical}
+  breadcrumbs={[{ label: 'Ground Beef Jerky', href: '/ground-beef-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  dateModified="June 2024"
+>
+  <h1>Ground Beef Jerky</h1>
+
+  <div class="answer-box">
+    <p>Ground beef jerky uses lean ground beef seasoned and pressed through a jerky gun into uniform strips. It is more affordable than whole-muscle jerky, easier to make (no slicing), and produces consistently sized strips that dry evenly. Always use at least <strong>90/10 lean ground beef</strong> and <strong>add curing salt</strong> — ground beef requires it for food safety.</p>
+  </div>
+
+  <img src="/images/ground-beef-jerky-trays.jpg" alt="Ground beef jerky strips piped from jerky gun on dehydrator trays ready to dry" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Ground Beef Jerky Recipe</h2>
+  <div class="recipe-section">
+    <p><strong>Ingredients (makes approx. 8 oz finished jerky):</strong></p>
+    <ul>
+      <li>1 lb 90/10 or 93/7 lean ground beef</li>
+      <li>1 teaspoon garlic powder</li>
+      <li>1 teaspoon onion powder</li>
+      <li>1 teaspoon black pepper</li>
+      <li>1 teaspoon smoked paprika</li>
+      <li>1/2 teaspoon sea salt</li>
+      <li>2 tablespoons soy sauce</li>
+      <li>1 tablespoon Worcestershire sauce</li>
+      <li>1/4 teaspoon Prague Powder No. 1 (required)</li>
+    </ul>
+    <p><strong>Instructions:</strong> Combine all ingredients with the ground beef, mixing thoroughly with your hands or a stand mixer until completely combined. Refrigerate the seasoned meat 4–12 hours. Load into a jerky gun and pipe 4-inch strips onto dehydrator trays. Dehydrate at 160°F for 5–7 hours.</p>
+  </div>
+
+  <h2>Ground Beef Jerky Seasoning Variations</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Flavor</th><th>Key Additions to Base Recipe</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Teriyaki</td><td>+ 2 tbsp brown sugar, 1 tsp sesame oil, 1/2 tsp ginger</td></tr>
+      <tr><td>Spicy</td><td>+ 1 tsp cayenne, 1 tsp sriracha, 1/2 tsp chili flakes</td></tr>
+      <tr><td>Sweet & Smoky</td><td>+ 2 tbsp brown sugar, 1 tsp liquid smoke, 1 tsp smoked paprika</td></tr>
+      <tr><td>Peppered</td><td>+ 2 tsp coarse black pepper (press extra pepper onto piped strips)</td></tr>
+    </tbody>
+  </table>
+
+  <h2>How to Use a Jerky Gun</h2>
+  <ol>
+    <li>Load the seasoned ground meat into the jerky gun barrel. Pack tightly to eliminate air pockets.</li>
+    <li>Attach the flat strip nozzle (for jerky strips) or round nozzle (for jerky sticks).</li>
+    <li>Hold the gun at 45° and squeeze the trigger while moving backward, piping 4-inch strips onto dehydrator trays.</li>
+    <li>Leave 1/2 inch of space between strips.</li>
+    <li>If you don't have a jerky gun, place seasoned meat in a zip-lock bag and cut a 1/2-inch corner off. Pipe strips the same way.</li>
+  </ol>
+
+  <h2>Ground Beef Jerky Without a Jerky Gun</h2>
+  <p>No jerky gun? These alternatives work:</p>
+  <ul>
+    <li><strong>Piping bag / zip-lock bag method:</strong> Fill a piping bag or a zip-lock bag with a 1/2-inch corner cut off. Pipe strips directly onto dehydrator trays or parchment-lined baking sheets.</li>
+    <li><strong>Press method:</strong> Press seasoned meat between two sheets of parchment paper to 1/4-inch thickness. Cut into strips with a pizza cutter or knife. Transfer to dehydrator trays.</li>
+    <li><strong>Meatloaf pan method:</strong> Press meat into a 9x5 loaf pan, freeze until firm, then slice into 1/4-inch strips with a sharp knife.</li>
+  </ul>
+
+  <img src="/images/beef-jerky-done.jpg" alt="Finished ground beef jerky strips with uniform thickness dried to deep brown perfection" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Why Ground Beef Jerky Needs Curing Salt</h2>
+  <p>Whole muscle jerky keeps bacteria on the surface, where heat from dehydrating destroys it. <strong>Ground beef is different</strong> — the grinding process distributes surface bacteria throughout the entire meat mass. Without curing salt (sodium nitrite), bacteria deep in the center of a ground beef strip may survive low-temperature dehydrating. Prague Powder No. 1 at 1/4 tsp per pound is non-negotiable for food safety with ground meat.</p>
+
+  <h2>Fat Content for Ground Beef Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Ground Beef</th><th>Fat %</th><th>Shelf Life</th><th>Texture</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>80/20</td><td>20% fat</td><td>Short (3–5 days)</td><td>Moist, good flavor</td></tr>
+      <tr><td>90/10</td><td>10% fat</td><td>1–2 weeks</td><td>Good balance</td></tr>
+      <tr><td>93/7</td><td>7% fat</td><td>2 weeks</td><td>Firmer, longer shelf life</td></tr>
+      <tr><td>96/4 (extra lean)</td><td>4% fat</td><td>2–3 weeks</td><td>Very firm, slightly dry</td></tr>
+    </tbody>
+  </table>
+  <p>Use <strong>90/10 or leaner</strong> for ground beef jerky. 80/20 produces great flavor but the fat goes rancid within days and pools on the dehydrator trays during drying.</p>
+</PillarLayout>

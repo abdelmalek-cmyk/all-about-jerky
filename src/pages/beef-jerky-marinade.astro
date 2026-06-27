@@ -1,0 +1,123 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const canonical = 'https://allaboutjerky.com/beef-jerky-marinade/';
+
+const faqs = [
+  { question: 'How long to marinate beef jerky?', answer: 'Marinate beef jerky for 8–24 hours in the refrigerator for best results. A minimum of 6 hours delivers acceptable flavor. 12–16 hours is the sweet spot for most marinades. Beyond 24 hours, the meat texture can become mushy — especially with acidic marinades containing vinegar or citrus juice.' },
+  { question: 'What is beef jerky cure and do I need it?', answer: 'Beef jerky cure is Prague Powder No. 1 (sodium nitrite mixed with salt), added at 1/4 teaspoon per 5 lbs of meat. It is not required for safe jerky when meat is properly dehydrated at 160°F, but it significantly extends shelf life, prevents gray coloring, and adds a subtle flavor depth. It is highly recommended for anyone making large batches.' },
+  { question: 'Can you marinate beef jerky too long?', answer: 'Yes — marinating beyond 24 hours can make jerky mushy, especially with acidic marinades (vinegar, citrus, pineapple juice). The acids break down muscle proteins over time. Soy sauce-based marinades are more forgiving — 24–36 hours is usually safe. For the best texture, stick to 8–16 hours.' },
+  { question: 'Can you reuse beef jerky marinade?', answer: 'No — never reuse beef jerky marinade. The marinade has been in contact with raw beef and may contain dangerous bacteria. After marinating, discard the marinade immediately. If you want a dipping sauce, make a fresh separate batch of the marinade and boil it for 5 minutes if you want to use it on finished jerky.' },
+  { question: 'Do you have to marinate beef jerky?', answer: 'You do not have to marinate beef jerky, but it dramatically improves flavor. The minimum is a dry rub applied 2–4 hours before dehydrating. However, even a quick 4-hour wet marinade adds significantly more flavor depth and moisture than a dry rub alone. For best results, 8–16 hour wet marinating is strongly recommended.' },
+];
+
+const relatedLinks = [
+  { label: 'Spicy Beef Jerky Recipe', href: '/recipes/spicy-beef-jerky/' },
+  { label: 'Teriyaki Beef Jerky Recipe', href: '/recipes/teriyaki-beef-jerky/' },
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Ground Beef Jerky', href: '/ground-beef-jerky/' },
+];
+---
+<PillarLayout
+  title="Beef Jerky Marinade & Cure Guide"
+  description="Best beef jerky marinade: soy sauce, Worcestershire, and spices. How long to marinate, whether to cure, and 6 marinade recipes from classic to teriyaki."
+  {canonical}
+  breadcrumbs={[{ label: 'Beef Jerky Marinade', href: '/beef-jerky-marinade/' }]}
+  {faqs}
+  {relatedLinks}
+  dateModified="June 2024"
+>
+  <h1>Beef Jerky Marinade & Cure Guide</h1>
+
+  <div class="answer-box">
+    <p>The best beef jerky marinade is built on a soy sauce base (for salt and umami), Worcestershire (for depth), and your choice of sweetener, acid, and spices. Marinate 8–24 hours for full flavor penetration. Adding Prague Powder No. 1 curing salt extends shelf life significantly and is highly recommended for large batches.</p>
+  </div>
+
+  <img src="/images/beef-jerky-marinade-mixing.jpg" alt="Beef jerky marinade ingredients being mixed — soy sauce, Worcestershire, garlic in glass bowl" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>The Classic Beef Jerky Marinade (Base Recipe)</h2>
+  <div class="recipe-section">
+    <p>This base works for 2 lbs of sliced beef. It's balanced, versatile, and a great starting point to customize.</p>
+    <ul>
+      <li>1/3 cup soy sauce</li>
+      <li>2 tablespoons Worcestershire sauce</li>
+      <li>1 teaspoon garlic powder</li>
+      <li>1 teaspoon onion powder</li>
+      <li>1 teaspoon black pepper</li>
+      <li>1/2 teaspoon smoked paprika</li>
+      <li>1/4 teaspoon Prague Powder No. 1 (optional but recommended)</li>
+    </ul>
+  </div>
+
+  <h2>Best Beef Jerky Marinade Variations</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Marinade Style</th><th>Key Additions</th><th>Flavor Profile</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Classic / Traditional</td><td>Base recipe as-is</td><td>Savory, peppery, clean</td></tr>
+      <tr><td>Teriyaki</td><td>+ Honey, brown sugar, ginger, sesame oil</td><td>Sweet, savory, glossy</td></tr>
+      <tr><td>Spicy</td><td>+ Sriracha, cayenne, chili flakes</td><td>Hot, savory, complex</td></tr>
+      <tr><td>Sweet & Hot</td><td>+ Brown sugar, honey, cayenne</td><td>Sweet first, heat at finish</td></tr>
+      <tr><td>BBQ</td><td>+ BBQ sauce, liquid smoke, paprika</td><td>Smoky, sweet, tangy</td></tr>
+      <tr><td>Low-Sodium</td><td>Replace soy with coconut aminos</td><td>Mild savory, slightly sweet</td></tr>
+    </tbody>
+  </table>
+
+  <img src="/images/beef-jerky-marinade-bag.jpg" alt="Marinated beef jerky strips in zip-lock bag with excess air removed for overnight marinating" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>How Long to Marinate Beef Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Marinating Time</th><th>Result</th><th>Recommended?</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>4–6 hours</td><td>Surface flavor only, not fully penetrated</td><td>Minimum acceptable</td></tr>
+      <tr><td>8–12 hours</td><td>Good flavor throughout the slice</td><td>✅ Yes</td></tr>
+      <tr><td>12–16 hours</td><td>Maximum flavor, ideal texture</td><td>✅ Best</td></tr>
+      <tr><td>24 hours</td><td>Very strong flavor, slightly softer texture</td><td>Acceptable</td></tr>
+      <tr><td>48+ hours</td><td>Mushy texture, over-penetrated salt</td><td>❌ Not recommended</td></tr>
+    </tbody>
+  </table>
+
+  <h2>What Is Beef Jerky Cure and How to Use It</h2>
+  <p><strong>Prague Powder No. 1</strong> (also called InstaCure No. 1 or pink curing salt) is a mixture of table salt and sodium nitrite (6.25%). It is the standard curing agent for jerky, salami, and other cured meats.</p>
+
+  <h3>How Much Cure to Use for Beef Jerky</h3>
+  <ul>
+    <li>Standard ratio: <strong>1 level teaspoon per 5 lbs of meat</strong> (or 0.25% of meat weight)</li>
+    <li>For a 2 lb batch: approximately <strong>2/5 teaspoon</strong> (just under 1/2 tsp)</li>
+    <li>For a 1 lb batch: approximately <strong>1/4 teaspoon</strong></li>
+  </ul>
+  <p>Never exceed the recommended amount — too much nitrite can be harmful. Prague Powder is always pink to distinguish it from regular salt.</p>
+
+  <h3>Cured vs. Uncured Beef Jerky Shelf Life</h3>
+  <table class="data-table">
+    <thead>
+      <tr><th>Storage</th><th>Uncured Jerky</th><th>Cured Jerky</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Room temperature, airtight</td><td>1–2 weeks</td><td>2–4 weeks</td></tr>
+      <tr><td>Refrigerator</td><td>1 month</td><td>2–3 months</td></tr>
+      <tr><td>Freezer, vacuum-sealed</td><td>3–6 months</td><td>6–12 months</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Beef Jerky Seasoning vs. Marinade</h2>
+  <p>A <strong>marinade</strong> is a liquid mixture the beef soaks in. A <strong>dry seasoning or rub</strong> is applied directly to the surface without liquid. Most recipes use a wet marinade because it penetrates deeper into the meat. Dry rubs are faster (no soak time needed) but produce a surface-only flavor. Many home jerky makers combine both: wet marinade for the base flavor, pressed dry spices on the surface for extra character.</p>
+
+  <h2>Beef Jerky Seasoning Kits</h2>
+  <p>Nesco, Hi Mountain, and Backwoods offer pre-mixed beef jerky seasoning kits that include curing salt, seasoning, and instructions. These are convenient for beginners and produce consistent results. The downside is less control over salt, spice, and sugar levels compared to a from-scratch marinade.</p>
+
+  <div class="tips-block">
+    <h3>Marinade Tips for Better Jerky</h3>
+    <ul>
+      <li><strong>Use a zip-lock bag</strong>, not a container — it keeps every strip submerged with less marinade.</li>
+      <li><strong>Remove all air</strong> from the bag before sealing to ensure the meat stays in contact with the liquid.</li>
+      <li><strong>Turn the bag once</strong> midway through marinating for even penetration.</li>
+      <li><strong>Never marinate at room temperature</strong> — refrigerator-only to prevent bacterial growth.</li>
+      <li><strong>Pat dry before dehydrating</strong> — surface moisture is the enemy of good jerky texture.</li>
+    </ul>
+  </div>
+</PillarLayout>

@@ -1,0 +1,13 @@
+---
+interface Link { label: string; href: string }
+interface Props { heading?: string; links: Link[] }
+const { heading = 'Related Pages', links } = Astro.props;
+---
+{links.length > 0 && (
+  <aside class="related-links">
+    <h3>{heading}</h3>
+    <ul>
+      {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+    </ul>
+  </aside>
+)}

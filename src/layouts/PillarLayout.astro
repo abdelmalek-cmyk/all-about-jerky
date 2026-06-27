@@ -1,0 +1,95 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import RelatedLinks from '../components/RelatedLinks.astro';
+import FaqSchema from '../components/FaqSchema.astro';
+
+interface Crumb { label: string; href: string }
+interface Link { label: string; href: string }
+interface Faq { question: string; answer: string }
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  breadcrumbs?: Crumb[];
+  relatedLinks?: Link[];
+  faqs?: Faq[];
+  datePublished?: string;
+  dateModified?: string;
+}
+const {
+  title,
+  description,
+  canonical,
+  breadcrumbs = [],
+  relatedLinks = [],
+  faqs = [],
+  datePublished,
+  dateModified,
+} = Astro.props;
+
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${canonical}#article`,
+  headline: title,
+  description,
+  url: canonical,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+  inLanguage: 'en-US',
+  ...(datePublished && { datePublished }),
+  ...(dateModified && { dateModified }),
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.answer-box', 'h1', 'h2'],
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+    name: 'Cole Mercer',
+    url: 'https://allaboutjerky.com/about/',
+    jobTitle: 'Pitmaster & Recipe Developer',
+    knowsAbout: ['beef jerky', 'food dehydration', 'meat smoking', 'jerky marinades', 'food preservation'],
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://allaboutjerky.com/#organization',
+    name: 'All About Jerky',
+    url: 'https://allaboutjerky.com',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://allaboutjerky.com/images/og-default.jpg',
+      width: 1200,
+      height: 630,
+    },
+  },
+};
+---
+<BaseLayout {title} {description} {canonical} type="article" {datePublished} {dateModified}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
+  <article class="page-content">
+    <div class="container">
+      <Breadcrumbs crumbs={breadcrumbs} />
+      {dateModified && (
+        <p class="text-muted">Last updated: {dateModified}</p>
+      )}
+      <slot />
+      {faqs.length > 0 && (
+        <>
+          <FaqSchema faqs={faqs} />
+          <section class="faq-block">
+            <h2>Frequently Asked Questions</h2>
+            {faqs.map((f) => (
+              <div class="faq-item">
+                <p class="faq-question">{f.question}</p>
+                <div class="faq-answer"><p set:html={f.answer} /></div>
+              </div>
+            ))}
+          </section>
+        </>
+      )}
+      <RelatedLinks links={relatedLinks} />
+    </div>
+  </article>
+</BaseLayout>

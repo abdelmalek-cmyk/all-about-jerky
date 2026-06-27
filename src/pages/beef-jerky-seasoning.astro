@@ -1,0 +1,111 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const title = 'Beef Jerky Seasoning — Homemade Blends & Store-Bought Guide';
+const description = 'Everything you need to know about beef jerky seasoning: homemade spice blends, store-bought kits, salt ratios, and how to season jerky for dehydrator or smoker.';
+const canonical = 'https://allaboutjerky.com/beef-jerky-seasoning/';
+
+const faqs = [
+  {
+    question: 'What seasoning do you put on beef jerky?',
+    answer: 'The core seasonings for beef jerky are salt, black pepper, garlic powder, and onion powder — this combination forms the base of almost every jerky recipe. Beyond the base, you build a flavor profile with additional ingredients: soy sauce and Worcestershire for umami depth, brown sugar or honey for sweetness, smoked paprika for smokiness, and cayenne or red pepper flakes for heat. The ratio of salt to meat (1–1.5 tsp per pound) is more important than specific spice choices.',
+  },
+  {
+    question: 'How much seasoning do you put on beef jerky?',
+    answer: 'For wet marinades, use 2–3 tablespoons of total seasoning per pound of raw beef, dissolved in a liquid base (soy sauce, Worcestershire). For dry rubs, use 1–2 tablespoons per pound, pressed firmly into both sides before dehydrating. Salt is the critical variable — use 1 to 1.5 teaspoons of salt per pound of beef for proper preservation and flavor. Under-salting produces bland jerky with shorter shelf life.',
+  },
+  {
+    question: 'What is the best store-bought beef jerky seasoning?',
+    answer: 'The best store-bought beef jerky seasoning kits are Hi Mountain Jerky Seasonings (widest variety, consistent results), LEM Products Backwoods (includes cure, accurate ratios), and Nesco Jerky Seasoning & Cure (designed for Nesco dehydrators, widely available). All three include sodium nitrite cure, which extends shelf life and prevents botulism. For custom flavors, buy individual spices and make your own blend.',
+  },
+  {
+    question: 'Do you need curing salt in beef jerky seasoning?',
+    answer: 'Curing salt (sodium nitrite, sold as Prague Powder #1 or Instacure #1) is optional if you plan to consume the jerky within 2 weeks and keep it refrigerated. It\'s strongly recommended if you want 1–2 month shelf life at room temperature, vacuum-seal for storage, or use lower dehydrator temperatures (below 160°F). Use exactly 1/4 tsp Prague Powder #1 per pound of meat — do not increase this amount.',
+  },
+  {
+    question: 'What is the difference between beef jerky seasoning and marinade?',
+    answer: 'Seasoning refers to the dry spice blend (salt, pepper, garlic powder, etc.). Marinade refers to the liquid mixture in which beef strips are soaked. Most homemade jerky uses a wet marinade that combines seasoning with a liquid base — typically soy sauce or Worcestershire. Dry-rubbed jerky skips the liquid and applies the seasoning blend directly to the surface. Both work well; wet marinades penetrate deeper, while dry rubs produce a more pronounced spice crust.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Beef Jerky Dry Rub', href: '/beef-jerky-dry-rub/' },
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Peppered Beef Jerky Recipe', href: '/recipes/peppered-beef-jerky/' },
+];
+---
+<PillarLayout
+  {title}
+  {description}
+  {canonical}
+  {faqs}
+  {relatedLinks}
+  dateModified="2024-06-01"
+  breadcrumbs={[
+    { label: 'Beef Jerky Seasoning', href: '/beef-jerky-seasoning/' },
+  ]}
+>
+  <h1>Beef Jerky Seasoning — Homemade Blends & Complete Guide</h1>
+
+  <div class="answer-box">
+    <p>The foundation of great beef jerky seasoning is simple: salt (1–1.5 tsp per lb), black pepper, garlic powder, and onion powder. Add soy sauce and Worcestershire for umami depth, then layer heat or sweetness based on your target flavor. The salt ratio is non-negotiable — everything else is customizable.</p>
+  </div>
+
+  <img src="/images/beef-jerky-seasoning.jpg" alt="Beef jerky seasoning spices in small bowls — black pepper, garlic powder, smoked paprika, salt, onion powder overhead view" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>What Does Beef Jerky Seasoning Actually Do?</h2>
+  <p>Seasoning serves three functions in beef jerky: <strong>preservation</strong> (salt draws moisture out and inhibits bacterial growth), <strong>flavor</strong> (spices, aromatics, umami compounds), and <strong>texture</strong> (salt denatures surface proteins, affecting how the finished jerky chews). Understanding these roles helps you build better blends and troubleshoot problems.</p>
+
+  <h2>The Core Seasoning Formula</h2>
+  <p>This base works for any flavor direction:</p>
+  <ul>
+    <li><strong>Salt:</strong> 1–1.5 tsp per pound of raw beef</li>
+    <li><strong>Black pepper:</strong> 1/2–1 tsp per pound</li>
+    <li><strong>Garlic powder:</strong> 1/2 tsp per pound</li>
+    <li><strong>Onion powder:</strong> 1/2 tsp per pound</li>
+    <li><strong>Liquid base:</strong> 3 tbsp soy sauce + 1 tbsp Worcestershire per pound</li>
+  </ul>
+  <p>From this base, you branch into flavor profiles by adding:</p>
+  <ul>
+    <li><strong>Spicy:</strong> cayenne, red pepper flakes, sriracha, gochujang</li>
+    <li><strong>Sweet:</strong> brown sugar, honey, maple syrup</li>
+    <li><strong>Smoky:</strong> smoked paprika, liquid smoke, chipotle powder</li>
+    <li><strong>Teriyaki:</strong> honey, rice vinegar, fresh ginger</li>
+    <li><strong>BBQ:</strong> tomato paste, apple cider vinegar, liquid smoke</li>
+  </ul>
+
+  <img src="/images/beef-jerky-marinade-mixing.jpg" alt="Beef jerky marinade being whisked in glass bowl with soy sauce, garlic and black pepper" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>How to Season Jerky: Wet vs. Dry</h2>
+  <p>Both wet marinades and dry rubs work — the choice comes down to flavor depth vs. surface texture.</p>
+
+  <table>
+    <thead>
+      <tr><th>Method</th><th>Penetration</th><th>Surface texture</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Wet marinade</td><td>Deep (12–24 hr)</td><td>Glossy, tender surface</td><td>Teriyaki, Korean BBQ, sweet</td></tr>
+      <tr><td>Dry rub</td><td>Surface only</td><td>Spice crust, bold exterior</td><td>Peppered, BBQ, smoky</td></tr>
+      <tr><td>Wet + dry rub finish</td><td>Deep + surface</td><td>Maximum flavor</td><td>Competition-style jerky</td></tr>
+    </tbody>
+  </table>
+
+  <h2>Salt: The One Non-Negotiable Variable</h2>
+  <p>Salt is the only ingredient in beef jerky seasoning that genuinely cannot be omitted or reduced significantly. It serves as a preservative (water activity reduction), a flavor amplifier, and a texture modifier. Too little salt produces jerky that spoils within days and tastes flat. Too much salt makes the finished jerky inedibly salty.</p>
+  <p>The correct range is <strong>1 to 1.5 teaspoons of kosher salt per pound of raw beef</strong>. If you're using soy sauce as part of your marinade (3 tbsp soy = approximately 1.5 tsp salt equivalent), account for that sodium in your total.</p>
+
+  <h2>Best Store-Bought Jerky Seasoning Kits</h2>
+  <ul>
+    <li><strong>Hi Mountain Jerky Seasonings</strong> — widest variety (15+ flavors), includes cure packet, designed for consistent home results. Best overall value.</li>
+    <li><strong>LEM Products Backwoods</strong> — accurate pre-measured ratios, cure included, popular with hunters for wild game jerky.</li>
+    <li><strong>Nesco Jerky Seasoning & Cure</strong> — designed to work with Nesco dehydrators, widely available at Walmart and hardware stores.</li>
+    <li><strong>McCormick Bag 'N Season Beef Jerky</strong> — basic entry-level option, no cure packet, good for beginners who want simplicity.</li>
+  </ul>
+
+  <img src="/images/beef-jerky-done.jpg" alt="Perfectly seasoned beef jerky strips in dark mahogany color on dark slate ready to eat" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Curing Salt: Do You Need It?</h2>
+  <p>Prague Powder #1 (sodium nitrite) prevents <em>Clostridium botulinum</em> (botulism) in low-oxygen environments — exactly what jerky becomes after vacuum sealing. Use it if you plan to store jerky longer than 2 weeks or vacuum-seal portions. The dose is exact: <strong>1/4 teaspoon per pound of raw meat</strong>. Do not increase this amount.</p>
+  <p>For same-week consumption from a clean dehydrator at 160°F, curing salt is optional. For anything going in long-term storage or being gifted to others, include it.</p>
+</PillarLayout>

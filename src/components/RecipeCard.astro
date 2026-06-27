@@ -1,0 +1,34 @@
+---
+interface Props {
+  title: string;
+  href: string;
+  image?: string;
+  emoji?: string;
+  type?: 'recipe' | 'method' | 'guide';
+  badge?: string;
+  description?: string;
+  volume?: string;
+  time?: string;
+  featured?: boolean;
+  meta?: string;
+}
+const {
+  title, href, image, emoji = '🥩',
+  type = 'recipe', badge, description,
+  volume, time, featured = false, meta,
+} = Astro.props;
+---
+<a href={href} class:list={['recipe-card', `recipe-card--${type}`, { 'recipe-card--featured': featured }]}>
+  <div class="recipe-card__thumb">
+    {image
+      ? <img src={image} alt={title} class="recipe-card__img" loading="lazy" width="400" height="400" />
+      : <span class="recipe-card__emoji" aria-hidden="true">{emoji}</span>
+    }
+    {badge && <span class="recipe-card__badge">{badge}</span>}
+  </div>
+  <div class="recipe-card__body">
+    <p class="recipe-card__title">{title}</p>
+    {(description || meta) && <p class="recipe-card__desc">{description ?? meta}</p>}
+    {time && <span class="recipe-card__time">⏱ {time}</span>}
+  </div>
+</a>

@@ -1,0 +1,61 @@
+---
+import { getCollection } from 'astro:content';
+import RecipeLayout from '../../layouts/RecipeLayout.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const d = entry.data;
+const slug = entry.slug;
+
+const relatedLinks = [
+  ...d.relatedPillars.map((href: string) => ({
+    label: href.replace(/\//g, '').replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()),
+    href,
+  })),
+  ...d.relatedRecipes.map((s: string) => ({
+    label: s.replace(/-/g, ' ').replace(/\b\w/g, (c: string) => c.toUpperCase()),
+    href: `/recipes/${s}/`,
+  })),
+];
+
+const canonical = `https://allaboutjerky.com/recipes/${slug}/`;
+---
+<RecipeLayout
+  title={d.title}
+  description={d.description}
+  {canonical}
+  primaryKeyword={d.primaryKeyword}
+  prepTime={d.prepTime}
+  cookTime={d.cookTime}
+  totalTime={d.totalTime}
+  recipeYield={d.yield}
+  category={d.category}
+  cuisine={d.cuisine}
+  ingredients={d.ingredients}
+  instructions={d.instructions}
+  image={`/images/${slug}.jpg`}
+  nutrition={d.nutrition}
+  faqs={d.faq}
+  {relatedLinks}
+  breadcrumbs={[{ label: 'Recipes', href: '/' }, { label: d.title, href: `/recipes/${slug}/` }]}
+  datePublished={d.datePublished}
+  dateModified={d.dateModified}
+>
+  <Fragment slot="intro">
+    <h1>{d.title}</h1>
+    {d.intro && (
+      <div class="answer-box">
+        <p>{d.intro}</p>
+      </div>
+    )}
+  </Fragment>
+  <Content />
+</RecipeLayout>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  image?: string;
+  type?: 'website' | 'article';
+  datePublished?: string;
+  dateModified?: string;
+}
+const {
+  title,
+  description,
+  canonical,
+  image = '/images/og-default.jpg',
+  type = 'website',
+  datePublished,
+  dateModified,
+} = Astro.props;
+const siteName = 'All About Jerky';
+const domain = 'https://allaboutjerky.com';
+const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+const ogImage = `${domain}${image}`;
+const ogImageAlt = `${title} — All About Jerky`;
+---
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="author" content="Cole Mercer" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<link rel="canonical" href={canonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={type} />
+<meta property="og:locale" content="en_US" />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={ogImageAlt} />
+
+<!-- Freshness signals for Google AI Overviews & featured snippets -->
+{datePublished && <meta property="article:published_time" content={datePublished} />}
+{dateModified && <meta property="article:modified_time" content={dateModified} />}
+{type === 'article' && <meta property="article:author" content="Cole Mercer" />}
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@allaboutjerky" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={ogImageAlt} />
+
+<!-- Favicon & PWA -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<meta name="theme-color" content="#C41E3A" />

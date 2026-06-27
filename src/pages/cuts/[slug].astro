@@ -1,0 +1,42 @@
+---
+import { getCollection } from 'astro:content';
+import PillarLayout from '../../layouts/PillarLayout.astro';
+
+export async function getStaticPaths() {
+  const cuts = await getCollection('cuts');
+  return cuts.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const d = entry.data;
+const slug = entry.slug;
+
+const relatedLinks = d.relatedPages.map((href: string) => ({
+  label: href
+    .replace(/\//g, '')
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c: string) => c.toUpperCase()),
+  href,
+}));
+
+const canonical = `https://allaboutjerky.com/cuts/${slug}/`;
+---
+<PillarLayout
+  title={d.title}
+  description={d.description}
+  {canonical}
+  relatedLinks={relatedLinks}
+  faqs={d.faq}
+  dateModified={d.dateModified}
+  breadcrumbs={[
+    { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+    { label: d.title, href: `/cuts/${slug}/` },
+  ]}
+>
+  <h1>{d.title}</h1>
+  <Content />
+</PillarLayout>

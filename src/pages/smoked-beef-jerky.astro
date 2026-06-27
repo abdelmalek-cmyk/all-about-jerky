@@ -1,0 +1,115 @@
+﻿---
+import PillarLayout from '../layouts/PillarLayout.astro';
+
+const canonical = 'https://allaboutjerky.com/smoked-beef-jerky/';
+
+const faqs = [
+  { question: 'How long to smoke beef jerky?', answer: 'Smoke beef jerky at 160–180°F for 4–6 hours for 1/4-inch slices. Start checking at 4 hours using the bend test. In a Traeger or pellet smoker at 165°F, plan for 4–5 hours. In a traditional charcoal smoker, plan 5–7 hours due to less consistent temperature control.' },
+  { question: 'What temperature to smoke beef jerky?', answer: 'Smoke beef jerky at 160–180°F (71–82°C). The USDA recommends reaching 160°F internal temperature. Pellet smokers and electric smokers are easiest to hold at this range. Avoid smoking above 200°F — higher temperatures cook the meat rather than dehydrate it, producing a tougher, less traditional jerky texture.' },
+  { question: 'Can you make beef jerky in a smoker?', answer: 'Yes — a smoker produces the most flavorful beef jerky possible. The combination of low-temperature drying and smoke absorption is superior to an oven or dehydrator for flavor depth. Electric, pellet, and charcoal smokers all work. Electric and pellet smokers are easiest because they maintain consistent temperatures without babysitting.' },
+  { question: 'Dehydrator vs smoker for beef jerky — which is better?', answer: 'Dehydrators are better for convenience, consistency, and food safety. Smokers produce better flavor. For the best of both worlds: smoke the marinated beef at 160°F for 2 hours to absorb smoke flavor, then finish in a dehydrator at 160°F for 2–3 hours for perfectly dried results. This hybrid method is increasingly popular with serious jerky makers.' },
+  { question: 'How do I make beef jerky on a Traeger pellet grill?', answer: 'Set your Traeger to 165°F (Smoke setting or the lowest temp available). Place marinated, dried beef strips directly on the grill grates or on a jerky rack. Smoke for 4–5 hours, checking hourly after the 3-hour mark. Use applewood or cherry pellets for a mild, sweet smoke that complements most jerky marinades without overpowering.' },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Spicy Beef Jerky Recipe', href: '/recipes/spicy-beef-jerky/' },
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+];
+---
+<PillarLayout
+  title="Smoked Beef Jerky Recipe — Traeger, Electric & Charcoal"
+  description="Smoked beef jerky recipe for Traeger, electric smoker, and charcoal. Temperature, smoke wood guide, and step-by-step instructions for the best smoked jerky."
+  {canonical}
+  breadcrumbs={[{ label: 'Smoked Beef Jerky', href: '/smoked-beef-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  dateModified="June 2024"
+>
+  <h1>Smoked Beef Jerky</h1>
+
+  <div class="answer-box">
+    <p>Smoked beef jerky delivers a depth of flavor that no dehydrator or oven can replicate. Smoke at <strong>160–180°F</strong> for <strong>4–6 hours</strong> using apple, cherry, or hickory wood. A pellet smoker (like a Traeger) makes the process nearly foolproof — set the temperature and walk away.</p>
+  </div>
+
+  <img src="/images/smoked-beef-jerky-smoker.jpg" alt="Pellet smoker lid open showing beef jerky strips on grates with wisps of smoke" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Smoked Beef Jerky Marinade</h2>
+  <div class="recipe-section">
+    <ul>
+      <li>2 lbs eye of round or top round, sliced 1/4-inch thick</li>
+      <li>1/3 cup soy sauce</li>
+      <li>2 tablespoons Worcestershire sauce</li>
+      <li>1 tablespoon liquid smoke (skip if using a real smoker)</li>
+      <li>2 teaspoons black pepper, coarsely ground</li>
+      <li>1 teaspoon garlic powder</li>
+      <li>1 teaspoon onion powder</li>
+      <li>1 teaspoon smoked paprika</li>
+      <li>1/2 teaspoon cayenne (optional)</li>
+      <li>1 tablespoon brown sugar</li>
+      <li>1/4 teaspoon Prague Powder No. 1</li>
+    </ul>
+    <p>Marinate 12–24 hours, pat dry, then smoke.</p>
+  </div>
+
+  <h2>How to Make Beef Jerky in a Smoker — Step by Step</h2>
+  <ol>
+    <li><strong>Prep and marinate the beef.</strong> Slice 1/4 inch thick, marinate 12–24 hours, then pat completely dry with paper towels.</li>
+    <li><strong>Preheat your smoker.</strong> Target 160–175°F. Add your chosen wood chips, pellets, or chunks.</li>
+    <li><strong>Lay strips on grates or jerky racks.</strong> Space strips so air circulates around each piece. For pellet grills, use a jerky rack or the upper grate to keep strips from falling through.</li>
+    <li><strong>Smoke at 160–175°F.</strong> Maintain this temperature range throughout. Add more wood/pellets as needed for consistent smoke.</li>
+    <li><strong>Check at 3 hours.</strong> Rotate strips from the hotter spots to the cooler edges. Check more frequently after 4 hours.</li>
+    <li><strong>Test doneness at 4–5 hours.</strong> Use the bend test: done jerky cracks and bends without snapping. It should feel firm and dry with no glossy surface moisture.</li>
+    <li><strong>Cool on a wire rack</strong> for 1 hour before storing.</li>
+  </ol>
+
+  <img src="/images/beef-jerky-marinade-bag.jpg" alt="Beef jerky strips marinating in soy sauce and spice mixture in zip-lock bag" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Best Wood for Smoking Beef Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Wood</th><th>Flavor Profile</th><th>Best Pairing</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Applewood</td><td>Mild, sweet, fruity</td><td>Teriyaki, honey, most recipes</td></tr>
+      <tr><td>Cherry</td><td>Sweet, slightly tart, deep color</td><td>Spicy, sweet, classic</td></tr>
+      <tr><td>Hickory</td><td>Strong, bacon-like</td><td>Classic, BBQ, peppered</td></tr>
+      <tr><td>Mesquite</td><td>Very strong, earthy</td><td>Bold spice blends — use sparingly</td></tr>
+      <tr><td>Pecan</td><td>Nutty, mild, rich</td><td>Sweet, garlic, traditional</td></tr>
+      <tr><td>Alder</td><td>Light, delicate</td><td>Any recipe; beginner-friendly</td></tr>
+    </tbody>
+  </table>
+
+  <img src="/images/beef-jerky-done.jpg" alt="Finished smoked beef jerky strips in dark mahogany color with smoky crust on slate" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+
+  <h2>Tillamook Country Smoker Beef Jerky Copycat</h2>
+  <p>Tillamook Country Smoker is one of the most popular commercial smoked beef jerky brands. To replicate their signature "Old Fashioned" flavor at home: use a heavier hand of black pepper (1.5 tsp), skip sweeteners entirely, smoke with hickory for 5 hours at 165°F, and add 1/2 teaspoon of liquid smoke to the marinade for extra depth. The result is a dry, peppery, intensely smoky jerky.</p>
+
+  <h2>Traeger Beef Jerky</h2>
+  <p>Traeger pellet grills are excellent for beef jerky because the auger system maintains steady temperature without manual fuel management. Best settings:</p>
+  <ul>
+    <li>Set to <strong>165°F</strong> (or the Smoke setting if your model has it)</li>
+    <li>Use <strong>applewood or cherry pellets</strong> for mild, food-friendly smoke</li>
+    <li>Total time: <strong>4–5 hours</strong> at 165°F</li>
+    <li>Place a sheet of aluminum foil on the lowest grate to catch drips</li>
+  </ul>
+
+  <h2>Electric Smoker Beef Jerky</h2>
+  <p>Electric smokers like the Masterbuilt hold temperature precisely, making them ideal for jerky. Use wood chips in the tray, set to 160°F, and plan for 4–6 hours. Rotate the racks from bottom to top midway through, as electric smokers often run hotter at the bottom.</p>
+
+  <h2>Smoker vs. Dehydrator: Which Is Better?</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Smoker</th><th>Dehydrator</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Flavor</td><td>⭐⭐⭐⭐⭐ Superior</td><td>⭐⭐⭐ Good</td></tr>
+      <tr><td>Temperature Control</td><td>⭐⭐⭐ (pellet: ⭐⭐⭐⭐⭐)</td><td>⭐⭐⭐⭐⭐</td></tr>
+      <tr><td>Consistency</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr>
+      <tr><td>Speed</td><td>⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+      <tr><td>Cost to operate</td><td>Medium</td><td>Low</td></tr>
+    </tbody>
+  </table>
+</PillarLayout>

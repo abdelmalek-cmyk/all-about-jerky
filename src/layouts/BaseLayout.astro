@@ -1,0 +1,330 @@
+﻿---
+import Seo from '../components/Seo.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  image?: string;
+  type?: 'website' | 'article';
+  datePublished?: string;
+  dateModified?: string;
+}
+const props = Astro.props;
+
+const siteSchema = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://allaboutjerky.com/#website',
+      name: 'All About Jerky',
+      url: 'https://allaboutjerky.com',
+      description: 'Homemade beef jerky recipes, marinade guides, and step-by-step drying methods for dehydrator, oven, smoker, and air fryer.',
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: 'https://allaboutjerky.com/?s={search_term_string}',
+        'query-input': 'required name=search_term_string',
+      },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://allaboutjerky.com/#organization',
+      name: 'All About Jerky',
+      url: 'https://allaboutjerky.com',
+      foundingDate: '2024',
+      logo: {
+        '@type': 'ImageObject',
+        '@id': 'https://allaboutjerky.com/#logo',
+        url: 'https://allaboutjerky.com/images/og-default.jpg',
+        width: 1200,
+        height: 630,
+        contentUrl: 'https://allaboutjerky.com/images/og-default.jpg',
+      },
+      sameAs: [
+        'https://www.pinterest.com/allaboutjerky',
+        'https://www.facebook.com/allaboutjerky',
+        'https://www.instagram.com/allaboutjerky',
+        'https://twitter.com/allaboutjerky',
+        'https://www.youtube.com/@allaboutjerky',
+      ],
+    },
+    {
+      '@type': 'Person',
+      '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+      name: 'Cole Mercer',
+      url: 'https://allaboutjerky.com/about/',
+      jobTitle: 'Pitmaster & Recipe Developer',
+      description: 'Bozeman, Montana pitmaster with 15+ years of beef jerky and smoked meat experience.',
+      worksFor: { '@id': 'https://allaboutjerky.com/#organization' },
+      knowsAbout: ['beef jerky', 'food dehydration', 'meat smoking', 'jerky marinades', 'food preservation', 'USDA food safety', 'curing meats'],
+    },
+  ],
+});
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <Seo {...props} />
+
+    <!-- WebSite + Organization + Person schema (site-wide AEO signals) -->
+    <script type="application/ld+json" set:html={siteSchema} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+
+    <!-- Skip navigation for keyboard/screen-reader users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="topbar">
+      <p>🔥 New recipe: <a href="/recipes/beef-jerky-flavors/">Bourbon Maple Beef Jerky →</a></p>
+    </div>
+
+    <!-- MAIN HEADER -->
+    <header class="site-header">
+      <div class="site-header__inner">
+
+        <!-- Logo -->
+        <a href="/" class="site-header__logo" aria-label="All About Jerky home">
+          <svg class="logo-icon" width="52" height="18" viewBox="0 0 52 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 6C4 3.5 6 2 9 2.5L43 2C46 1.5 49 3.5 48 7L47.5 11C48 13.5 46 16 43 15.5L9 15.5C6 15.5 4 13.5 4 11L4 6Z" fill="#7A2020"/>
+            <path d="M9 3.5C12 2.5 40 2.5 43 3.5" stroke="#9B3535" stroke-width="0.9" stroke-linecap="round" fill="none"/>
+            <line x1="15" y1="4.5" x2="14.5" y2="13.5" stroke="#521515" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="26" y1="4" x2="25.5" y2="14" stroke="#521515" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="37" y1="4.5" x2="36.5" y2="13.5" stroke="#521515" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+          <div class="logo-text-block">
+            <span class="logo-tagline">All About</span>
+            <span class="logo-wordmark">Jerky</span>
+            <span class="logo-rule" aria-hidden="true"></span>
+          </div>
+        </a>
+
+        <!-- Desktop primary nav -->
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <ul class="primary-nav__list" role="list">
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/" class="primary-nav__link">Recipes <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/">All Recipes</a>
+                <a href="/how-to-make-beef-jerky/">How to Make Beef Jerky</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/dehydrator-beef-jerky/" class="primary-nav__link">Methods <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/dehydrator-beef-jerky/">🌡️ Dehydrator</a>
+                <a href="/smoked-beef-jerky/">🔥 Smoker</a>
+                <a href="/beef-jerky-in-oven/">🥩 Oven</a>
+                <a href="/air-fryer-beef-jerky/">💨 Air Fryer</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/recipes/spicy-beef-jerky/" class="primary-nav__link">Flavors <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/recipes/spicy-beef-jerky/">🌶️ Spicy</a>
+                <a href="/recipes/teriyaki-beef-jerky/">🍯 Teriyaki</a>
+                <a href="/recipes/sweet-beef-jerky/">🍬 Sweet & Honey</a>
+                <a href="/recipes/peppered-beef-jerky/">🫙 Peppered</a>
+                <a href="/recipes/korean-beef-jerky/">🥢 Korean BBQ</a>
+                <a href="/recipes/bbq-beef-jerky/">🍖 BBQ</a>
+                <a href="/recipes/beef-jerky-flavors/">🌍 Global Flavors</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/best-meat-for-beef-jerky/" class="primary-nav__link">Meat & Cut <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/best-meat-for-beef-jerky/">🥩 Best Meat Guide</a>
+                <a href="/ground-beef-jerky/">🍔 Ground Beef</a>
+                <a href="/cuts/eye-of-round-beef-jerky/">Eye of Round</a>
+                <a href="/cuts/round-beef-jerky/">Top & Bottom Round</a>
+                <a href="/cuts/brisket-jerky/">Brisket</a>
+                <a href="/venison-jerky/">🦌 Venison</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/beef-jerky-marinade/" class="primary-nav__link">Marinade <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/beef-jerky-marinade/">🧄 Marinade Guide</a>
+                <a href="/beef-jerky-seasoning/">🧂 Seasoning</a>
+                <a href="/beef-jerky-dry-rub/">🌿 Dry Rub</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item has-dropdown">
+              <a href="/guides/is-beef-jerky-healthy/" class="primary-nav__link">Guides <span class="nav-arrow" aria-hidden="true">▾</span></a>
+              <div class="nav-dropdown">
+                <a href="/guides/is-beef-jerky-healthy/">💪 Is It Healthy?</a>
+                <a href="/guides/how-long-does-beef-jerky-last/">📦 How Long Does It Last?</a>
+                <a href="/guides/beef-jerky-time-and-temperature/">⏱️ Time & Temp</a>
+                <a href="/guides/when-is-beef-jerky-done/">✅ When Is It Done?</a>
+                <a href="/guides/can-dogs-eat-beef-jerky/">🐕 Can Dogs Eat It?</a>
+              </div>
+            </li>
+
+            <li class="primary-nav__item primary-nav__item--about">
+              <a href="/about/" class="primary-nav__link">About</a>
+            </li>
+
+          </ul>
+        </nav>
+
+        <!-- Mobile hamburger -->
+        <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" type="button">
+          <span></span><span></span><span></span>
+        </button>
+
+      </div>
+    </header>
+
+    <!-- MOBILE NAV DRAWER -->
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+      <div class="mobile-nav__inner">
+        <button class="mobile-nav__close" aria-label="Close navigation" type="button">✕</button>
+
+        <details>
+          <summary>Recipes</summary>
+          <a href="/">All Recipes</a>
+          <a href="/how-to-make-beef-jerky/">How to Make Beef Jerky</a>
+        </details>
+        <details>
+          <summary>Methods</summary>
+          <a href="/dehydrator-beef-jerky/">Dehydrator</a>
+          <a href="/smoked-beef-jerky/">Smoker</a>
+          <a href="/beef-jerky-in-oven/">Oven</a>
+          <a href="/air-fryer-beef-jerky/">Air Fryer</a>
+        </details>
+        <details>
+          <summary>Flavors</summary>
+          <a href="/recipes/spicy-beef-jerky/">Spicy</a>
+          <a href="/recipes/teriyaki-beef-jerky/">Teriyaki</a>
+          <a href="/recipes/sweet-beef-jerky/">Sweet & Honey</a>
+          <a href="/recipes/peppered-beef-jerky/">Peppered</a>
+          <a href="/recipes/korean-beef-jerky/">Korean BBQ</a>
+          <a href="/recipes/bbq-beef-jerky/">BBQ</a>
+          <a href="/recipes/beef-jerky-flavors/">Global Flavors</a>
+        </details>
+        <details>
+          <summary>Meat & Cut</summary>
+          <a href="/best-meat-for-beef-jerky/">Best Meat Guide</a>
+          <a href="/ground-beef-jerky/">Ground Beef</a>
+          <a href="/cuts/eye-of-round-beef-jerky/">Eye of Round</a>
+          <a href="/cuts/round-beef-jerky/">Top & Bottom Round</a>
+          <a href="/cuts/brisket-jerky/">Brisket</a>
+          <a href="/venison-jerky/">Venison</a>
+        </details>
+        <details>
+          <summary>Marinade & Seasoning</summary>
+          <a href="/beef-jerky-marinade/">Marinade Guide</a>
+          <a href="/beef-jerky-seasoning/">Seasoning</a>
+          <a href="/beef-jerky-dry-rub/">Dry Rub</a>
+        </details>
+        <details>
+          <summary>Guides</summary>
+          <a href="/guides/is-beef-jerky-healthy/">Is It Healthy?</a>
+          <a href="/guides/how-long-does-beef-jerky-last/">How Long Does It Last?</a>
+          <a href="/guides/beef-jerky-time-and-temperature/">Time & Temp</a>
+          <a href="/guides/when-is-beef-jerky-done/">When Is It Done?</a>
+          <a href="/guides/can-dogs-eat-beef-jerky/">Can Dogs Eat It?</a>
+        </details>
+        <a href="/about/" class="mobile-nav__about">About Cole Mercer</a>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+
+        <!-- About column -->
+        <div class="footer-col footer-col--about">
+          <a href="/" class="footer-logo">All About Jerky</a>
+          <p>Recipes, techniques, and honest advice from Cole Mercer — a Montana pitmaster with 15+ years of jerky-making experience.</p>
+          <a href="/about/" class="footer-about-link">Meet Cole →</a>
+        </div>
+
+        <!-- Recipes & Flavors -->
+        <div class="footer-col">
+          <h4>Recipes & Flavors</h4>
+          <ul>
+            <li><a href="/recipes/spicy-beef-jerky/">Spicy Beef Jerky</a></li>
+            <li><a href="/recipes/teriyaki-beef-jerky/">Teriyaki Beef Jerky</a></li>
+            <li><a href="/recipes/sweet-beef-jerky/">Sweet & Honey</a></li>
+            <li><a href="/recipes/peppered-beef-jerky/">Peppered Beef Jerky</a></li>
+            <li><a href="/recipes/korean-beef-jerky/">Korean BBQ Jerky</a></li>
+            <li><a href="/recipes/bbq-beef-jerky/">BBQ Beef Jerky</a></li>
+          </ul>
+        </div>
+
+        <!-- Methods & Cuts -->
+        <div class="footer-col">
+          <h4>Methods & Cuts</h4>
+          <ul>
+            <li><a href="/dehydrator-beef-jerky/">Dehydrator</a></li>
+            <li><a href="/smoked-beef-jerky/">Smoker</a></li>
+            <li><a href="/beef-jerky-in-oven/">Oven</a></li>
+            <li><a href="/air-fryer-beef-jerky/">Air Fryer</a></li>
+            <li><a href="/best-meat-for-beef-jerky/">Best Meat</a></li>
+            <li><a href="/beef-jerky-marinade/">Marinade Guide</a></li>
+          </ul>
+        </div>
+
+        <!-- Guides -->
+        <div class="footer-col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="/how-to-make-beef-jerky/">Beginner Guide</a></li>
+            <li><a href="/guides/is-beef-jerky-healthy/">Nutrition Facts</a></li>
+            <li><a href="/guides/how-long-does-beef-jerky-last/">Storage Guide</a></li>
+            <li><a href="/guides/beef-jerky-time-and-temperature/">Time & Temp</a></li>
+            <li><a href="/guides/when-is-beef-jerky-done/">Is It Done?</a></li>
+            <li><a href="/guides/can-dogs-eat-beef-jerky/">Dogs & Jerky</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; {new Date().getFullYear()} allaboutjerky.com · Made with ❤️ in Bozeman, Montana</p>
+        <p class="footer-disclaimer">All content is for informational purposes only. Always follow USDA safe food handling guidelines.</p>
+      </div>
+    </footer>
+
+    <script>
+      const btn = document.querySelector('.nav-hamburger') as HTMLButtonElement | null;
+      const closeBtn = document.querySelector('.mobile-nav__close') as HTMLButtonElement | null;
+      const drawer = document.getElementById('mobile-nav');
+
+      function openDrawer() {
+        btn?.setAttribute('aria-expanded', 'true');
+        drawer?.classList.add('is-open');
+        drawer?.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeDrawer() {
+        btn?.setAttribute('aria-expanded', 'false');
+        drawer?.classList.remove('is-open');
+        drawer?.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      btn?.addEventListener('click', openDrawer);
+      closeBtn?.addEventListener('click', closeDrawer);
+      drawer?.addEventListener('click', (e) => { if (e.target === drawer) closeDrawer(); });
+      document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeDrawer(); });
+    </script>
+
+  </body>
+</html>

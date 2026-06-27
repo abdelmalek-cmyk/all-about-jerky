@@ -1,0 +1,445 @@
+﻿---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import RecipeCard from '../components/RecipeCard.astro';
+import FaqSchema from '../components/FaqSchema.astro';
+
+const canonical = 'https://allaboutjerky.com/';
+
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Beef Jerky Recipes',
+  description: 'Complete collection of homemade beef jerky recipes for dehydrator, oven, smoker, and air fryer.',
+  url: canonical,
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, url: 'https://allaboutjerky.com/recipes/spicy-beef-jerky/', name: 'Spicy Beef Jerky' },
+    { '@type': 'ListItem', position: 2, url: 'https://allaboutjerky.com/recipes/teriyaki-beef-jerky/', name: 'Teriyaki Beef Jerky' },
+    { '@type': 'ListItem', position: 3, url: 'https://allaboutjerky.com/recipes/sweet-beef-jerky/', name: 'Sweet & Honey Beef Jerky' },
+    { '@type': 'ListItem', position: 4, url: 'https://allaboutjerky.com/recipes/bbq-beef-jerky/', name: 'BBQ Beef Jerky' },
+    { '@type': 'ListItem', position: 5, url: 'https://allaboutjerky.com/recipes/korean-beef-jerky/', name: 'Korean BBQ Beef Jerky' },
+    { '@type': 'ListItem', position: 6, url: 'https://allaboutjerky.com/recipes/peppered-beef-jerky/', name: 'Peppered Beef Jerky' },
+  ],
+};
+
+const recipes = [
+  {
+    title: 'Spicy Beef Jerky',
+    href: '/recipes/spicy-beef-jerky/',
+    image: '/images/spicy-beef-jerky.jpg',
+    badge: 'Quick Win',
+    description: 'Jalapeño, sriracha & cayenne balanced with honey. The hottest recipe on the site.',
+    volume: '14,390',
+    time: '5 hr 20 min',
+  },
+  {
+    title: 'Teriyaki Beef Jerky',
+    href: '/recipes/teriyaki-beef-jerky/',
+    image: '/images/teriyaki-beef-jerky.jpg',
+    badge: 'Quick Win',
+    description: 'Soy sauce, honey & fresh ginger. Classic store-shelf flavor, made at home.',
+    volume: '11,230',
+    time: '5 hr 15 min',
+  },
+  {
+    title: 'Sweet & Honey Beef Jerky',
+    href: '/recipes/sweet-beef-jerky/',
+    image: '/images/sweet-beef-jerky.jpg',
+    badge: 'Quick Win',
+    description: 'Brown sugar, maple syrup & honey. Crowd-pleaser for non-spicy fans.',
+    volume: '2,900',
+    time: '5 hr',
+  },
+  {
+    title: 'BBQ & Global Flavors',
+    href: '/recipes/beef-jerky-flavors/',
+    image: '/images/beef-jerky-flavors.jpg',
+    description: 'Dr Pepper, Korean BBQ, Thai, Bourbon — 6 signature flavor profiles.',
+    volume: '2,380',
+    time: '5 hr',
+  },
+];
+
+const methods = [
+  {
+    title: 'Dehydrator Beef Jerky',
+    href: '/dehydrator-beef-jerky/',
+    image: '/images/dehydrator-beef-jerky.jpg',
+    badge: '#1 Method',
+    description: 'Best results. 160°F for 4–6 hours — no rotation, no moisture buildup.',
+    volume: '91,010',
+    time: '4–6 hr',
+  },
+  {
+    title: 'Smoked Beef Jerky',
+    href: '/smoked-beef-jerky/',
+    image: '/images/smoked-beef-jerky.jpg',
+    description: 'Traeger, pellet, electric & charcoal. Wood type chart & Tillamook copycat.',
+    volume: '23,020',
+    time: '4–6 hr',
+  },
+  {
+    title: 'Beef Jerky Marinade',
+    href: '/beef-jerky-marinade/',
+    image: '/images/beef-jerky-marinade.jpg',
+    description: 'Every marinade variation: teriyaki, spicy, sweet & Prague Powder cure guide.',
+    volume: '22,670',
+  },
+  {
+    title: 'Ground Beef Jerky',
+    href: '/ground-beef-jerky/',
+    image: '/images/ground-beef-jerky.jpg',
+    description: 'Jerky gun method. Budget-friendly with perfectly uniform strips.',
+    volume: '15,340',
+    time: '5–7 hr',
+  },
+  {
+    title: 'Beef Jerky in Oven',
+    href: '/beef-jerky-in-oven/',
+    image: '/images/beef-jerky-in-oven.jpg',
+    description: 'No equipment needed. 175°F with door propped for airflow.',
+    volume: '14,770',
+    time: '3–5 hr',
+  },
+  {
+    title: 'How to Make Beef Jerky',
+    href: '/how-to-make-beef-jerky/',
+    image: '/images/how-to-make-beef-jerky.jpg',
+    badge: 'Beginner',
+    description: 'Every step explained for first-timers: meat selection, marinade, drying, storage.',
+    volume: '4,700',
+  },
+  {
+    title: 'Air Fryer Beef Jerky',
+    href: '/air-fryer-beef-jerky/',
+    image: '/images/air-fryer-beef-jerky.jpg',
+    description: 'The fastest method. Done in 2–4 hours in Ninja, Cosori, or any air fryer.',
+    volume: '4,470',
+    time: '2–4 hr',
+  },
+  {
+    title: 'Venison & Wild Game Jerky',
+    href: '/venison-jerky/',
+    image: '/images/venison-jerky.jpg',
+    description: 'Deer jerky recipes + Wild Bill\'s teriyaki copycat. Wild game food safety.',
+    volume: '2,740',
+    time: '4–6 hr',
+  },
+];
+
+const guides = [
+  {
+    title: 'Best Meat for Beef Jerky',
+    href: '/best-meat-for-beef-jerky/',
+    image: '/images/best-meat-for-beef-jerky.jpg',
+    badge: 'Quick Win',
+    description: 'Eye of round vs top round vs flank steak. Full cut rankings & grain-slicing guide.',
+    volume: '11,640',
+  },
+  {
+    title: 'How Long Does Beef Jerky Last?',
+    href: '/guides/how-long-does-beef-jerky-last/',
+    image: '/images/how-long-does-beef-jerky-last.jpg',
+    badge: 'Quick Win',
+    description: 'Homemade vs commercial shelf life. Room temp, fridge, freezer storage times.',
+    volume: '9,240',
+  },
+  {
+    title: 'Is Beef Jerky Healthy?',
+    href: '/guides/is-beef-jerky-healthy/',
+    image: '/images/is-beef-jerky-healthy.jpg',
+    description: 'Calories, protein & sodium facts. Keto-friendly options and low-sodium recipes.',
+    volume: '2,300',
+  },
+  {
+    title: 'Beef Jerky Time & Temperature',
+    href: '/guides/beef-jerky-time-and-temperature/',
+    image: '/images/beef-jerky-time-and-temperature.jpg',
+    description: 'Complete time & temp chart for all 4 drying methods. Never guess again.',
+    volume: '1,620',
+  },
+  {
+    title: 'Can Dogs Eat Beef Jerky?',
+    href: '/guides/can-dogs-eat-beef-jerky/',
+    image: '/images/can-dogs-eat-beef-jerky.jpg',
+    description: 'Toxic ingredients list. Plus a vet-safe homemade dog jerky recipe.',
+    volume: '1,350',
+  },
+  {
+    title: 'When Is Beef Jerky Done?',
+    href: '/guides/when-is-beef-jerky-done/',
+    image: '/images/when-is-beef-jerky-done.jpg',
+    description: 'The bend test + 4 reliable doneness checks. Never under-dry a batch again.',
+    volume: '1,210',
+  },
+];
+
+const faqs = [
+  {
+    question: 'How do you make beef jerky?',
+    answer: 'Slice lean beef 1/4-inch thick, marinate 8–24 hours in soy sauce + seasonings, pat dry, then dehydrate at 160°F for 4–6 hours. Use a food dehydrator, oven (175°F, door propped open), smoker, or air fryer. Jerky is done when a cooled strip bends and cracks without snapping completely.',
+  },
+  {
+    question: 'What is the best beef jerky recipe for beginners?',
+    answer: 'The best beginner recipe uses eye of round beef with a simple marinade: 1/3 cup soy sauce, 2 tablespoons Worcestershire, 1 teaspoon each garlic powder, onion powder, and black pepper. Marinate 12 hours, pat dry, dehydrate at 160°F for 4–6 hours. Hard to mess up and always delicious.',
+  },
+  {
+    question: 'What is the best meat for beef jerky?',
+    answer: 'Eye of round and top round are the best cuts. Both are very lean — less fat means longer shelf life — easy to slice uniformly, and affordable. Flank steak and London broil also work well. Avoid fatty cuts like chuck or ribeye; the fat goes rancid and shortens shelf life.',
+  },
+  {
+    question: 'How long does homemade beef jerky last?',
+    answer: 'Homemade beef jerky lasts 1–2 weeks at room temperature in an airtight container, 1 month refrigerated, and 3–6 months frozen when vacuum-sealed. Always keep it dry, use an airtight container, and check for mold or off smells before eating stored jerky.',
+  },
+];
+---
+<BaseLayout
+  title="Beef Jerky Recipes — Homemade Jerky for Dehydrator, Oven & Smoker"
+  description="The best homemade beef jerky recipes — spicy, teriyaki, sweet, BBQ, and more. Step-by-step guides for dehydrator, oven, smoker, and air fryer. 296k monthly searches answered."
+  canonical={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(itemListSchema)} />
+  <FaqSchema faqs={faqs} />
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__badge">296,000+ monthly searches</div>
+      <h1>Beef Jerky Recipes</h1>
+      <p>Homemade beef jerky better than store-bought — spicy, teriyaki, sweet, BBQ, and everything in between. Every method covered from scratch.</p>
+    </div>
+  </section>
+
+  <!-- STAT STRIP -->
+  <div class="stat-strip">
+    <div class="stat-strip__item"><strong>18</strong> recipes & guides</div>
+    <div class="stat-strip__item"><strong>296,000+</strong> monthly searches</div>
+    <div class="stat-strip__item"><strong>4</strong> cooking methods</div>
+    <div class="stat-strip__item"><strong>160°F</strong> safe internal temp</div>
+  </div>
+
+  <main class="home-main">
+
+    <!-- ANSWER BOX -->
+    <div class="home-section">
+      <div class="container">
+        <div class="answer-box">
+          <p><strong>How to make beef jerky:</strong> Slice lean beef 1/4-inch thick against the grain, marinate 8–24 hours in soy sauce + seasonings, pat completely dry, then dehydrate at <strong>160°F for 4–6 hours</strong>. Jerky is done when a cooled strip bends and cracks without snapping. Use a dehydrator, oven (175°F, door propped), smoker, or air fryer.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURED RECIPES — high volume + low KD first -->
+    <div class="home-section">
+      <div class="container container--wide">
+        <div class="section-header">
+          <h2>Beef Jerky Recipes</h2>
+          <p class="section-header__sub">Flavor-forward recipes sorted by search volume — quick-win keywords highlighted</p>
+        </div>
+        <div class="featured-grid">
+          {recipes.map((r) => (
+            <RecipeCard
+              title={r.title}
+              href={r.href}
+              image={r.image}
+              type="recipe"
+              badge={r.badge}
+              description={r.description}
+              volume={r.volume}
+              time={r.time}
+              featured={true}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-sep" />
+
+    <!-- COOKING METHODS — sorted by volume -->
+    <div class="home-section">
+      <div class="container container--wide">
+        <div class="section-header">
+          <h2>Cooking Method Guides</h2>
+          <p class="section-header__sub">Step-by-step guides for every drying method — sorted by monthly search volume</p>
+        </div>
+        <div class="card-grid">
+          {methods.map((m) => (
+            <RecipeCard
+              title={m.title}
+              href={m.href}
+              image={m.image}
+              type="method"
+              badge={m.badge}
+              description={m.description}
+              volume={m.volume}
+              time={m.time}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-sep" />
+
+    <!-- GUIDES — sorted by volume, low KD first -->
+    <div class="home-section">
+      <div class="container container--wide">
+        <div class="section-header">
+          <h2>Guides & Reference</h2>
+          <p class="section-header__sub">Answer-first guides targeting question keywords — strong Featured Snippet candidates</p>
+        </div>
+        <div class="card-grid">
+          {guides.map((g) => (
+            <RecipeCard
+              title={g.title}
+              href={g.href}
+              image={g.image}
+              type="guide"
+              badge={g.badge}
+              description={g.description}
+              volume={g.volume}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-sep" />
+
+    <!-- MEET COLE -->
+    <div class="home-section">
+      <div class="container container--wide">
+        <div class="author-section">
+          <img
+            src="/images/cole-mercer.jpg"
+            alt="Cole Mercer, pitmaster and creator of allaboutjerky.com"
+            class="author-section__img"
+            width="320"
+            height="400"
+            loading="lazy"
+          />
+          <div class="author-section__body">
+            <p class="author-section__eyebrow">Meet the Pitmaster</p>
+            <h2 class="author-section__name">Hi, I'm <em>Cole</em></h2>
+            <p class="author-section__tagline">Bozeman, Montana pitmaster with 15+ years of jerky obsession</p>
+            <p>I grew up watching my grandfather hang strips of venison in his smokehouse every fall. He never wrote a recipe down — it was all feel, smell, and that satisfying bend-and-crack test. I've spent the last 15 years turning those memories into repeatable, shareable recipes.</p>
+            <p>Whether you've got a Nesco dehydrator on your counter, a pellet smoker in the backyard, or just an oven and some foil, I'll show you exactly how to make jerky that's better than anything you'll find in a gas station bag.</p>
+            <a href="/about/" class="btn-primary">Read My Story →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="section-sep" />
+
+    <!-- CATEGORY CARDS -->
+    <div class="home-section">
+      <div class="container container--wide">
+        <div class="section-header">
+          <h2>Browse by Category</h2>
+          <p class="section-header__sub">Every jerky topic — find exactly what you're looking for</p>
+        </div>
+        <div class="cat-card-grid">
+
+          <a href="/recipes/spicy-beef-jerky/" class="cat-card cat-card--spicy">
+            <span class="cat-card__icon">🌶️</span>
+            <div class="cat-card__body">
+              <strong>Spicy Jerky</strong>
+              <p>Jalapeño · Habanero · Sriracha · Peppered</p>
+            </div>
+          </a>
+
+          <a href="/recipes/teriyaki-beef-jerky/" class="cat-card cat-card--teriyaki">
+            <span class="cat-card__icon">🍯</span>
+            <div class="cat-card__body">
+              <strong>Teriyaki & Sweet</strong>
+              <p>Classic teriyaki · Honey maple · Brown sugar</p>
+            </div>
+          </a>
+
+          <a href="/dehydrator-beef-jerky/" class="cat-card cat-card--dehydrator">
+            <span class="cat-card__icon">🌡️</span>
+            <div class="cat-card__body">
+              <strong>Dehydrator</strong>
+              <p>Best results · 160°F · 4–6 hours · Nesco & Excalibur</p>
+            </div>
+          </a>
+
+          <a href="/smoked-beef-jerky/" class="cat-card cat-card--smoker">
+            <span class="cat-card__icon">🔥</span>
+            <div class="cat-card__body">
+              <strong>Smoker</strong>
+              <p>Traeger · Pellet · Electric · Charcoal · Wood charts</p>
+            </div>
+          </a>
+
+          <a href="/beef-jerky-in-oven/" class="cat-card cat-card--oven">
+            <span class="cat-card__icon">🥩</span>
+            <div class="cat-card__body">
+              <strong>Oven</strong>
+              <p>No equipment needed · 175°F · Door-propped method</p>
+            </div>
+          </a>
+
+          <a href="/air-fryer-beef-jerky/" class="cat-card cat-card--airfryer">
+            <span class="cat-card__icon">💨</span>
+            <div class="cat-card__body">
+              <strong>Air Fryer</strong>
+              <p>Fastest method · Done in 2–4 hours · Ninja & Cosori</p>
+            </div>
+          </a>
+
+          <a href="/beef-jerky-marinade/" class="cat-card cat-card--marinade">
+            <span class="cat-card__icon">🧄</span>
+            <div class="cat-card__body">
+              <strong>Marinade & Cure</strong>
+              <p>Base recipe · Variations · Prague Powder guide</p>
+            </div>
+          </a>
+
+          <a href="/best-meat-for-beef-jerky/" class="cat-card cat-card--meat">
+            <span class="cat-card__icon">🔪</span>
+            <div class="cat-card__body">
+              <strong>Meat & Cuts</strong>
+              <p>Eye of round · Brisket · Flank · Ground beef</p>
+            </div>
+          </a>
+
+          <a href="/guides/how-long-does-beef-jerky-last/" class="cat-card cat-card--storage">
+            <span class="cat-card__icon">📦</span>
+            <div class="cat-card__body">
+              <strong>Storage Guide</strong>
+              <p>Room temp · Fridge · Freezer · Vacuum seal tips</p>
+            </div>
+          </a>
+
+          <a href="/guides/beef-jerky-time-and-temperature/" class="cat-card cat-card--temp">
+            <span class="cat-card__icon">⏱️</span>
+            <div class="cat-card__body">
+              <strong>Time & Temperature</strong>
+              <p>Full chart for every method · USDA safe temps</p>
+            </div>
+          </a>
+
+          <a href="/venison-jerky/" class="cat-card cat-card--venison">
+            <span class="cat-card__icon">🦌</span>
+            <div class="cat-card__body">
+              <strong>Venison & Wild Game</strong>
+              <p>Deer jerky · Wild Bill's copycat · Food safety</p>
+            </div>
+          </a>
+
+          <a href="/guides/is-beef-jerky-healthy/" class="cat-card cat-card--health">
+            <span class="cat-card__icon">💪</span>
+            <div class="cat-card__body">
+              <strong>Nutrition & Health</strong>
+              <p>Calories · Protein · Keto · Low-sodium options</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+  </main>
+</BaseLayout>

@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import GuideLayout from '../../layouts/GuideLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const d = entry.data;
+const slug = entry.slug;
+
+const relatedLinks = d.relatedPages.map((href: string) => ({
+  label: href
+    .replace(/\//g, ' ')
+    .replace(/guides/gi, '')
+    .trim()
+    .replace(/-/g, ' ')
+    .replace(/\b\w/g, (c: string) => c.toUpperCase()),
+  href,
+}));
+
+const canonical = `https://allaboutjerky.com/guides/${slug}/`;
+---
+<GuideLayout
+  title={d.title}
+  description={d.description}
+  {canonical}
+  faqs={d.faq}
+  {relatedLinks}
+  breadcrumbs={[{ label: d.title, href: `/guides/${slug}/` }]}
+  datePublished={d.datePublished}
+  dateModified={d.dateModified}
+>
+  <Content />
+</GuideLayout>

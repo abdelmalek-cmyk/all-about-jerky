@@ -1,4 +1,4 @@
----
+﻿---
 title: "How Long Does Beef Jerky Last? Storage Guide"
 description: "How long does beef jerky last? Commercial jerky: 1-2 years unopened, 1-2 weeks open. Homemade: 1-2 weeks room temp, 1-3 months fridge. Full storage guide."
 primaryKeyword: "how long does beef jerky last"
@@ -34,7 +34,7 @@ Beef jerky shelf life depends on three things: whether it's commercial or homema
 <p><strong>Quick answer:</strong> Commercial jerky lasts up to 2 years unopened, 1-2 weeks open. Homemade jerky lasts 1-2 weeks at room temperature, 1 month in the fridge, 6 months frozen. Always use an airtight container and keep away from heat and moisture.</p>
 </div>
 
-![Assorted beef jerky in mason jars and vacuum sealed bags showing proper storage methods](/images/beef-jerky-storage-jars.jpg)
+![Assorted beef jerky in mason jars and vacuum sealed bags showing proper storage methods](/images/beef-jerky-storage-jars.webp)
 
 ## Beef Jerky Shelf Life by Storage Method
 

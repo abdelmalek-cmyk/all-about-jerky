@@ -1,4 +1,4 @@
----
+﻿---
 title: "Beef Jerky Time & Temperature Guide"
 description: "Beef jerky temperature: 160°F for dehydrators, 175°F for ovens. Full time and temperature chart for dehydrator, oven, smoker, and air fryer jerky making."
 primaryKeyword: "how long does it take to make beef jerky"
@@ -32,7 +32,7 @@ Making safe, properly dried beef jerky requires hitting the right internal tempe
 <p><strong>Key numbers:</strong> Dehydrate at 160°F for 4-6 hours. Oven at 175°F for 3-5 hours. Smoker at 160-180°F for 4-6 hours. Always test with the bend test before pulling jerky from the heat.</p>
 </div>
 
-![Digital meat thermometer showing 160°F being inserted into beef jerky strip on dehydrator tray](/images/beef-jerky-thermometer.jpg)
+![Digital meat thermometer showing 160°F being inserted into beef jerky strip on dehydrator tray](/images/beef-jerky-thermometer.webp)
 
 ## Beef Jerky Time & Temperature Chart
 

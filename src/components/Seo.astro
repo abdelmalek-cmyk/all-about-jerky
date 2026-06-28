@@ -1,4 +1,4 @@
----
+﻿---
 interface Props {
   title: string;
   description: string;
@@ -12,7 +12,7 @@ const {
   title,
   description,
   canonical,
-  image = '/images/og-default.jpg',
+  image = '/images/og-default.webp',
   type = 'website',
   datePublished,
   dateModified,
@@ -21,7 +21,7 @@ const siteName = 'All About Jerky';
 const domain = 'https://allaboutjerky.com';
 const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
 const ogImage = `${domain}${image}`;
-const ogImageAlt = `${title} — All About Jerky`;
+const ogImageAlt = `${title} - All About Jerky`;
 ---
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />

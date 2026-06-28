@@ -62,7 +62,7 @@ dateModified: "2024-06-01"
 
 Marcus Okafor works at a company where the Friday snack table is taken seriously. For three months running, someone kept bringing in a commercial brand of sweet and hot beef jerky that always disappeared first. Marcus decided to reverse-engineer it at home. His first attempt was too sweet — candy-sweet, not jerky-sweet. His second used only cayenne for heat and came out flat. The third batch hit the mark: brown sugar and maple syrup for layered sweetness, chili powder for a slow-building warmth that arrives after the sweetness fades. He brought it in on a Tuesday. By noon, two coworkers had texted him asking for the recipe. The commercial brand hasn't come back.
 
-![Sweet beef jerky ingredients flat-lay: honey jar, maple syrup, brown sugar, and raw beef strips on marble](/images/sweet-beef-jerky-ingredients.jpg)
+![Sweet beef jerky ingredients flat-lay: honey jar, maple syrup, brown sugar, and raw beef strips on marble](/images/sweet-beef-jerky-ingredients.webp)
 
 ---
 
@@ -101,7 +101,7 @@ The apple cider vinegar is the ingredient most people question. It doesn't make 
 
 For a detailed comparison of which beef cuts work best for any jerky recipe, see the [best meat for beef jerky guide](/best-meat-for-beef-jerky/).
 
-![Sweet honey beef jerky strips on wire rack after drying, golden caramelized surface](/images/sweet-beef-jerky-oven.jpg)
+![Sweet honey beef jerky strips on wire rack after drying, golden caramelized surface](/images/sweet-beef-jerky-oven.webp)
 
 ---
 
@@ -120,7 +120,7 @@ The sweet beef jerky surface will turn deep golden-brown to mahogany during dryi
 
 For complete temperature guidance for all methods, see the [beef jerky time and temperature chart](/guides/beef-jerky-time-and-temperature/).
 
-![Macro close-up of caramelized sweet beef jerky surface — amber glaze and brown sugar crust detail](/images/sweet-beef-jerky-texture.jpg)
+![Macro close-up of caramelized sweet beef jerky surface — amber glaze and brown sugar crust detail](/images/sweet-beef-jerky-texture.webp)
 
 ---
 
@@ -150,7 +150,7 @@ Sweet beef jerky has a slightly shorter shelf life than spicy or plain jerky bec
 
 See the full [beef jerky storage guide](/guides/how-long-does-beef-jerky-last/) for complete shelf life tables.
 
-![Homemade sweet honey beef jerky in a glass mason jar with kraft label and twine ribbon](/images/sweet-beef-jerky-gift.jpg)
+![Homemade sweet honey beef jerky in a glass mason jar with kraft label and twine ribbon](/images/sweet-beef-jerky-gift.webp)
 
 ---
 
@@ -166,23 +166,23 @@ MIDJOURNEY IMAGE PROMPTS
 
 1. HERO
 "Close-up of sweet honey beef jerky strips on dark slate, golden caramelized surface glistening, small wooden honey dipper with honey drizzle alongside, warm amber lighting, food photography, 85mm lens --ar 16:9 --style raw --v 6.1"
-Filename: sweet-beef-jerky-hero.jpg | Alt: "Golden caramelized sweet honey beef jerky on dark slate with honey dipper"
+Filename: sweet-beef-jerky-hero.webp | Alt: "Golden caramelized sweet honey beef jerky on dark slate with honey dipper"
 
 2. THREE SWEETENERS FLAT-LAY
 "Overhead flat-lay of sweet beef jerky ingredients: jar of honey, bottle of maple syrup, bowl of brown sugar, raw beef strips, small ceramic bowl with marinade, white marble background, natural light --ar 1:1 --style raw --v 6.1"
-Filename: sweet-beef-jerky-ingredients.jpg | Alt: "Sweet beef jerky ingredients: honey, maple syrup, and brown sugar"
+Filename: sweet-beef-jerky-ingredients.webp | Alt: "Sweet beef jerky ingredients: honey, maple syrup, and brown sugar"
 
 3. CARAMELIZED SURFACE MACRO
 "Extreme close-up macro of sweet beef jerky surface texture, deep amber caramelized glaze, brown sugar crust visible, beautiful food photography, shallow depth of field --ar 4:5 --style raw --v 6.1"
-Filename: sweet-beef-jerky-texture.jpg | Alt: "Macro close-up of caramelized sweet beef jerky surface"
+Filename: sweet-beef-jerky-texture.webp | Alt: "Macro close-up of caramelized sweet beef jerky surface"
 
 4. OVEN BAKING SHEET
 "Sweet beef jerky strips arranged on parchment paper on baking rack, golden color after 4 hours in oven at 175°F, oven interior visible, food process photography --ar 3:2 --style raw --v 6.1"
-Filename: sweet-beef-jerky-oven.jpg | Alt: "Sweet beef jerky drying on parchment-lined oven rack at 175°F"
+Filename: sweet-beef-jerky-oven.webp | Alt: "Sweet beef jerky drying on parchment-lined oven rack at 175°F"
 
 5. GIFT BAG / LIFESTYLE
 "Homemade sweet beef jerky in a small mason jar with a kraft paper label, ribbon tied around the lid, rustic wooden table, warm window light, gift food photography --ar 4:5 --style raw --v 6.1"
-Filename: sweet-beef-jerky-gift.jpg | Alt: "Homemade sweet beef jerky in mason jar as a gift"
+Filename: sweet-beef-jerky-gift.webp | Alt: "Homemade sweet beef jerky in mason jar as a gift"
 
 RANK MATH SEO
 SEO Title: Succulent Sweet & Honey Beef Jerky | allaboutjerky.com

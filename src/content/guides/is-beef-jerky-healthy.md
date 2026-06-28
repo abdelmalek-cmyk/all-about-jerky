@@ -1,4 +1,4 @@
----
+﻿---
 title: "Is Beef Jerky Healthy? Nutrition Facts"
 description: "Is homemade beef jerky healthy? It provides 12-15 g protein per oz with minimal fat, but is high in sodium. Full nutrition facts, keto, and low-sodium guide."
 primaryKeyword: "is homemade beef jerky healthy"
@@ -32,7 +32,7 @@ Homemade beef jerky is a healthy high-protein snack -- a 1-oz serving delivers 1
 <p><strong>Bottom line:</strong> Homemade beef jerky is healthier than most commercial snacks. High protein, low fat, and no preservatives. Watch sodium and sugar content based on your recipe choice.</p>
 </div>
 
-![Healthy beef jerky strips on dark slate with protein-rich snack presentation](/images/is-beef-jerky-healthy-nutrition.jpg)
+![Healthy beef jerky strips on dark slate with protein-rich snack presentation](/images/is-beef-jerky-healthy-nutrition.webp)
 
 ## Homemade Beef Jerky Nutrition Facts (Per 1 oz / 28 g)
 

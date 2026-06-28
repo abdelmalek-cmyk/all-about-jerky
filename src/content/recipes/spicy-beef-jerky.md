@@ -62,7 +62,7 @@ dateModified: "2024-06-01"
 
 Emma Driscoll had made spicy beef jerky twice before she brought it to her hiking group — and both batches fell flat. The problem, she figured out later, was that she used only cayenne. Cayenne burns fast and exits fast. So Emma tried a three-source approach: fresh jalapeño for fruity front-end heat, sriracha for tangy garlic warmth in the middle, and cayenne for the back-of-the-throat finish. The next batch disappeared before the group reached the two-mile mark. Her trail partner called it "the only jerky that gets better the more you eat." Emma now makes a double batch every Sunday.
 
-![Spicy beef jerky marinade with jalapeño rounds, sriracha, and cayenne on marble surface](/images/spicy-beef-jerky-marinade.jpg)
+![Spicy beef jerky marinade with jalapeño rounds, sriracha, and cayenne on marble surface](/images/spicy-beef-jerky-marinade.webp)
 
 ---
 
@@ -101,7 +101,7 @@ Stacking jalapeño, sriracha, and cayenne in one marinade builds heat across the
 | Honey | Maple syrup, agave | Slightly different caramelization |
 | Cayenne 1 tsp | Chipotle powder 1.5 tsp | Smoky heat instead of clean burn |
 
-![Marinated spicy beef jerky strips on stainless dehydrator tray, ready to dry](/images/spicy-beef-jerky-dehydrator.jpg)
+![Marinated spicy beef jerky strips on stainless dehydrator tray, ready to dry](/images/spicy-beef-jerky-dehydrator.webp)
 
 ---
 
@@ -120,7 +120,7 @@ For oven spicy beef jerky, prop the door open 1–2 inches with a wooden spoon t
 
 Check doneness with the **bend test**: pull a strip, cool 2–3 minutes, then bend it sharply. Properly finished spicy beef jerky cracks at the 90-degree angle and holds its shape. Still underdone if it bends without cracking. See the full [beef jerky doneness guide](/guides/when-is-beef-jerky-done/) for a breakdown of each stage.
 
-![Spicy beef jerky bend test — strip cracks cleanly at 90 degrees when done](/images/spicy-beef-jerky-bend-test.jpg)
+![Spicy beef jerky bend test — strip cracks cleanly at 90 degrees when done](/images/spicy-beef-jerky-bend-test.webp)
 
 ---
 
@@ -150,7 +150,7 @@ Finished spicy beef jerky stores well. The low moisture content and the acid fro
 
 Adding the optional curing salt extends room-temperature shelf life to about 3 weeks. For the full breakdown by storage method and curing status, see the [beef jerky storage guide](/guides/how-long-does-beef-jerky-last/).
 
-![Homemade spicy beef jerky packed in a kraft snack bag for hiking](/images/spicy-beef-jerky-snack.jpg)
+![Homemade spicy beef jerky packed in a kraft snack bag for hiking](/images/spicy-beef-jerky-snack.webp)
 
 ---
 
@@ -166,23 +166,23 @@ MIDJOURNEY IMAGE PROMPTS
 
 1. HERO
 "Close-up macro of spicy beef jerky strips stacked on dark walnut board, fresh jalapeño slices scattered, sriracha bottle soft focus background, warm amber side lighting, Canon 85mm f/1.8, shallow depth of field, rich red-brown meat color --ar 16:9 --style raw --v 6.1"
-Filename: spicy-beef-jerky-hero.jpg | Alt: "Homemade spicy beef jerky with jalapeño on dark wood"
+Filename: spicy-beef-jerky-hero.webp | Alt: "Homemade spicy beef jerky with jalapeño on dark wood"
 
 2. MARINADE
 "Overhead flat-lay of spicy beef jerky marinade in dark ceramic bowl, raw beef strips partially submerged, jalapeño rounds visible, pinch bowls of cayenne alongside, white marble surface, natural window light --ar 1:1 --style raw --v 6.1"
-Filename: spicy-beef-jerky-marinade.jpg | Alt: "Spicy beef jerky marinade with jalapeño and sriracha"
+Filename: spicy-beef-jerky-marinade.webp | Alt: "Spicy beef jerky marinade with jalapeño and sriracha"
 
 3. DEHYDRATOR TRAY
 "Marinated spicy beef jerky strips on stainless dehydrator tray, uniform 1/4-inch thickness, red-orange coating visible, industrial food photography, dramatic top lighting --ar 3:2 --style raw --v 6.1"
-Filename: spicy-beef-jerky-dehydrator.jpg | Alt: "Spicy jerky strips on dehydrator tray before drying"
+Filename: spicy-beef-jerky-dehydrator.webp | Alt: "Spicy jerky strips on dehydrator tray before drying"
 
 4. BEND TEST
 "Extreme close-up of finished spicy beef jerky, dark caramelized surface, visible pepper flakes, one strip held between fingers bending 90 degrees and cracking, warm studio lighting --ar 4:5 --style raw --v 6.1"
-Filename: spicy-beef-jerky-bend-test.jpg | Alt: "Spicy beef jerky bend test — strip cracks at 90 degrees"
+Filename: spicy-beef-jerky-bend-test.webp | Alt: "Spicy beef jerky bend test — strip cracks at 90 degrees"
 
 5. SNACK BAG
 "Spicy beef jerky in kraft paper snack bag on wooden hiking pack, trail mix visible alongside, warm outdoor afternoon light, lifestyle food photography --ar 4:5 --style raw --v 6.1"
-Filename: spicy-beef-jerky-snack.jpg | Alt: "Homemade spicy beef jerky packed for hiking"
+Filename: spicy-beef-jerky-snack.webp | Alt: "Homemade spicy beef jerky packed for hiking"
 
 RANK MATH SEO
 SEO Title: Scorching Homemade Spicy Beef Jerky | allaboutjerky.com

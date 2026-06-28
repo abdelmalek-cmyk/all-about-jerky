@@ -1,4 +1,4 @@
----
+﻿---
 title: "Can Dogs Eat Beef Jerky? What's Safe & What's Not"
 description: "Can dogs eat beef jerky? Store-bought jerky is unsafe for dogs due to salt, onion, and garlic. Learn what's safe and how to make homemade dog-safe jerky treats."
 primaryKeyword: "homemade beef jerky for dogs"
@@ -28,7 +28,7 @@ Plain, unseasoned beef jerky made specifically for dogs is safe in small quantit
 <p><strong>Short answer:</strong> Human beef jerky = no. Homemade plain dog-safe jerky = yes, in moderation. The difference is in the seasoning. Never give your dog jerky containing salt, garlic, onion, sugar, or any spices.</p>
 </div>
 
-![Small dog sitting beside plain homemade beef jerky dog treats on dark slate](/images/can-dogs-eat-beef-jerky-dog.jpg)
+![Small dog sitting beside plain homemade beef jerky dog treats on dark slate](/images/can-dogs-eat-beef-jerky-dog.webp)
 
 ## Why Human Beef Jerky Is Unsafe for Dogs
 

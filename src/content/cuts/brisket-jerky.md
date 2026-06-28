@@ -1,6 +1,6 @@
 ---
 title: "Brisket Beef Jerky — Can You Use Brisket for Jerky?"
-description: "Can you make beef jerky from brisket? Yes — but you must trim it aggressively. Full guide to which part of the brisket to use, how to trim it, and best recipes."
+description: "Can you make beef jerky from brisket? Yes — use the lean flat, trim fat aggressively. Guide to cuts, prep, and best brisket jerky recipes."
 primaryKeyword: "brisket beef jerky"
 imageAlt: "Sliced brisket flat trimmed lean for beef jerky next to finished dark mahogany brisket jerky strips"
 faq:
@@ -23,7 +23,7 @@ datePublished: "2024-06-01"
 dateModified: "2024-06-01"
 ---
 
-![Brisket flat beef cut trimmed lean beside finished dark mahogany brisket jerky strips](/images/brisket-jerky.jpg)
+![Brisket flat beef cut trimmed lean beside finished dark mahogany brisket jerky strips](/images/brisket-jerky.webp)
 
 Brisket jerky occupies a unique niche: it's not the best choice for most situations, but when you have a trimmed brisket flat and the time to prepare it properly, it produces a rich, deeply beefy jerky that leaner cuts can't replicate.
 
@@ -42,7 +42,7 @@ The flat runs from the thin end of the brisket to where it meets the point. It h
 
 ## Trimming Brisket for Jerky
 
-![Beef jerky slicing knife on dark cutting board showing thin uniform strips](/images/beef-jerky-slicing.jpg)
+![Beef jerky slicing knife on dark cutting board showing thin uniform strips](/images/beef-jerky-slicing.webp)
 
 1. Remove the fat cap until no more than **1/8 inch** remains. Use a sharp boning knife held nearly parallel to the meat surface.
 2. Remove any visible fat seams between muscle groups.
@@ -51,7 +51,7 @@ The flat runs from the thin end of the brisket to where it meets the point. It h
 
 ## Why Brisket Makes Exceptional Smoked Jerky
 
-![Pellet smoker open with beef jerky on grates showing wisps of hickory smoke](/images/smoked-beef-jerky-smoker.jpg)
+![Pellet smoker open with beef jerky on grates showing wisps of hickory smoke](/images/smoked-beef-jerky-smoker.webp)
 
 If you're smoking jerky anyway, brisket flat is worth the extra trimming work. The smoke penetrates the brisket's slightly looser grain structure efficiently, and the residual fat basts the strips during the early part of the smoke before drying concentrates the flavor. **Arizona Jacks Brisket Beef Jerky** and **Carnivore Candy Brisket Beef Jerky** are commercial versions built on this principle.
 

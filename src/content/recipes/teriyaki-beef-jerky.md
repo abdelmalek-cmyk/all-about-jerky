@@ -62,7 +62,7 @@ dateModified: "2024-06-01"
 
 Sarah Kendrick never understood why people made their own jerky until her neighbor showed up at a block party with homemade teriyaki beef jerky. Sarah took one piece to be polite. Then another. By the end of the night she had asked for the recipe twice, forgotten it, and looked it up herself at home. What surprised her wasn't the flavor — it was how different it tasted from the gas-station version she grew up eating. This teriyaki beef jerky was sticky, bright with ginger, and savory in a way that kept drawing her back. "It tastes like someone actually made it," she told her neighbor the next day. Sarah now keeps a batch in her fridge every weekend.
 
-![Teriyaki beef jerky marinade overhead — soy sauce, honey drizzle, grated ginger, and sesame seeds on marble](/images/teriyaki-beef-jerky-marinade.jpg)
+![Teriyaki beef jerky marinade overhead — soy sauce, honey drizzle, grated ginger, and sesame seeds on marble](/images/teriyaki-beef-jerky-marinade.webp)
 
 ---
 
@@ -101,7 +101,7 @@ The mirin is the ingredient most people skip, and it's the one that makes the bi
 | Brown sugar | Coconut sugar | Lower glycemic, similar caramel note |
 | Sesame oil | Toasted sesame oil (same) | Use sparingly, very potent |
 
-![Beef strips marinating in glossy teriyaki sauce in a glass container](/images/teriyaki-beef-jerky-marinating.jpg)
+![Beef strips marinating in glossy teriyaki sauce in a glass container](/images/teriyaki-beef-jerky-marinating.webp)
 
 ---
 
@@ -121,7 +121,7 @@ For full timing guidance across all four methods, see the [beef jerky time and t
 
 The teriyaki marinade creates a gorgeous lacquered finish during drying — the sugars caramelize and darken into a deep mahogany glaze on each strip. This is normal and desirable. If the surface looks burnt before 4 hours, your temperature may be running high — check with an oven thermometer.
 
-![Finished teriyaki beef jerky with deep mahogany lacquered glaze and sesame seeds on the surface](/images/teriyaki-beef-jerky-finished.jpg)
+![Finished teriyaki beef jerky with deep mahogany lacquered glaze and sesame seeds on the surface](/images/teriyaki-beef-jerky-finished.webp)
 
 ---
 
@@ -151,7 +151,7 @@ Teriyaki beef jerky is slightly stickier than plain or spicy varieties, which me
 
 For full shelf life numbers by storage method and whether you used curing salt, see the [beef jerky storage guide](/guides/how-long-does-beef-jerky-last/).
 
-![Teriyaki beef jerky in a small wooden bowl with sesame seeds and chopsticks alongside](/images/teriyaki-beef-jerky-bowl.jpg)
+![Teriyaki beef jerky in a small wooden bowl with sesame seeds and chopsticks alongside](/images/teriyaki-beef-jerky-bowl.webp)
 
 ---
 
@@ -168,23 +168,23 @@ MIDJOURNEY IMAGE PROMPTS
 
 1. HERO
 "Close-up of glossy teriyaki beef jerky strips stacked on dark slate board, sesame seeds visible, small dish of teriyaki sauce alongside, fresh ginger root in background, warm golden side lighting, food photography, 85mm lens, shallow depth of field --ar 16:9 --style raw --v 6.1"
-Filename: teriyaki-beef-jerky-hero.jpg | Alt: "Glossy homemade teriyaki beef jerky with sesame seeds on dark slate"
+Filename: teriyaki-beef-jerky-hero.webp | Alt: "Glossy homemade teriyaki beef jerky with sesame seeds on dark slate"
 
 2. MARINADE
 "Overhead shot of teriyaki beef jerky marinade in small glass bowl, grated fresh ginger and minced garlic visible, honey drizzle mid-pour, soy sauce bottle alongside, clean white marble, natural light --ar 1:1 --style raw --v 6.1"
-Filename: teriyaki-beef-jerky-marinade.jpg | Alt: "Teriyaki beef jerky marinade with soy sauce, honey, and fresh ginger"
+Filename: teriyaki-beef-jerky-marinade.webp | Alt: "Teriyaki beef jerky marinade with soy sauce, honey, and fresh ginger"
 
 3. LACQUERED FINISH
 "Close-up of teriyaki beef jerky after drying, deep mahogany glaze surface, sesame seeds pressed in, beautiful caramelized sheen, macro food photography, dark moody background --ar 4:5 --style raw --v 6.1"
-Filename: teriyaki-beef-jerky-finished.jpg | Alt: "Finished teriyaki beef jerky with lacquered caramelized surface"
+Filename: teriyaki-beef-jerky-finished.webp | Alt: "Finished teriyaki beef jerky with lacquered caramelized surface"
 
 4. MARINATING PROCESS
 "Raw beef strips submerged in teriyaki marinade in glass container, dark liquid with visible garlic pieces, refrigerator background, process-style food photography --ar 3:2 --style raw --v 6.1"
-Filename: teriyaki-beef-jerky-marinating.jpg | Alt: "Beef strips marinating in teriyaki sauce for 12–24 hours"
+Filename: teriyaki-beef-jerky-marinating.webp | Alt: "Beef strips marinating in teriyaki sauce for 12–24 hours"
 
 5. SERVING
 "Small wooden bowl filled with teriyaki beef jerky strips, chopsticks resting alongside, Japanese ceramic tea cup in background, soft natural light, minimal Asian-inspired food styling --ar 4:5 --style raw --v 6.1"
-Filename: teriyaki-beef-jerky-bowl.jpg | Alt: "Teriyaki beef jerky in wooden bowl with chopsticks"
+Filename: teriyaki-beef-jerky-bowl.webp | Alt: "Teriyaki beef jerky in wooden bowl with chopsticks"
 
 RANK MATH SEO
 SEO Title: Irresistible Teriyaki Beef Jerky | allaboutjerky.com

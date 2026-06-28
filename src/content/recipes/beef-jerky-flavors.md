@@ -80,7 +80,7 @@ Simmering 12 oz of Dr Pepper down to 1/2 cup removes the water and carbonation w
 
 Once reduced, the syrup should coat the back of a spoon. Let it cool completely before adding the other marinade ingredients — hot syrup will start cooking the meat surface and change the texture.
 
-![Dr Pepper being reduced to thick syrup in a saucepan for beef jerky marinade](/images/dr-pepper-beef-jerky-reduction.jpg)
+![Dr Pepper being reduced to thick syrup in a saucepan for beef jerky marinade](/images/dr-pepper-beef-jerky-reduction.webp)
 
 ---
 
@@ -111,7 +111,7 @@ Korean-style jerky centers on gochujang — a fermented chili and soybean paste 
 
 **Flavor profile:** Savory · Fermented heat · Nutty · Slightly sweet
 
-![Korean BBQ beef jerky with dark gochujang glaze and toasted sesame seeds on dark slate](/images/korean-bbq-beef-jerky.jpg)
+![Korean BBQ beef jerky with dark gochujang glaze and toasted sesame seeds on dark slate](/images/korean-bbq-beef-jerky.webp)
 
 ---
 
@@ -133,7 +133,7 @@ Thai-style beef jerky uses fish sauce as the salt base instead of soy sauce. Fis
 
 **Flavor profile:** Sweet · Tangy · Citrus · Light heat
 
-![Thai sweet chili beef jerky on banana leaf with lime wedges and lemongrass](/images/thai-beef-jerky.jpg)
+![Thai sweet chili beef jerky on banana leaf with lime wedges and lemongrass](/images/thai-beef-jerky.webp)
 
 ---
 
@@ -152,7 +152,7 @@ Bourbon brings oak, vanilla, and caramel — flavors that intensify during dehyd
 
 **Flavor profile:** Oak · Vanilla · Smoky · Savory
 
-![Bourbon beef jerky fanned out on barrel wood surface with a glass of amber whiskey alongside](/images/bourbon-beef-jerky.jpg)
+![Bourbon beef jerky fanned out on barrel wood surface with a glass of amber whiskey alongside](/images/bourbon-beef-jerky.webp)
 
 ---
 
@@ -231,23 +231,23 @@ MIDJOURNEY IMAGE PROMPTS
 
 1. HERO ASSORTMENT
 "Flat-lay overhead of six different beef jerky flavors on a large wooden board: labeled small piles of Dr Pepper, Korean BBQ, Thai, Bourbon, Garlic BBQ, and Chipotle Lime jerky, garnished with their key ingredients, warm studio lighting, food photography --ar 16:9 --style raw --v 6.1"
-Filename: beef-jerky-flavors-hero.jpg | Alt: "Six homemade beef jerky flavor varieties on wooden board"
+Filename: beef-jerky-flavors-hero.webp | Alt: "Six homemade beef jerky flavor varieties on wooden board"
 
 2. DR PEPPER REDUCTION
 "Dr Pepper being reduced in a small saucepan on a gas stove, thick syrupy consistency, measuring cup alongside showing 1/2 cup mark, warm kitchen lighting, recipe process photography --ar 3:2 --style raw --v 6.1"
-Filename: dr-pepper-beef-jerky-reduction.jpg | Alt: "Dr Pepper being reduced to syrup for beef jerky marinade"
+Filename: dr-pepper-beef-jerky-reduction.webp | Alt: "Dr Pepper being reduced to syrup for beef jerky marinade"
 
 3. KOREAN BBQ JERKY
 "Close-up of Korean BBQ beef jerky strips with sesame seeds pressed into the surface, dark glossy gochujang glaze, small container of gochujang paste alongside, dark slate background --ar 4:5 --style raw --v 6.1"
-Filename: korean-bbq-beef-jerky.jpg | Alt: "Korean BBQ beef jerky with gochujang and sesame seeds"
+Filename: korean-bbq-beef-jerky.webp | Alt: "Korean BBQ beef jerky with gochujang and sesame seeds"
 
 4. BOURBON JERKY LIFESTYLE
 "Bourbon beef jerky strips fanned out on a barrel wood surface, a glass of bourbon alongside, warm amber bar lighting, masculine food lifestyle photography --ar 16:9 --style raw --v 6.1"
-Filename: bourbon-beef-jerky.jpg | Alt: "Homemade bourbon beef jerky with a glass of whiskey"
+Filename: bourbon-beef-jerky.webp | Alt: "Homemade bourbon beef jerky with a glass of whiskey"
 
 5. THAI JERKY
 "Thai sweet chili beef jerky strips on banana leaf, lime wedges scattered, small dish of sweet chili sauce, fresh lemongrass stalk alongside, bright natural Southeast Asian food styling --ar 4:5 --style raw --v 6.1"
-Filename: thai-beef-jerky.jpg | Alt: "Thai sweet chili beef jerky with lime and lemongrass"
+Filename: thai-beef-jerky.webp | Alt: "Thai sweet chili beef jerky with lime and lemongrass"
 
 RANK MATH SEO
 SEO Title: Remarkable Dr Pepper Beef Jerky | allaboutjerky.com

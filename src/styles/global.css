@@ -652,6 +652,18 @@ tr:last-child td { border-bottom: none; }
 .data-table tr:nth-child(even) td { background: var(--clr-highlight); }
 .data-table tr:last-child td { border-bottom: none; }
 
+/* Wide tables scroll inside themselves on narrow screens so the page body
+   never scrolls horizontally (mobile usability + CLS). */
+@media (max-width: 700px) {
+  table,
+  .data-table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* ===== TIPS BLOCK ===== */
 .tips-block {
   background: #f0fdf4;

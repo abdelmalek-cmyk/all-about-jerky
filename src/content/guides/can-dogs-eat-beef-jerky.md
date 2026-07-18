@@ -17,7 +17,7 @@ relatedPages:
   - "/recipes/teriyaki-beef-jerky/"
   - "/how-to-make-beef-jerky/"
 datePublished: "2024-02-15"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 # Can Dogs Eat Beef Jerky?
@@ -40,6 +40,8 @@ Plain, unseasoned beef jerky made specifically for dogs is safe in small quantit
 | Xylitol (some brands) | Extremely toxic; causes hypoglycemia and liver failure |
 | Chili / capsaicin | GI upset, vomiting, diarrhea |
 | Sugar | Not toxic but promotes obesity and dental problems |
+
+The garlic and onion risk is the most serious. Both are members of the allium family, which the [ASPCA lists as toxic to dogs](https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets) — they damage red blood cells and can cause hemolytic anemia. The [American Kennel Club](https://www.akc.org/expert-advice/nutrition/can-dogs-eat-garlic/) notes that garlic is roughly five times more concentrated than onion, so even the small amount of garlic powder in a jerky marinade is a genuine hazard.
 
 Even jerky that doesn't seem that salty to humans can cause salt poisoning in a small dog. A single strip of teriyaki beef jerky can contain 200-300 mg of sodium -- a dangerous dose for a 10-lb dog.
 

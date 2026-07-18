@@ -21,7 +21,7 @@ relatedPages:
   - "/air-fryer-beef-jerky/"
   - "/guides/when-is-beef-jerky-done/"
 datePublished: "2024-02-01"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 # Beef Jerky Time & Temperature Guide
@@ -46,7 +46,7 @@ Making safe, properly dried beef jerky requires hitting the right internal tempe
 
 ## USDA Safety Requirements
 
-The USDA's recommendation for jerky safety is to reach an **internal temperature of 160°F** throughout the meat to destroy *Salmonella* and *E. coli*. There are two ways to achieve this:
+According to [USDA Food Safety and Inspection Service (FSIS)](https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/jerky-and-food-safety), the recommendation for jerky safety is to reach an **internal temperature of 160°F** (71°C) throughout the meat to destroy *Salmonella* and *E. coli* before the drying process begins. There are two ways to achieve this:
 
 1. **Marinate and dry normally**, then finish in a 275°F oven for 10 minutes to ensure the internal temp is reached
 2. **Pre-heat the meat to 160°F** before dehydrating: simmer marinated strips in marinade for 5 minutes before placing in dehydrator

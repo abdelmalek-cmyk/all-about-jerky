@@ -24,4 +24,5 @@ Allow: /
 User-agent: Bytespider
 Disallow: /
 
+Sitemap: https://allaboutjerky.com/sitemap.xml
 Sitemap: https://allaboutjerky.com/sitemap-index.xml

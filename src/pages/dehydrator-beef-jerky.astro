@@ -1,7 +1,42 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/dehydrator-beef-jerky/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Dehydrator Beef Jerky',
+  description: 'Classic beef jerky made in a food dehydrator: lean beef marinated in a soy-Worcestershire base, dried at 160°F for 4–6 hours until it passes the bend test.',
+  image: '/images/dehydrator-beef-jerky-machine.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H15M',
+  recipeYield: 'About 1 lb (from 2 lbs raw beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'dehydrator beef jerky, beef jerky recipe dehydrator, how to make beef jerky in a dehydrator',
+  ingredients: [
+    '2 lbs lean beef (eye of round or top round), trimmed and sliced 1/4 inch thick',
+    '1/3 cup soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1/2 teaspoon black pepper',
+    '1/2 teaspoon smoked paprika',
+  ],
+  instructions: [
+    'Trim all visible fat from the beef and freeze 1–2 hours until firm for easier slicing.',
+    'Slice to an even 1/4-inch thickness — against the grain for chewy jerky, with the grain for tender.',
+    'Combine soy sauce, Worcestershire, garlic powder, onion powder, black pepper, and smoked paprika. Add the beef, seal in a zip-lock bag, and refrigerate 8–24 hours.',
+    'Remove strips from the marinade and pat completely dry with paper towels.',
+    'Arrange strips in a single layer on dehydrator trays with space between each — do not overlap.',
+    'Dehydrate at 160°F. Start timing once the unit reaches temperature.',
+    'Check at 4 hours and rotate trays if strips are drying unevenly.',
+    'Bend test: cool a strip 2–3 minutes, bend at 90° — done jerky cracks and bends without snapping, with no moist spots.',
+    'Cool on a wire rack at least 1 hour before sealing in an airtight container.',
+  ],
+};
 
 const faqs = [
   { question: 'How long to dehydrate beef jerky?', answer: 'Dehydrate beef jerky at 160°F for 4–6 hours for 1/4-inch slices. Thicker 3/8-inch slices take 6–8 hours. Start checking at 4 hours using the bend test: jerky is done when it cracks and bends without snapping and shows no moisture.' },
@@ -27,15 +62,17 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>How to Make Beef Jerky in a Dehydrator</h1>
 
   <div class="answer-box">
     <p>A food dehydrator is the best tool for making beef jerky at home. Set the temperature to <strong>160°F</strong>, dehydrate for <strong>4–6 hours</strong>, and use the bend test to check doneness. Unlike an oven, a dehydrator circulates dry air evenly around every strip — no rotation needed and no moisture buildup.</p>
   </div>
 
-  <img src="/images/dehydrator-beef-jerky-machine.webp" alt="Stainless steel food dehydrator with beef jerky strips visible on trays with slight steam" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/dehydrator-beef-jerky-machine.webp" width="1200" height="896" alt="Stainless steel food dehydrator with beef jerky strips visible on trays with slight steam" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>What You Need for Dehydrator Beef Jerky</h2>
   <ul>
@@ -46,7 +83,7 @@ const relatedLinks = [
     <li><strong>Paper towels</strong> to pat strips dry before dehydrating</li>
   </ul>
 
-  <img src="/images/dehydrator-beef-jerky-loading.webp" alt="Raw marinated beef strips being loaded onto dehydrator trays arranged with space between them" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/dehydrator-beef-jerky-loading.webp" width="1200" height="896" alt="Raw marinated beef strips being loaded onto dehydrator trays arranged with space between them" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>How to Make Beef Jerky in a Food Dehydrator — Step by Step</h2>
   <ol>
@@ -93,7 +130,7 @@ const relatedLinks = [
     </tbody>
   </table>
 
-  <img src="/images/beef-jerky-done.webp" alt="Finished dehydrated beef jerky strips in rich dark mahogany color on dark slate" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Finished dehydrated beef jerky strips in rich dark mahogany color on dark slate" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Dehydrated Beef Jerky Recipes</h2>
   <p>Every recipe on this site works in a food dehydrator. The most popular:</p>

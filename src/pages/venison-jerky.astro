@@ -1,7 +1,43 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/venison-jerky/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Venison Jerky',
+  description: 'Classic deer jerky: trimmed venison in a soy-Worcestershire marinade with brown sugar, dehydrated at 160°F for 4–6 hours. Includes wild-game safety steps.',
+  image: '/images/venison-jerky-rustic.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H15M',
+  recipeYield: 'About 1 lb (from 2 lbs raw venison)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'venison jerky, deer jerky recipe, venison jerky marinade, wild game jerky',
+  ingredients: [
+    '2 lbs venison roast (hindquarter, backstrap, or top round), all fat and sinew removed',
+    '1/3 cup soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 tablespoon brown sugar',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon black pepper',
+    '1/2 teaspoon smoked paprika',
+    '1/4 teaspoon Prague Powder No. 1 (strongly recommended)',
+  ],
+  instructions: [
+    'For wild venison, freeze at -4°F for 3 days before processing to kill Trichinella parasites.',
+    'Trim every trace of fat and sinew — deer fat carries a strong tallow flavor into the finished jerky.',
+    'Slice 1/4 inch thick against the grain.',
+    'Combine the marinade ingredients, add the venison, and marinate 12–24 hours refrigerated.',
+    'Pat strips completely dry and arrange in a single layer on dehydrator trays.',
+    'Dehydrate at 160°F for 4–6 hours until a cooled strip cracks and bends without snapping.',
+    'For maximum safety, finish in a 275°F oven for 10 minutes (USDA post-dehydration step).',
+    'Cool completely before storing — venison jerky keeps longer than beef thanks to its low fat.',
+  ],
+};
 
 const faqs = [
   { question: 'How do you make deer beef jerky?', answer: 'Venison jerky is made the same way as beef jerky: slice 1/4 inch thin against the grain, marinate 12–24 hours, then dehydrate at 160°F for 4–6 hours. Venison is leaner than beef — trim every visible piece of fat and sinew before marinating. The lack of fat means venison jerky has a longer shelf life than most beef jerky.' },
@@ -24,15 +60,17 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'Venison Jerky', href: '/venison-jerky/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>Venison & Wild Game Jerky</h1>
 
   <div class="answer-box">
     <p>Venison jerky is made exactly like beef jerky — slice 1/4 inch thin, marinate 12–24 hours, dehydrate at 160°F for 4–6 hours. Deer meat is leaner than beef, making it ideal for jerky with an even longer shelf life. Trim all fat and sinew carefully before marinating, as deer fat has a strong, tallow-like flavor that carries through to the finished jerky.</p>
   </div>
 
-  <img src="/images/venison-jerky-rustic.webp" alt="Dark brown venison jerky strips on rustic wooden board with herbs and wild game aesthetic" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/venison-jerky-rustic.webp" width="1200" height="896" alt="Dark brown venison jerky strips on rustic wooden board with herbs and wild game aesthetic" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>Classic Deer Beef Jerky Recipe</h2>
   <div class="recipe-section">
@@ -87,7 +125,7 @@ const relatedLinks = [
     <li>Dehydrate 6–8 hours at 160°F for the signature thin, crispy texture</li>
   </ul>
 
-  <img src="/images/beef-jerky-done.webp" alt="Finished venison jerky strips in deep mahogany brown laid out on dark slate after dehydrating" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Finished venison jerky strips in deep mahogany brown laid out on dark slate after dehydrating" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Food Safety for Wild Game Jerky</h2>
   <p>Wild venison can harbor parasites (Trichinella) and bacteria not present in commercially raised beef. For maximum safety with wild game jerky:</p>

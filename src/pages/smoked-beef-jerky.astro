@@ -1,7 +1,44 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/smoked-beef-jerky/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Smoked Beef Jerky',
+  description: 'Smoked beef jerky with real wood smoke: lean beef in a peppery soy marinade, smoked at 160–175°F for 4–6 hours on a pellet, electric, or charcoal smoker.',
+  image: '/images/smoked-beef-jerky-smoker.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H15M',
+  recipeYield: 'About 1 lb (from 2 lbs raw beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'smoked beef jerky, smoked beef jerky recipe, traeger beef jerky, beef jerky smoker recipe',
+  ingredients: [
+    '2 lbs eye of round or top round, sliced 1/4-inch thick',
+    '1/3 cup soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 tablespoon liquid smoke (skip if using a real smoker)',
+    '2 teaspoons black pepper, coarsely ground',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon smoked paprika',
+    '1/2 teaspoon cayenne (optional)',
+    '1 tablespoon brown sugar',
+    '1/4 teaspoon Prague Powder No. 1',
+  ],
+  instructions: [
+    'Slice the beef 1/4 inch thick, marinate 12–24 hours refrigerated, then pat completely dry with paper towels.',
+    'Preheat the smoker to 160–175°F and add your chosen wood — apple, cherry, or hickory.',
+    'Lay strips on grates or jerky racks with space around each piece so smoke and air circulate.',
+    'Smoke at 160–175°F, adding wood or pellets as needed for consistent smoke.',
+    'Check at 3 hours and rotate strips from hotter spots to cooler edges.',
+    'Test doneness at 4–5 hours with the bend test: done jerky cracks and bends without snapping, with no glossy surface moisture.',
+    'Cool on a wire rack for 1 hour before storing.',
+  ],
+};
 
 const faqs = [
   { question: 'How long to smoke beef jerky?', answer: 'Smoke beef jerky at 160–180°F for 4–6 hours for 1/4-inch slices. Start checking at 4 hours using the bend test. In a Traeger or pellet smoker at 165°F, plan for 4–5 hours. In a traditional charcoal smoker, plan 5–7 hours due to less consistent temperature control.' },
@@ -26,15 +63,17 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'Smoked Beef Jerky', href: '/smoked-beef-jerky/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>Smoked Beef Jerky</h1>
 
   <div class="answer-box">
     <p>Smoked beef jerky delivers a depth of flavor that no dehydrator or oven can replicate. Smoke at <strong>160–180°F</strong> for <strong>4–6 hours</strong> using apple, cherry, or hickory wood. A pellet smoker (like a Traeger) makes the process nearly foolproof — set the temperature and walk away.</p>
   </div>
 
-  <img src="/images/smoked-beef-jerky-smoker.webp" alt="Pellet smoker lid open showing beef jerky strips on grates with wisps of smoke" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/smoked-beef-jerky-smoker.webp" width="1200" height="896" alt="Pellet smoker lid open showing beef jerky strips on grates with wisps of smoke" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>Smoked Beef Jerky Marinade</h2>
   <div class="recipe-section">
@@ -65,7 +104,7 @@ const relatedLinks = [
     <li><strong>Cool on a wire rack</strong> for 1 hour before storing.</li>
   </ol>
 
-  <img src="/images/beef-jerky-marinade-bag.webp" alt="Beef jerky strips marinating in soy sauce and spice mixture in zip-lock bag" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-marinade-bag.webp" width="1200" height="896" alt="Beef jerky strips marinating in soy sauce and spice mixture in zip-lock bag" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Best Wood for Smoking Beef Jerky</h2>
   <table class="data-table">
@@ -82,7 +121,7 @@ const relatedLinks = [
     </tbody>
   </table>
 
-  <img src="/images/beef-jerky-done.webp" alt="Finished smoked beef jerky strips in dark mahogany color with smoky crust on slate" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Finished smoked beef jerky strips in dark mahogany color with smoky crust on slate" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Tillamook Country Smoker Beef Jerky Copycat</h2>
   <p>Tillamook Country Smoker is one of the most popular commercial smoked beef jerky brands. To replicate their signature "Old Fashioned" flavor at home: use a heavier hand of black pepper (1.5 tsp), skip sweeteners entirely, smoke with hickory for 5 hours at 165°F, and add 1/2 teaspoon of liquid smoke to the marinade for extra depth. The result is a dry, peppery, intensely smoky jerky.</p>

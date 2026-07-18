@@ -1,7 +1,41 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/how-to-make-beef-jerky/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Homemade Beef Jerky',
+  description: 'The complete beginner method for homemade beef jerky: slice lean beef thin, marinate in the classic soy base 8–24 hours, and dry at 160°F until it passes the bend test.',
+  image: '/images/beef-jerky-done.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H15M',
+  recipeYield: 'About 1 lb (from 2 lbs raw beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'how to make beef jerky, homemade beef jerky, beef jerky recipe',
+  ingredients: [
+    '2 lbs lean beef (eye of round or top round)',
+    '1/3 cup soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon black pepper',
+    '1/2 teaspoon smoked paprika',
+    'Optional: 1/4 tsp Prague Powder No. 1 for longer shelf life',
+  ],
+  instructions: [
+    'Choose a lean single-muscle roast (eye of round or top round) and trim every visible strip of fat.',
+    'Freeze the roast 1–2 hours until firm, then slice 1/4 inch thick — against the grain for chewy jerky, with the grain for tender.',
+    'Combine the marinade ingredients in a zip-lock bag, add the beef strips, remove excess air, seal, and refrigerate 8–24 hours.',
+    'Remove the strips and pat completely dry with paper towels.',
+    'Dry the beef: dehydrator at 160°F for 4–6 hours, oven at 175°F for 3–5 hours with the door propped 1 inch, smoker at 160–175°F for 4–6 hours, or air fryer at 160°F for 2–4 hours.',
+    'Bend test: cool a strip 2–3 minutes and bend at 90° — done jerky cracks and bends without snapping and shows no moist areas.',
+    'Cool on a wire rack at least 1 hour, then store airtight: 1–2 weeks at room temperature, 1 month refrigerated, 6 months frozen.',
+  ],
+};
 
 const faqs = [
   { question: 'How do you make tender beef jerky?', answer: 'To make tender beef jerky: (1) slice with the grain instead of against it — this keeps muscle fibers long and produces a softer chew; (2) cut slightly thicker (3/8 inch instead of 1/4 inch); (3) add a tenderizing ingredient like pineapple juice or kiwi puree to the marinade; (4) remove from the dehydrator slightly earlier — just past the bend-without-snapping stage.' },
@@ -25,8 +59,10 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>How to Make Beef Jerky</h1>
 
   <div class="answer-box">
@@ -37,7 +73,7 @@ const relatedLinks = [
   <p>The best beef for jerky is <strong>eye of round</strong> or <strong>top round</strong> — lean, affordable, and easy to slice. Buy a single muscle roast, not pre-cut steaks. Trim every visible strip of fat before slicing — fat goes rancid and shortens shelf life dramatically.</p>
   <p>See our complete <a href="/best-meat-for-beef-jerky/">guide to the best meat for beef jerky</a> for a full cut comparison.</p>
 
-  <img src="/images/beef-jerky-slicing.webp" alt="Lean beef being sliced paper-thin against the grain on a dark cutting board for jerky making" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-slicing.webp" width="1200" height="896" alt="Lean beef being sliced paper-thin against the grain on a dark cutting board for jerky making" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>Step 2: Slice the Beef</h2>
   <p>Freeze the roast for 1–2 hours until firm but not solid. This makes hand-slicing much easier. Slice <strong>1/4 inch thick</strong>:</p>
@@ -76,7 +112,7 @@ const relatedLinks = [
     </tbody>
   </table>
 
-  <img src="/images/beef-jerky-done.webp" alt="Finished homemade beef jerky strips in rich dark mahogany color ready to eat" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Finished homemade beef jerky strips in rich dark mahogany color ready to eat" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Step 5: Test for Doneness</h2>
   <p>The <strong>bend test</strong> is the most reliable doneness check. Remove a strip from the heat, cool 2–3 minutes, then bend it sharply at 90°:</p>

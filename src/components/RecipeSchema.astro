@@ -1,4 +1,6 @@
 ﻿---
+import { getImageDims } from '../lib/image-dims.mjs';
+
 interface Props {
   name: string;
   description: string;
@@ -11,6 +13,7 @@ interface Props {
   instructions: string[];
   category: string;
   cuisine: string;
+  keywords?: string;
   datePublished: string;
   dateModified?: string;
   url?: string;
@@ -19,6 +22,7 @@ interface Props {
 const p = Astro.props;
 const base = 'https://allaboutjerky.com';
 const pageUrl = p.url ?? base;
+const imgDims = getImageDims(p.image) ?? { width: 1200, height: 800 };
 
 const schema: Record<string, unknown> = {
   '@context': 'https://schema.org',
@@ -29,12 +33,15 @@ const schema: Record<string, unknown> = {
   url: pageUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
   inLanguage: 'en-US',
-  image: {
-    '@type': 'ImageObject',
-    url: `${base}${p.image}`,
-    width: 1200,
-    height: 800,
-  },
+  image: [
+    {
+      '@type': 'ImageObject',
+      url: `${base}${p.image}`,
+      width: imgDims.width,
+      height: imgDims.height,
+    },
+  ],
+  ...(p.keywords && { keywords: p.keywords }),
   author: {
     '@type': 'Person',
     '@id': `${base}/about/#cole-mercer`,

@@ -1,7 +1,41 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/air-fryer-beef-jerky/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Air Fryer Beef Jerky',
+  description: 'The fastest homemade jerky: lean beef marinated overnight, then dried in an air fryer at 160°F for 2–4 hours with a flip every 45–60 minutes.',
+  image: '/images/air-fryer-beef-jerky-basket.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT3H',
+  totalTime: 'PT3H15M',
+  recipeYield: 'About 4–6 oz (from 12 oz raw beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'air fryer beef jerky, beef jerky in air fryer, air fryer jerky recipe',
+  ingredients: [
+    '12 oz lean beef (eye of round), sliced 1/4 inch thin',
+    '2 tablespoons soy sauce',
+    '1 tablespoon Worcestershire sauce',
+    '1/2 teaspoon garlic powder',
+    '1/2 teaspoon onion powder',
+    '1/2 teaspoon black pepper',
+    '1/4 teaspoon smoked paprika',
+  ],
+  instructions: [
+    'Freeze the beef 1–2 hours, then slice 1/4 inch or thinner against the grain.',
+    'Combine the marinade ingredients, add the beef strips, seal, and refrigerate 8–24 hours.',
+    'Pat every surface of the strips completely dry — wet strips can splatter in the air fryer.',
+    'Arrange strips in a single layer in the basket or on dehydrator trays. Do not stack; work in batches if needed.',
+    'Set the air fryer to 160°F (dehydrate mode if available) or its lowest temperature.',
+    'Flip the strips every 45–60 minutes with tongs so both sides dry evenly.',
+    'Check at 2 hours with the bend test — thin strips finish at 1.5–2 hours, thicker strips need 3–4 hours.',
+    'Cool on a wire rack 30–60 minutes before storing.',
+  ],
+};
 
 const faqs = [
   { question: 'How do you make beef jerky in an air fryer?', answer: 'To make beef jerky in an air fryer: (1) Slice lean beef 1/4 inch thin. (2) Marinate 8–24 hours. (3) Pat strips completely dry. (4) Lay strips in a single layer in the air fryer basket — do not stack. (5) Set to 160°F (dehydrator mode if available) or the lowest temperature. (6) Cook 2–4 hours, flipping every 45–60 minutes. (7) Check with the bend test.' },
@@ -26,15 +60,17 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'Air Fryer Beef Jerky', href: '/air-fryer-beef-jerky/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>Air Fryer Beef Jerky</h1>
 
   <div class="answer-box">
     <p>An air fryer makes beef jerky in <strong>2–4 hours</strong> at <strong>160°F</strong> — the fastest home jerky method available. The high-velocity air circulation dehydrates strips faster than a standard dehydrator. The trade-off is batch size: most air fryers fit only 4–6 oz of meat per batch in a single layer.</p>
   </div>
 
-  <img src="/images/air-fryer-beef-jerky-basket.webp" alt="Air fryer basket open with beef jerky strips arranged inside, digital display visible" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/air-fryer-beef-jerky-basket.webp" width="1200" height="896" alt="Air fryer basket open with beef jerky strips arranged inside, digital display visible" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>Air Fryer Beef Jerky Recipe</h2>
   <div class="recipe-section">
@@ -76,7 +112,7 @@ const relatedLinks = [
     </tbody>
   </table>
 
-  <img src="/images/beef-jerky-done.webp" alt="Finished air fryer beef jerky strips with perfect chewy texture on dark slate board" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Finished air fryer beef jerky strips with perfect chewy texture on dark slate board" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Best Air Fryers for Beef Jerky</h2>
   <table class="data-table">

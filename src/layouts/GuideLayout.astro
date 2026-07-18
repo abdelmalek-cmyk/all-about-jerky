@@ -29,6 +29,14 @@ const {
   dateModified,
 } = Astro.props;
 
+// ISO date in schema, readable date on screen
+function humanDate(iso: string): string {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) return iso;
+  return new Date(`${iso}T00:00:00Z`).toLocaleDateString('en-US', {
+    year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC',
+  });
+}
+
 const articleSchema = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -71,7 +79,7 @@ const articleSchema = {
   <article class="page-content">
     <div class="container">
       <Breadcrumbs crumbs={breadcrumbs} />
-      {dateModified && <p class="text-muted">Updated: {dateModified}</p>}
+      {dateModified && <p class="text-muted">Updated: {humanDate(dateModified)}</p>}
       <slot />
       {faqs.length > 0 && (
         <>

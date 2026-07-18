@@ -1,5 +1,19 @@
 ﻿---
 import Seo from '../components/Seo.astro';
+
+// Self-hosted fonts (was render-blocking Google Fonts CSS + 2 third-party origins).
+// Only the weights actually used in global.css — italics limited to the 400s that render.
+import '@fontsource/lato/300.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/400-italic.css';
+import '@fontsource/lato/700.css';
+import '@fontsource/lato/900.css';
+import '@fontsource/playfair-display/400.css';
+import '@fontsource/playfair-display/400-italic.css';
+import '@fontsource/playfair-display/600.css';
+import '@fontsource/playfair-display/700.css';
+import '@fontsource/playfair-display/800.css';
+import '@fontsource/anton/400.css';
 import '../styles/global.css';
 
 interface Props {
@@ -70,10 +84,6 @@ const siteSchema = JSON.stringify({
 
     <!-- WebSite + Organization + Person schema (site-wide AEO signals) -->
     <script type="application/ld+json" set:html={siteSchema} />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet" />
   </head>
   <body>
 

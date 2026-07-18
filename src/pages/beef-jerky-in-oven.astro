@@ -1,7 +1,41 @@
 ﻿---
 import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
 
 const canonical = 'https://allaboutjerky.com/beef-jerky-in-oven/';
+
+// Recipe rich-result eligibility — mirrors the on-page recipe exactly
+const recipe = {
+  name: 'Oven Beef Jerky',
+  description: 'Beef jerky made in a standard home oven — no dehydrator needed. Marinated lean beef dried on wire racks at 175°F with the door propped open, 3–5 hours.',
+  image: '/images/beef-jerky-in-oven-rack.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT4H',
+  totalTime: 'PT4H15M',
+  recipeYield: 'About 1 lb (from 2 lbs raw beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'oven beef jerky, beef jerky in oven, how to make beef jerky in the oven',
+  ingredients: [
+    '2 lbs lean beef (eye of round, top round, or flank steak)',
+    '1/3 cup soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon black pepper',
+  ],
+  instructions: [
+    'Freeze the beef 1–2 hours until firm, slice 1/4 inch thick against the grain, and trim all visible fat.',
+    'Combine soy sauce, Worcestershire, garlic powder, onion powder, and black pepper. Marinate the beef 8–24 hours refrigerated in a sealed zip-lock bag.',
+    'Preheat the oven to 175°F.',
+    'Pat the strips completely dry with paper towels — surface moisture steams the jerky instead of drying it.',
+    'Arrange strips in a single layer on wire racks set over foil-lined baking sheets.',
+    'Load the oven and prop the door open 1/2 to 1 inch with a wooden spoon so moisture can escape.',
+    'Dry 3–5 hours, checking at 3 hours and rotating the baking sheets halfway through.',
+    'Bend test: cool a strip 2–3 minutes and bend at 90° — done jerky cracks and holds without feeling soft or rubbery.',
+    'Cool completely on a wire rack before storing.',
+  ],
+};
 
 const faqs = [
   { question: 'Can you make beef jerky in the oven?', answer: 'Yes — an oven is a perfectly effective way to make beef jerky. Set the oven to 175°F, prop the door open about 1 inch with a wooden spoon to allow moisture to escape, and dry beef strips on wire racks over baking sheets for 3–5 hours. The result is comparable to a dehydrator, though ovens are slightly less energy-efficient.' },
@@ -26,15 +60,17 @@ const relatedLinks = [
   breadcrumbs={[{ label: 'Oven Beef Jerky', href: '/beef-jerky-in-oven/' }]}
   {faqs}
   {relatedLinks}
-  dateModified="June 2024"
+  datePublished="2024-06-01"
+  dateModified="2026-07-18"
 >
+  <RecipeSchema {...recipe} datePublished="2024-06-01" dateModified="2026-07-18" url={canonical} />
   <h1>How to Make Beef Jerky in the Oven</h1>
 
   <div class="answer-box">
     <p>You can make excellent beef jerky in a standard home oven without any special equipment. Set the oven to <strong>175°F</strong>, prop the door open <strong>1 inch</strong> with a wooden spoon (this vents moisture), and dry beef strips on wire racks for <strong>3–5 hours</strong>. The propped door is essential — a closed oven traps steam and produces soft, under-dried jerky.</p>
   </div>
 
-  <img src="/images/beef-jerky-in-oven-rack.webp" alt="Open kitchen oven with beef jerky strips on wire rack over foil-lined baking sheet" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-in-oven-rack.webp" width="1200" height="896" alt="Open kitchen oven with beef jerky strips on wire rack over foil-lined baking sheet" style="width:100%;border-radius:8px;margin:1.5rem 0;"  loading="eager" fetchpriority="high"/>
 
   <h2>What You Need to Make Oven Beef Jerky</h2>
   <ul>
@@ -75,7 +111,7 @@ const relatedLinks = [
   <h2>Convection Oven Beef Jerky</h2>
   <p>A convection oven is significantly better than a conventional oven for jerky. The fan circulates air around the strips continuously, similar to a dehydrator. For convection oven jerky: reduce the temperature to <strong>165°F</strong> (convection runs hotter than indicated) and keep the door <strong>closed</strong> — the fan provides enough airflow without the door trick.</p>
 
-  <img src="/images/beef-jerky-done.webp" alt="Oven-dried beef jerky strips in deep rich color cooling on wire rack after baking" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy" />
+  <img src="/images/beef-jerky-done.webp" width="1200" height="896" alt="Oven-dried beef jerky strips in deep rich color cooling on wire rack after baking" style="width:100%;border-radius:8px;margin:1.5rem 0;" loading="lazy"  decoding="async"/>
 
   <h2>Ground Beef Jerky in the Oven</h2>
   <p>Ground beef jerky (made with a jerky gun) works in the oven using the same method. Pipe strips onto wire racks and bake at 175°F for 4–6 hours. Ground beef jerky is slightly more forgiving in the oven because the uniform thickness dries more predictably than hand-sliced strips.</p>

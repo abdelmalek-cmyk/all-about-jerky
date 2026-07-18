@@ -55,7 +55,7 @@ relatedRecipes:
   - "teriyaki-beef-jerky"
   - "sweet-beef-jerky"
 datePublished: "2024-01-15"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 ## Emma's Story: When One Heat Source Isn't Enough
@@ -123,6 +123,12 @@ Check doneness with the **bend test**: pull a strip, cool 2–3 minutes, then be
 ![Spicy beef jerky bend test — strip cracks cleanly at 90 degrees when done](/images/spicy-beef-jerky-bend-test.webp)
 
 ---
+
+## Jalapeño Beef Jerky
+
+Jalapeño is the front-of-mouth heat in this recipe, and it's easy to build a dedicated jalapeño beef jerky around it. Use two fresh jalapeños thinly sliced (seeds left in for more heat), drop the sriracha and cayenne to let the pepper's bright, grassy flavor lead, and keep the honey — jalapeño and honey are the classic pairing.
+
+For **honey jalapeño beef jerky**, raise the honey to 3 tablespoons and add 1 tablespoon of brown sugar. The extra sweetness rounds off the jalapeño burn and produces a lightly sticky, sweet-heat strip that's one of the most popular flavors in commercial jerky. Press a fresh jalapeño round onto each strip before drying for a visible signal of what's inside. For a hotter jalapeño jerky, swap in serrano (about twice the heat) or leave the jalapeño seeds and membranes fully intact.
 
 ## Variations
 

@@ -55,7 +55,7 @@ relatedRecipes:
   - "spicy-beef-jerky"
   - "sweet-beef-jerky"
 datePublished: "2024-01-20"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 ## Sarah's Story: The Batch That Converted a Skeptic
@@ -83,6 +83,21 @@ Store-bought teriyaki beef jerky relies on artificial flavors and a ton of added
 The mirin is the ingredient most people skip, and it's the one that makes the biggest difference. Mirin is a Japanese sweet rice wine — lower in alcohol than sake, higher in residual sugar. It contributes a sweetness that integrates into the soy base rather than sitting on top of it, which is why teriyaki beef jerky made with mirin tastes more complete than versions that use only brown sugar.
 
 ---
+
+## Teriyaki Beef Jerky Marinade Recipe
+
+The teriyaki marinade below makes enough for 2 lbs of sliced beef. It also works as a standalone teriyaki marinade for ground-beef jerky or for a smoked batch — just scale it to your meat weight.
+
+- 1/3 cup low-sodium soy sauce
+- 3 tablespoons honey
+- 2 tablespoons mirin (Japanese sweet rice wine)
+- 1 tablespoon brown sugar
+- 1 tablespoon fresh ginger, grated
+- 2 cloves garlic, minced
+- 1 teaspoon sesame oil
+- 1/2 teaspoon black pepper
+
+Whisk everything together until the honey and brown sugar fully dissolve into the soy base, then pour over the beef strips and marinate 12–24 hours, flipping once. The ratio that matters most is the soy-to-sweetener balance: 1/3 cup soy against 3 tablespoons honey plus 1 tablespoon brown sugar gives the classic sweet-savory teriyaki profile without tipping into candy-sweet. For a thicker glaze, simmer a separate 1/4 cup of the marinade (never the used marinade) for 3–4 minutes and brush it on during the last hour of drying.
 
 ## Ingredient Notes and Substitutions
 

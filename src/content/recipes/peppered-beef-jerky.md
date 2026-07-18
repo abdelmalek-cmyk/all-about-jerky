@@ -52,12 +52,12 @@ relatedRecipes:
   - "bbq-beef-jerky"
   - "beef-jerky-flavors"
 datePublished: "2024-06-01"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 Peppered beef jerky is the purist's choice — no sweetness, no fruit, just beef and black pepper working together. The key is using *coarsely cracked* pepper (not pre-ground), which creates a textured crust that gives every bite a sharp, clean heat that builds slowly.
 
-This recipe uses a two-step pepper application: black pepper in the marinade for depth, and a second coating pressed into the surface before drying. The result is a bold, savory jerky that tastes like a proper steakhouse peppercorn crust in portable form.
+This recipe uses a two-step pepper application: black pepper in the marinade for depth, and a second coating of cracked black pepper pressed into the surface before drying. The result is a bold, savory jerky that tastes like a proper steakhouse peppercorn crust in portable form.
 
 ![Peppered beef jerky strips fanned out on dark slate with cracked black pepper crust](/images/peppered-beef-jerky.webp)
 
@@ -83,6 +83,19 @@ Crack peppercorns in a zip-lock bag with a rolling pin for the most control over
 ## Temperature & Safety
 
 The USDA recommends heating beef jerky to an **internal temperature of 160°F (71°C)**. When using a food dehydrator set to 160°F, standard 1/4-inch strips reach this temperature naturally within the drying window. If your dehydrator doesn't reach 160°F, finish the jerky in a 275°F oven for 10 minutes after drying.
+
+## Peppered Beef Jerky Variations
+
+The base recipe is a clean cracked-black-pepper jerky. These three variations cover the most popular peppered styles, each a small change to the marinade or coating.
+
+### Garlic Pepper Beef Jerky
+Add 1 tablespoon of granulated garlic (not garlic powder — the coarser grind holds up better) to the marinade, and mix 1 teaspoon of garlic granules into the cracked pepper you press onto the strips. Garlic pepper beef jerky is the most popular peppered variation because the garlic's savory depth balances the sharp piperine bite of the black pepper.
+
+### Salt and Pepper Beef Jerky
+For a minimalist salt and pepper beef jerky, cut the marinade down to soy sauce, 1 teaspoon of kosher salt, and 1 tablespoon of coarse black pepper — no Worcestershire, no sugar, no paprika. This is the purest expression of the style: just beef, salt, and pepper. Press extra coarse salt and pepper onto both sides before drying.
+
+### Sweet Heat Peppered Jerky
+Keep the black pepper coating but add 2 tablespoons of brown sugar and 1/4 teaspoon of cayenne to the marinade. The sugar caramelizes into a light glaze that offsets the pepper, and the cayenne adds a second, warmer layer of heat beneath the sharp pepper bite.
 
 ## Storage
 

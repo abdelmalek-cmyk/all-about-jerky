@@ -18,12 +18,14 @@ faq:
     answer: "Yes -- freezing is the best long-term storage method for homemade beef jerky. Vacuum-seal strips in bags or use heavy-duty zip-lock bags with excess air removed. Frozen jerky maintains quality for 3-6 months. Thaw in the refrigerator overnight or at room temperature for 1-2 hours before eating."
   - question: "How do you tell if beef jerky is bad?"
     answer: "Beef jerky has gone bad if it: smells sour, rancid, or off; feels soft, sticky, or wet rather than dry and leathery; shows visible mold (white, green, or fuzzy spots); has an unusual discoloration beyond the normal dark brown. When in doubt, throw it out -- foodborne illness from spoiled jerky is not worth the risk."
+  - question: "How long can beef jerky sit out?"
+    answer: "Properly dried beef jerky can sit out at room temperature for 1-2 weeks in a sealed container -- the USDA 2-hour rule for fresh meat doesn't apply to shelf-stable dried products. Left open to the air, quality drops within 2-3 days. In a hot car or direct sun, fat rancidity sets in within hours."
 relatedPages:
   - "/how-to-make-beef-jerky/"
   - "/guides/when-is-beef-jerky-done/"
   - "/guides/beef-jerky-time-and-temperature/"
 datePublished: "2024-01-10"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 # How Long Does Beef Jerky Last? Storage Guide
@@ -68,7 +70,31 @@ Adding Prague Powder No. 1 at 1/4 teaspoon per 5 lbs of meat provides nitrite-ba
 
 ## How Long Does Beef Jerky Last Unrefrigerated?
 
-Commercial beef jerky can sit unrefrigerated in its unopened package for 1-2 years. Once opened, 1-2 weeks at room temperature is safe if the bag is resealed properly. Homemade jerky: 1-2 weeks maximum at room temperature in an airtight container -- shorter in warm or humid conditions.
+Beef jerky lasts unrefrigerated for 1-2 years (commercial, unopened), 1-2 weeks (commercial, opened and resealed), or 1-2 weeks (homemade, airtight container). Homemade jerky made with curing salt and vacuum-sealed stretches to about 2 months unrefrigerated. Heat and humidity shorten every one of these windows.
+
+| Jerky type | Unrefrigerated shelf life |
+|---|---|
+| Commercial, unopened | 1-2 years (check best-by date) |
+| Commercial, opened + resealed | 1-2 weeks |
+| Homemade, no cure, airtight | 1-2 weeks |
+| Homemade, cured + vacuum-sealed | Up to 2 months |
+| Any jerky in heat/humidity | Days, not weeks -- refrigerate |
+
+Why jerky survives without refrigeration at all: proper drying removes enough moisture (below roughly 35% water content) that bacteria can't grow. That protection fails if the jerky was under-dried, if fat was left on the meat (fat goes rancid regardless of drying), or if humid air gets into the container and re-moisturizes the surface.
+
+## How Long Can Beef Jerky Sit Out?
+
+Beef jerky can sit out at room temperature for 1-2 weeks if it's properly dried and kept in a sealed container -- unlike fresh meat, the USDA's 2-hour rule doesn't apply to shelf-stable dried products. Jerky left out open to the air lasts about 2-3 days before the surface picks up moisture and quality drops.
+
+The practical limits:
+
+- **In a sealed bag or jar on the counter:** 1-2 weeks for homemade, 1-2 weeks for opened commercial jerky
+- **Open to the air (in a bowl, on a board):** 2-3 days -- it won't become dangerous immediately, but it dries harder, staling accelerates, and in humid air the surface can rehydrate enough to allow mold
+- **In a hot car or direct sun:** hours, not days -- heat accelerates fat rancidity even in well-dried jerky
+
+### Can You Leave Beef Jerky Out Overnight?
+
+Yes -- beef jerky can be left out overnight without spoiling, as long as it's in an airtight container and the environment isn't extremely hot or humid. For any period longer than a day, refrigerate it or return it to sealed storage.
 
 ## How to Tell If Beef Jerky Has Gone Bad
 
@@ -79,7 +105,3 @@ Signs that beef jerky has spoiled and should be discarded:
 - **Visible mold** -- white, green, gray, or fuzzy spots anywhere on the surface
 - **Off colors** -- beyond normal dark brown to black darkening
 - **Metallic or chemical taste** -- indicates fat oxidation (rancidity)
-
-## Can You Leave Beef Jerky Out Overnight?
-
-Yes -- beef jerky can be left out overnight without spoiling, as long as it's in an airtight container and the environment isn't extremely hot or humid. For any period longer than a day, refrigerate it or return it to sealed storage.

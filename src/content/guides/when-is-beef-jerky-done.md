@@ -28,7 +28,7 @@ Beef jerky is done when it passes the bend test: bend a cooled strip at a 90° a
 <p><strong>The bend test:</strong> Remove a strip, cool 2-3 minutes, bend at 90°. Done jerky cracks and holds. Underdone jerky bends without cracking. Overdone jerky snaps completely. Always test on a cooled strip -- hot jerky feels softer than it actually is.</p>
 </div>
 
-![Close-up of beef jerky strip being bent showing perfect crack test ”” dark mahogany color](/images/beef-jerky-bend-test-close.webp)
+![Close-up of beef jerky strip being bent showing perfect crack test — dark mahogany color](/images/beef-jerky-bend-test-close.webp)
 
 ## The 4 Doneness Tests
 

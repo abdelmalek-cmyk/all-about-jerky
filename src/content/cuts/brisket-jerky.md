@@ -20,7 +20,7 @@ relatedPages:
   - "/smoked-beef-jerky/"
   - "/dehydrator-beef-jerky/"
 datePublished: "2024-06-01"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 ![Brisket flat beef cut trimmed lean beside finished dark mahogany brisket jerky strips](/images/brisket-jerky.webp)
@@ -28,6 +28,19 @@ dateModified: "2024-06-01"
 Brisket jerky occupies a unique niche: it's not the best choice for most situations, but when you have a trimmed brisket flat and the time to prepare it properly, it produces a rich, deeply beefy jerky that leaner cuts can't replicate.
 
 The flavor argument for brisket is real. Brisket's intramuscular fat carries flavor compounds that survive dehydration, giving brisket jerky a roasted, savory depth that eye-of-round jerky lacks. The tradeoff is shelf life and difficulty of preparation.
+
+## Does Brisket Make Good Jerky?
+
+Yes — brisket makes good jerky, with two conditions: use only the flat (first cut), and trim the fat aggressively down to 1/8 inch or less. Done right, brisket jerky has a deeper, more roasted beef flavor than any lean cut. Done carelessly, the fat turns greasy and rancid within days.
+
+Where brisket lands against the standard jerky cuts:
+
+- **Flavor:** best of any common cut — the intramuscular fat carries savory depth through dehydration
+- **Effort:** worst — expect 15–20 minutes of knife work trimming a flat before slicing
+- **Shelf life:** shortest — about 1 week at room temperature versus 2 weeks for eye of round
+- **Cost:** flats often run cheaper per pound than eye of round when bought whole
+
+If it's your first batch of jerky, start with [eye of round](/cuts/eye-of-round-beef-jerky/). If you already trim briskets for smoking and know the muscle, the flat makes a jerky worth the extra work.
 
 ## Brisket Flat vs. Brisket Point
 
@@ -49,7 +62,23 @@ The flat runs from the thin end of the brisket to where it meets the point. It h
 3. Look for the "fat vein" that runs through the flat — cut the flat into sections on either side of it rather than trying to slice through it.
 4. The finished trim should look like a lean roast with minimal visible white fat.
 
-## Why Brisket Makes Exceptional Smoked Jerky
+## Brisket Jerky Recipe
+
+The standard marinade works perfectly on brisket flat — the cut needs no special treatment beyond the trim:
+
+- 2 lbs trimmed brisket flat, sliced 1/4 inch against the grain
+- 1/3 cup soy sauce
+- 2 tablespoons Worcestershire sauce
+- 2 teaspoons coarse black pepper
+- 1 teaspoon garlic powder
+- 1 teaspoon onion powder
+- 1 teaspoon smoked paprika
+- 1 tablespoon brown sugar
+- 1/4 teaspoon Prague Powder No. 1 (recommended — brisket's fat content makes the cure worth it)
+
+Marinate 12–24 hours, pat completely dry, and dehydrate at 160°F for 4–6 hours. Because brisket carries more fat than eye of round, blot any surface oil with paper towels at the halfway mark and again when the strips come off the trays — surface fat is what turns rancid first.
+
+## Smoked Brisket Jerky
 
 ![Pellet smoker open with beef jerky on grates showing wisps of hickory smoke](/images/smoked-beef-jerky-smoker.webp)
 

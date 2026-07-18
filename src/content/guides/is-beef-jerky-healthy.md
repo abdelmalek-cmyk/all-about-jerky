@@ -16,12 +16,14 @@ faq:
     answer: "Plain homemade beef jerky made without sugar is keto-friendly, typically containing 0-2 g net carbs per serving. To make keto beef jerky, replace soy sauce with coconut aminos (lower sodium and carbs), skip brown sugar and honey, and season with garlic powder, onion powder, black pepper, and smoked paprika. Sweetened recipes like teriyaki are not keto."
   - question: "How do I make low-sodium beef jerky?"
     answer: "To make low-sodium beef jerky: use coconut aminos (65 mg sodium per tablespoon vs. 920 mg for regular soy sauce), skip Worcestershire sauce, and season primarily with garlic powder, onion powder, smoked paprika, and black pepper. A 1-oz serving of low-sodium homemade jerky can be brought down to 150-200 mg sodium, compared to 500-700 mg in standard recipes."
+  - question: "How much sodium is in beef jerky?"
+    answer: "Standard homemade beef jerky contains 450-600 mg of sodium per 1-oz serving; commercial jerky averages about 505 mg per ounce according to USDA FoodData Central, with some brands reaching 600-800 mg. Most of it comes from soy sauce. A low-sodium homemade version using coconut aminos lands at 150-200 mg per serving."
 relatedPages:
   - "/guides/how-long-does-beef-jerky-last/"
   - "/guides/beef-jerky-time-and-temperature/"
   - "/best-meat-for-beef-jerky/"
 datePublished: "2024-02-01"
-dateModified: "2024-06-01"
+dateModified: "2026-07-18"
 ---
 
 # Is Beef Jerky Healthy? Nutrition Facts
@@ -46,6 +48,22 @@ Homemade beef jerky is a healthy high-protein snack -- a 1-oz serving delivers 1
 | Iron | 10-15% DV | 10-15% DV | 10-15% DV |
 
 *Values are estimates. Exact nutrition depends on cut, marinade absorption, and drying time.*
+
+### Homemade vs. Store-Bought Beef Jerky Nutrition
+
+The [USDA FoodData Central](https://fdc.nal.usda.gov/) entry for commercial beef jerky (chopped and formed) lists **116 calories, 9.4 g protein, 7.3 g fat, and about 505 mg sodium per ounce**. Homemade jerky from a whole lean cut beats that on every line: more protein (13–15 g), a fraction of the fat (1–2 g), and sodium you control. The difference comes from the meat itself — commercial "chopped and formed" jerky is made from ground trimmings with fat worked through them, while homemade starts from a trimmed eye of round.
+
+## How Much Sodium Is in Beef Jerky?
+
+Beef jerky contains roughly 450–600 mg of sodium per 1-oz serving in standard homemade recipes, and about 505 mg per ounce in commercial jerky per USDA data — some store brands run 600–800 mg. That's 20–35% of the 2,300 mg daily limit in a single handful, which is why sodium is jerky's main nutritional drawback.
+
+Where the sodium comes from, and how to cut it:
+
+- **Soy sauce** is the biggest contributor — regular soy sauce carries ~920 mg per tablespoon. Low-sodium soy sauce cuts that by 40%; coconut aminos drops it to ~65 mg per tablespoon.
+- **Added salt** in the marinade or rub runs ~575 mg per 1/4 tsp. Don't eliminate it (salt is the preservative), but don't stack it on top of a full soy base either.
+- **Worcestershire sauce** adds ~65 mg per tablespoon — minor, but it adds up in low-sodium builds.
+
+A deliberate low-sodium build (coconut aminos, no Worcestershire, measured salt) lands at 150–200 mg per serving — comparable to a slice of bread.
 
 ## Is Beef Jerky Good for Weight Loss?
 

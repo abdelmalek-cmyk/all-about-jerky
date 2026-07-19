@@ -24,6 +24,9 @@ const methodHeroes = [
   'ground-beef-jerky-trays',
   'venison-jerky-rustic',
   'beef-jerky-done',
+  // chicken cluster heroes
+  'chicken-jerky',
+  'chicken-jerky-for-dogs',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

@@ -1,0 +1,248 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/chicken-jerky/';
+
+const recipe = {
+  name: 'Chicken Jerky',
+  description:
+    'Homemade chicken jerky from lean chicken breast: marinated, pre-heated to a safe 165°F, then dried until it snaps. A leaner, faster-drying alternative to beef jerky.',
+  image: '/images/chicken-jerky.webp',
+  prepTime: 'PT25M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H25M',
+  recipeYield: 'About 12 oz (from 2 lbs raw chicken breast)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'chicken jerky, chicken jerky recipe, how to make chicken jerky, dehydrator chicken jerky',
+  ingredients: [
+    '2 lbs boneless skinless chicken breast, all fat and connective tissue trimmed',
+    '1/3 cup low-sodium soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 tablespoon honey or brown sugar',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon smoked paprika',
+    '1/2 teaspoon coarse black pepper',
+    '1/4 teaspoon cayenne pepper (optional)',
+  ],
+  instructions: [
+    'Trim every trace of fat and connective tissue from the chicken breast — chicken fat turns rancid faster than beef fat and will shorten shelf life.',
+    'Freeze the breasts 60–90 minutes until firm but not solid. Chicken is much softer than beef and will not slice cleanly otherwise.',
+    'Slice against the grain to an even 1/4-inch thickness. Uniform thickness matters more with chicken because thin spots dry to brittle before thick spots finish.',
+    'Whisk together soy sauce, Worcestershire, honey, garlic powder, onion powder, smoked paprika, black pepper, and cayenne until the honey dissolves.',
+    'Add the chicken strips, seal in a zip-lock bag with the air pressed out, and refrigerate 4–12 hours. Chicken absorbs marinade faster than beef — do not exceed 12 hours or the texture turns mushy.',
+    'Bring the strips and marinade to a simmer in a saucepan for 3–5 minutes, until the chicken reaches an internal temperature of 165°F. This is the USDA-recommended pre-heat step for poultry jerky and is not optional.',
+    'Remove the strips and pat every surface completely dry with paper towels.',
+    'Arrange in a single layer on dehydrator trays with space between strips. Dry at 160°F for 4–6 hours, checking from 3.5 hours on.',
+    'Chicken jerky is done when a cooled strip snaps rather than bends — it finishes firmer and more brittle than beef jerky, which is normal.',
+    'Cool completely on a wire rack before storing in an airtight container.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'Is chicken jerky a thing?',
+    answer:
+      'Yes, chicken jerky is absolutely a thing — it is just far less common than beef jerky. Beef dominates the category for three reasons: beef has a firmer muscle structure that produces the chewy texture people associate with jerky, lean beef cuts like eye of round are cheap and widely available, and beef jerky carries centuries of tradition behind it. Chicken jerky is leaner, dries faster, and has a snappier texture.',
+  },
+  {
+    question: 'Can you make jerky out of chicken?',
+    answer:
+      'Yes. Use boneless skinless chicken breast, trim all fat, slice 1/4 inch thick, marinate 4–12 hours, then heat the strips to an internal temperature of 165°F before drying at 160°F for 4–6 hours. The 165°F pre-heat step matters more with poultry than with beef because of Salmonella risk.',
+  },
+  {
+    question: 'What temperature do you dehydrate chicken jerky at?',
+    answer:
+      'Dry chicken jerky at 160°F, but heat the chicken to an internal temperature of 165°F first. USDA FSIS recommends pre-heating poultry to 165°F before dehydrating because most home dehydrators do not reach a temperature high enough to reliably destroy Salmonella on their own.',
+  },
+  {
+    question: 'How long does it take to dehydrate chicken jerky?',
+    answer:
+      'Chicken jerky takes 4–6 hours at 160°F in a dehydrator, 3–4 hours in a 175°F oven, 2–3 hours in an air fryer, and 3–4 hours in a smoker at 165°F. Chicken dries faster than beef because it has less connective tissue and thinner muscle fibers — start checking an hour earlier than you would for beef.',
+  },
+  {
+    question: 'Is chicken jerky healthy?',
+    answer:
+      'Chicken jerky is a lean, high-protein snack. Chicken breast is one of the leanest meats available, so chicken jerky is typically lower in fat than beef jerky made from round cuts. As with all jerky, sodium is the main nutritional consideration — most of it comes from soy sauce, which you can cut substantially by using low-sodium soy sauce or coconut aminos.',
+  },
+  {
+    question: 'How long does homemade chicken jerky last?',
+    answer:
+      'Homemade chicken jerky lasts about 1–2 weeks in an airtight container at room temperature, 1 month refrigerated, and 3 months frozen. Chicken jerky has a slightly shorter shelf life than beef jerky because residual poultry fat oxidizes faster — trim aggressively and refrigerate if you are keeping it beyond a few days.',
+  },
+  {
+    question: 'Can cats eat chicken jerky?',
+    answer:
+      'Cats should not eat seasoned chicken jerky made for people. Garlic and onion — both in most jerky marinades — are toxic to cats, and the sodium level is far too high for a cat. Plain, unseasoned dehydrated chicken breast with no salt or seasoning is generally safe as an occasional treat, but check with your veterinarian first.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Chicken Jerky for Dogs', href: '/chicken-jerky-for-dogs/' },
+  { label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' },
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+];
+---
+<PillarLayout
+  title="Chicken Jerky Recipe: Easy 165°F Method"
+  description="How to make chicken jerky at home: marinate lean chicken breast, pre-heat to a safe 165°F, then dry 4–6 hours. Dehydrator, oven, air fryer & smoker methods."
+  {canonical}
+  breadcrumbs={[{ label: 'Chicken Jerky', href: '/chicken-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  datePublished="2026-07-19"
+  dateModified="2026-07-19"
+>
+  <RecipeSchema {...recipe} datePublished="2026-07-19" dateModified="2026-07-19" url={canonical} />
+
+  <h1>How to Make Chicken Jerky</h1>
+
+  <div class="answer-box">
+    <p>To make chicken jerky, trim and slice lean chicken breast 1/4 inch thick, marinate 4–12 hours, then heat the strips to an internal temperature of <strong>165°F</strong> before drying at <strong>160°F for 4–6 hours</strong>. The 165°F pre-heat is essential — poultry carries a Salmonella risk that beef does not, and most dehydrators cannot reach a pathogen-killing temperature on their own.</p>
+  </div>
+
+  <ContentImage src="/images/chicken-jerky.webp" alt="Homemade chicken jerky strips on a dark board, dried and lightly glossy" eager={true} />
+
+  <h2>Is Chicken Jerky a Thing?</h2>
+  <p>Yes — chicken jerky is a real, established product, and people make it at home constantly. The question comes up so often because chicken jerky is dramatically less visible than beef jerky on store shelves, and the pet-treat aisle is full of chicken jerky <em>for dogs</em>, which muddies the picture further.</p>
+  <p>Three things explain beef's dominance:</p>
+  <ul>
+    <li><strong>Texture.</strong> Beef's dense muscle fibers and connective tissue produce the long, pliable chew people associate with jerky. Chicken breast has finer fibers and almost no connective tissue, so chicken jerky comes out snappier and more brittle — a genuinely different eating experience, not a worse one.</li>
+    <li><strong>Safety.</strong> Poultry requires a higher safe temperature (165°F vs 160°F) and carries a more familiar Salmonella risk. Commercial producers face a stricter process, which raises cost.</li>
+    <li><strong>Tradition and economics.</strong> Jerky descends from preserving large game and cattle. Lean beef cuts like eye of round are cheap, uniform, and slice beautifully — chicken breast is softer and fiddlier to cut thin.</li>
+  </ul>
+  <p>None of that makes chicken jerky worse. It dries faster, it is leaner, and it takes marinade more readily than beef does.</p>
+
+  <h2>Chicken Jerky for Humans vs. Dog Treats</h2>
+  <p>Searches for "chicken jerky for humans" and "chicken jerky for people" exist for a good reason: most chicken jerky sold is dog treats. The two are not interchangeable, and the difference is not marketing — it is safety.</p>
+  <p><strong>Chicken jerky for people</strong> is seasoned: soy sauce, garlic, onion, pepper, sometimes sweetener. <strong>Chicken jerky for dogs must be plain chicken and nothing else</strong> — garlic and onion are toxic to dogs, and the sodium in a human marinade is far beyond what a dog should have. Never give your dog jerky made from the recipe on this page.</p>
+  <p>If you are making treats for a dog, use our dedicated guide to <a href="/chicken-jerky-for-dogs/">chicken jerky for dogs</a> instead — single-ingredient, no seasoning, with the safety questions answered directly.</p>
+
+  <h2>Chicken Jerky vs. Beef Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Chicken jerky</th><th>Beef jerky</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Safe internal temp</td><td>165°F</td><td>160°F</td></tr>
+      <tr><td>Drying time (1/4 inch)</td><td>4–6 hours</td><td>4–6 hours, often longer</td></tr>
+      <tr><td>Texture</td><td>Snappy, brittle, crisp edges</td><td>Chewy, pliable, fibrous</td></tr>
+      <tr><td>Fat content</td><td>Very low (breast is ~1–3%)</td><td>Low (lean round is ~3–5%)</td></tr>
+      <tr><td>Shelf life</td><td>Slightly shorter</td><td>Slightly longer</td></tr>
+      <tr><td>Slicing difficulty</td><td>Harder — needs a firmer freeze</td><td>Easier — holds its shape</td></tr>
+    </tbody>
+  </table>
+  <p>If you have made beef jerky before, the biggest adjustments are the mandatory 165°F pre-heat, a longer freeze before slicing, and finishing the batch earlier than instinct suggests.</p>
+
+  <h2>Is Chicken Jerky Safe? The 165°F Rule</h2>
+  <p>Chicken jerky is safe to eat when the chicken reaches an internal temperature of <strong>165°F (74°C)</strong>. This is the single most important difference between chicken and beef jerky, and it is where most home recipes go wrong.</p>
+  <p><a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/jerky-and-food-safety">USDA Food Safety and Inspection Service</a> guidance is explicit: most home dehydrators do not get hot enough to destroy pathogens, and the drying process itself makes bacteria more heat-resistant. The fix is to heat the meat <em>before</em> it goes in the dehydrator.</p>
+
+  <h3>The Pre-Heat Method (recommended)</h3>
+  <ol>
+    <li>Marinate the strips as normal.</li>
+    <li>Transfer the strips and marinade to a saucepan and bring to a gentle simmer for 3–5 minutes, until the chicken reaches 165°F internally.</li>
+    <li>Pat completely dry and dehydrate as usual.</li>
+  </ol>
+  <p>The strips will look cooked and pale going into the dehydrator. That is expected — they darken as they dry.</p>
+
+  <h3>The Post-Heat Alternative</h3>
+  <p>If you would rather dry first, finish the fully dried strips in a <strong>275°F oven for 10 minutes</strong>. This also satisfies the safety requirement, though it firms the texture slightly more than the pre-heat method.</p>
+
+  <h2>Chicken Jerky Marinade</h2>
+  <p>Chicken is milder than beef, so the marinade does more of the flavor work — but chicken also absorbs marinade faster, so the window is shorter. <strong>4–12 hours is the sweet spot; past 12 hours the surface turns mushy.</strong></p>
+  <p>The base recipe on this page uses soy sauce for salt and umami, Worcestershire for depth, a touch of honey for balance, and garlic, onion, smoked paprika and pepper for the savory backbone. For a much deeper breakdown of how marinade components work — salt ratios, acids, sweeteners, cures — see the <a href="/beef-jerky-marinade/">beef jerky marinade guide</a>; the chemistry is identical, only the timing changes.</p>
+
+  <ContentImage src="/images/chicken-jerky-marinade.webp" alt="Chicken breast strips marinating in soy sauce and spices in a glass bowl" />
+
+  <h2>How to Make Chicken Jerky — Step by Step</h2>
+  <ol>
+    <li><strong>Trim ruthlessly.</strong> Remove all fat and connective tissue. Poultry fat oxidizes faster than beef fat and is the main cause of off-flavors in stored chicken jerky.</li>
+    <li><strong>Freeze 60–90 minutes.</strong> Longer than you would for beef. Chicken breast is soft and will tear rather than slice unless it is properly firm.</li>
+    <li><strong>Slice 1/4 inch against the grain.</strong> Consistency matters more here than with beef — uneven strips finish at wildly different times.</li>
+    <li><strong>Marinate 4–12 hours</strong> in the refrigerator, in a sealed bag with the air pressed out.</li>
+    <li><strong>Pre-heat to 165°F.</strong> Simmer the strips in the marinade 3–5 minutes. Do not skip this.</li>
+    <li><strong>Pat completely dry.</strong> Surface moisture steams the meat instead of drying it.</li>
+    <li><strong>Dry at 160°F for 4–6 hours</strong> in a single layer with space between strips.</li>
+    <li><strong>Test from 3.5 hours.</strong> Cool a strip 2–3 minutes and bend it — chicken jerky is done when it snaps rather than folds.</li>
+    <li><strong>Cool completely</strong> on a wire rack before sealing.</li>
+  </ol>
+
+  <h2>How Long to Dehydrate Chicken Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Method</th><th>Temperature</th><th>Time (1/4-inch strips)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Food dehydrator</td><td>160°F</td><td>4–6 hours</td></tr>
+      <tr><td>Oven (door propped)</td><td>175°F</td><td>3–4 hours</td></tr>
+      <tr><td>Air fryer (dehydrate mode)</td><td>160°F</td><td>2–3 hours</td></tr>
+      <tr><td>Pellet smoker</td><td>165°F</td><td>3–4 hours</td></tr>
+    </tbody>
+  </table>
+  <p>All four assume the chicken already reached 165°F in the pre-heat step. For the underlying logic on drying temperatures and thickness, the <a href="/guides/beef-jerky-time-and-temperature/">beef jerky time and temperature guide</a> applies to chicken too — with 165°F substituted for 160°F as the safe internal target.</p>
+
+  <h2>Chicken Jerky by Method</h2>
+
+  <h3>Chicken Jerky in a Dehydrator</h3>
+  <p>A dehydrator is the most reliable method. Set it to 160°F, lay strips in a single layer with airflow gaps, and start checking at 3.5 hours. Rotate trays once at the halfway point if your model has a bottom-mounted fan. Everything in the <a href="/dehydrator-beef-jerky/">dehydrator beef jerky guide</a> about tray loading and airflow applies here — chicken simply finishes sooner.</p>
+
+  <ContentImage src="/images/chicken-jerky-dehydrator.webp" alt="Chicken jerky strips arranged on stainless dehydrator trays before drying" />
+
+  <h3>Chicken Jerky in the Oven</h3>
+  <p>Set the oven to 175°F and prop the door open about an inch with a wooden spoon so moisture escapes. Lay strips on wire racks over foil-lined baking sheets and dry 3–4 hours, rotating the sheets halfway. Chicken runs faster than beef in the oven — check at 2.5 hours.</p>
+
+  <h3>Chicken Jerky in an Air Fryer</h3>
+  <p>Air fryers are the fastest route: 160°F on dehydrate mode for 2–3 hours, flipping every 45 minutes. The strong fan dries chicken quickly, so check at 90 minutes on the first batch. Capacity is the limitation — most baskets hold 6–8 oz of strips in a single layer.</p>
+
+  <h3>Smoked Chicken Jerky</h3>
+  <p>Smoked chicken jerky is excellent and underrated. Chicken takes smoke far more readily than beef, so go milder than you think: apple or cherry, never mesquite. Smoke at 165°F for 3–4 hours. On a pellet grill the setup is identical to beef — see the <a href="/smoked-beef-jerky/#traeger-pellet-grill">Traeger and pellet grill guide</a> for settings, then shorten the time and watch it closely.</p>
+
+  <h2>Chicken Jerky Flavors</h2>
+
+  <h3>Buffalo Chicken Jerky</h3>
+  <p>The most popular chicken jerky flavor, and it works because buffalo sauce was built for chicken in the first place. Replace the Worcestershire with 3 tablespoons of cayenne-based hot sauce (Frank's RedHot is the classic), add 1/2 teaspoon of garlic powder, and drop the honey to 2 teaspoons. Finish with a light dusting of cayenne on the strips before drying.</p>
+
+  <h3>Teriyaki Chicken Jerky</h3>
+  <p>Chicken and teriyaki are a natural pairing — the sweetness balances chicken's mildness better than it does beef's richness. Use the marinade from our <a href="/recipes/teriyaki-beef-jerky/">teriyaki beef jerky recipe</a> exactly as written, but cut the marinating time to 6–8 hours and remember the 165°F pre-heat.</p>
+
+  <h3>Spicy & Sriracha Chicken Jerky</h3>
+  <p>Add 2 tablespoons of sriracha and 1 teaspoon of red pepper flakes to the base marinade. Chicken carries heat more cleanly than beef because there is less fat to mute the capsaicin — start lower than you would with beef.</p>
+
+  <h3>Maple & Honey Garlic Chicken Jerky</h3>
+  <p>Swap the honey for 2 tablespoons of maple syrup and double the garlic powder to 2 teaspoons. High-sugar marinades dry slower and stick more, so use parchment or silicone dehydrator sheets for this one.</p>
+
+  <h2>Chicken Jerky Sticks from Ground Chicken</h2>
+  <p>Ground chicken jerky sticks are made the same way as ground beef jerky: season the meat, press it through a jerky gun into strips, and dry. Two chicken-specific cautions. First, <strong>use ground chicken breast, not standard ground chicken</strong>, which often includes skin and runs far fattier. Second, ground poultry needs the 165°F pre-heat even more than whole strips do — grinding distributes surface bacteria through the entire batch.</p>
+  <p>Because pre-simmering piped strips is impractical, use the post-heat method for sticks: dry them fully, then finish 10 minutes in a 275°F oven. The technique for loading and piping is covered in the <a href="/ground-beef-jerky/">ground beef jerky guide</a>.</p>
+
+  <ContentImage src="/images/chicken-jerky-done.webp" alt="Finished chicken jerky strips cooling on a wire rack" />
+
+  <h2>Is Chicken Jerky Healthy?</h2>
+  <p>Chicken jerky is one of the leanest high-protein snacks you can make. Chicken breast is among the lowest-fat meats available — per <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a>, raw skinless chicken breast is roughly 1–3% fat — and dehydration removes water while leaving the protein behind, concentrating it substantially.</p>
+  <p>The nutritional caveat is the same as it is for beef jerky: <strong>sodium</strong>. Nearly all of it comes from soy sauce, at roughly 920 mg per tablespoon for the regular version. Low-sodium soy sauce cuts that by about 40%, and coconut aminos drops it to around 65 mg per tablespoon. Our <a href="/guides/is-beef-jerky-healthy/">jerky nutrition guide</a> breaks down the sodium math in detail — the same logic applies to chicken.</p>
+  <p>We do not publish per-serving nutrition figures for this recipe, because the real numbers depend on how much marinade each batch absorbs, and estimating them would be guesswork.</p>
+
+  <h2>How Long Does Chicken Jerky Last?</h2>
+  <ul>
+    <li><strong>Room temperature:</strong> 1–2 weeks in an airtight container, away from heat and light.</li>
+    <li><strong>Refrigerated:</strong> about 1 month.</li>
+    <li><strong>Frozen:</strong> about 3 months, vacuum-sealed.</li>
+  </ul>
+  <p>Chicken jerky keeps slightly less well than beef because residual poultry fat oxidizes faster. Trimming thoroughly is the single biggest factor in shelf life. The storage principles in the <a href="/guides/how-long-does-beef-jerky-last/">beef jerky storage guide</a> — airtight containers, oxygen absorbers, vacuum sealing — all transfer directly.</p>
+
+  <div class="tips-block">
+    <h3>Chicken Jerky Troubleshooting</h3>
+    <ul>
+      <li><strong>Strips shattered instead of snapping.</strong> Over-dried. Chicken crosses from done to brittle faster than beef — start testing at 3.5 hours.</li>
+      <li><strong>Texture is mushy or pasty.</strong> Marinated too long. Keep chicken under 12 hours.</li>
+      <li><strong>Strips tore while slicing.</strong> Not frozen firm enough. Chicken needs 60–90 minutes, not the 1–2 hours that works for a beef roast.</li>
+      <li><strong>Off or soapy smell after a week.</strong> Residual fat has gone rancid. Trim harder next batch and refrigerate.</li>
+    </ul>
+  </div>
+</PillarLayout>

@@ -47,6 +47,8 @@ Even jerky that doesn't seem that salty to humans can cause salt poisoning in a 
 
 ## How to Make Homemade Dog-Safe Beef Jerky
 
+The rule is the same whatever meat you use: plain, unseasoned, fully dried. If you'd rather use poultry, our guide to [chicken jerky for dogs](/chicken-jerky-for-dogs/) covers the single-ingredient chicken version, including the 165°F safe temperature poultry requires and the FDA recall history behind the "is chicken jerky bad for dogs" question.
+
 ### Simple Dog Jerky (Strips)
 
 **Ingredients:**

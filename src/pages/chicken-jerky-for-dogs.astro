@@ -1,0 +1,202 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/chicken-jerky-for-dogs/';
+
+const recipe = {
+  name: 'Chicken Jerky for Dogs',
+  description:
+    'Single-ingredient chicken jerky dog treats made from plain chicken breast — no salt, no seasoning, no garlic or onion. Heated to a safe 165°F, then dried until firm.',
+  image: '/images/chicken-jerky-for-dogs.webp',
+  prepTime: 'PT20M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H20M',
+  recipeYield: 'About 12 oz of treats (from 2 lbs raw chicken breast)',
+  category: 'Pet Treat',
+  cuisine: 'American',
+  keywords: 'chicken jerky for dogs, homemade chicken jerky dog treats, dog chicken jerky recipe',
+  ingredients: [
+    '2 lbs boneless skinless chicken breast, all fat and connective tissue trimmed',
+    'Nothing else — no salt, no oil, no seasoning, no garlic, no onion',
+  ],
+  instructions: [
+    'Trim every trace of fat and connective tissue from the chicken breast. Fat is the main cause of both rancidity and digestive upset in dogs.',
+    'Freeze the breasts 60–90 minutes until firm but not solid, which makes thin, even slicing possible.',
+    'Slice into 1/4-inch strips. Cut with the grain for longer, chewier treats that take a dog more time to work through.',
+    'Simmer the strips in plain water for 3–5 minutes until they reach an internal temperature of 165°F. This is the USDA-recommended safe temperature for poultry and also protects anyone handling the treats.',
+    'Pat every surface completely dry with paper towels.',
+    'Arrange in a single layer on dehydrator trays with space between strips for airflow.',
+    'Dry at 160°F for 4–6 hours, until the strips are firm and dry all the way through with no soft or springy centers.',
+    'Cool completely, then store in an airtight container in the refrigerator. These contain no salt, cure, or preservatives, so they are refrigerated treats.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'Is chicken jerky bad for dogs?',
+    answer:
+      'Homemade chicken jerky made from plain chicken breast with no seasoning is not bad for dogs — it is one of the simplest single-ingredient treats you can make. The bad reputation comes from imported commercial chicken jerky treats, mostly manufactured in China, which the FDA investigated after thousands of illness reports beginning in 2007. Plain homemade jerky avoids that entire category of risk because you control the single ingredient.',
+  },
+  {
+    question: 'Is chicken jerky safe for dogs?',
+    answer:
+      'Yes, when it is plain chicken and nothing else. The two real dangers are seasoning and sourcing. Garlic and onion — standard in human jerky marinades — are toxic to dogs, and high sodium is harmful. Make dog jerky from unseasoned chicken breast, heat it to 165°F for food safety, and dry it fully. Never give your dog jerky made from a human recipe.',
+  },
+  {
+    question: 'Is chicken jerky good for dogs?',
+    answer:
+      'Plain chicken jerky is a good treat in moderation. It is lean, high in protein, single-ingredient, and free of the fillers and preservatives in many commercial treats. It should still be treated as a treat rather than food — veterinary guidance is that treats make up no more than 10% of a dog\'s daily calories.',
+  },
+  {
+    question: 'Can dogs eat chicken jerky?',
+    answer:
+      'Dogs can eat plain, unseasoned chicken jerky. They should not eat seasoned chicken jerky made for people, which typically contains garlic powder, onion powder, and a large amount of sodium. Garlic and onion are both members of the allium family and are toxic to dogs.',
+  },
+  {
+    question: 'Can chicken jerky cause diarrhea in dogs?',
+    answer:
+      'Yes, most often from portion size rather than the jerky itself. Dehydrated chicken is concentrated and protein-dense, so a dog eating several strips at once takes in far more protein than a normal treat portion. Introduce it slowly — one small strip a day for the first few days — and keep total treats under 10% of daily calories. Persistent diarrhea warrants a call to your veterinarian.',
+  },
+  {
+    question: 'How do you make chicken jerky for dogs?',
+    answer:
+      'Trim all fat from boneless skinless chicken breast, freeze 60–90 minutes, and slice into 1/4-inch strips. Simmer the strips in plain water until they reach 165°F internally, pat dry, then dehydrate at 160°F for 4–6 hours until firm throughout. Add nothing else — no salt, oil, or seasoning of any kind.',
+  },
+  {
+    question: 'How long does homemade chicken jerky for dogs last?',
+    answer:
+      'Because it contains no salt, cure, or preservatives, homemade dog chicken jerky should be refrigerated and used within about 1 week, or frozen for up to 3 months. Discard any piece that smells off, feels soft or tacky, or shows any spotting.',
+  },
+  {
+    question: 'Can cats eat chicken jerky made for dogs?',
+    answer:
+      'Plain unseasoned chicken jerky is generally safe for cats as an occasional treat, since the single ingredient is simply dried chicken. Cats have different nutritional needs and much smaller portion tolerances than dogs, so check with your veterinarian first and offer only small pieces.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Chicken Jerky for People', href: '/chicken-jerky/' },
+  { label: 'Can Dogs Eat Beef Jerky?', href: '/guides/can-dogs-eat-beef-jerky/' },
+  { label: 'Dehydrator Guide', href: '/dehydrator-beef-jerky/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+];
+---
+<PillarLayout
+  title="Chicken Jerky for Dogs: Safe DIY Recipe"
+  description="Is chicken jerky safe for dogs? Yes — if it's plain chicken only. The safety facts, the FDA recall history, and a single-ingredient homemade recipe."
+  {canonical}
+  breadcrumbs={[{ label: 'Chicken Jerky for Dogs', href: '/chicken-jerky-for-dogs/' }]}
+  {faqs}
+  {relatedLinks}
+  datePublished="2026-07-19"
+  dateModified="2026-07-19"
+>
+  <RecipeSchema {...recipe} datePublished="2026-07-19" dateModified="2026-07-19" url={canonical} />
+
+  <h1>Chicken Jerky for Dogs</h1>
+
+  <div class="answer-box">
+    <p>Chicken jerky is safe for dogs when it is <strong>plain chicken breast and nothing else</strong>. Trim the fat, slice 1/4 inch thick, heat the strips to <strong>165°F</strong>, then dry at 160°F for 4–6 hours. Never use a human jerky marinade — garlic and onion are toxic to dogs and the sodium is far too high.</p>
+  </div>
+
+  <div class="tips-block">
+    <h3>The one rule that matters</h3>
+    <p><strong>Plain chicken only.</strong> No salt. No oil. No garlic, onion, or seasoning of any kind. Every ingredient beyond chicken adds risk without adding anything your dog wants — dogs are drawn to the meat, not the marinade.</p>
+  </div>
+
+  <ContentImage src="/images/chicken-jerky-for-dogs.webp" alt="Plain homemade chicken jerky dog treats on a wooden board beside a dog" eager={true} />
+
+  <h2>Is Chicken Jerky Safe for Dogs?</h2>
+  <p>Yes — homemade chicken jerky made from a single ingredient is safe for dogs, and it is one of the cleanest treats you can give them. The anxiety attached to this question is real and well-founded, but it traces to <em>commercial imported</em> chicken jerky treats, not to plain chicken dried at home.</p>
+  <p>There are only two genuine risks, and both are fully within your control:</p>
+  <ul>
+    <li><strong>Seasoning.</strong> Garlic and onion are toxic to dogs. Salt in jerky quantities is harmful. A human marinade contains both.</li>
+    <li><strong>Under-drying or under-heating.</strong> Poultry carries a Salmonella risk. Heating the chicken to 165°F and drying it completely resolves this.</li>
+  </ul>
+  <p>Control those two things and what remains is dried chicken breast — protein, and nothing else.</p>
+
+  <h2>Why Chicken Jerky Got a Bad Reputation</h2>
+  <p>If you have searched whether chicken jerky is bad for dogs, you have probably encountered alarming headlines. Here is what actually happened, accurately.</p>
+  <p>Beginning in 2007, the <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/jerky-pet-treats">U.S. Food and Drug Administration</a> investigated a long-running pattern of illness reports linked to jerky pet treats — chicken, duck, and sweet potato varieties. The FDA received thousands of complaints involving dogs, a smaller number involving cats, and reports that included deaths. The great majority of implicated products were manufactured in China.</p>
+  <p>Reported signs included decreased appetite and activity, vomiting, diarrhea, and increased drinking and urination. A subset of dogs developed a Fanconi-like kidney syndrome.</p>
+  <p>Two facts matter for context, and both are frequently omitted:</p>
+  <ul>
+    <li><strong>The FDA never identified a definitive cause.</strong> Despite extensive testing across many years, no single contaminant or ingredient was conclusively established as responsible.</li>
+    <li><strong>Complaints dropped sharply after 2013</strong>, when several Chinese-manufactured jerky products were withdrawn from the U.S. market following a New York State finding of unapproved antibiotic residues.</li>
+  </ul>
+  <p>None of this implicates plain chicken. The concern was always about specific imported manufactured products and whatever was in them — which is exactly why a single-ingredient treat you dry yourself sidesteps the entire issue.</p>
+
+  <h2>What NOT to Put in Chicken Jerky for Dogs</h2>
+  <p>Everything on this list appears in ordinary human jerky recipes, which is why human jerky must never be shared with a dog.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Ingredient</th><th>Why it's a problem</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Garlic (powder or fresh)</td><td>Toxic — damages red blood cells; more concentrated than onion</td></tr>
+      <tr><td>Onion / onion powder</td><td>Toxic — same allium mechanism, can cause hemolytic anemia</td></tr>
+      <tr><td>Salt / soy sauce</td><td>Sodium far beyond a dog's tolerance; risk of sodium poisoning</td></tr>
+      <tr><td>Sugar, honey, maple syrup</td><td>Not toxic, but empty calories and bad for teeth</td></tr>
+      <tr><td>Chili, cayenne, black pepper</td><td>Gastrointestinal irritation</td></tr>
+      <tr><td>Xylitol (in some sauces)</td><td>Extremely toxic — causes hypoglycemia and liver failure</td></tr>
+    </tbody>
+  </table>
+  <p>The <a href="https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets">ASPCA lists alliums as toxic to dogs</a>, and the <a href="https://www.akc.org/expert-advice/nutrition/can-dogs-eat-garlic/">American Kennel Club</a> notes garlic is roughly five times more concentrated than onion — which is why even the garlic powder in a marinade is a real hazard, not a trivial one. The same reasoning applies to beef; our guide on <a href="/guides/can-dogs-eat-beef-jerky/">whether dogs can eat beef jerky</a> covers it in more depth.</p>
+
+  <h2>How to Make Chicken Jerky for Dogs</h2>
+  <ol>
+    <li><strong>Trim all fat.</strong> Use boneless skinless chicken breast and remove every visible piece of fat and connective tissue. Fat causes both rancidity and digestive upset.</li>
+    <li><strong>Freeze 60–90 minutes</strong> until firm but not solid — chicken breast will not slice thin while soft.</li>
+    <li><strong>Slice 1/4 inch thick.</strong> Cut <em>with</em> the grain for dog treats; the longer fibers make a chewier strip that lasts longer.</li>
+    <li><strong>Heat to 165°F.</strong> Simmer the strips in plain water for 3–5 minutes. This protects your dog and anyone handling the treats.</li>
+    <li><strong>Pat completely dry</strong> on both sides.</li>
+    <li><strong>Dry at 160°F for 4–6 hours</strong> in a single layer with airflow between strips.</li>
+    <li><strong>Check for doneness.</strong> Strips should be firm and dry throughout with no soft or springy centers. Dog treats should be drier than human jerky, since there is no salt to help preserve them.</li>
+    <li><strong>Cool, then refrigerate</strong> in an airtight container.</li>
+  </ol>
+
+  <ContentImage src="/images/chicken-jerky-dog-slicing.webp" alt="Plain chicken breast being sliced into even strips for homemade dog jerky" />
+
+  <h2>Chicken Jerky Dog Treats by Method</h2>
+
+  <h3>In a Dehydrator</h3>
+  <p>The best method — steady low heat and constant airflow. Set to 160°F and dry 4–6 hours. A dehydrator is also the easiest way to make a large batch, which matters since these treats are refrigerated and get used quickly.</p>
+
+  <h3>In the Oven</h3>
+  <p>Set the oven to 175°F and prop the door open about an inch. Lay strips on wire racks over foil-lined baking sheets and dry 2–3 hours, checking from 2 hours. Ovens run less evenly than dehydrators, so rotate the sheets halfway and expect the back row to finish first.</p>
+
+  <h3>In an Air Fryer</h3>
+  <p>Use the dehydrate setting at 160°F for 2–3 hours, flipping the strips every 45 minutes. Fastest option, smallest capacity — most baskets fit only 6–8 oz of chicken in a single layer.</p>
+
+  <h2>How Much Chicken Jerky Can a Dog Have?</h2>
+  <p>Treats should make up no more than <strong>10% of your dog's daily calories</strong>. For most dogs that means one or two strips a day, not a handful. Dehydrated chicken is deceptively concentrated — a 1-oz strip of jerky started as roughly 3 oz of raw chicken.</p>
+  <p>Introduce it gradually. Give one small piece the first day and watch for any digestive reaction before making it a regular treat, particularly with puppies, senior dogs, or dogs with a history of a sensitive stomach.</p>
+
+  <h2>Can Chicken Jerky Cause Diarrhea in Dogs?</h2>
+  <p>It can, and the usual cause is quantity rather than the chicken itself. Dried chicken is protein-dense, and a dog that works through several strips in one sitting is taking in a large protein load at once. That is enough to loosen stools in many dogs, even though nothing is wrong with the treat.</p>
+  <p>Keep portions small, introduce them slowly, and make sure the strips are fully dried — under-dried jerky retains moisture that can spoil. If diarrhea persists beyond a day or two, or if you see vomiting, lethargy, or reduced appetite, stop the treats and contact your veterinarian.</p>
+
+  <h2>Store-Bought vs. Homemade: How to Read the Label</h2>
+  <p>We do not review or recommend specific commercial brands here — product formulations and sourcing change, and a recommendation we cannot verify is worth nothing to you. What we can give you is the criteria to judge a package yourself:</p>
+  <ul>
+    <li><strong>Check the ingredient list length.</strong> The best chicken jerky treats have one ingredient: chicken. Every addition is worth questioning.</li>
+    <li><strong>Look for country of origin, not just "distributed by."</strong> A U.S. company address is not the same as U.S. manufacturing. Look for explicit "Made in USA" sourcing language.</li>
+    <li><strong>Watch for glycerin, sugars, and unnamed "flavorings"</strong> — common in soft jerky treats and unnecessary in a meat product.</li>
+    <li><strong>Avoid anything with garlic or onion</strong> in any form, including "natural flavor" that lists them.</li>
+    <li><strong>Check current FDA recall notices</strong> before buying an unfamiliar brand, rather than relying on any article's snapshot in time.</li>
+  </ul>
+  <p>Homemade sidesteps all of this. You know precisely what went in because you put one thing in.</p>
+
+  <ContentImage src="/images/chicken-jerky-dog-done.webp" alt="Finished plain chicken jerky dog treats in an airtight glass storage jar" />
+
+  <h2>Storing Homemade Dog Chicken Jerky</h2>
+  <p>These treats have no salt, cure, or preservatives, so they will not keep like human jerky does:</p>
+  <ul>
+    <li><strong>Refrigerator:</strong> about 1 week in an airtight container.</li>
+    <li><strong>Freezer:</strong> up to 3 months. Freeze in weekly portions and thaw as needed.</li>
+    <li><strong>Room temperature:</strong> not recommended beyond the day they are made.</li>
+  </ul>
+  <p>Discard any piece that smells sour, feels soft or tacky, or shows any discoloration. When in doubt, throw it out — the batch cost a few dollars of chicken.</p>
+</PillarLayout>

@@ -53,6 +53,10 @@ According to [USDA Food Safety and Inspection Service (FSIS)](https://www.fsis.u
 
 Most experienced home jerky makers rely on proper drying at 160°F+ to handle food safety naturally, but the USDA step-heating method is recommended for anyone serving high-risk individuals (elderly, pregnant, immunocompromised).
 
+### Poultry Is 165°F, Not 160°F
+
+The 160°F target on this page applies to beef and other red meat. **Poultry requires 165°F (74°C)** — a higher threshold set by USDA FSIS because of Salmonella risk. If you're drying chicken or turkey, use 165°F as the internal-temperature target and heat the meat before it goes in the dehydrator. Our [chicken jerky guide](/chicken-jerky/) walks through the pre-heat method, and the [chicken jerky for dogs](/chicken-jerky-for-dogs/) guide covers the plain single-ingredient version.
+
 ## How Temperature Affects Jerky Texture
 
 - **Too low (below 145°F):** Safety risk, slow drying, bacteria can survive

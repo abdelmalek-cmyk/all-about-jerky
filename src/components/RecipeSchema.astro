@@ -33,12 +33,16 @@ const schema: Record<string, unknown> = {
   url: pageUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
   inLanguage: 'en-US',
-  image: schemaImages.map((img) => ({
-    '@type': 'ImageObject',
-    url: `${base}${img.url}`,
-    width: img.width,
-    height: img.height,
-  })),
+  // Omit entirely rather than emit an empty array, which validators flag as
+  // an error. Reappears automatically once the image file exists.
+  ...(schemaImages.length > 0 && {
+    image: schemaImages.map((img) => ({
+      '@type': 'ImageObject',
+      url: `${base}${img.url}`,
+      width: img.width,
+      height: img.height,
+    })),
+  }),
   ...(p.keywords && { keywords: p.keywords }),
   author: {
     '@type': 'Person',

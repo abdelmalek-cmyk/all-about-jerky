@@ -1,0 +1,27 @@
+---
+import { getImageDims } from '../lib/image-dims.mjs';
+
+interface Props {
+  src: string;
+  alt: string;
+  /** First image above the fold — loads eagerly with high priority (LCP). */
+  eager?: boolean;
+}
+const { src, alt, eager = false } = Astro.props;
+
+// Renders nothing if the file isn't present yet, so a page never ships
+// broken <img> tags. Dimensions come from the real file (CLS prevention).
+const dims = getImageDims(src);
+---
+{dims && (
+  <img
+    src={src}
+    alt={alt}
+    width={dims.width}
+    height={dims.height}
+    style="width:100%;border-radius:8px;margin:1.5rem 0;"
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : undefined}
+    decoding={eager ? undefined : 'async'}
+  />
+)}

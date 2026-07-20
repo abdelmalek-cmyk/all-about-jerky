@@ -1,0 +1,13 @@
+{
+  // Static-assets-only deploy: no `main` key means there is no Worker script —
+  // Cloudflare serves the built `dist/` folder as static assets from the edge.
+  // This also signals to `wrangler deploy` that the project is already
+  // configured, so it skips the `astro add cloudflare` auto-setup that was
+  // rewriting astro.config.mjs to a hybrid/SSR build.
+  "name": "all-about-jerky",
+  "compatibility_date": "2026-07-20",
+  "assets": {
+    "directory": "./dist",
+    "not_found_handling": "404-page"
+  }
+}

@@ -1,6 +1,7 @@
 ---
 import PillarLayout from '../layouts/PillarLayout.astro';
 import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
 import ContentImage from '../components/ContentImage.astro';
 
 const canonical = 'https://allaboutjerky.com/chicken-jerky/';
@@ -107,6 +108,18 @@ const relatedLinks = [
   </div>
 
   <ContentImage src="/images/chicken-jerky.webp" alt="Homemade chicken jerky strips on a dark board, dried and lightly glossy" eager={true} />
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
 
   <h2>Is Chicken Jerky a Thing?</h2>
   <p>Yes — chicken jerky is a real, established product, and people make it at home constantly. The question comes up so often because chicken jerky is dramatically less visible than beef jerky on store shelves, and the pet-treat aisle is full of chicken jerky <em>for dogs</em>, which muddies the picture further.</p>

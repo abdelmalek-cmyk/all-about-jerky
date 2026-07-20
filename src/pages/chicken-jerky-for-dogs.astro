@@ -1,6 +1,7 @@
 ---
 import PillarLayout from '../layouts/PillarLayout.astro';
 import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
 import ContentImage from '../components/ContentImage.astro';
 
 const canonical = 'https://allaboutjerky.com/chicken-jerky-for-dogs/';
@@ -107,6 +108,18 @@ const relatedLinks = [
   </div>
 
   <ContentImage src="/images/chicken-jerky-for-dogs.webp" alt="Plain homemade chicken jerky dog treats on a wooden board beside a dog" eager={true} />
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
 
   <h2>Is Chicken Jerky Safe for Dogs?</h2>
   <p>Yes — homemade chicken jerky made from a single ingredient is safe for dogs, and it is one of the cleanest treats you can give them. The anxiety attached to this question is real and well-founded, but it traces to <em>commercial imported</em> chicken jerky treats, not to plain chicken dried at home.</p>

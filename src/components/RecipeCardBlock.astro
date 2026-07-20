@@ -1,0 +1,105 @@
+---
+// Printable "Sally's-style" recipe card, matching the one in RecipeLayout.
+// Used on pillar pages that carry a recipe but aren't recipe-collection entries
+// (e.g. the chicken jerky pages). Reuses the existing .rcb CSS — no new styles.
+interface Props {
+  title: string;
+  image?: string;
+  description: string;
+  prepTime: string;
+  cookTime: string;
+  totalTime: string;
+  recipeYield: string;
+  ingredients: string[];
+  instructions: string[];
+  nutrition?: Record<string, string>;
+}
+const {
+  title, image, description, prepTime, cookTime, totalTime,
+  recipeYield, ingredients, instructions, nutrition,
+} = Astro.props;
+
+function isoToHuman(iso: string): string {
+  const h = iso.match(/(\d+)H/)?.[1];
+  const m = iso.match(/(\d+)M/)?.[1];
+  const parts: string[] = [];
+  if (h) parts.push(`${h} hr`);
+  if (m) parts.push(`${m} min`);
+  return parts.join(' ') || iso;
+}
+---
+<div class="rcb" id="recipe-card">
+  <div class="rcb__top">
+    <div class="rcb__header">
+      {image && <img class="rcb__thumb" src={image} alt={title} width="80" height="80" loading="lazy" />}
+      <div class="rcb__title-area">
+        <h2 class="rcb__title">{title}</h2>
+        <p class="rcb__author">By <a href="/about/" style="color:inherit;text-decoration:none;font-weight:700;">Cole Mercer</a></p>
+        <div class="rcb__stars" aria-label="5 stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="rcb__actions">
+      <button class="rcb__btn-print" onclick="window.print()" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Print Recipe
+      </button>
+    </div>
+
+    <p class="rcb__desc">{description}</p>
+
+    <div class="rcb__times">
+      <div class="rcb__time-item">
+        <span class="rcb__time-label">Prep Time</span>
+        <span class="rcb__time-val">{isoToHuman(prepTime)}</span>
+      </div>
+      <div class="rcb__time-item">
+        <span class="rcb__time-label">Cook / Dry</span>
+        <span class="rcb__time-val">{isoToHuman(cookTime)}</span>
+      </div>
+      <div class="rcb__time-item">
+        <span class="rcb__time-label">Total Time</span>
+        <span class="rcb__time-val">{isoToHuman(totalTime)}</span>
+      </div>
+      <div class="rcb__time-item">
+        <span class="rcb__time-label">Yield</span>
+        <span class="rcb__time-val">{recipeYield}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="rcb__ingredients">
+    <h3>Ingredients</h3>
+    <ul>
+      {ingredients.map((ing) => (
+        <li>
+          <label>
+            <input type="checkbox" />
+            <span>{ing}</span>
+          </label>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="rcb__instructions-section">
+    <h3>Instructions</h3>
+    <ol>
+      {instructions.map((step) => <li>{step}</li>)}
+    </ol>
+  </div>
+
+  {nutrition && (
+    <div class="rcb__nutrition">
+      <h3>Nutrition Per Serving</h3>
+      <div class="rcb__nutr-grid">
+        {Object.entries(nutrition).map(([key, val]) => (
+          <div class="rcb__nutr-item">
+            <span class="rcb__nutr-val">{val}</span>
+            <span class="rcb__nutr-key">{key}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  )}
+</div>

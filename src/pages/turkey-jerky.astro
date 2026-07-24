@@ -1,0 +1,272 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/turkey-jerky/';
+
+const recipe = {
+  name: 'Turkey Jerky',
+  description:
+    'Lean homemade turkey jerky from turkey breast: marinated, pre-heated to a safe 165°F, then dried until it snaps. Leaner and easy to make low-sodium.',
+  image: '/images/turkey-jerky.webp',
+  prepTime: 'PT25M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H25M',
+  recipeYield: 'About 12 oz (from 2 lbs raw turkey breast)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'turkey jerky, turkey jerky recipe, how to make turkey jerky, ground turkey jerky, low sodium turkey jerky',
+  ingredients: [
+    '2 lbs boneless skinless turkey breast, all fat and tendon trimmed',
+    '1/3 cup low-sodium soy sauce (or coconut aminos for a lower-sodium batch)',
+    '2 tablespoons Worcestershire sauce',
+    '1 tablespoon honey or brown sugar',
+    '1 teaspoon garlic powder',
+    '1 teaspoon onion powder',
+    '1 teaspoon smoked paprika',
+    '1/2 teaspoon coarse black pepper',
+    '1/4 teaspoon cayenne pepper (optional)',
+  ],
+  instructions: [
+    'Trim every trace of fat and tendon from the turkey breast — poultry fat turns rancid faster than beef fat and shortens shelf life.',
+    'Freeze the breast 60–90 minutes until firm but not solid. Turkey is soft and will not slice cleanly otherwise.',
+    'Slice against the grain to an even 1/4-inch thickness. Uniform thickness matters more with poultry because thin spots dry brittle before thick spots finish.',
+    'Whisk together the soy sauce, Worcestershire, honey, garlic powder, onion powder, smoked paprika, black pepper, and cayenne until the honey dissolves.',
+    'Add the turkey strips, seal in a zip-lock bag with the air pressed out, and refrigerate 4–12 hours. Poultry absorbs marinade fast — do not exceed 12 hours or the texture turns mushy.',
+    'Bring the strips and marinade to a gentle simmer for 3–5 minutes, until the turkey reaches an internal temperature of 165°F. This USDA-recommended pre-heat is not optional for poultry jerky.',
+    'Remove the strips and pat every surface completely dry with paper towels.',
+    'Arrange in a single layer on dehydrator trays with space between strips. Dry at 160°F for 4–6 hours, checking from 3.5 hours on.',
+    'Turkey jerky is done when a cooled strip snaps rather than bends — it finishes firmer and more brittle than beef jerky, which is normal.',
+    'Cool completely on a wire rack before storing in an airtight container.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'Is turkey jerky healthy?',
+    answer:
+      'Turkey jerky is one of the leanest high-protein snacks you can make. Turkey breast is very low in fat, so turkey jerky is typically lower in fat than beef jerky made from round cuts, while delivering a similar protein hit. The main nutritional watch-point, as with all jerky, is sodium — most of which comes from soy sauce and added salt, both of which you can cut substantially at home.',
+  },
+  {
+    question: 'Is turkey jerky healthier than beef jerky?',
+    answer:
+      'Turkey jerky made from breast meat is generally leaner than beef jerky made from round cuts — less total and saturated fat for a comparable amount of protein. Beef jerky carries more iron and zinc. Neither is "unhealthy"; turkey wins on fat and calories, beef wins on certain minerals. For either, sodium is the number to watch, and homemade lets you control it.',
+  },
+  {
+    question: 'How much protein is in turkey jerky?',
+    answer:
+      'Turkey jerky is protein-dense because drying removes water and concentrates the meat. Exact figures depend on the cut and how much marinade is absorbed, so check the label on store-bought or calculate from your own ingredients rather than trusting a single number. Turkey breast is among the highest-protein, lowest-fat meats available, which is why it makes such an efficient jerky.',
+  },
+  {
+    question: 'Can you make turkey jerky from ground turkey?',
+    answer:
+      'Yes. Use lean ground turkey breast (93/7 or leaner — standard ground turkey includes skin and runs fattier), season it, press it through a jerky gun into strips or sticks, and dry. Because grinding spreads surface bacteria through the whole batch, ground turkey jerky needs the 165°F heat step even more than sliced strips do.',
+  },
+  {
+    question: 'How long does turkey jerky last?',
+    answer:
+      'Homemade turkey jerky lasts about 1–2 weeks in an airtight container at room temperature, 1 month refrigerated, and 3 months frozen. Poultry jerky keeps slightly less well than beef because residual fat oxidizes faster, so trim thoroughly and refrigerate if you are keeping it beyond a few days.',
+  },
+  {
+    question: 'Can dogs eat turkey jerky?',
+    answer:
+      'Dogs can eat plain, unseasoned turkey jerky, but never the seasoned version made for people — garlic and onion are toxic to dogs and the sodium is far too high. Make dog turkey jerky from plain turkey breast with no salt or seasoning, heated to 165°F and fully dried. See our chicken jerky for dogs guide for the single-ingredient method, which is identical for turkey.',
+  },
+  {
+    question: 'Can cats eat turkey jerky?',
+    answer:
+      'Cats should not eat seasoned turkey jerky made for people — garlic and onion are toxic to cats and the sodium is far too high. Plain, unseasoned dried turkey breast with no salt or seasoning is generally safe as an occasional treat in tiny amounts, but check with your veterinarian first.',
+  },
+  {
+    question: 'Can you eat turkey jerky while pregnant?',
+    answer:
+      'Shelf-stable jerky that has been properly heated to 165°F and fully dried is generally considered lower-risk than deli or undercooked meats, but jerky is also high in sodium and is a processed food. Pregnancy nutrition is individual, so treat this as general information only and ask your doctor or midwife before making turkey jerky a regular snack.',
+  },
+  {
+    question: 'Is turkey jerky keto-friendly?',
+    answer:
+      'Plain turkey jerky made without added sugar is keto-friendly — turkey breast is essentially fat-and-protein with no carbs. To keep it keto, skip the honey and brown sugar, use coconut aminos in place of soy sauce, and season with garlic, onion, smoked paprika, and pepper. Sweetened or teriyaki versions are not keto.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Chicken Jerky', href: '/chicken-jerky/' },
+  { label: 'Chicken Jerky for Dogs', href: '/chicken-jerky-for-dogs/' },
+  { label: 'Is Beef Jerky Healthy?', href: '/guides/is-beef-jerky-healthy/' },
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+];
+---
+<PillarLayout
+  title="Turkey Jerky Recipe: Lean & High-Protein"
+  description="How to make turkey jerky: lean turkey breast, safe 165°F method, 4–6 hours. Low-sodium and high-protein — plus dehydrator, oven, smoker, and stick methods."
+  {canonical}
+  breadcrumbs={[{ label: 'Turkey Jerky', href: '/turkey-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  datePublished="2026-07-21"
+  dateModified="2026-07-21"
+>
+  <RecipeSchema {...recipe} datePublished="2026-07-21" dateModified="2026-07-21" url={canonical} />
+
+  <h1>How to Make Turkey Jerky</h1>
+
+  <div class="answer-box">
+    <p>To make turkey jerky, trim and slice lean turkey breast 1/4 inch thick, marinate 4–12 hours, then heat the strips to an internal temperature of <strong>165°F</strong> before drying at <strong>160°F for 4–6 hours</strong>. Turkey is leaner than beef and easy to make low-sodium, but the 165°F pre-heat is essential — poultry carries a Salmonella risk that most home dehydrators cannot destroy on their own.</p>
+  </div>
+
+  <ContentImage src="/images/turkey-jerky.webp" alt="Homemade turkey jerky strips on a dark board, dried and lightly glossy" eager={true} />
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <h2>Is Turkey Jerky Safe? The 165°F Rule</h2>
+  <p>Turkey jerky is safe to eat when the turkey reaches an internal temperature of <strong>165°F (74°C)</strong>. This is the single most important difference from beef jerky, which targets 160°F, and it is where most home poultry-jerky recipes go wrong.</p>
+  <p><a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/jerky-and-food-safety">USDA Food Safety and Inspection Service</a> guidance is explicit: most home dehydrators do not get hot enough to reliably destroy Salmonella, and the drying process itself makes bacteria more heat-resistant. The fix is to heat the meat <em>before</em> it goes in the dehydrator.</p>
+
+  <h3>The Pre-Heat Method (recommended)</h3>
+  <ol>
+    <li>Marinate the strips as normal.</li>
+    <li>Transfer the strips and marinade to a saucepan and bring to a gentle simmer for 3–5 minutes, until the turkey reaches 165°F internally.</li>
+    <li>Pat completely dry and dehydrate as usual.</li>
+  </ol>
+  <p>The strips will look pale and cooked going into the dehydrator — that is expected, and they darken as they dry. If you would rather dry first, finish the fully dried strips in a <strong>275°F oven for 10 minutes</strong> instead. The same 165°F target applies to poultry across every method; our <a href="/guides/beef-jerky-time-and-temperature/">time and temperature guide</a> covers the underlying logic (with 165°F substituted for beef's 160°F).</p>
+
+  <h2>How to Make Turkey Jerky — Step by Step</h2>
+  <ol>
+    <li><strong>Trim ruthlessly.</strong> Use boneless skinless turkey breast and remove all fat and tendon. Poultry fat oxidizes faster than beef fat and is the main cause of off-flavors in stored turkey jerky.</li>
+    <li><strong>Freeze 60–90 minutes.</strong> Longer than you would for beef. Turkey breast is soft and tears rather than slices unless it is properly firm.</li>
+    <li><strong>Slice 1/4 inch against the grain.</strong> Consistency matters more here than with beef — uneven strips finish at wildly different times.</li>
+    <li><strong>Marinate 4–12 hours</strong> refrigerated, in a sealed bag with the air pressed out.</li>
+    <li><strong>Pre-heat to 165°F.</strong> Simmer the strips in the marinade 3–5 minutes. Do not skip this.</li>
+    <li><strong>Pat completely dry.</strong> Surface moisture steams the meat instead of drying it.</li>
+    <li><strong>Dry at 160°F for 4–6 hours</strong> in a single layer with space between strips.</li>
+    <li><strong>Test from 3.5 hours.</strong> Cool a strip 2–3 minutes and bend it — turkey jerky is done when it snaps rather than folds.</li>
+    <li><strong>Cool completely</strong> on a wire rack before sealing.</li>
+  </ol>
+
+  <ContentImage src="/images/turkey-jerky-sliced.webp" alt="Lean turkey breast sliced into even quarter-inch strips on a wooden board" />
+
+  <h2>Turkey Jerky Marinade &amp; Seasoning</h2>
+  <p>Turkey is mild, so the marinade does most of the flavor work — but turkey also absorbs marinade quickly, so <strong>4–12 hours is the window; past 12 hours the surface turns mushy</strong>. The base recipe above uses low-sodium soy sauce for salt and umami, Worcestershire for depth, a touch of honey for balance, and garlic, onion, smoked paprika and pepper for the savory backbone.</p>
+  <p>Popular turkey jerky seasoning directions:</p>
+  <ul>
+    <li><strong>Peppered:</strong> double the black pepper and press extra cracked pepper onto the strips before drying.</li>
+    <li><strong>Sweet &amp; spicy:</strong> raise the honey to 2 tablespoons and add 1–2 teaspoons of sriracha.</li>
+    <li><strong>Cajun:</strong> swap the paprika for 1 tablespoon of salt-free Cajun seasoning.</li>
+    <li><strong>Teriyaki:</strong> use the marinade from our <a href="/recipes/teriyaki-beef-jerky/">teriyaki recipe</a>, cut to a 6–8 hour soak.</li>
+  </ul>
+  <p>For a deeper breakdown of how marinade components work — salt ratios, acids, sweeteners, cures — see the <a href="/beef-jerky-marinade/">beef jerky marinade guide</a>; the chemistry is identical, only the timing changes for poultry.</p>
+
+  <h2>How Long to Dehydrate Turkey Jerky</h2>
+  <table class="data-table">
+    <thead>
+      <tr><th>Method</th><th>Temperature</th><th>Time (1/4-inch strips)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Food dehydrator</td><td>160°F</td><td>4–6 hours</td></tr>
+      <tr><td>Oven (door propped)</td><td>175°F</td><td>3–4 hours</td></tr>
+      <tr><td>Air fryer (dehydrate mode)</td><td>160°F</td><td>2–3 hours</td></tr>
+      <tr><td>Pellet smoker</td><td>165°F</td><td>3–4 hours</td></tr>
+    </tbody>
+  </table>
+  <p>All four assume the turkey already reached 165°F in the pre-heat step. Turkey dries faster than beef because it has less connective tissue — start checking an hour earlier than you would for a beef batch.</p>
+
+  <h2>Turkey Jerky by Method</h2>
+
+  <h3>Dehydrator</h3>
+  <p>A dehydrator is the most reliable method. Set it to 160°F, lay strips in a single layer with airflow gaps, and start checking at 3.5 hours. Rotate trays once at the halfway mark if your model has a bottom-mounted fan. Everything in the <a href="/dehydrator-beef-jerky/">dehydrator beef jerky guide</a> about tray loading and airflow applies here — turkey simply finishes sooner.</p>
+
+  <ContentImage src="/images/turkey-jerky-dehydrator.webp" alt="Turkey jerky strips arranged on stainless dehydrator trays before drying" />
+
+  <h3>Oven</h3>
+  <p>Set the oven to 175°F and prop the door open about an inch with a wooden spoon so moisture escapes. Lay strips on wire racks over foil-lined baking sheets and dry 3–4 hours, rotating the sheets halfway. Check at 2.5 hours — turkey runs fast in the oven.</p>
+
+  <h3>Air Fryer</h3>
+  <p>Air fryers are the quickest route: 160°F on the dehydrate setting for 2–3 hours, flipping every 45 minutes. The strong fan dries turkey fast, so check the first batch at 90 minutes. Capacity is the limitation — most baskets hold 6–8 oz of strips in a single layer.</p>
+
+  <h3>Smoked &amp; Traeger Turkey Jerky</h3>
+  <p>Smoked turkey jerky is excellent — turkey takes smoke readily, so go milder than you think: apple or cherry, never mesquite. Smoke at 165°F for 3–4 hours. On a pellet grill the setup is identical to beef; see the <a href="/smoked-beef-jerky/#traeger-pellet-grill">Traeger and pellet grill guide</a> for settings, then shorten the time and watch it closely.</p>
+
+  <h2>Ground Turkey Jerky &amp; Turkey Jerky Sticks</h2>
+  <p>Ground turkey jerky and turkey jerky sticks are made the same way as their beef counterparts: season the meat, press it through a jerky gun into strips or sticks, and dry. Two turkey-specific cautions. First, <strong>use lean ground turkey breast (93/7 or leaner)</strong> — standard ground turkey includes skin and runs far fattier, which goes rancid quickly. Second, ground poultry needs the 165°F heat step even more than sliced strips, because grinding distributes surface bacteria through the entire batch.</p>
+  <p>Because pre-simmering piped strips is impractical, use the post-heat method for sticks: dry them fully, then finish 10 minutes in a 275°F oven. A basic ground turkey jerky mix for 1 lb of lean ground turkey breast: 2 tbsp low-sodium soy sauce, 1 tbsp Worcestershire, 1 tsp each garlic and onion powder, 1 tsp smoked paprika, 1/2 tsp black pepper, and 1/4 tsp Prague Powder No. 1. The technique for loading and piping is covered in the <a href="/ground-beef-jerky/">ground beef jerky guide</a>.</p>
+
+  <ContentImage src="/images/turkey-jerky-sticks.webp" alt="Ground turkey jerky sticks piped onto a dehydrator tray before drying" />
+
+  <h2>Is Turkey Jerky Healthy? Nutrition &amp; Protein</h2>
+  <p>Turkey jerky is one of the leanest high-protein snacks you can make. Turkey breast is among the lowest-fat meats available — per <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a>, raw skinless turkey breast is only a few percent fat — and dehydration removes water while leaving the protein behind, concentrating it substantially.</p>
+  <p>Two things to know before trusting a number on a label:</p>
+  <ul>
+    <li><strong>Protein and fat</strong> depend on the cut. Breast-only turkey jerky is leaner than jerky made from thigh or from standard ground turkey with skin.</li>
+    <li><strong>Sodium</strong> is turkey jerky's real nutritional watch-point, and it comes almost entirely from soy sauce and added salt — not the meat. That is exactly why the low-sodium version below is so effective.</li>
+  </ul>
+  <p>We do not publish per-serving figures for this recipe, because the real numbers depend on how much marinade each batch absorbs and estimating them would be guesswork. For how the sodium math works across all jerky, see our <a href="/guides/is-beef-jerky-healthy/">jerky nutrition guide</a> — the same logic applies to turkey.</p>
+
+  <h2>How to Make Low-Sodium Turkey Jerky</h2>
+  <p>Low sodium is turkey jerky's biggest advantage over beef, and it is easy to build in. Nearly all the sodium in any jerky comes from the marinade, so you control it directly:</p>
+  <ul>
+    <li><strong>Swap soy sauce for coconut aminos</strong> — roughly 65 mg of sodium per tablespoon versus about 920 mg for regular soy sauce, a dramatic cut with a slightly sweeter flavor.</li>
+    <li><strong>Skip the Worcestershire</strong> (or use a low-sodium version) and skip any added table salt.</li>
+    <li><strong>Lean on aromatics for flavor</strong> — garlic powder, onion powder, smoked paprika, and black pepper carry almost no sodium but do most of the tasting work.</li>
+  </ul>
+  <p>A deliberate low-sodium build lands far below a standard soy-based marinade while keeping all the protein. Because there is less salt acting as a preservative, treat low-sodium turkey jerky as a refrigerate-and-use-quickly batch, or add a measured 1/4 tsp of curing salt per pound if you want a longer room-temperature life.</p>
+
+  <h2>Turkey Jerky vs Beef Jerky</h2>
+  <p>The two are made almost identically — the differences come down to fat, minerals, texture, and safe temperature.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Turkey jerky</th><th>Beef jerky</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Fat content</td><td>Very low (breast is leaner)</td><td>Low (lean round is ~3–5%)</td></tr>
+      <tr><td>Protein</td><td>High</td><td>High</td></tr>
+      <tr><td>Iron &amp; zinc</td><td>Lower</td><td>Higher</td></tr>
+      <tr><td>Safe internal temp</td><td>165°F</td><td>160°F</td></tr>
+      <tr><td>Texture</td><td>Snappy, brittle, crisp edges</td><td>Chewy, pliable, fibrous</td></tr>
+      <tr><td>Drying time (1/4 inch)</td><td>4–6 hours</td><td>4–6 hours, often longer</td></tr>
+      <tr><td>Shelf life</td><td>Slightly shorter</td><td>Slightly longer</td></tr>
+    </tbody>
+  </table>
+  <p>Neither is "healthier" across the board: turkey wins on fat and calories, beef wins on iron and zinc, and sodium depends entirely on how each is seasoned. If you like beef jerky's chew, our <a href="/guides/is-beef-jerky-healthy/">beef jerky nutrition guide</a> breaks down its numbers in the same way.</p>
+
+  <h2>Wild Turkey Jerky</h2>
+  <p>Wild turkey makes excellent jerky and is even leaner than store-bought breast, so it dries fast and can turn brittle quickly — pull it early and watch it closely. Use the breast; the legs of a wild bird are tough and tendon-heavy. Two safety notes specific to wild game: freeze the meat solid for several days before processing, and always hit the 165°F internal temperature, since wild birds can carry pathogens that farmed poultry is screened for. Hunters who also make deer jerky will find the same wild-game handling in our <a href="/venison-jerky/">venison jerky guide</a>.</p>
+
+  <h2>Turkey Jerky for Dogs</h2>
+  <p>Dogs love turkey jerky, and plain turkey is a great single-ingredient treat — but it must be <strong>plain turkey breast and nothing else</strong>. Never give a dog the seasoned recipe on this page: garlic and onion are toxic to dogs, and the sodium is far beyond what a dog should have. The <a href="https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets">ASPCA lists alliums as toxic to dogs</a>, and the <a href="https://www.akc.org/expert-advice/nutrition/can-dogs-eat-garlic/">American Kennel Club</a> notes garlic is even more concentrated than onion.</p>
+  <p>To make dog turkey jerky: trim all fat from plain turkey breast, slice 1/4 inch, heat to 165°F in plain water, and dry at 160°F for 4–6 hours until firm. No salt, no seasoning, no marinade. The method is identical to our <a href="/chicken-jerky-for-dogs/">chicken jerky for dogs</a> guide, which also covers portion sizes and the safety history behind commercial poultry jerky treats.</p>
+
+  <h2>Can You Eat Turkey Jerky While Pregnant?</h2>
+  <p>This is a common and reasonable question, and the honest answer is that it depends on your individual pregnancy — so treat what follows as general food-safety information, not medical advice, and confirm with your doctor or midwife.</p>
+  <p>The pregnancy concern with cured and deli meats is <em>Listeria</em>. Shelf-stable jerky that has been properly heated to 165°F and fully dried is generally considered lower-risk than refrigerated deli meats, because the pathogens have been destroyed and the low moisture prevents regrowth. The countervailing points: jerky is high in sodium and is a processed food, both of which matter more during pregnancy. If you do eat it, homemade — where you control the temperature and the salt — gives you the most oversight. Always run it past your healthcare provider first.</p>
+
+  <h2>How to Store Turkey Jerky</h2>
+  <ul>
+    <li><strong>Room temperature:</strong> 1–2 weeks in an airtight container, away from heat and light.</li>
+    <li><strong>Refrigerated:</strong> about 1 month.</li>
+    <li><strong>Frozen:</strong> about 3 months, vacuum-sealed.</li>
+  </ul>
+  <p>Turkey jerky keeps slightly less well than beef because residual poultry fat oxidizes faster, so thorough trimming is the single biggest factor in shelf life. Low-sodium and unsweetened batches keep for less time than salted ones — refrigerate them. The storage principles in the <a href="/guides/how-long-does-beef-jerky-last/">beef jerky storage guide</a> — airtight containers, oxygen absorbers, vacuum sealing — all transfer directly.</p>
+
+  <div class="tips-block">
+    <h3>Turkey Jerky Troubleshooting</h3>
+    <ul>
+      <li><strong>Strips shattered instead of snapping.</strong> Over-dried. Turkey crosses from done to brittle faster than beef — start testing at 3.5 hours.</li>
+      <li><strong>Texture is mushy or pasty.</strong> Marinated too long. Keep turkey under 12 hours.</li>
+      <li><strong>Strips tore while slicing.</strong> Not frozen firm enough. Turkey needs 60–90 minutes in the freezer, not the 1–2 hours a beef roast takes.</li>
+      <li><strong>Off or soapy smell after a week.</strong> Residual fat has gone rancid. Trim harder next batch and refrigerate.</li>
+    </ul>
+  </div>
+</PillarLayout>

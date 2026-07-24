@@ -23,7 +23,7 @@ relatedPages:
   - "/guides/beef-jerky-time-and-temperature/"
   - "/best-meat-for-beef-jerky/"
 datePublished: "2024-02-01"
-dateModified: "2026-07-18"
+dateModified: "2026-07-21"
 ---
 
 # Is Beef Jerky Healthy? Nutrition Facts
@@ -90,3 +90,5 @@ Yes -- plain beef jerky made with only salt, pepper, and garlic is completely ca
 - **Low-sodium soy sauce** cuts sodium by 40% without changing flavor significantly
 - **Skip sugar** -- plain and peppered jerky can be made with zero added sugar
 - **Portion control** -- 1 oz is one serving; it's easy to eat 3-4 oz in one sitting
+
+Want an even leaner option? [Turkey jerky](/turkey-jerky/) made from turkey breast is lower in fat than beef jerky for a comparable amount of protein, and it's easy to make low-sodium -- just remember poultry needs a 165°F internal temperature, not beef's 160°F.

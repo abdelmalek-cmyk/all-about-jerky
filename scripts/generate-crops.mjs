@@ -27,6 +27,8 @@ const methodHeroes = [
   // chicken cluster heroes
   'chicken-jerky',
   'chicken-jerky-for-dogs',
+  // turkey hero
+  'turkey-jerky',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

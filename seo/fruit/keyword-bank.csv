@@ -1,0 +1,85 @@
+keyword,section,page_url,volume,kd,intent,is_question
+handmade fruit jerky,buy,/fruit-jerky/,210,38.0,Commercial,False
+best fruit jerky,buy,/fruit-jerky/,20,,,False
+buy fruit jerky,buy,/fruit-jerky/,20,,,False
+dried fruit jerky,buy,/fruit-jerky/,20,,,False
+fruit jerky recipe,core-recipe,/fruit-jerky/,110,32.0,Informational,False
+how to make fruit jerky,core-recipe,/fruit-jerky/,110,27.0,Informational,True
+how to make solely fruit jerky,core-recipe,/fruit-jerky/,40,21.0,Informational,True
+juice jerky fruit leather,core-recipe,/fruit-jerky/,40,,,False
+homemade fruit jerky,core-recipe,/fruit-jerky/,20,,,False
+how to make fruit jerky at home,core-recipe,/fruit-jerky/,20,,,True
+best dehydrator for jerky and fruit,dehydrator,/fruit-jerky/,20,,,False
+fruit jerky dehydrator,dehydrator,/fruit-jerky/,20,,,False
+hot fruit flavored beef jerky,fruit-beef,/fruit-jerky/,50,,,False
+chinese fruit flavored beef jerky,fruit-beef,/fruit-jerky/,20,,,False
+fruit beef jerky,fruit-beef,/fruit-jerky/,20,,,False
+fruit flavored beef jerky,fruit-beef,/fruit-jerky/,20,,,False
+fruit flavored beef jerky recipe,fruit-beef,/fruit-jerky/,20,,,False
+soo hot fruit beef jerky,fruit-beef,/fruit-jerky/,20,,,False
+beef jerky and fruit diet,fruit-beef,/fruit-jerky/,10,,,False
+soo hot fruit flavored beef jerky,fruit-beef,/fruit-jerky/,10,,,False
+fruit jerky,general,/fruit-jerky/,3600,41.0,Informational,False
+fruit jerky snack,general,/fruit-jerky/,20,,,False
+jerky fruit,general,/fruit-jerky/,20,,,False
+watermelon fruit jerky,general,/fruit-jerky/,20,,,False
+what is fruit jerky,general,/fruit-jerky/,20,,,True
+klarstein fruit jerky plus 6,general,/fruit-jerky/,10,,,False
+watermelon road fruit jerky,general,/fruit-jerky/,10,,,False
+is fruit jerky good for you,health,/fruit-jerky/,20,,,True
+is fruit jerky healthy,health,/fruit-jerky/,20,,,True
+organic mango fruit jerky,mango,/fruit-jerky/,140,17.0,"Informational, Commercial",False
+fruit jerky mango,mango,/fruit-jerky/,110,27.0,Transactional,False
+mango fruit jerky,mango,/fruit-jerky/,110,18.0,Commercial,False
+solely mango fruit jerky,mango,/fruit-jerky/,90,12.0,"Informational, Transactional",False
+solely organic mango fruit jerky,mango,/fruit-jerky/,90,24.0,"Informational, Transactional",False
+solely fruit jerky mango,mango,/fruit-jerky/,70,31.0,"Informational, Transactional",False
+solely organic fruit jerky mango,mango,/fruit-jerky/,40,29.0,"Informational, Transactional",False
+solely fruit jerky mango chili,mango,/fruit-jerky/,20,,,False
+solely fruit jerky mango guava,mango,/fruit-jerky/,20,,,False
+solely: fruit jerky mango,mango,/fruit-jerky/,20,,,False
+organic fruit jerky,organic,/fruit-jerky/,590,25.0,Commercial,False
+solely fruit jerky banana,other-flavors,/fruit-jerky/,20,,,False
+solely fruit jerky pineapple,pineapple,/fruit-jerky/,50,18.0,"Informational, Transactional",False
+pineapple fruit jerky,pineapple,/fruit-jerky/,30,,,False
+solely fruit jerky pineapple coconut,pineapple,/fruit-jerky/,30,,,False
+fruit jerky pineapple,pineapple,/fruit-jerky/,20,,,False
+solely organic pineapple fruit jerky,pineapple,/fruit-jerky/,20,,,False
+solely pineapple fruit jerky,pineapple,/fruit-jerky/,20,,,False
+solely organic fruit jerky pineapple,pineapple,/fruit-jerky/,10,,,False
+solely fruit jerky,solely-brand,/fruit-jerky/,9900,37.0,Commercial,False
+solely organic fruit jerky,solely-brand,/fruit-jerky/,1600,35.0,"Informational, Transactional",False
+solely fruit jerky costco,solely-brand,/fruit-jerky/,590,36.0,"Informational, Transactional",False
+fruit jerky costco,solely-brand,/fruit-jerky/,210,29.0,"Navigational, Transactional",False
+fruit jerky solely,solely-brand,/fruit-jerky/,170,32.0,Commercial,False
+soley fruit jerky,solely-brand,/fruit-jerky/,170,27.0,"Informational, Transactional",False
+costco fruit jerky,solely-brand,/fruit-jerky/,110,28.0,"Informational, Transactional",False
+costco solely fruit jerky,solely-brand,/fruit-jerky/,110,34.0,Informational,False
+is solely fruit jerky healthy,solely-brand,/fruit-jerky/,110,7.0,Informational,True
+whole foods fruit jerky,solely-brand,/fruit-jerky/,90,22.0,Informational,False
+solely organic fruit jerky costco,solely-brand,/fruit-jerky/,50,,,False
+snact fruit jerky,solely-brand,/fruit-jerky/,40,1.0,Commercial,False
+are solely fruit jerky healthy,solely-brand,/fruit-jerky/,30,,,True
+solely fruit jerky flavors,solely-brand,/fruit-jerky/,30,,,False
+solely fruit jerky nutrition,solely-brand,/fruit-jerky/,30,,,False
+fruit jerky whole foods,solely-brand,/fruit-jerky/,20,,,False
+how is solely fruit jerky made,solely-brand,/fruit-jerky/,20,,,True
+solely fruit jerky calories,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky canada,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky ingredients,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky instagram,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky nutrition facts,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky review,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky variety pack,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky walmart,solely-brand,/fruit-jerky/,20,,,False
+solely fruit jerky whole foods,solely-brand,/fruit-jerky/,20,,,False
+solely organic fruit jerky nutrition facts,solely-brand,/fruit-jerky/,20,,,False
+solely organic fruit jerky variety 16 pack,solely-brand,/fruit-jerky/,20,,,False
+where can i buy solely fruit jerky,solely-brand,/fruit-jerky/,20,,,True
+does costco sell solely fruit jerky,solely-brand,/fruit-jerky/,10,,,True
+how does solely make their fruit jerky,solely-brand,/fruit-jerky/,10,,,True
+solely fruit jerky healthy,solely-brand,/fruit-jerky/,10,,,False
+solely fruit jerky nutrition label,solely-brand,/fruit-jerky/,10,,,False
+solely jerky fruit,solely-brand,/fruit-jerky/,10,,,False
+solely organic fruit jerky amazon,solely-brand,/fruit-jerky/,10,,,False
+who owns solely fruit jerky,solely-brand,/fruit-jerky/,10,,,False

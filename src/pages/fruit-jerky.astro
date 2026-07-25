@@ -1,0 +1,163 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/fruit-jerky/';
+
+const recipe = {
+  name: 'Fruit Jerky',
+  description:
+    'Homemade fruit jerky from just pureed fruit — no added sugar, vegan, and simpler than meat jerky with no food-safety pre-heat. Dried low at 135°F into chewy strips.',
+  image: '/images/fruit-jerky.webp',
+  prepTime: 'PT15M',
+  cookTime: 'PT6H',
+  totalTime: 'PT6H15M',
+  recipeYield: 'About 8–10 strips (from 3 cups fruit)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords: 'fruit jerky, how to make fruit jerky, fruit jerky recipe, homemade fruit jerky, mango fruit jerky',
+  ingredients: [
+    '3 cups ripe fruit (mango, strawberries, peaches, or a mix), peeled and chopped',
+    '1 tablespoon lemon juice (brightens the flavor and keeps the color)',
+    'Optional: 1–2 teaspoons honey or maple syrup, only if the fruit is tart',
+  ],
+  instructions: [
+    'Wash, peel, and roughly chop the fruit. Very ripe fruit purees smoothest and is naturally sweetest — no added sugar needed.',
+    'Blend the fruit with the lemon juice until completely smooth. For a silkier jerky, strain the puree through a fine sieve to remove seeds and fibers.',
+    'Taste it. Add the optional honey or maple only if the fruit is tart; skip it entirely for a no-added-sugar batch.',
+    'Line a dehydrator tray with a fruit-leather sheet or parchment. Spread the puree in an even 1/8-inch layer — thinner dries faster and more evenly.',
+    'Dry at 135°F (57°C) for 6–8 hours. Fruit needs no food-safety pre-heat the way meat does — there is no pathogen risk, so low and slow is all it takes.',
+    'The fruit jerky is done when the surface is no longer tacky and it peels cleanly off the sheet in one piece, with no wet spots.',
+    'Cool fully, then cut into strips with scissors or a pizza wheel. Roll in parchment or store flat in an airtight container.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'How do you make Solely fruit jerky at home?',
+    answer:
+      "Solely's product is simply organic fruit pureed and slow-dried into strips — nothing added. To make the same thing at home, blend ripe fruit (a splash of lemon juice keeps the color), spread it thin on a lined tray, and dry at 135°F for 6–8 hours until it peels cleanly. That is the entire process; the store version just does it at scale.",
+  },
+  {
+    question: 'Are Solely fruit jerky healthy?',
+    answer:
+      'Solely fruit jerky is a whole-food snack — organic fruit and nothing else — so it is a genuinely good choice compared with candy or processed fruit snacks. The one caveat applies to all dried fruit: drying removes water and concentrates the natural sugar and calories per bite, so a small strip carries the sugar of a larger piece of fresh fruit. Enjoy it in sensible portions.',
+  },
+  {
+    question: 'How do you make fruit jerky at home?',
+    answer:
+      'Puree ripe fruit until smooth, spread it in a thin 1/8-inch layer on a lined dehydrator tray, and dry at 135°F for 6–8 hours until it is no longer tacky and peels off in one piece. No dehydrator? Use your oven on its lowest setting (usually 150–170°F) with the door cracked, checking often. There is no cure and no safety pre-heat — it is just fruit.',
+  },
+  {
+    question: 'Where can I buy Solely fruit jerky?',
+    answer:
+      'Solely fruit jerky is sold at Costco, Whole Foods, Walmart, many natural-grocery stores, and online including Amazon and the brand’s own site. Availability and specific flavors vary by store and season, so stock at any one location changes over time. If you want it cheaper and fresher, the homemade version on this page is the same idea — pureed fruit, dried.',
+  },
+  {
+    question: 'Does Costco sell Solely fruit jerky?',
+    answer:
+      'Yes — Costco has carried Solely fruit jerky, typically as organic multi-packs or variety packs. Costco rotates its inventory and stock differs by warehouse and region, so it is not guaranteed at every location at every time. Check your local warehouse or Costco’s site, or make your own at home with the recipe above.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' },
+  { label: 'Beef Jerky Flavors', href: '/recipes/beef-jerky-flavors/' },
+  { label: 'Is Beef Jerky Healthy?', href: '/guides/is-beef-jerky-healthy/' },
+];
+---
+<PillarLayout
+  title="How to Make Fruit Jerky (No Added Sugar)"
+  description="Make homemade fruit jerky from just pureed fruit — no added sugar, vegan, and simpler than meat jerky (no pre-heat). Plus mango, pineapple, and is Solely healthy?"
+  {canonical}
+  breadcrumbs={[{ label: 'Fruit Jerky', href: '/fruit-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  datePublished="2026-07-25"
+  dateModified="2026-07-25"
+>
+  <RecipeSchema {...recipe} datePublished="2026-07-25" dateModified="2026-07-25" url={canonical} />
+
+  <h1>How to Make Fruit Jerky</h1>
+
+  <div class="answer-box">
+    <p>Fruit jerky is pureed or thinly sliced fruit dried into chewy strips — essentially a thick, no-added-sugar fruit leather. To make it, blend ripe fruit until smooth, spread it thin on a lined tray, and dry at <strong>135°F for 6–8 hours</strong> until it peels off cleanly. Unlike meat jerky, there's no cure and no food-safety pre-heat — it's just fruit, which makes it the simplest, most family-friendly jerky you can make.</p>
+  </div>
+
+  <ContentImage src="/images/fruit-jerky.webp" alt="Homemade fruit jerky strips rolled and stacked on a light board" eager={true} />
+
+  <h2>What Is Fruit Jerky?</h2>
+  <p>Fruit jerky is fruit — and nothing else has to go into it. You puree or slice ripe fruit, spread or lay it thin, and dry it slowly until the water is gone and what's left is a chewy, intensely fruity strip. It's the same idea as <strong>fruit leather</strong>, just often thicker and firmer, with a jerky-like chew.</p>
+  <p>The important distinction is what fruit jerky <em>isn't</em>. It's not a "fruit snack" or fruit-flavored candy — those are mostly added sugar, juice concentrate, and gelatin. Real fruit jerky is a <strong>whole-food, vegan, no-sugar-added</strong> snack: the sweetness comes entirely from the fruit. That's why it works so well as a lunchbox or trail snack, and why brands like Solely have built a business on exactly this.</p>
+
+  <h2>Fruit Jerky Recipe</h2>
+  <p>This is the base <strong>fruit jerky recipe</strong> — it works with almost any fruit. The whole thing is three steps: puree, spread thin, dry low. Because there's no meat, there's no cure to measure and no safe-temperature step to hit, so it's genuinely hard to get wrong. Homemade fruit jerky also costs a fraction of the packaged versions.</p>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/fruit-jerky-puree.webp" alt="Smooth fruit puree spread thin on a lined dehydrator tray before drying" />
+
+  <p>A few things that make the difference between chewy fruit jerky and a sticky mess:</p>
+  <ul>
+    <li><strong>Use ripe fruit.</strong> Under-ripe fruit is tart and watery; ripe fruit is sweeter and purees smoother, so you won't be tempted to add sugar.</li>
+    <li><strong>Spread it thin and even.</strong> A 1/8-inch layer dries evenly. Thick or uneven spots stay tacky in the middle while the edges over-dry.</li>
+    <li><strong>Don't rush the temperature.</strong> Low heat preserves the color and flavor. Cranking the heat sets the surface and traps moisture underneath.</li>
+  </ul>
+
+  <h3>Fruit Jerky Dehydrator: Time &amp; Temperature</h3>
+  <p>A dehydrator is the ideal tool for fruit jerky because it holds a steady low temperature with even airflow. The key number is much lower than meat jerky:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Method</th><th>Temperature</th><th>Time</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Food dehydrator</td><td>135°F (57°C)</td><td>6–8 hours</td></tr>
+      <tr><td>Oven (lowest setting, door cracked)</td><td>150–170°F</td><td>4–6 hours, check often</td></tr>
+    </tbody>
+  </table>
+  <p>Notice there's <strong>no 160°F or 165°F pre-heat step</strong> like there is for beef or poultry jerky. Fruit carries no salmonella or E. coli risk, so you never have to heat it to a pathogen-killing temperature — you just dry it. That's what makes fruit jerky the best first project for beginners and kids. If you already own a dehydrator for our <a href="/dehydrator-beef-jerky/">dehydrator beef jerky</a>, the same machine handles fruit at the lower setting.</p>
+
+  <h2>Organic Fruit Jerky</h2>
+  <p>Here's the honest truth about <strong>organic fruit jerky</strong>: when you make it yourself, it's automatically as organic as the fruit you buy. There's nothing to add — no preservatives, no added sugar, no coloring — so a batch made from organic mangoes <em>is</em> organic fruit jerky, full stop. That's the whole appeal of the packaged organic brands, and it's something you fully control at home.</p>
+  <p>If organic matters to you, the only decision is the fruit itself. Buy organic fruit, puree it, dry it, and you've matched the ingredient list of any premium organic fruit jerky on the shelf — usually for a lot less money.</p>
+
+  <h2>Organic Mango Fruit Jerky</h2>
+  <p><strong>Mango fruit jerky</strong> is the most popular flavor for good reason: mango is naturally sweet, low in fibrous texture, and purees into a silky, glossy strip. It's the flavor most packaged brands lead with, and the easiest one to nail at home.</p>
+  <p>For <strong>organic mango fruit jerky</strong>, use two to three very ripe mangoes (or thawed frozen mango, which is picked ripe and purees beautifully). Blend smooth with a squeeze of lime or lemon, spread thin, and dry at 135°F. Mango needs no added sugar at all when it's ripe. For a little heat — a popular twist — dust the puree with a pinch of chili powder before drying for a mango-chili strip.</p>
+
+  <ContentImage src="/images/fruit-jerky-mango.webp" alt="Bright orange mango fruit jerky strips on parchment" />
+
+  <h2>Is Solely Fruit Jerky Healthy?</h2>
+  <p>Yes — <strong>Solely fruit jerky is a genuinely healthy snack, with one honest caveat.</strong> It's made from organic fruit and nothing else: no added sugar, no preservatives, no coloring. As a whole-food snack it's far better than candy, chips, or gummy "fruit snacks," and it's vegan and gluten-free by nature.</p>
+  <p>The caveat applies to <em>all</em> dried fruit, homemade or packaged. Drying removes the water but keeps the sugar and calories, so they become concentrated per bite — <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a> figures show dried fruit carries far more sugar per ounce than the fresh fruit it came from. A small strip can hold the natural sugar of a much larger piece of fresh fruit. That doesn't make it unhealthy; it means it's a snack to enjoy in sensible portions rather than by the bagful. The same is exactly true of the homemade version on this page — the honesty cuts both ways.</p>
+
+  <h3>Is Fruit Jerky Good for You?</h3>
+  <p>Fruit jerky is good for you as a whole-food snack: it's real fruit, so it brings the fiber, vitamins, and antioxidants of the fruit with it, and it satisfies a sweet craving without the added sugar of candy. Treat it like dried fruit — because that's what it is. Portion-aware, it's a smart choice; eaten mindlessly, the concentrated sugar adds up. If you're comparing snacks on protein and sodium instead, our <a href="/guides/is-beef-jerky-healthy/">guide to whether beef jerky is healthy</a> covers the savory side.</p>
+
+  <h2>Hot Fruit-Flavored Beef Jerky</h2>
+  <p>A quick clarification, because these searches overlap: some people looking for "fruit jerky" actually want <strong>fruit-flavored beef jerky</strong> — real beef jerky with a sweet-and-hot fruit glaze, like the mango-habanero and pineapple styles, or the sweet-heat "hot fruit" jerky sold at Asian markets. That's a different product: it's meat, cured and dried at meat temperatures, with fruit in the marinade.</p>
+  <p>If that's what you're after, you want a beef recipe, not a fruit one. Our <a href="/recipes/beef-jerky-flavors/">beef jerky flavors guide</a> covers fruit-forward marinades (including a Dr Pepper glaze), and the <a href="/how-to-make-beef-jerky/">how to make beef jerky</a> guide has the full method at the safe 160°F. Fruit-only jerky, covered on this page, is the vegan version — no meat at all.</p>
+
+  <h2>Pineapple Fruit Jerky</h2>
+  <p><strong>Pineapple fruit jerky</strong> is tangy, bright, and a little chewier than mango because pineapple is more fibrous. Blend fresh or canned pineapple (drain it well) until smooth, strain out the tough fibers for a cleaner strip, and dry at 135°F. Pineapple is naturally acidic, so it keeps its color well and needs no lemon juice.</p>
+  <p>The most popular variation is <strong>pineapple-coconut</strong>: blend a couple of tablespoons of coconut cream into the pineapple puree before drying for a tropical, slightly richer strip. It's the same combination the packaged brands sell, and it's easy to make at home.</p>
+
+  <ContentImage src="/images/fruit-jerky-pineapple.webp" alt="Golden pineapple fruit jerky strips on a light surface" />
+
+  <h2>How Is Solely Fruit Jerky Made?</h2>
+  <p>People researching the brand often want to know the process, and it's refreshingly simple: <strong>Solely presses and purees whole organic fruit, then slow-dries it into thin strips</strong> — no added sugar, juice concentrate, or preservatives. That single-ingredient approach is the entire selling point, and it's why the strips taste so distinctly of the fruit itself.</p>
+  <p>We don't sell fruit jerky and we won't pretend to know Solely's exact equipment or recipe — but the method is no secret, because it's the same one you'd use in your kitchen: ripe fruit, pureed, dried low. Once you know that, the packaged product stops being mysterious and starts looking very makeable. The <a href="#recipe-card">recipe above</a> is the home version of exactly this process, minus the price tag.</p>
+</PillarLayout>

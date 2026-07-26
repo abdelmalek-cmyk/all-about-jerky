@@ -251,6 +251,18 @@
     "width": 1200,
     "height": 896
   },
+  "/images/fruit-jerky-16x9.webp": {
+    "width": 1254,
+    "height": 705
+  },
+  "/images/fruit-jerky-1x1.webp": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/fruit-jerky-4x3.webp": {
+    "width": 1254,
+    "height": 941
+  },
   "/images/fruit-jerky-dehydrator.webp": {
     "width": 1254,
     "height": 1254
@@ -264,6 +276,10 @@
     "height": 1254
   },
   "/images/fruit-jerky-puree.webp": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/fruit-jerky.webp": {
     "width": 1254,
     "height": 1254
   },

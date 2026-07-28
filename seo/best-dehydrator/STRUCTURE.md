@@ -1,47 +1,49 @@
-# Best Dehydrator for Jerky — Page Structure (AFFILIATE BUYING GUIDE)
+# Best Dehydrator for Jerky — Page Structure (INFORMATIONAL, no affiliate yet)
 
-The site's FIRST affiliate / monetization page. A product buying guide, NOT a recipe. This is the start of the affiliate phase.
+An informational buying-advice article. NOT affiliate, NOT a recipe. Goal: RANK and bring traffic. Affiliate comes later once there are visitors.
 
 ## The page
-### `/best-dehydrator-for-jerky/` — AFFILIATE BUYING GUIDE
+### `/best-dehydrator-for-jerky/`
 - **Primary:** best dehydrator for jerky (1,600) + best food dehydrator for jerky (880) + best dehydrator for beef jerky (590)
-- **Volume:** 7,600/mo · 87 keywords · median KD 26 · intent COMMERCIAL (buying decision)
-- **Pattern:** top-level src/pages/best-dehydrator-for-jerky.astro. Use a Article/BlogPosting layout, NOT the recipe pillar layout. No recipe card.
+- **Volume:** 7,600/mo · 87 keywords · median KD 26 · Commercial intent
+- **Pattern:** top-level src/pages/best-dehydrator-for-jerky.astro, Article/BlogPosting layout (NOT recipe pillar, NOT affiliate).
 
-## Why this page (the affiliate strategy)
-Intent is commercial — people choosing which dehydrator to buy. The SERP is review articles + weak forum threads, no shops dominating, so a genuinely useful buying guide can rank. This page monetizes via affiliate links AND funnels the site's existing recipe traffic toward a purchase. It's the template for future gear guides (best jerky gun, best meat slicer).
+## Goal
+Rank by being the most useful "how to choose a dehydrator for jerky" resource. Teach buying CRITERIA and trade-offs, not product SKUs. The SERP is advice articles (jerkyholic, seriouseats) — beatable with genuine depth. Brings traffic now; affiliate links can be layered onto the same page later without a rewrite.
 
-## Required components (DIFFERENT from recipe pages)
-- NO Recipe schema, NO recipe card.
-- Article (or BlogPosting) schema + BreadcrumbList + FAQPage.
-- OPTIONAL ItemList for the ranked product shortlist (appropriate for "best of" lists).
-- Product/Review markup ONLY if writing real reviews — never fabricate ratings/review counts.
-- FTC affiliate disclosure near the top (legally required).
-- Affiliate link placeholders (href="AFFILIATE_LINK_X") for the user to fill — do NOT invent URLs.
+## What this is NOT (for now)
+- NO affiliate links, buy buttons, or affiliate disclosure.
+- NO Product/Review/aggregateRating schema, NO product-purchase ItemList.
+- Naming general well-known models as teaching EXAMPLES is OK (no buy links, no invented specs/prices), framed as education not a sales list.
 
-## Structure (H2s by volume; see keywords-AEO.md for the full mapping)
-1. Best Dehydrator for Jerky — intro + top pick (answer-first) + comparison table (1,600)
-2. The ranked picks — 4-6 dehydrators, pros/cons, specs, affiliate buttons (880/390)
-3. By use-case — budget (under $100, KD 13), commercial, by meat (deer KD 11)
-4. How to choose — buying criteria (temp range, thermostat, wattage, trays)
-5. Best temperature for dehydrating jerky — 540/mo cluster, KD 15-18 (easy)
-6. Best meat & cut — 970/mo, link to existing /best-meat-for-beef-jerky/
-7. Best recipe & marinade for dehydrator — link to existing recipe/marinade pages
+## Schema
+Article/BlogPosting (author Cole Mercer, ISO dates) + BreadcrumbList + FAQPage. No commercial schema.
+
+## Structure (H2s lead with real-volume keywords, ordered by volume — see keywords-AEO.md)
+1. best dehydrator for jerky (1,600) — intro + answer-first (the CRITERIA, not a product)
+2. best food dehydrator for jerky (880) — the buying criteria (temp range, thermostat, wattage, trays)
+3. best meat dehydrator for jerky (390) — dehydrator TYPES explained
+4. best temp for dehydrating jerky (140+140, KD 15-18) — temp table, easy win
+5. use-cases: under $100 (KD 13), commercial, deer (KD 11)
+6. best meat for jerky dehydrator (170+170) — summarize + link to /best-meat-for-beef-jerky/
+7. best marinade/recipe for dehydrator — link to /dehydrator-beef-jerky/, /beef-jerky-marinade/
 
 ## Content rules
-- Genuine buying criteria + honest pros/cons = what beats jerkyholic. Not a thin affiliate grab.
-- Don't fabricate product specs — use verifiable ones (tray count, wattage, temp range) or describe generally. Flag that the user should verify current specs/prices.
-- Reinforce the 160F/165F safety angle in the temperature section (ties to site authority).
+- Genuine buying advice = ranking substance. No invented specs/prices.
+- Reinforce 160F/165F safety in the temp section (ties to site authority).
 
 ## Images
-Custom hero (best-dehydrator-for-jerky.webp) is fine to generate. Product images have affiliate/copyright rules — use ContentImage placeholders; user sources compliant product images.
+Custom hero (best-dehydrator-for-jerky.webp). ContentImage pattern. No product/affiliate images.
 
 ## Nav & linking
-- Nav: NOT a recipe/meat. Create a "Gear" or "Reviews" section (holds future buying guides) or place under Guides. Add to sitemap.xml.
+- Nav: under Guides (informational; no "Gear/Reviews" section yet since no affiliate). Add to sitemap.xml.
 - Outbound: /dehydrator-beef-jerky/, /best-meat-for-beef-jerky/, /beef-jerky-marinade/, /guides/beef-jerky-time-and-temperature/.
-- Inbound (CRITICAL for affiliate funnel): add links FROM /dehydrator-beef-jerky/ and other dehydrator pages TO this guide ("Need a dehydrator? See our picks"). This turns existing recipe traffic into affiliate clicks.
+- Inbound: from /dehydrator-beef-jerky/ etc. to this guide ("Choosing a dehydrator? Read our guide").
 
 ## Deploy note
-Pure static via wrangler.jsonc. No Node built-ins (fs/path) in the bundle.
+Pure static via wrangler.jsonc. No Node built-ins in the bundle.
 
-Companion files: keywords-AEO.md and keyword-bank.csv (87 keywords by section + is_question).
+## Future (not now)
+Keep structure so affiliate links drop in later (use-case + criteria sections are natural spots). Add NOTHING affiliate now.
+
+Companion files: keywords-AEO.md, keyword-bank.csv (87 keywords by section + is_question).

@@ -155,6 +155,10 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/candied-salmon-jerky.webp": {
+    "width": 1254,
+    "height": 1254
+  },
   "/images/chicken-jerky-16x9.webp": {
     "width": 1254,
     "height": 705
@@ -367,6 +371,30 @@
     "width": 1200,
     "height": 896
   },
+  "/images/salmon-jerky-16x9.webp": {
+    "width": 1254,
+    "height": 705
+  },
+  "/images/salmon-jerky-1x1.webp": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/salmon-jerky-4x3.webp": {
+    "width": 1254,
+    "height": 941
+  },
+  "/images/salmon-jerky-dehydrator.webp": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/salmon-jerky-sliced.webp": {
+    "width": 1254,
+    "height": 1254
+  },
+  "/images/salmon-jerky.webp": {
+    "width": 1254,
+    "height": 1254
+  },
   "/images/smoked-beef-jerky-smoker-16x9.webp": {
     "width": 1200,
     "height": 675
@@ -386,6 +414,10 @@
   "/images/smoked-beef-jerky.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/smoked-salmon-jerky.webp": {
+    "width": 1254,
+    "height": 1254
   },
   "/images/spicy-beef-jerky-16x9.webp": {
     "width": 896,

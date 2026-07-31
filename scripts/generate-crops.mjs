@@ -31,6 +31,8 @@ const methodHeroes = [
   'turkey-jerky',
   // fruit hero
   'fruit-jerky',
+  // salmon hero
+  'salmon-jerky',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

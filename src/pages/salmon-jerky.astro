@@ -1,0 +1,182 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/salmon-jerky/';
+
+const recipe = {
+  name: 'Salmon Jerky',
+  description:
+    'Homemade salmon jerky — fresh salmon brined and slowly dried into chewy, omega-3-rich strips. Includes the FDA parasite freeze step and the 145°F fish-safe temperature, with smoked, dried, and candied options.',
+  image: '/images/salmon-jerky.webp',
+  prepTime: 'PT30M',
+  cookTime: 'PT5H',
+  totalTime: 'PT5H30M',
+  recipeYield: 'About 8 oz (from 1.5 lb fresh salmon)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords:
+    'salmon jerky, salmon jerky recipe, smoked salmon jerky, dried salmon, dehydrated salmon, candied salmon jerky, how to make salmon jerky, salmon jerkey, salmon jerkey recipe',
+  ingredients: [
+    '1.5 lb salmon fillet, skin removed and pin bones pulled (use previously frozen salmon — see the freeze step)',
+    '1/4 cup soy sauce (or tamari for gluten-free)',
+    '2 tablespoons brown sugar or pure maple syrup',
+    '1 tablespoon Worcestershire sauce',
+    '1 teaspoon coarsely ground black pepper',
+    '1/2 teaspoon garlic powder',
+    'Optional: 1/4 teaspoon cayenne or a pinch of chili flakes',
+  ],
+  instructions: [
+    'Freeze for safety first. Unless your salmon is labeled sushi-grade or previously frozen, freeze it at -4°F (-20°C) for 7 days to destroy any parasites. This is essential for jerky that will not be cooked to a high temperature.',
+    'Partially freeze the fillet for 30–45 minutes so it firms up, then slice against the grain into even 1/4-inch strips. Removing the skin makes them dry more evenly.',
+    'Whisk the soy sauce, brown sugar or maple, Worcestershire, black pepper, and garlic powder into a brine. Add the salmon strips, coat well, and refrigerate 6–12 hours.',
+    'Remove the strips and pat them completely dry. Let them air-dry on a rack 30–60 minutes until the surface turns tacky (a pellicle forms) — this helps the jerky dry evenly and take on smoke.',
+    'Arrange the strips in a single layer with space between them on dehydrator trays, a smoker rack, or an oven rack set over a lined sheet.',
+    'Dry at 145–160°F for 4–6 hours. Fish is safely cooked at an internal 145°F — not the 160°F used for beef. The jerky is done when it is firm, dry, and bends without breaking, with no wet spots.',
+    'Cool completely, then store in an airtight container in the refrigerator. Salmon is oily and spoils faster than beef jerky, so keep it cold and eat within 1–2 weeks.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'How long does salmon jerky last?',
+    answer:
+      'Homemade salmon jerky lasts about 1–2 weeks in the refrigerator, and up to 2–3 months frozen. It keeps for a much shorter time than beef jerky because salmon is an oily fish, and those healthy fats turn rancid faster than the lean protein in beef. Always refrigerate it, and vacuum-seal or freeze any you won’t eat within a week.',
+  },
+  {
+    question: 'Does salmon jerky need to be refrigerated?',
+    answer:
+      'Yes. Unlike beef jerky, homemade salmon jerky should be refrigerated. Salmon’s high oil content makes it prone to going rancid at room temperature, and most salmon jerky is dried at a lower temperature than beef, so it isn’t as shelf-stable. Keep it in an airtight container in the fridge and freeze it for longer storage.',
+  },
+  {
+    question: 'Can dogs eat salmon jerky?',
+    answer:
+      'Dogs can eat plain, fully cooked salmon jerky in moderation — with two hard rules. It must be unseasoned (no salt, soy, garlic, or onion, which are harmful to dogs), and it must be thoroughly cooked. Raw or undercooked salmon can carry a parasite that causes salmon poisoning disease, which is potentially fatal to dogs. Make a separate plain, well-cooked batch for your dog, and see our chicken jerky for dogs guide for a safe method.',
+  },
+  {
+    question: 'How do you cut salmon for jerky?',
+    answer:
+      'Chill the fillet in the freezer for 30–45 minutes first so it firms up and slices cleanly. Remove the skin, pull any pin bones, and cut against the grain into even strips about 1/4 inch thick. Uniform thickness is the key to jerky that dries at the same rate — thin spots over-dry while thick ones stay wet.',
+  },
+  {
+    question: 'What does salmon jerky taste like?',
+    answer:
+      'Salmon jerky is rich, savory, and lightly sweet, with a clean smoky-fish flavor that’s far milder than you’d expect — closer to smoked salmon than to fishy dried seafood. The texture is chewy and tender rather than tough. Candied or maple versions lean sweet-and-smoky, while a peppered or soy brine keeps it savory.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Dehydrator Beef Jerky', href: '/dehydrator-beef-jerky/' },
+  { label: 'Smoked Beef Jerky', href: '/smoked-beef-jerky/' },
+  { label: 'Chicken Jerky for Dogs', href: '/chicken-jerky-for-dogs/' },
+  { label: 'Time & Temperature Guide', href: '/guides/beef-jerky-time-and-temperature/' },
+];
+---
+<PillarLayout
+  title="Salmon Jerky Recipe (Smoked & Candied)"
+  description="Make salmon jerky at home — smoked, dried, or candied. The easy recipe, the fish-safety freeze step most guides skip, plus dehydrator times and the 145°F rule."
+  {canonical}
+  breadcrumbs={[{ label: 'Salmon Jerky', href: '/salmon-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  datePublished="2026-07-26"
+  dateModified="2026-07-26"
+>
+  <RecipeSchema {...recipe} datePublished="2026-07-26" dateModified="2026-07-26" url={canonical} />
+
+  <h1>Salmon Jerky</h1>
+
+  <div class="answer-box">
+    <p>Salmon jerky is fresh salmon sliced thin, brined, and slowly dried into a chewy, protein- and omega-3-rich snack. Unlike beef, salmon needs a food-safety <strong>freeze step</strong> first (FDA: −4°F for 7 days) and dries at a lower <strong>145°F</strong>. You can make it in a dehydrator, smoker, or oven — smoked and candied are the most popular styles.</p>
+  </div>
+
+  <ContentImage src="/images/salmon-jerky.webp" alt="Homemade salmon jerky strips, glossy and deep orange, stacked on a board" eager={true} />
+
+  <p>If you searched for the <strong>best salmon jerky</strong>, you’ll find it’s expensive to buy and easy to make for a fraction of the price. This guide covers <strong>salmon jerky for humans</strong> — the real snack, as opposed to the dog treats sold under the same name (there’s a safe dog version further down). Salmon jerky is simply salmon, cured in a light brine and dried until chewy; done right it tastes like a cross between smoked salmon and jerky, not "fishy" at all.</p>
+
+  <h2>Salmon Jerky Recipe</h2>
+  <p>This is the base <strong>salmon jerky recipe</strong>, and it’s the answer to how to make salmon jerky in any appliance — dehydrator, smoker, or oven. The method is the same three moves as meat jerky (slice, brine, dry) with one fish-specific safety step added up front. Because salmon is delicate and oily, it dries faster and at a lower temperature than beef.</p>
+
+  <div class="tips-block">
+    <p><strong>⚠️ Fish safety — do this before anything else.</strong> Salmon is not beef, and the safety rules are different. Raw salmon can carry parasites, so unless your fish is labeled sushi-grade or previously frozen, <strong>freeze it at −4°F (−20°C) for 7 days first</strong> — the <a href="https://www.fda.gov/food/buy-store-serve-safe-food/selecting-and-serving-fresh-and-frozen-seafood-safely">FDA</a> parasite-destruction guideline, and the single step most recipes skip. Fish is safely cooked at an internal <strong>145°F</strong> per the <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart">USDA</a> — do <em>not</em> use the 160°F beef or 165°F poultry rule here.</p>
+  </div>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/salmon-jerky-sliced.webp" alt="Fresh salmon fillet sliced into thin even strips on a cutting board for jerky" />
+
+  <p>A few things make the difference between great salmon jerky and a fishy, uneven batch:</p>
+  <ul>
+    <li><strong>Use a firm, previously frozen fillet.</strong> Wild sockeye or king holds together best; the freeze step doubles as safety and firmness.</li>
+    <li><strong>Let a pellicle form.</strong> Air-drying the brined strips until tacky gives the jerky a glossy finish and helps it take smoke evenly.</li>
+    <li><strong>Dry low and slow.</strong> High heat squeezes out the oil and makes salmon greasy and brittle; a steady 145–160°F keeps it tender.</li>
+  </ul>
+
+  <h2>Smoked Salmon Jerky</h2>
+  <p><strong>Smoked salmon jerky</strong> — also searched as salmon jerky in the smoker — is the classic Pacific Northwest style, and there’s an important safety fork in the road between two methods:</p>
+  <ul>
+    <li><strong>Hot-smoked</strong> (around 160–175°F) actually cooks the fish as it dries, bringing it past the safe 145°F. This is the easiest safe route and what we recommend for most people.</li>
+    <li><strong>Cold-smoked</strong> (under ~90°F) adds smoke flavor without cooking the salmon. It makes beautiful <strong>smoked salmon strips</strong>, but because the fish stays raw, the <strong>freeze step is mandatory</strong> — cold smoke does not make salmon safe on its own.</li>
+  </ul>
+  <p>Either way, brine the strips, form a pellicle, then smoke over alder (the traditional salmon wood) until firm. If you already smoke meat, the setup mirrors our <a href="/smoked-beef-jerky/">smoked beef jerky</a> method — just at fish temperatures and times.</p>
+
+  <ContentImage src="/images/smoked-salmon-jerky.webp" alt="Smoked salmon jerky strips resting on a smoker rack with light wood smoke" />
+
+  <h2>Dried Salmon</h2>
+  <p><strong>Dried salmon</strong> and salmon jerky overlap, but there’s a distinction worth knowing. Traditional dried salmon (and dried salmon strips) can be as simple as salted fish dried until hard — a preservation method used for centuries. <strong>Salmon jerky</strong> is the seasoned, snackable version: brined or marinated with soy, sugar, or spice, then dried to a tender-chewy texture rather than rock-hard. If a recipe is just salt and fish, it’s dried salmon; add a flavored brine and dry it to a chew, and you’ve made jerky.</p>
+
+  <h2>Dehydrated Salmon</h2>
+  <p>A dehydrator is the most reliable way to make <strong>dehydrated salmon</strong>, because it holds a steady low temperature with even airflow — exactly what oily fish needs. Salmon jerky in the dehydrator dries faster than beef, so start checking early.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Method</th><th>Temperature</th><th>Time</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Dehydrator</td><td>145–160°F</td><td>4–6 hours</td></tr>
+      <tr><td>Smoker (hot-smoked)</td><td>160–175°F</td><td>3–5 hours</td></tr>
+      <tr><td>Oven (lowest setting, door cracked)</td><td>~175°F</td><td>3–4 hours</td></tr>
+    </tbody>
+  </table>
+  <p>Whatever the appliance, the finish line is the same: firm, dry, and pliable, with the fish having passed 145°F. The same machine that makes our <a href="/dehydrator-beef-jerky/">dehydrator beef jerky</a> handles salmon at the lower setting — see the <a href="/guides/beef-jerky-time-and-temperature/">time and temperature guide</a> for how humidity and thickness shift the timing.</p>
+
+  <ContentImage src="/images/salmon-jerky-dehydrator.webp" alt="Salmon jerky strips drying on stainless dehydrator trays" />
+
+  <h2>Candied Salmon Jerky</h2>
+  <p><strong>Candied salmon jerky</strong> — often just called "salmon candy" — is the sweet-and-smoky Pacific Northwest specialty, and it’s the most popular flavor for good reason. You make it exactly like the base recipe, but the brine leans sweet: brown sugar and <strong>maple</strong> syrup, sometimes with a splash of soy for balance. Many cooks brush the strips with extra maple partway through drying to build a glossy, candy-like glaze.</p>
+  <p>The same sweet approach covers <strong>teriyaki salmon jerky</strong> (add ginger and a little more soy) and <strong>maple salmon jerky</strong>. Keep the heat low so the sugars concentrate into a sticky sheen rather than scorching — candied salmon should be glossy and chewy, not burnt.</p>
+
+  <ContentImage src="/images/candied-salmon-jerky.webp" alt="Glossy candied salmon jerky strips glazed with maple on a wire rack" />
+
+  <h2>Salmon Jerky for Dogs</h2>
+  <p><strong>Salmon jerky for dogs</strong> is a genuinely great treat — salmon’s omega-3s support a dog’s skin and coat — but it comes with two non-negotiable rules that are different from the human version.</p>
+  <ul>
+    <li><strong>Plain only.</strong> Dog salmon jerky (and <strong>salmon jerky dog treats</strong>) must have no salt, soy, sugar, garlic, or onion — several of those are toxic to dogs. Just salmon.</li>
+    <li><strong>Fully cooked, always.</strong> Salmon must reach a safe cooked temperature for dogs. Raw or undercooked salmon can carry a parasite that causes <em>salmon poisoning disease</em>, which is potentially fatal to dogs if untreated. Per the <a href="https://www.akc.org/expert-advice/nutrition/can-dogs-eat-salmon/">AKC</a>, cook salmon thoroughly before giving it to your dog.</li>
+  </ul>
+  <p>Make a separate, unseasoned, well-cooked batch for your dog — never share the soy-and-pepper human version. For a full dog-safe method and portioning, see our <a href="/chicken-jerky-for-dogs/">chicken jerky for dogs</a> guide, which applies the same single-ingredient, fully-cooked approach.</p>
+
+  <h2>Alaska Salmon Jerky</h2>
+  <p><strong>Alaska salmon jerky</strong> (and <strong>Alaskan salmon jerky</strong>) is a benchmark for a reason: cold, wild Alaskan waters produce firm, clean-tasting salmon that dries beautifully. The species you choose matters more than the state on the label:</p>
+  <ul>
+    <li><strong>Sockeye</strong> — deep red, firm, and lean-ish; the go-to for classic <strong>sockeye salmon jerky</strong> with the best color and chew.</li>
+    <li><strong>King (Chinook)</strong> — the fattiest and richest; <strong>king salmon jerky</strong> is luxurious but oilier, so dry it a little longer.</li>
+    <li><strong>Coho and pink</strong> — leaner and milder; budget-friendly and easy to work with.</li>
+  </ul>
+  <p>For the best results, look for firm, <strong>wild caught salmon</strong> and remember it must be previously frozen for the safety step. Wild fish holds its texture through drying far better than soft farmed fillets.</p>
+
+  <h2>Is Salmon Jerky Healthy?</h2>
+  <p>Yes — <strong>salmon jerky is one of the healthier jerkies you can eat</strong>, with one caveat. It’s a concentrated source of high-quality protein and, unlike beef jerky, it delivers <strong>omega-3 fatty acids</strong> (EPA and DHA) that support heart and brain health, per <a href="https://fdc.nal.usda.gov/">USDA FoodData Central</a> data on salmon. It’s naturally low-carb and keto-friendly.</p>
+  <p>The caveat is sodium: brining and drying concentrate salt, so salmon jerky can be high in it. If that matters to you, use a low-sodium soy sauce and go lighter on the brine. Eaten in sensible portions, salmon jerky is a nutrient-dense, protein-and-omega-3 snack — we don’t publish nutrition numbers we can’t source, so check the label or your recipe’s ingredients for exact figures.</p>
+</PillarLayout>

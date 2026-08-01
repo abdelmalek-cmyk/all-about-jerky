@@ -3,6 +3,7 @@ import BaseLayout from './BaseLayout.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import RelatedLinks from '../components/RelatedLinks.astro';
 import FaqSchema from '../components/FaqSchema.astro';
+import ShareBar from '../components/ShareBar.astro';
 
 interface Crumb { label: string; href: string }
 interface Link { label: string; href: string }
@@ -12,6 +13,8 @@ interface Props {
   title: string;
   description: string;
   canonical: string;
+  image?: string;
+  shareLabel?: string;
   breadcrumbs?: Crumb[];
   relatedLinks?: Link[];
   faqs?: Faq[];
@@ -22,12 +25,16 @@ const {
   title,
   description,
   canonical,
+  image = '/images/og-default.webp',
+  shareLabel = 'Share this recipe',
   breadcrumbs = [],
   relatedLinks = [],
   faqs = [],
   datePublished,
   dateModified,
 } = Astro.props;
+
+const shareImage = `https://allaboutjerky.com${image}`;
 
 // ISO date in schema, readable date on screen
 function humanDate(iso: string): string {
@@ -74,7 +81,7 @@ const articleSchema = {
   },
 };
 ---
-<BaseLayout {title} {description} {canonical} type="article" {datePublished} {dateModified}>
+<BaseLayout {title} {description} {canonical} {image} type="article" {datePublished} {dateModified}>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <article class="page-content">
     <div class="container">
@@ -82,6 +89,7 @@ const articleSchema = {
       {dateModified && (
         <p class="text-muted">Last updated: {humanDate(dateModified)}</p>
       )}
+      <ShareBar url={canonical} title={title} image={shareImage} label={shareLabel} />
       <slot />
       {faqs.length > 0 && (
         <>
@@ -97,6 +105,7 @@ const articleSchema = {
           </section>
         </>
       )}
+      <ShareBar url={canonical} title={title} image={shareImage} label={shareLabel} />
       <RelatedLinks links={relatedLinks} />
     </div>
   </article>

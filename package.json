@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/build-image-manifest.mjs && astro build",
+    "build": "node scripts/build-image-manifest.mjs && node scripts/build-search-index.mjs && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

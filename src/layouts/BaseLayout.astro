@@ -1,5 +1,7 @@
 ﻿---
 import Seo from '../components/Seo.astro';
+import SearchBox from '../components/SearchBox.astro';
+import SocialLinks from '../components/SocialLinks.astro';
 
 // Self-hosted fonts (was render-blocking Google Fonts CSS + 2 third-party origins).
 // Only the weights actually used in global.css — italics limited to the 400s that render.
@@ -195,6 +197,13 @@ const siteSchema = JSON.stringify({
           </ul>
         </nav>
 
+        <div class="header-utils">
+          <SearchBox />
+          <div class="header-social">
+            <SocialLinks />
+          </div>
+        </div>
+
         <!-- Mobile hamburger -->
         <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav" type="button">
           <span></span><span></span><span></span>
@@ -260,6 +269,10 @@ const siteSchema = JSON.stringify({
           <a href="/best-dehydrator-for-jerky/">Best Dehydrator for Jerky</a>
         </details>
         <a href="/about/" class="mobile-nav__about">About Cole Mercer</a>
+        <div class="mobile-nav__social">
+          <span class="mobile-nav__social-label">Follow</span>
+          <SocialLinks />
+        </div>
       </div>
     </div>
 

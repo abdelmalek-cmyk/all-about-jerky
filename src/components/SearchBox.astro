@@ -1,0 +1,206 @@
+---
+// Client-side site search. Imports the build-time static index (no fs in the
+// browser bundle) and filters it in-memory as the user types.
+---
+<div class="hsearch" data-hsearch>
+  <button
+    class="hsearch__toggle"
+    type="button"
+    aria-label="Search the site"
+    aria-expanded="false"
+    aria-controls="hsearch-panel"
+  >
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+  </button>
+
+  <div class="hsearch__panel" id="hsearch-panel" role="dialog" aria-label="Site search" hidden>
+    <div class="hsearch__field">
+      <svg class="hsearch__field-ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.5" y2="16.5"/></svg>
+      <input
+        class="hsearch__input"
+        type="search"
+        placeholder="Search recipes &amp; guides…"
+        aria-label="Search recipes and guides"
+        autocomplete="off"
+        spellcheck="false"
+        role="combobox"
+        aria-expanded="false"
+        aria-controls="hsearch-results"
+        aria-autocomplete="list"
+      />
+      <button class="hsearch__clear" type="button" aria-label="Clear search" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+    <ul class="hsearch__results" id="hsearch-results" role="listbox" aria-label="Search results"></ul>
+  </div>
+</div>
+
+<script>
+  import searchIndex from '../data/search-index.json';
+
+  type Entry = { title: string; url: string; description: string };
+  const INDEX = searchIndex as Entry[];
+  const MAX = 7;
+
+  function score(item: Entry, terms: string[], q: string): number {
+    const title = item.title.toLowerCase();
+    const desc = (item.description || '').toLowerCase();
+    let s = 0;
+    for (const t of terms) {
+      if (title.includes(t)) s += 10;
+      else if (desc.includes(t)) s += 3;
+      else return -1; // every term must match somewhere
+    }
+    if (title.startsWith(q)) s += 6;
+    else if (title.includes(q)) s += 3;
+    return s;
+  }
+
+  function query(q: string): Entry[] {
+    const norm = q.trim().toLowerCase();
+    if (!norm) return [];
+    const terms = norm.split(/\s+/);
+    return INDEX
+      .map((item) => ({ item, s: score(item, terms, norm) }))
+      .filter((r) => r.s > 0)
+      .sort((a, b) => b.s - a.s)
+      .slice(0, MAX)
+      .map((r) => r.item);
+  }
+
+  function excerpt(text: string, len = 92): string {
+    if (!text) return '';
+    return text.length > len ? text.slice(0, len).replace(/\s+\S*$/, '') + '…' : text;
+  }
+
+  document.querySelectorAll('[data-hsearch]').forEach((root) => {
+    const toggle = root.querySelector('.hsearch__toggle') as HTMLButtonElement;
+    const panel = root.querySelector('.hsearch__panel') as HTMLElement;
+    const input = root.querySelector('.hsearch__input') as HTMLInputElement;
+    const clearBtn = root.querySelector('.hsearch__clear') as HTMLButtonElement;
+    const results = root.querySelector('.hsearch__results') as HTMLElement;
+    let active = -1; // highlighted result index
+    let current: Entry[] = [];
+    let debounce: number | undefined;
+
+    function open() {
+      panel.hidden = false;
+      toggle.setAttribute('aria-expanded', 'true');
+      requestAnimationFrame(() => input.focus());
+    }
+    function close() {
+      panel.hidden = true;
+      toggle.setAttribute('aria-expanded', 'false');
+      input.setAttribute('aria-expanded', 'false');
+      active = -1;
+    }
+    function isOpen() {
+      return !panel.hidden;
+    }
+
+    function render(items: Entry[]) {
+      current = items;
+      active = -1;
+      const q = input.value.trim();
+      if (!q) {
+        results.innerHTML = '';
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      input.setAttribute('aria-expanded', 'true');
+      if (items.length === 0) {
+        results.innerHTML = '<li class="hsearch__empty" role="status">No results found</li>';
+        return;
+      }
+      results.innerHTML = items
+        .map(
+          (it, i) =>
+            `<li role="option" id="hsearch-opt-${i}" aria-selected="false">` +
+            `<a href="${it.url}"><span class="hsearch__r-title">${escapeHtml(it.title)}</span>` +
+            (it.description ? `<span class="hsearch__r-desc">${escapeHtml(excerpt(it.description))}</span>` : '') +
+            `</a></li>`
+        )
+        .join('');
+    }
+
+    function escapeHtml(s: string): string {
+      return s.replace(/[&<>"']/g, (c) =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string)
+      );
+    }
+
+    function setActive(i: number) {
+      const opts = Array.from(results.querySelectorAll('[role="option"]')) as HTMLElement[];
+      if (opts.length === 0) return;
+      active = (i + opts.length) % opts.length;
+      opts.forEach((el, idx) => {
+        const on = idx === active;
+        el.setAttribute('aria-selected', on ? 'true' : 'false');
+        el.classList.toggle('is-active', on);
+        if (on) {
+          input.setAttribute('aria-activedescendant', el.id);
+          el.scrollIntoView({ block: 'nearest' });
+        }
+      });
+    }
+
+    function go(i: number) {
+      const item = current[i];
+      if (item) window.location.href = item.url;
+    }
+
+    toggle.addEventListener('click', () => (isOpen() ? close() : open()));
+
+    input.addEventListener('input', () => {
+      clearBtn.hidden = input.value.length === 0;
+      window.clearTimeout(debounce);
+      debounce = window.setTimeout(() => render(query(input.value)), 160);
+    });
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (input.value) {
+          input.value = '';
+          clearBtn.hidden = true;
+          render([]);
+        } else {
+          close();
+          toggle.focus();
+        }
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        setActive(active + 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        setActive(active - 1);
+      } else if (e.key === 'Enter') {
+        e.preventDefault();
+        go(active >= 0 ? active : 0);
+      }
+    });
+
+    clearBtn.addEventListener('click', () => {
+      input.value = '';
+      clearBtn.hidden = true;
+      render([]);
+      input.focus();
+    });
+
+    // Mouse hover highlights the row for consistency with keyboard nav.
+    results.addEventListener('mousemove', (e) => {
+      const li = (e.target as Element).closest('[role="option"]') as HTMLElement | null;
+      if (!li) return;
+      const opts = Array.from(results.querySelectorAll('[role="option"]'));
+      setActive(opts.indexOf(li));
+    });
+
+    // Close on outside click / Escape anywhere.
+    document.addEventListener('click', (e) => {
+      if (isOpen() && !root.contains(e.target as Node)) close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isOpen() && document.activeElement !== input) close();
+    });
+  });
+</script>

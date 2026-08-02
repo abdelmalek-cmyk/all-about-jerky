@@ -12,10 +12,23 @@ const { src, alt, eager = false } = Astro.props;
 // Renders nothing if the file isn't present yet, so a page never ships
 // broken <img> tags. Dimensions come from the real file (CLS prevention).
 const dims = getImageDims(src);
+
+// Responsive variants (from scripts/generate-responsive.mjs) so small screens
+// don't download the full-width hero. Rule must match that script exactly.
+const w = dims?.width ?? 0;
+const base = src.replace(/\.webp$/i, '');
+const srcsetParts = [];
+if (w > 480) srcsetParts.push(`${base}-480.webp 480w`);
+if (w > 960) srcsetParts.push(`${base}-960.webp 960w`);
+if (srcsetParts.length) srcsetParts.push(`${src} ${w}w`);
+const srcset = srcsetParts.length ? srcsetParts.join(', ') : undefined;
+const sizes = srcset ? '(min-width: 900px) 800px, 100vw' : undefined;
 ---
 {dims && (
   <img
     src={src}
+    srcset={srcset}
+    sizes={sizes}
     alt={alt}
     width={dims.width}
     height={dims.height}

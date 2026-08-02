@@ -213,7 +213,7 @@ const siteSchema = JSON.stringify({
     </header>
 
     <!-- MOBILE NAV DRAWER -->
-    <div class="mobile-nav" id="mobile-nav" aria-hidden="true" role="dialog" aria-label="Navigation menu">
+    <div class="mobile-nav" id="mobile-nav" aria-hidden="true" inert role="dialog" aria-label="Navigation menu">
       <div class="mobile-nav__inner">
         <button class="mobile-nav__close" aria-label="Close navigation" type="button">✕</button>
 
@@ -346,12 +346,14 @@ const siteSchema = JSON.stringify({
         btn?.setAttribute('aria-expanded', 'true');
         drawer?.classList.add('is-open');
         drawer?.setAttribute('aria-hidden', 'false');
+        drawer?.removeAttribute('inert');
         document.body.style.overflow = 'hidden';
       }
       function closeDrawer() {
         btn?.setAttribute('aria-expanded', 'false');
         drawer?.classList.remove('is-open');
         drawer?.setAttribute('aria-hidden', 'true');
+        drawer?.setAttribute('inert', '');
         document.body.style.overflow = '';
       }
 

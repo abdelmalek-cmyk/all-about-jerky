@@ -1344,7 +1344,7 @@ tr:last-child td { border-bottom: none; }
   margin: 0 auto;
 }
 .site-footer__bottom p { font-size: .82rem; margin: 0 0 .3rem; }
-.footer-disclaimer { font-size: .75rem !important; color: rgba(255,255,255,.4) !important; }
+.footer-disclaimer { font-size: .75rem !important; color: rgba(255,255,255,.6) !important; }
 
 /* ===== UTILITY ===== */
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }

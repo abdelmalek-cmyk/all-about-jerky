@@ -11,7 +11,9 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const imgDir = join(root, 'public/images');
 const outFile = join(root, 'src/data/image-dims.json');
 
-const files = (await readdir(imgDir)).filter((f) => /\.(webp|jpg|jpeg|png|gif|avif)$/i.test(f));
+const files = (await readdir(imgDir)).filter(
+  (f) => /\.(webp|jpg|jpeg|png|gif|avif)$/i.test(f) && !/-(480|960)\.webp$/i.test(f),
+);
 
 const manifest = {};
 for (const file of files) {

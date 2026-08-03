@@ -35,6 +35,8 @@ const methodHeroes = [
   'salmon-jerky',
   // jamaican jerk seasoning hero
   'jamaican-jerk-seasoning',
+  // jerky gun recipe hero (RecipeCardBlock/RecipeSchema use this one)
+  'jerky-gun-recipe',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

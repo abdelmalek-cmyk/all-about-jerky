@@ -1,0 +1,279 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/jerky-gun/';
+
+const recipe = {
+  name: 'Ground Beef Jerky (Jerky Gun Recipe)',
+  description:
+    'A foolproof ground beef jerky gun recipe: 90/10 lean beef mixed with cure and a classic savory-smoky seasoning, extruded into uniform strips and dehydrated at 160°F. Snaps clean, keeps for weeks, and looks like it came from a real jerky shop.',
+  image: '/images/jerky-gun-recipe.webp',
+  prepTime: 'PT20M',
+  cookTime: 'PT6H',
+  totalTime: 'PT6H20M',
+  recipeYield: 'About 1 lb finished jerky (from 2 lb ground beef)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords:
+    'jerky gun recipe, jerky gun recipes, beef jerky gun recipe, ground beef jerky gun, how to make beef jerky with a jerky gun, hamburger jerky gun',
+  ingredients: [
+    '2 lb 90/10 or leaner ground beef (93/7 is even better — fat is not your friend here)',
+    '1/2 teaspoon Prague Powder #1 curing salt (also sold as Insta Cure #1 or "pink cure")',
+    '2 teaspoons kosher salt',
+    '2 teaspoons brown sugar',
+    '2 teaspoons garlic powder',
+    '2 teaspoons onion powder',
+    '2 teaspoons coarsely ground black pepper',
+    '1 teaspoon smoked paprika',
+    '1 teaspoon Worcestershire sauce',
+    '1 teaspoon liquid smoke (hickory or mesquite)',
+    '2 tablespoons cold water',
+  ],
+  instructions: [
+    'Put the ground beef in a large bowl and set it (bowl and all) in the fridge for 15 minutes. Cold meat behaves; warm meat smears and misbehaves in the gun.',
+    'In a small bowl, whisk together the cure, salt, brown sugar, garlic powder, onion powder, pepper, and smoked paprika. Sprinkle the dry mix over the cold beef, then add the Worcestershire, liquid smoke, and cold water.',
+    'Mix with your hands (or a stand-mixer paddle on low) for 2 to 3 minutes until the meat turns tacky and holds together in a clump when you press it. That tacky stage is the protein binding — skip it and your jerky will crumble.',
+    'Cover the bowl and refrigerate at least 1 hour, up to 24. Longer rest = deeper flavor and better cure activation.',
+    'Load the cold meat into the jerky gun in stages: press the plunger fully forward, then pull it back 2 inches at a time and pack the barrel bit by bit to force out air pockets. Attach the flat single nozzle.',
+    'Extrude strips directly onto dehydrator trays: hold the gun at a 45° angle about half an inch above the tray, squeeze steadily, and move the gun backward at an even pace. Cut strips at 5 to 6 inches with a butter knife.',
+    'Dehydrate at 160°F for 4 to 6 hours. Start checking at 4. The USDA target for ground meat jerky is a full 160°F throughout the drying process — this is not a place to run cool.',
+    'The jerky is done when a strip bends and cracks along the fibers without snapping in half. Let strips cool on a paper towel for 10 minutes, then store in a sealed jar or vacuum bag.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'What is a jerky gun and what does it do?',
+    answer:
+      'A jerky gun is a hand-operated extruder — think caulking gun for food — that pushes seasoned ground meat through a nozzle to form uniform jerky strips or round snack sticks. It solves the two hardest problems with ground-meat jerky: shaping it evenly so it dries at the same rate, and getting that clean, storebought look. Load, squeeze the trigger, and out come perfect strips.',
+  },
+  {
+    question: 'How do you use a jerky gun step by step?',
+    answer:
+      'Wash and dry the gun, attach a nozzle, pack cold seasoned ground meat into the barrel in 2-inch stages to push out air pockets, then screw on the handle. Hold the gun at a 45° angle about half an inch above your dehydrator tray, squeeze the trigger with steady pressure, and move the gun backward to lay out an even strip. Cut to length, then dehydrate at 160°F.',
+  },
+  {
+    question: 'What kind of ground beef do you use in a jerky gun?',
+    answer:
+      'Use 90/10 lean ground beef at a minimum — 93/7 or 95/5 is even better. Fat does not evaporate in a dehydrator; it melts, pools, and shortens shelf life by going rancid. Leaner is always safer for jerky. Ground venison, turkey, and chicken all work in a jerky gun too, and lean game meat is a natural fit because it is already low fat.',
+  },
+  {
+    question: 'Do you need cure (Prague Powder) for jerky gun jerky?',
+    answer:
+      'You should. Ground meat has far more surface area exposed to bacteria than whole-muscle jerky, and it spends hours in the low-temperature range where bacteria thrive. Prague Powder #1 (sodium nitrite) at 1/4 teaspoon per pound of meat prevents botulism, keeps the color red instead of gray, and adds that classic cured-jerky flavor. If you skip it, refrigerate the finished jerky and eat it within a week.',
+  },
+  {
+    question: 'What temperature do you dehydrate ground beef jerky at?',
+    answer:
+      'Dehydrate ground beef jerky at 160°F for the full drying time. This is a USDA food-safety recommendation for ground meat, which has to reach 160°F throughout to kill harmful bacteria. Whole-muscle jerky can be done at slightly lower temps, but ground meat is different — never run your dehydrator below 160°F for jerky gun batches.',
+  },
+  {
+    question: 'How long does jerky gun jerky last?',
+    answer:
+      'Cured jerky-gun jerky lasts 2 to 4 weeks at room temperature in an airtight bag, 2 to 3 months in the fridge, and 6 to 12 months vacuum-sealed in the freezer. Uncured jerky lasts about a week in the fridge and should not be stored at room temperature. Always let the jerky cool completely before bagging — warm jerky in a sealed bag creates condensation, which invites mold within days.',
+  },
+  {
+    question: 'What is the best jerky gun brand?',
+    answer:
+      'The LEM Jerky Cannon® is the most-cited pick for serious home jerky makers thanks to its anodized aluminum barrel, 1.5 lb capacity, and reliable trigger mechanism. Weston and Nesco make solid alternatives at lower price points, and Hi Mountain Seasonings sells a well-liked plastic-and-metal hybrid. Cabela\'s carries private-label versions of similar guns. Avoid all-plastic budget guns — the trigger mechanism fails first and the barrels crack.',
+  },
+  {
+    question: 'Can you use a jerky gun without a dehydrator?',
+    answer:
+      'Yes. Extrude the strips directly onto wire cooling racks set over sheet pans and bake in the oven at its lowest setting (usually 170°F) with the door propped open an inch to vent moisture. Total time runs 3 to 5 hours. A convection oven works best because the moving air mimics a dehydrator. A smoker at 160°F also works and adds real wood-smoke flavor no liquid smoke can match.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Ground Beef Jerky Recipe', href: '/ground-beef-jerky/' },
+  { label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' },
+  { label: 'Best Dehydrator for Jerky', href: '/best-dehydrator-for-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Beef Jerky Seasoning', href: '/beef-jerky-seasoning/' },
+];
+---
+<PillarLayout
+  title="Jerky Gun Guide: How to Use, Best Brands & Recipe"
+  description="Jerky gun guide: how to use one, best brands (LEM, Nesco, Weston), and a foolproof ground beef jerky recipe. USDA-safe temps, cleaning tips, pro moves."
+  {canonical}
+  image="/images/jerky-gun-hero.webp"
+  breadcrumbs={[{ label: 'Jerky Gun', href: '/jerky-gun/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this guide"
+  datePublished="2026-08-03"
+  dateModified="2026-08-03"
+>
+  <RecipeSchema {...recipe} datePublished="2026-08-03" dateModified="2026-08-03" url={canonical} />
+
+  <h1>Jerky Gun: The Complete Guide (How to Use, Best Brands & a Recipe)</h1>
+
+  <div class="answer-box">
+    <p>A <strong>jerky gun</strong> is a hand-operated extruder that pushes seasoned ground meat through a nozzle to form uniform jerky strips or snack sticks. Load 90/10 or leaner ground beef mixed with cure and seasoning, extrude the strips onto a dehydrator tray, and dry at <strong>160°F</strong> until the jerky bends without snapping.</p>
+  </div>
+
+  <ContentImage src="/images/jerky-gun-hero.webp" alt="A jerky gun extruding uniform strips of ground beef jerky onto a dehydrator tray" eager={true} />
+
+  <p>The first time I used a jerky gun I fought it like it owed me money. I overpacked the barrel, cranked the ring too tight, and ended up chasing a rogue meat noodle across the countertop while the dog watched with obvious professional interest. <em>[Switches to serious face]</em> But once you learn its little quirks, the jerky gun is honestly the shortest path between "raw ground beef" and "jerky that looks like it came from a real shop." This is the complete guide: what it is, how to run it, USDA-safe temps, my favorite recipe, an honest brand comparison, and every troubleshooting move I've earned the hard way.</p>
+
+  <h2>What Is a Jerky Gun</h2>
+  <p><strong>What is a jerky gun?</strong> It's a hand-cranked extruder built for shaping ground-meat jerky. Picture a caulking gun for food and you are 90% of the way there — a long tube with a plunger on one end and a trigger handle on the other, feeding your seasoned meat mixture through a small opening. Swap the nozzle and you switch between flat jerky strips and round snack sticks.</p>
+  <p>The point of the tool is uniformity. Ground meat by itself does not want to become jerky — it wants to become a meatball. A jerky gun (also called a jerky shooter, jerky cannon, jerky maker, or jerky tube gun, depending on who's marketing it) presses the meat into an even thickness so every strip on the tray dries at the same rate. Even strips = predictable jerky. Uneven strips = some pieces snap like plywood while others are still floppy in the middle. Ask me how I know.</p>
+
+  <h2>Jerky Gun Nozzles: Flat, Double, and Round</h2>
+  <p>Every jerky gun ships with a small pile of interchangeable nozzles that screw on with a twist ring. Three shapes cover almost every home use:</p>
+  <ul>
+    <li><strong>Flat single strip</strong> — the workhorse. One wide, even ribbon of jerky. Cut to length after extruding. This is the shape most people picture when they picture jerky.</li>
+    <li><strong>Flat double strip</strong> — extrudes two narrower strips side by side. Faster loading of a tray, but be honest with yourself: the two strips almost never come out the same thickness. If you care about even drying, the single strip wins.</li>
+    <li><strong>Round snack-stick nozzle</strong> — makes tube-shaped jerky sticks. Great for a Slim-Jim style snack, especially with a fattier blend and casings if you want to level up.</li>
+  </ul>
+  <p>Some kits also throw in a sausage-style nozzle for casings — nice to have if you want to grow into snack-stick or hot-dog territory, otherwise ignore it for jerky.</p>
+
+  <ContentImage src="/images/jerky-gun-nozzles.webp" alt="Three jerky gun nozzles laid out — flat single strip, flat double strip, and round snack-stick tip" />
+
+  <h2>What Ground Beef to Use in a Jerky Gun</h2>
+  <p>The single biggest lever on jerky quality — bigger than seasoning, bigger than technique — is the leanness of your <strong>ground beef jerky gun</strong> mixture. Fat is the enemy here. Fat doesn't evaporate in a dehydrator; it melts, pools on the surface, goes rancid faster than the rest, and shortens your shelf life dramatically.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Ground beef lean/fat</th><th>Verdict</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>80/20 (regular)</td><td>Too fatty. Greasy jerky, shorter shelf life. Only if it's what you have.</td></tr>
+      <tr><td>85/15</td><td>Passable. Blot the finished jerky aggressively with paper towels.</td></tr>
+      <tr><td>90/10</td><td>Minimum I'd recommend. Clean, sturdy jerky.</td></tr>
+      <tr><td>93/7</td><td>Sweet spot. Enough fat for tenderness, lean enough to keep clean.</td></tr>
+      <tr><td>95/5 or 96/4</td><td>Excellent shelf life, slightly drier bite. Great for long storage.</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Hamburger jerky gun</strong> searches are basically the same query — "hamburger" and "ground beef" are the same thing, and the same rules apply. Ground venison, ground turkey, and ground chicken all extrude beautifully too; wild game is naturally lean and pairs perfectly with a jerky gun.</p>
+
+  <ContentImage src="/images/jerky-gun-meat-prep.webp" alt="Lean ground beef in a bowl with cure and seasonings ready to mix for a jerky gun" />
+
+  <h2>Do You Need Cure for Jerky Gun Jerky</h2>
+  <p>Short answer: yes, and here's why. Ground meat has way more surface area exposed to bacteria than a whole muscle slice — every crank of the grinder redistributes surface microbes throughout the batch. Then your jerky spends 4 to 6 hours in a low-temperature range where those bacteria would love to throw a party. <strong>Prague Powder #1</strong> (also sold as Insta Cure #1 or "pink cure") shuts that party down.</p>
+  <p>The dose is small and precise: <strong>1/4 teaspoon of Prague Powder #1 per pound of meat</strong>, or 1 teaspoon per 5 lb batch. Don't guess and don't overshoot — pink cure is dyed pink specifically so you can't confuse it with regular salt. It:</p>
+  <ul>
+    <li>Prevents botulism during the long low-temperature dry.</li>
+    <li>Keeps the finished jerky reddish-brown instead of dull gray.</li>
+    <li>Adds that unmistakable cured-jerky flavor and aroma.</li>
+    <li>Roughly triples shelf life at room temperature.</li>
+  </ul>
+  <p>The USDA lays this out plainly in their <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/jerky-and-food-safety" rel="noopener" target="_blank">Jerky and Food Safety guide</a> — worth a five-minute read if you're new to home curing. This applies to <strong>deer jerky gun</strong> batches too; wild game absolutely needs the cure.</p>
+
+  <h2>How to Load a Jerky Gun</h2>
+  <p>Loading is the step most people get wrong, and a badly loaded barrel is the source of about 80% of jerky-gun frustration. Ignore the instinct to dump the whole bowl of meat in at once. Instead:</p>
+  <ol>
+    <li>Wash the gun first (yes, even a brand-new one — factory oils are not seasoning).</li>
+    <li>Attach your chosen nozzle to the barrel and tighten the twist ring finger-tight. Do not crank it — you'll fight to get it off later.</li>
+    <li>Push the plunger all the way forward inside the barrel.</li>
+    <li>Pull the plunger back 2 inches, then pack that 2 inches of the barrel with meat, pressing down firmly with a spoon or your fingers to eliminate air pockets.</li>
+    <li>Pull the plunger back another 2 inches and repeat until the whole barrel is packed.</li>
+    <li>Screw the handle assembly onto the barrel. Pull the trigger a few times until meat starts appearing at the nozzle — that's your sign the pressure is right.</li>
+  </ol>
+  <p>Air pockets are the enemy. When the plunger passes an air pocket, the pressure drops, the strip goes thin, and you end up with jerky that looks like it was drawn by someone with a bad case of the hiccups. Load in stages and press firmly. This is the difference between an infuriating gun and a beautiful one.</p>
+
+  <ContentImage src="/images/jerky-gun-loading.webp" alt="Loading cold seasoned ground beef into a jerky gun barrel in small stages to eliminate air pockets" />
+
+  <h2>How to Use a Jerky Gun</h2>
+  <p><strong>How to use a jerky gun</strong> in one sentence: hold it at a 45° angle half an inch above the dehydrator tray, squeeze the trigger with steady even pressure, and move the gun backward at a slow steady pace so the meat lays down in an even ribbon.</p>
+  <p>A few technique notes that matter more than they sound like they should:</p>
+  <ul>
+    <li><strong>Angle the gun toward you, not straight down.</strong> Straight-down extrusion pushes the meat into a squished blob. A 45° angle lets it flow onto the tray as a clean ribbon.</li>
+    <li><strong>Move the gun, not the meat.</strong> Trigger pressure should stay constant; your other hand controls speed by pulling the gun backward.</li>
+    <li><strong>Cut strips at 5 to 6 inches</strong> with a butter knife or offset spatula. Longer strips look impressive but they break awkwardly when you're eating them later.</li>
+    <li><strong>Keep the meat cold.</strong> If you feel resistance building in the trigger, the meat has warmed up — put the whole loaded gun in the fridge for 10 minutes, then come back. Warm meat smears; cold meat flows.</li>
+    <li><strong>Don't overlap strips</strong> on the tray. Leave at least a quarter-inch gap for airflow. Touching strips dry unevenly.</li>
+  </ul>
+
+  <h2>What Temperature to Dehydrate Ground Beef Jerky</h2>
+  <p>This is the one non-negotiable safety line. <strong>Dehydrate ground beef jerky at 160°F for the full drying time</strong> — 4 to 6 hours for typical strip thickness. Whole-muscle jerky can be dried at lower temps if you've properly cured and pre-cooked, but ground meat is a different animal and has to reach 160°F throughout.</p>
+  <p>The USDA is explicit about this: because grinding exposes the entire batch to any surface bacteria, ground-meat jerky needs a full 160°F kill step. Some dehydrator manuals list 145°F or 155°F "jerky settings" — those are historical hangovers from the pre-Salmonella-outbreak era. Ignore them. Run at <strong>160°F</strong> or higher.</p>
+  <p>If your dehydrator won't hit 160°F, the workaround is to bake the finished jerky in the oven at 275°F for 10 minutes to hit the safety target. Personally I'd rather buy a dehydrator that runs at the right temperature (see <a href="/best-dehydrator-for-jerky/">best dehydrator for jerky</a> for that breakdown) than fight this fight every batch.</p>
+
+  <h2>Ground Beef Jerky Gun Recipe</h2>
+  <p>This is the <strong>beef jerky gun recipe</strong> I come back to when I don't want to think — it's the honest classic. Savory, faintly sweet, mildly smoky, snaps clean, keeps for weeks. It's also the base I customize from: dial up the pepper for peppered jerky, swap in soy for teriyaki, add cayenne for spicy. You can substitute ground venison, turkey, or chicken with no other changes as long as you keep the lean ratio and the cure.</p>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/jerky-gun-recipe.webp" alt="Freshly extruded ground beef jerky strips arranged on dehydrator trays ready to dry" />
+
+  <p>For more variations built on this same base, our <a href="/ground-beef-jerky/">ground beef jerky recipe hub</a> collects the teriyaki, peppered, spicy, and honey versions in one place.</p>
+
+  <h2>Jerky Gun Tips (from a Pitmaster)</h2>
+  <p>The rest of the internet will tell you the basics. Here's the stuff I only figured out after batches went sideways — the <strong>jerky gun tips</strong> that actually save the day mid-batch:</p>
+  <ul>
+    <li><strong>Mix the meat until it turns tacky.</strong> Push it 2 to 3 minutes with your hands. When you can press a clump and it stays together like clay, the proteins are bound and your jerky will hold shape. Skip this step and it crumbles on the tray. This is the single biggest crumbly-jerky fix.</li>
+    <li><strong>Rest the mix 1 to 24 hours before extruding.</strong> The cure needs time to work and the flavors need time to marry. Fresh-mixed goes in fine but pales next to rested.</li>
+    <li><strong>If the gun spits or blows out mid-strip, stop.</strong> That's an air pocket working its way to the nozzle. Retract the plunger, open the barrel, tamp the meat down again, reload the trapped section, and continue. Don't just squeeze harder — you'll spray meat.</li>
+    <li><strong>If the trigger gets hard to pull, chill the whole gun for 10 minutes.</strong> The meat has warmed and smeared. Cold meat flows; warm meat resists.</li>
+    <li><strong>Don't crank the retaining ring past finger-tight.</strong> The nozzle only needs to seal, not weld itself on. Overtightened rings are the #1 reason for post-batch cleaning rage.</li>
+    <li><strong>Blot the finished jerky.</strong> Even lean jerky throws a few beads of oil on the surface as it cools. A paper-towel wipe now buys you a week of shelf life later.</li>
+    <li><strong>Cool completely before bagging.</strong> Warm jerky sealed in plastic sweats, and sweaty jerky grows mold in three days. Ten minutes on a paper towel and you're safe to bag.</li>
+  </ul>
+
+  <h2>Best Jerky Gun Brands Compared</h2>
+  <p>There's no single "best" jerky gun — there's the right one for how much you'll actually use it. Here's the honest comparison of the brands that show up on every jerky-gun search: LEM (aka the Jerky Cannon), Nesco, Weston, Hi Mountain, Cabela's, and Presto. I'm not fabricating star ratings or prices — those move around and every list on the internet is out of date the day it publishes. What follows is what's actually different about each:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Brand / Model</th><th>Body</th><th>What it's known for</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>LEM Jerky Cannon®</strong></td><td>Anodized aluminum barrel, plastic-and-steel handle</td><td>1.5 lb capacity, flared barrel ends for easy loading, ships with Backwoods® seasoning packs</td><td>Serious home jerky makers who batch large and often</td></tr>
+      <tr><td><strong>Nesco Jerky Gun</strong></td><td>Plastic body, metal nozzles</td><td>Sold as part of the Nesco dehydrator ecosystem, budget-friendly</td><td>Beginners already using a Nesco dehydrator</td></tr>
+      <tr><td><strong>Weston Jerky Gun</strong></td><td>Aluminum with plastic handle</td><td>Solid mid-tier, similar footprint to LEM at a lower price point</td><td>Value-conscious jerky makers who want metal, not plastic</td></tr>
+      <tr><td><strong>Hi Mountain Jerky Gun</strong></td><td>Plastic-and-metal hybrid</td><td>Sold with Hi Mountain's cure and seasoning kits; includes three interchangeable nozzles (flat, round, long)</td><td>Buyers who want a starter kit with cure included</td></tr>
+      <tr><td><strong>Cabela's Jerky Gun</strong></td><td>Retailer private-label of similar mid-tier guns</td><td>Widely available at Cabela's and Bass Pro stores</td><td>In-person shoppers who want to see it before buying</td></tr>
+      <tr><td><strong>Presto Jerky Gun</strong></td><td>Plastic body, dishwasher-safe parts</td><td>Compact, low price point, easy cleanup</td><td>Occasional users making small batches</td></tr>
+    </tbody>
+  </table>
+  <p>The pattern is straightforward: <strong>metal-barrel guns (LEM, Weston) outlast plastic ones</strong>, but plastic guns are lighter, cheaper, and fine for a few batches a year. If you're going to make jerky more than four or five times a year, spring for the metal barrel. If not, the plastic route is genuinely fine — just don't over-tighten anything.</p>
+  <p><strong>Where to buy:</strong> LEM sells direct at lemproducts.com. Nesco, Weston, and Presto are on Walmart, Amazon, and most kitchen stores. Cabela's guns are at Cabela's and Bass Pro. Tractor Supply carries Weston. I don't run affiliate links on this page — I'd rather rank by being useful than by pushing anyone's inventory.</p>
+
+  <ContentImage src="/images/jerky-gun-brands-comparison.webp" alt="A lineup of the major jerky gun brands side by side for comparison" />
+
+  <h2>Jerky Gun vs Jerky Slicer</h2>
+  <p>Nobody else covers this decision on the internet, which is a shame because it's the one people usually get wrong. A <strong>jerky gun</strong> extrudes ground meat into shaped strips; a <strong>jerky slicer</strong> cuts whole-muscle beef (like eye of round or top round roasts) into uniform slices. Same finished snack, entirely different pathways.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Jerky gun (ground meat)</th><th>Jerky slicer (whole muscle)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Meat cost</td><td>Cheaper — ground beef is affordable</td><td>Higher — you're buying whole roasts</td></tr>
+      <tr><td>Texture</td><td>Tender, uniform, easy to chew</td><td>Chewier, traditional jerky bite</td></tr>
+      <tr><td>Prep time</td><td>Mix and extrude — fast</td><td>Slice, marinate, arrange — slower</td></tr>
+      <tr><td>Shelf life (cured)</td><td>2–4 weeks room temp</td><td>3–6 weeks room temp (less surface area, less fat)</td></tr>
+      <tr><td>Best for</td><td>Kids, older folks, snack sticks, custom flavors</td><td>Traditionalists, gift jerky, longer storage</td></tr>
+      <tr><td>Tool difficulty</td><td>Beginner-friendly</td><td>Requires knife skills or a slicer</td></tr>
+    </tbody>
+  </table>
+  <p>My take: if you're new to jerky, start with the gun. Ground beef is forgiving, the tool is cheap, and the finished jerky is easier for kids to eat. Once you've made a few batches and know you love the hobby, add a slicer for the whole-muscle route. They coexist happily — I own both.</p>
+
+  <h2>Jerky Gun Cleaning and Care</h2>
+  <p>A dirty jerky gun is a slow-motion failure. Meat left in the threads goes rancid inside a day, and dried meat inside the barrel turns the next batch into an archaeology project. The good news: cleaning takes five minutes if you do it right after use.</p>
+  <ol>
+    <li><strong>Disassemble immediately</strong> after your last strip — barrel, plunger, retaining ring, nozzle. Don't let anything sit.</li>
+    <li><strong>Hand-wash every part in hot soapy water.</strong> Yes, even the "dishwasher-safe" ones — the dishwasher cycle heat is hard on anodized coatings and rubber gaskets.</li>
+    <li><strong>Scrub the threads with a small brush.</strong> Meat hides where the nozzle screws on and where the handle joins the barrel. A toothbrush works.</li>
+    <li><strong>Run the included barrel brush</strong> through the barrel — LEM and most others include one. If yours didn't, a bottle brush works.</li>
+    <li><strong>Dry every part completely</strong> before storage. Wet aluminum spots and wet gaskets grow mold in a drawer.</li>
+    <li><strong>Store it disassembled.</strong> A screwed-together gun in a drawer traps humidity around the gasket and it dies faster.</li>
+  </ol>
+  <p>If you're into DIY, you may have seen <strong>Milwaukee jerky gun</strong> or <strong>diy jerky gun</strong> setups — a caulking-gun frame fitted with a food-grade sausage-stuffer tube for high-volume batches. They work, but they're a novelty for people making 5+ pounds at a time, and the caulking-gun frame itself never touches meat (it just pushes the food-grade tube). A standard hand gun is more than enough for household use.</p>
+
+  <ContentImage src="/images/jerky-gun-cleaning.webp" alt="A disassembled jerky gun with barrel, plunger, and nozzles laid out beside a cleaning brush ready for washing" />
+
+  <p>Want to keep going? Our <a href="/how-to-make-beef-jerky/">how to make beef jerky</a> guide covers the whole process from raw meat to finished snack — the jerky gun is one route, and knife-slicing whole muscle is the other classic path.</p>
+</PillarLayout>

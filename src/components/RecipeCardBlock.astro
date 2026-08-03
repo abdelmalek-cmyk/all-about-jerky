@@ -31,7 +31,18 @@ function isoToHuman(iso: string): string {
 <div class="rcb" id="recipe-card">
   <div class="rcb__top">
     <div class="rcb__header">
-      {image && <img class="rcb__thumb" src={image} alt={title} width="80" height="80" loading="lazy" />}
+      {image && (
+      <img
+        class="rcb__thumb"
+        src={image}
+        srcset={`${image.replace(/\.webp$/, '-480.webp')} 480w, ${image} 1254w`}
+        sizes="80px"
+        alt={title}
+        width="80"
+        height="80"
+        loading="lazy"
+      />
+    )}
       <div class="rcb__title-area">
         <h2 class="rcb__title">{title}</h2>
         <p class="rcb__author">By <a href="/about/" style="color:inherit;text-decoration:none;font-weight:700;">Cole Mercer</a></p>

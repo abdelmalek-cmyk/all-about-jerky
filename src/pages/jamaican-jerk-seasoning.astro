@@ -1,0 +1,206 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/jamaican-jerk-seasoning/';
+
+const recipe = {
+  name: 'Jamaican Jerk Seasoning',
+  description:
+    'Homemade Jamaican jerk seasoning — a bold Caribbean dry rub built on allspice, thyme, and scotch bonnet heat, with warm spices like nutmeg and cinnamon. Use it dry or blend it into a wet jerk paste for chicken, pork, or fish.',
+  image: '/images/jamaican-jerk-seasoning.webp',
+  prepTime: 'PT10M',
+  cookTime: 'PT5M',
+  totalTime: 'PT15M',
+  recipeYield: 'About 1/2 cup (seasons ~4 lbs of chicken)',
+  category: 'Seasoning',
+  cuisine: 'Jamaican',
+  keywords:
+    'jamaican jerk seasoning, jamaican jerk seasoning recipe, homemade jerk seasoning, jamaican jerk seasoning ingredients, dry jamaican jerk seasoning, jamaican jerk chicken seasoning, authentic jamaican jerk seasoning',
+  ingredients: [
+    '2 tablespoons ground allspice (Jamaicans call it pimento — this is the backbone)',
+    '1 tablespoon dried thyme',
+    '2 teaspoons cayenne pepper (or 1 teaspoon scotch bonnet powder for the real deal)',
+    '1 tablespoon garlic powder',
+    '1 tablespoon onion powder',
+    '2 teaspoons ground ginger',
+    '1 teaspoon ground cinnamon',
+    '1 teaspoon ground nutmeg',
+    '2 tablespoons brown sugar',
+    '1 tablespoon coarsely ground black pepper',
+    '1 tablespoon salt',
+    'Optional: 1 tablespoon dried scallion or chive flakes',
+  ],
+  instructions: [
+    'If you have whole allspice berries and peppercorns, toast them in a dry pan over medium heat for 2–3 minutes until fragrant, then grind. This one step is the single biggest upgrade over any jar on the shelf.',
+    'Measure every ground spice into a bowl. Allspice is the star of the show, so do not be shy with it — the blend should smell warm and almost clove-like.',
+    'Whisk until the color is an even reddish-brown with no stubborn clumps of brown sugar or salt.',
+    'Taste a tiny pinch off your fingertip. Adjust from there: more cayenne for heat, more brown sugar to round it off, more thyme for that grassy Caribbean note.',
+    'Store in an airtight jar away from light and heat. It holds its punch for about 6 months — though it never lasts that long in my kitchen.',
+    'To use it dry, rub 1–2 tablespoons per pound of chicken, pork, or fish. To make a wet jerk paste, blend 3 tablespoons of the mix with 4 scallions, 1 scotch bonnet, 2 tablespoons oil, 2 tablespoons lime juice, and a splash of soy sauce.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'What is in Jamaican jerk seasoning?',
+    answer:
+      'The two non-negotiable ingredients in Jamaican jerk seasoning are allspice (which Jamaicans call pimento) and scotch bonnet pepper. Around those you build a supporting cast of thyme, garlic, ginger, scallion, cinnamon, nutmeg, black pepper, and usually a little brown sugar and salt. Allspice does the heavy lifting on flavor and scotch bonnet does the heavy lifting on heat.',
+  },
+  {
+    question: 'How do you make Jamaican jerk seasoning?',
+    answer:
+      'To make dry Jamaican jerk seasoning, whisk together ground allspice, dried thyme, cayenne or scotch bonnet powder, garlic and onion powder, ginger, cinnamon, nutmeg, brown sugar, black pepper, and salt, then store it airtight. For a wet jerk paste, blend a few tablespoons of that dry mix with fresh scallions, a scotch bonnet, oil, lime juice, and a splash of soy sauce until smooth. Both start from the same spice base.',
+  },
+  {
+    question: 'How do you use Jamaican jerk seasoning?',
+    answer:
+      'Use dry jerk seasoning as a rub — about 1–2 tablespoons per pound of chicken, pork, or fish — and let it sit at least an hour, ideally overnight. Use the wet paste as a marinade, coating the meat and refrigerating 4–24 hours before grilling, baking, or air-frying. It also works stirred into rice, roasted vegetables, or even popcorn if you are feeling adventurous.',
+  },
+  {
+    question: 'Is Jamaican jerk seasoning spicy?',
+    answer:
+      'Traditionally, yes — scotch bonnet peppers are seriously hot, roughly 40 times hotter than a jalapeño, so authentic jerk has real fire to it. But heat is the one thing you fully control at home: use less cayenne (or swap in mild paprika), skip the scotch bonnet, and lean on the sweet and aromatic spices for a mild version the whole table can enjoy.',
+  },
+  {
+    question: 'What does Jamaican jerk seasoning taste like?',
+    answer:
+      'Jerk seasoning tastes warm, aromatic, and sweet-hot all at once. The allspice gives it a clove-and-cinnamon warmth, the thyme adds an earthy herbal note, the brown sugar brings a gentle sweetness, and the scotch bonnet delivers a fruity heat that builds. It is complex and unmistakable — nothing else tastes quite like it.',
+  },
+  {
+    question: 'What can I substitute for Jamaican jerk seasoning?',
+    answer:
+      'The closest quick substitute is a mix of allspice, cayenne, dried thyme, and a pinch of cinnamon and nutmeg — that covers most of the character. In a real pinch, a Cajun or Creole blend gets you the savory heat but misses the allspice warmth, so add a little ground allspice if you have it. Honestly, though, the homemade blend on this page takes ten minutes and beats every shortcut.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Beef Jerky Seasoning', href: '/beef-jerky-seasoning/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Beef Jerky Dry Rub', href: '/beef-jerky-dry-rub/' },
+  { label: 'Spicy Beef Jerky Recipe', href: '/recipes/spicy-beef-jerky/' },
+];
+---
+<PillarLayout
+  title="Jamaican Jerk Seasoning (Homemade Recipe)"
+  description="Homemade Jamaican jerk seasoning: the easy recipe, what's really in it, dry vs wet paste, how to use it on chicken, plus how the big store brands compare."
+  {canonical}
+  breadcrumbs={[{ label: 'Jamaican Jerk Seasoning', href: '/jamaican-jerk-seasoning/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this recipe"
+  datePublished="2026-08-03"
+  dateModified="2026-08-03"
+>
+  <RecipeSchema {...recipe} datePublished="2026-08-03" dateModified="2026-08-03" url={canonical} />
+
+  <h1>Jamaican Jerk Seasoning</h1>
+
+  <div class="answer-box">
+    <p>Jamaican jerk seasoning is a bold Caribbean spice blend built on <strong>allspice</strong> (Jamaicans call it pimento), fiery <strong>scotch bonnet</strong> peppers, and fresh <strong>thyme</strong>, rounded out with warm spices like nutmeg and cinnamon. It comes two ways — a dry rub or a wet paste — and it's what gives jerk chicken that smoky, sweet-hot, unmistakable punch.</p>
+  </div>
+
+  <ContentImage src="/images/jamaican-jerk-seasoning.webp" alt="Jamaican jerk seasoning dry rub in a wooden bowl surrounded by fresh spices" eager={true} />
+
+  <p>Here's the thing about jerk seasoning: it does not mess around. The first time I made it from scratch I got a little enthusiastic with the scotch bonnet, and let's just say my tasting spoon and I needed a short timeout and a tall glass of milk. <em>[Switches to serious face]</em> But dialed in right, it's one of the great flavor bombs in all of cooking — warm, sweet, and hot at the same time. This is your complete guide: how to make it, what's actually in it, dry versus wet, how the famous store brands stack up, and how to keep your mouth off the ceiling.</p>
+
+  <h2>Jamaican Jerk Seasoning Recipe</h2>
+  <p>This is the base <strong>jamaican jerk seasoning recipe</strong>, and I have good news for the nervous cooks in the room: it's a "dump everything in a bowl and whisk" situation. If you can make a decent bowl of cereal, you can make this. The hard part is resisting the urge to sniff the allspice too closely (you will sneeze — it's a rite of passage).</p>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/jamaican-jerk-seasoning-mix.webp" alt="Freshly whisked homemade Jamaican jerk seasoning in a glass jar and spoon" />
+
+  <p>A few things separate a great homemade blend from a sad one:</p>
+  <ul>
+    <li><strong>Toast and grind whole spices if you can.</strong> Whole allspice berries and peppercorns, toasted for two minutes and ground fresh, are a genuine glow-up. It's the difference between "oh, nice" and "wait, what IS that."</li>
+    <li><strong>Respect the allspice.</strong> It's the backbone of the whole thing. Skimp on it and you've made a generic chili rub wearing a Jamaica jersey.</li>
+    <li><strong>Sugar is a team player, not the captain.</strong> A little brown sugar rounds off the heat and helps things caramelize on the grill. Too much and you've made candy with a temper.</li>
+  </ul>
+  <p>Want the <strong>authentic jamaican jerk seasoning recipe</strong> feel without a trip to Kingston? Fresh thyme and real scotch bonnet get you most of the way there. More on that in the <a href="#authentic">authentic section</a> below.</p>
+
+  <h2>Jamaican Jerk Chicken Seasoning</h2>
+  <p>Nine times out of ten, when someone searches for <strong>jamaican jerk chicken seasoning</strong>, this is the dream in their head: crispy, mahogany, sweet-and-smoky chicken pulled off the grill while somebody nearby says "okay, that smells illegal." Jerk and chicken are a match made in flavor heaven, so let's get you there.</p>
+  <p>You've got two ways to season the bird:</p>
+  <ul>
+    <li><strong>Dry rub:</strong> massage 1–2 tablespoons of the dry blend per pound into the chicken (thighs and drumsticks are the move — they stay juicy). Let it sit at least an hour; overnight earns you serious street cred.</li>
+    <li><strong>Wet marinade:</strong> coat the chicken in the wet jerk paste and refrigerate 4–24 hours. Wet penetrates deeper and gives you that classic sticky, lacquered skin.</li>
+  </ul>
+  <p>Then cook it hot and finish it slow: grill or bake at around 375°F, turning until the internal temperature hits <strong>165°F</strong> for safe, juicy chicken. Pinch of char is not a mistake — it's the whole point.</p>
+
+  <ContentImage src="/images/jerk-seasoning-on-chicken.webp" alt="Raw chicken thighs coated in Jamaican jerk seasoning ready to grill" />
+
+  <h2>What Is in Jamaican Jerk Seasoning</h2>
+  <p>Let's open the hood. If you've ever wondered <strong>what is in jamaican jerk seasoning</strong> — or what spices are in it — the honest answer is that there are two stars and a whole supporting cast. Get the two stars right and you're 80% of the way home.</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Ingredient</th><th>What it does</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Allspice (pimento)</td><td>The backbone — warm, clove-and-cinnamon flavor unique to jerk</td></tr>
+      <tr><td>Scotch bonnet pepper</td><td>The heat — fruity, fierce, and traditional</td></tr>
+      <tr><td>Thyme</td><td>Earthy, herbal Caribbean note</td></tr>
+      <tr><td>Scallion &amp; garlic</td><td>Savory, aromatic depth</td></tr>
+      <tr><td>Ginger</td><td>Bright, warm bite</td></tr>
+      <tr><td>Cinnamon &amp; nutmeg</td><td>Sweet, cozy warmth</td></tr>
+      <tr><td>Brown sugar</td><td>Balances the heat, helps caramelize</td></tr>
+      <tr><td>Black pepper &amp; salt</td><td>Seasoning foundation</td></tr>
+    </tbody>
+  </table>
+  <p>The <strong>jamaican jerk seasoning ingredients</strong> list can flex a little from cook to cook — some add cloves, some add a splash of soy — but if allspice and scotch bonnet aren't in the room, it's not jerk. It's just spicy.</p>
+
+  <ContentImage src="/images/jamaican-jerk-seasoning-ingredients.webp" alt="The core ingredients in Jamaican jerk seasoning arranged on a table" />
+
+  <h2>Jamaican Jerk Seasoning Paste</h2>
+  <p>Time to settle the great debate: dry rub or <strong>jamaican jerk seasoning paste</strong>? This is the "coffee or tea" of the jerk world, and the answer is a deeply unhelpful "it depends." Both start from the same spices — the difference is whether you add fresh wet ingredients.</p>
+  <ul>
+    <li><strong>Dry seasoning</strong> is a shelf-stable rub. It's convenient, it stores for months, and it's brilliant for a quick weeknight <strong>jamaican jerk dry seasoning</strong> hit on chicken or fish.</li>
+    <li><strong>Wet paste (or marinade/sauce)</strong> blends the dry mix with fresh scallion, scotch bonnet, oil, lime, and soy. It's messier and doesn't keep as long, but it soaks in deeper and delivers that authentic sticky finish.</li>
+  </ul>
+  <p>My take? Keep a jar of the dry blend around for busy nights, and make the wet paste when you've got time and something to celebrate. Best of both worlds, zero regrets.</p>
+
+  <ContentImage src="/images/jamaican-jerk-seasoning-wet-paste.webp" alt="Thick wet Jamaican jerk paste marinade in a bowl with fresh scallions and scotch bonnet" />
+
+  <h2 id="authentic">Authentic Jamaican Jerk Seasoning</h2>
+  <p><em>[Switches to serious face]</em> Jerk isn't just a flavor — it's a cooking tradition with real roots. <strong>Authentic jamaican jerk seasoning</strong> traces back to the Maroons of Jamaica, and the spiritual home of jerk is Boston Bay in Portland parish, where it's cooked low and slow over pimento (allspice) wood. That smoke, plus allspice berries, scotch bonnet, thyme, and scallion, is the real thing.</p>
+  <p>You can't ship pimento-wood smoke to a suburban backyard, and that's okay. To get <strong>traditional jamaican jerk seasoning</strong> character at home, focus on what you can control: use whole allspice, fresh thyme, and actual scotch bonnet, and cook over some kind of live fire or smoke if you can. Respect the ingredients and you'll make something honest — even if it's on a Tuesday, in Ohio, next to a trampoline.</p>
+
+  <h2>Walkerswood Jamaican Jerk Seasoning</h2>
+  <p>Not everyone wants to build a spice blend from scratch, and that's completely fair. So let's talk store brands — starting with the one everyone asks about. <strong>Walkerswood jamaican jerk seasoning</strong> is the big name: a Jamaican company whose traditional jerk seasoning is a <em>wet paste</em> that runs genuinely, respectably hot. This is not a "spicy for the grocery store" hot — it's the real fire.</p>
+  <p>It comes in two lanes: the standard <strong>walkerswood traditional jamaican jerk seasoning</strong> (bring a fan for your mouth) and a milder version for the heat-cautious. If you want an authentic Jamaican wet jerk without doing the blending yourself, this is the usual first recommendation.</p>
+
+  <h2>Grace Jamaican Jerk Seasoning</h2>
+  <p><strong>Grace jamaican jerk seasoning</strong> is the other Jamaican heavyweight you'll spot on Caribbean grocery shelves. Grace is a huge Caribbean food brand, and their jerk products lean toward wet marinades, including a popular <strong>grace jamaican honey jerk seasoning</strong> that trades a little of the raw heat for a sweeter, stickier profile.</p>
+  <p>If Walkerswood is the fiery purist, Grace's honey jerk is the crowd-pleaser you bring to a cookout where not everyone has an asbestos tongue. Both are legit; it just depends on your heat tolerance and your sweet tooth.</p>
+
+  <h2>McCormick Jamaican Jerk Seasoning</h2>
+  <p>Finally, the option you can grab at literally any US supermarket without a special trip. <strong>Mccormick jamaican jerk seasoning</strong> is a <em>dry</em> blend, milder and more mainstream than the Jamaican wet pastes, and it's a perfectly good on-ramp if you're jerk-curious. Badia makes a similar widely-available dry blend at a budget price, and store brands abound.</p>
+  <p>So which is the <strong>best jamaican jerk seasoning</strong>? Honestly, it depends on what you're after: Walkerswood or Grace for authentic wet heat, McCormick or Badia for easy and mild. And the homemade blend up top for full control over flavor and fire. I'm not here to fabricate star ratings — try a couple and trust your own taste buds. They're smarter than any list.</p>
+
+  <ContentImage src="/images/jamaican-jerk-seasoning-brands.webp" alt="A lineup of Jamaican jerk seasoning jars for comparison" />
+
+  <h2>Jamaican Jerk Seasoning Substitute</h2>
+  <p>Caught without any jerk on hand? A good <strong>jamaican jerk seasoning substitute</strong> is closer than you think. The quick version: mix ground allspice, cayenne, dried thyme, and a small pinch of cinnamon and nutmeg. That combination covers most of the personality — allspice for warmth, cayenne for heat, thyme for the herbal backbone.</p>
+  <p>In a genuine emergency, a Cajun or Creole blend will get you savory heat, but it misses the allspice warmth that makes jerk <em>jerk</em> — so stir in a little ground allspice if you've got it. Or, you know, spend ten minutes making the real thing. I had to say it.</p>
+
+  <h2>Mild Jamaican Jerk Seasoning</h2>
+  <p>Here's the good news for anyone who tapped out at my scotch-bonnet story: heat is optional. A <strong>mild jamaican jerk seasoning</strong> keeps all the warm, aromatic magic and simply dials the fire down. Because let's be honest, jerk that sets off the smoke alarm in your mouth isn't fun for the whole table.</p>
+  <ul>
+    <li><strong>Cut or skip the scotch bonnet and cayenne</strong> — that's where nearly all the heat lives.</li>
+    <li><strong>Swap in sweet paprika</strong> for color and a whisper of pepper without the burn.</li>
+    <li><strong>Lean a little sweeter</strong> with extra brown sugar and let the allspice, cinnamon, and nutmeg carry the flavor.</li>
+  </ul>
+  <p>You'll still get that unmistakable jerk aroma — just without the milk chaser. Everybody at the cookout wins, including the brave and the cautious.</p>
+</PillarLayout>

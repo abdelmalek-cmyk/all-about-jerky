@@ -399,6 +399,58 @@ blockquote { border-left: 4px solid var(--clr-primary); padding: .75rem 1.5rem; 
 }
 .answer-box p { margin-bottom: 0; }
 
+/* ===== TABLE OF CONTENTS (long-form pillars) ===== */
+.toc {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius);
+  padding: 1.25rem 1.75rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.toc__title {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin: 0 0 0.75rem;
+}
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+  columns: 2;
+  column-gap: 2rem;
+}
+.toc li {
+  break-inside: avoid;
+  margin: 0.25rem 0;
+  font-size: 0.95rem;
+}
+.toc a {
+  color: #1f2937;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.toc a:hover { border-bottom-color: var(--clr-accent); }
+@media (max-width: 640px) {
+  .toc ol { columns: 1; }
+}
+
+/* ===== BACK TO TOP (long-form pillars) ===== */
+.back-to-top {
+  margin: 2.5rem 0 0;
+  text-align: right;
+  font-size: 0.9rem;
+}
+.back-to-top a {
+  color: var(--clr-primary);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+}
+.back-to-top a:hover { border-bottom-color: var(--clr-primary); }
+
 /* ===== RECIPE IMAGES ===== */
 .recipe-hero-img {
   width: 100%;

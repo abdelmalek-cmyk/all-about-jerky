@@ -19,10 +19,14 @@ const w = dims?.width ?? 0;
 const base = src.replace(/\.webp$/i, '');
 const srcsetParts = [];
 if (w > 480) srcsetParts.push(`${base}-480.webp 480w`);
+if (w > 640) srcsetParts.push(`${base}-640.webp 640w`);
 if (w > 960) srcsetParts.push(`${base}-960.webp 960w`);
 if (srcsetParts.length) srcsetParts.push(`${src} ${w}w`);
 const srcset = srcsetParts.length ? srcsetParts.join(', ') : undefined;
-const sizes = srcset ? '(min-width: 900px) 800px, 100vw' : undefined;
+// Actual layout: .page-content .container caps at 820px on desktop; on smaller
+// viewports the image spans 100vw minus 3rem of combined side padding. This
+// gives the browser a display width closer to reality so it doesn't over-pick.
+const sizes = srcset ? '(min-width: 820px) 800px, calc(100vw - 3rem)' : undefined;
 ---
 {dims && (
   <img

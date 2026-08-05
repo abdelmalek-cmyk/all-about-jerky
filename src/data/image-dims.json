@@ -1,4 +1,8 @@
 {
+  "/images/air-fryer-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/air-fryer-beef-jerky-basket-16x9.webp": {
     "width": 1200,
     "height": 675
@@ -10,6 +14,10 @@
   "/images/air-fryer-beef-jerky-basket-4x3.webp": {
     "width": 1195,
     "height": 896
+  },
+  "/images/air-fryer-beef-jerky-basket-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/air-fryer-beef-jerky-basket.webp": {
     "width": 1200,
@@ -31,9 +39,17 @@
     "width": 1195,
     "height": 896
   },
+  "/images/bbq-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/bbq-beef-jerky.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/beef-jerky-bend-test-close-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/beef-jerky-bend-test-close.webp": {
     "width": 1200,
@@ -51,9 +67,17 @@
     "width": 1195,
     "height": 896
   },
+  "/images/beef-jerky-done-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-done.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/beef-jerky-dry-rub-applying-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/beef-jerky-dry-rub-applying.webp": {
     "width": 1200,
@@ -71,9 +95,17 @@
     "width": 896,
     "height": 672
   },
+  "/images/beef-jerky-flavors-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/beef-jerky-flavors.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/beef-jerky-in-oven-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/beef-jerky-in-oven-rack-16x9.webp": {
     "width": 1200,
@@ -87,6 +119,10 @@
     "width": 1195,
     "height": 896
   },
+  "/images/beef-jerky-in-oven-rack-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-in-oven-rack.webp": {
     "width": 1200,
     "height": 896
@@ -95,9 +131,21 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/beef-jerky-marinade-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/beef-jerky-marinade-bag-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-marinade-bag.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/beef-jerky-marinade-mixing-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/beef-jerky-marinade-mixing.webp": {
     "width": 1200,
@@ -107,29 +155,61 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/beef-jerky-seasoning-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-seasoning.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/beef-jerky-slicing-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/beef-jerky-slicing.webp": {
     "width": 1200,
     "height": 896
   },
+  "/images/beef-jerky-storage-jars-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-storage-jars.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/beef-jerky-storage-mason-jar-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/beef-jerky-storage-mason-jar.webp": {
     "width": 1200,
     "height": 896
   },
+  "/images/beef-jerky-thermometer-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/beef-jerky-thermometer.webp": {
     "width": 1200,
     "height": 896
   },
+  "/images/beef-jerky-time-and-temperature-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/beef-jerky-time-and-temperature.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/best-meat-for-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/best-meat-for-beef-jerky-cuts-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/best-meat-for-beef-jerky-cuts.webp": {
     "width": 1200,
@@ -139,13 +219,29 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/bourbon-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/bourbon-beef-jerky.webp": {
     "width": 896,
     "height": 1152
   },
+  "/images/brisket-jerky-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/brisket-jerky.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/can-dogs-eat-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/can-dogs-eat-beef-jerky-dog-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/can-dogs-eat-beef-jerky-dog.webp": {
     "width": 1200,
@@ -154,6 +250,10 @@
   "/images/can-dogs-eat-beef-jerky.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/candied-salmon-jerky-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/candied-salmon-jerky.webp": {
     "width": 1254,
@@ -171,21 +271,45 @@
     "width": 1254,
     "height": 941
   },
+  "/images/chicken-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/chicken-jerky-dehydrator-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/chicken-jerky-dehydrator.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/chicken-jerky-dog-dehydrator-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/chicken-jerky-dog-dehydrator.webp": {
     "width": 1254,
     "height": 1254
   },
+  "/images/chicken-jerky-dog-done-640.webp": {
+    "width": 640,
+    "height": 960
+  },
   "/images/chicken-jerky-dog-done.webp": {
     "width": 1024,
     "height": 1536
   },
+  "/images/chicken-jerky-dog-slicing-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/chicken-jerky-dog-slicing.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/chicken-jerky-done-640.webp": {
+    "width": 640,
+    "height": 960
   },
   "/images/chicken-jerky-done.webp": {
     "width": 1024,
@@ -203,9 +327,17 @@
     "width": 1254,
     "height": 941
   },
+  "/images/chicken-jerky-for-dogs-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/chicken-jerky-for-dogs.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/chicken-jerky-marinade-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/chicken-jerky-marinade.webp": {
     "width": 1254,
@@ -215,6 +347,14 @@
     "width": 1254,
     "height": 1254
   },
+  "/images/cole-mercer-640.webp": {
+    "width": 640,
+    "height": 823
+  },
+  "/images/cole-mercer-smoker-640.webp": {
+    "width": 640,
+    "height": 366
+  },
   "/images/cole-mercer-smoker.webp": {
     "width": 1344,
     "height": 768
@@ -222,6 +362,14 @@
   "/images/cole-mercer.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/dehydrator-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/dehydrator-beef-jerky-loading-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/dehydrator-beef-jerky-loading.webp": {
     "width": 1200,
@@ -239,6 +387,10 @@
     "width": 1195,
     "height": 896
   },
+  "/images/dehydrator-beef-jerky-machine-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/dehydrator-beef-jerky-machine.webp": {
     "width": 1200,
     "height": 896
@@ -247,9 +399,17 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/dr-pepper-beef-jerky-reduction-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/dr-pepper-beef-jerky-reduction.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/eye-of-round-roast-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/eye-of-round-roast.webp": {
     "width": 1200,
@@ -267,17 +427,37 @@
     "width": 1254,
     "height": 941
   },
+  "/images/fruit-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/fruit-jerky-dehydrator-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/fruit-jerky-dehydrator.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/fruit-jerky-mango-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/fruit-jerky-mango.webp": {
     "width": 1254,
     "height": 1254
   },
+  "/images/fruit-jerky-pineapple-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/fruit-jerky-pineapple.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/fruit-jerky-puree-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/fruit-jerky-puree.webp": {
     "width": 1254,
@@ -286,6 +466,10 @@
   "/images/fruit-jerky.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/ground-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/ground-beef-jerky-trays-16x9.webp": {
     "width": 1200,
@@ -299,6 +483,10 @@
     "width": 1195,
     "height": 896
   },
+  "/images/ground-beef-jerky-trays-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/ground-beef-jerky-trays.webp": {
     "width": 1200,
     "height": 896
@@ -307,13 +495,29 @@
     "width": 1024,
     "height": 1024
   },
+  "/images/how-long-does-beef-jerky-last-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/how-long-does-beef-jerky-last.webp": {
     "width": 1024,
     "height": 1024
   },
+  "/images/how-to-make-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/how-to-make-beef-jerky.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/is-beef-jerky-healthy-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/is-beef-jerky-healthy-nutrition-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/is-beef-jerky-healthy-nutrition.webp": {
     "width": 1200,
@@ -335,17 +539,37 @@
     "width": 1254,
     "height": 941
   },
+  "/images/jamaican-jerk-seasoning-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/jamaican-jerk-seasoning-brands-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jamaican-jerk-seasoning-brands.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/jamaican-jerk-seasoning-ingredients-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/jamaican-jerk-seasoning-ingredients.webp": {
     "width": 1254,
     "height": 1254
   },
+  "/images/jamaican-jerk-seasoning-mix-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jamaican-jerk-seasoning-mix.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/jamaican-jerk-seasoning-wet-paste-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/jamaican-jerk-seasoning-wet-paste.webp": {
     "width": 1254,
@@ -355,25 +579,49 @@
     "width": 1254,
     "height": 1254
   },
+  "/images/jerk-seasoning-on-chicken-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jerk-seasoning-on-chicken.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/jerky-gun-cleaning-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/jerky-gun-cleaning.webp": {
     "width": 1254,
     "height": 1254
   },
+  "/images/jerky-gun-hero-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jerky-gun-hero.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/jerky-gun-loading-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/jerky-gun-loading.webp": {
     "width": 1254,
     "height": 1254
   },
+  "/images/jerky-gun-meat-prep-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jerky-gun-meat-prep.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/jerky-gun-nozzles-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/jerky-gun-nozzles.webp": {
     "width": 1254,
@@ -391,9 +639,17 @@
     "width": 1254,
     "height": 941
   },
+  "/images/jerky-gun-recipe-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/jerky-gun-recipe.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/korean-bbq-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/korean-bbq-beef-jerky.webp": {
     "width": 896,
@@ -410,6 +666,14 @@
   "/images/korean-beef-jerky-4x3.webp": {
     "width": 1195,
     "height": 896
+  },
+  "/images/korean-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 478
+  },
+  "/images/korean-beef-jerky-gochujang-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/korean-beef-jerky-gochujang.webp": {
     "width": 1200,
@@ -431,6 +695,14 @@
     "width": 1195,
     "height": 896
   },
+  "/images/peppered-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 478
+  },
+  "/images/peppered-beef-jerky-peppercorns-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/peppered-beef-jerky-peppercorns.webp": {
     "width": 1200,
     "height": 896
@@ -438,6 +710,10 @@
   "/images/peppered-beef-jerky.webp": {
     "width": 1200,
     "height": 896
+  },
+  "/images/round-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 478
   },
   "/images/round-beef-jerky.webp": {
     "width": 1200,
@@ -455,9 +731,21 @@
     "width": 1254,
     "height": 941
   },
+  "/images/salmon-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/salmon-jerky-dehydrator-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/salmon-jerky-dehydrator.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/salmon-jerky-sliced-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/salmon-jerky-sliced.webp": {
     "width": 1254,
@@ -466,6 +754,10 @@
   "/images/salmon-jerky.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/smoked-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/smoked-beef-jerky-smoker-16x9.webp": {
     "width": 1200,
@@ -479,6 +771,10 @@
     "width": 1195,
     "height": 896
   },
+  "/images/smoked-beef-jerky-smoker-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/smoked-beef-jerky-smoker.webp": {
     "width": 1200,
     "height": 896
@@ -486,6 +782,10 @@
   "/images/smoked-beef-jerky.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/smoked-salmon-jerky-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/smoked-salmon-jerky.webp": {
     "width": 1254,
@@ -503,17 +803,37 @@
     "width": 896,
     "height": 672
   },
+  "/images/spicy-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
+  },
+  "/images/spicy-beef-jerky-bend-test-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/spicy-beef-jerky-bend-test.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/spicy-beef-jerky-dehydrator-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/spicy-beef-jerky-dehydrator.webp": {
     "width": 896,
     "height": 1152
   },
+  "/images/spicy-beef-jerky-marinade-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/spicy-beef-jerky-marinade.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/spicy-beef-jerky-snack-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/spicy-beef-jerky-snack.webp": {
     "width": 896,
@@ -535,17 +855,37 @@
     "width": 896,
     "height": 672
   },
+  "/images/sweet-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
+  },
+  "/images/sweet-beef-jerky-gift-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/sweet-beef-jerky-gift.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/sweet-beef-jerky-ingredients-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/sweet-beef-jerky-ingredients.webp": {
     "width": 896,
     "height": 1152
   },
+  "/images/sweet-beef-jerky-oven-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/sweet-beef-jerky-oven.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/sweet-beef-jerky-texture-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/sweet-beef-jerky-texture.webp": {
     "width": 1024,
@@ -567,17 +907,37 @@
     "width": 896,
     "height": 672
   },
+  "/images/teriyaki-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
+  },
+  "/images/teriyaki-beef-jerky-bowl-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/teriyaki-beef-jerky-bowl.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/teriyaki-beef-jerky-finished-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/teriyaki-beef-jerky-finished.webp": {
     "width": 896,
     "height": 1152
   },
+  "/images/teriyaki-beef-jerky-marinade-640.webp": {
+    "width": 640,
+    "height": 823
+  },
   "/images/teriyaki-beef-jerky-marinade.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/teriyaki-beef-jerky-marinating-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/teriyaki-beef-jerky-marinating.webp": {
     "width": 896,
@@ -586,6 +946,10 @@
   "/images/teriyaki-beef-jerky.webp": {
     "width": 896,
     "height": 1152
+  },
+  "/images/thai-beef-jerky-640.webp": {
+    "width": 640,
+    "height": 823
   },
   "/images/thai-beef-jerky.webp": {
     "width": 896,
@@ -603,17 +967,37 @@
     "width": 1254,
     "height": 941
   },
+  "/images/turkey-jerky-640.webp": {
+    "width": 640,
+    "height": 640
+  },
+  "/images/turkey-jerky-dehydrator-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/turkey-jerky-dehydrator.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/turkey-jerky-done-640.webp": {
+    "width": 640,
+    "height": 960
   },
   "/images/turkey-jerky-done.webp": {
     "width": 1024,
     "height": 1536
   },
+  "/images/turkey-jerky-sliced-640.webp": {
+    "width": 640,
+    "height": 640
+  },
   "/images/turkey-jerky-sliced.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/turkey-jerky-sticks-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/turkey-jerky-sticks.webp": {
     "width": 1254,
@@ -622,6 +1006,10 @@
   "/images/turkey-jerky.webp": {
     "width": 1254,
     "height": 1254
+  },
+  "/images/venison-jerky-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/venison-jerky-rustic-16x9.webp": {
     "width": 1200,
@@ -635,6 +1023,10 @@
     "width": 1195,
     "height": 896
   },
+  "/images/venison-jerky-rustic-640.webp": {
+    "width": 640,
+    "height": 478
+  },
   "/images/venison-jerky-rustic.webp": {
     "width": 1200,
     "height": 896
@@ -642,6 +1034,10 @@
   "/images/venison-jerky.webp": {
     "width": 1024,
     "height": 1024
+  },
+  "/images/when-is-beef-jerky-done-640.webp": {
+    "width": 640,
+    "height": 640
   },
   "/images/when-is-beef-jerky-done.webp": {
     "width": 1024,

@@ -9,8 +9,9 @@ import { join } from 'path';
 const root = new URL('../', import.meta.url).pathname.replace(/^\/([A-Z]:)/, '$1');
 const imgDir = join(root, 'public/images');
 
-// Must match ContentImage's srcset rule: -480 when wider than 480, -960 when wider than 960.
-const WIDTHS = [480, 960];
+// Must match ContentImage's srcset rule: -480/-640/-960 progressive widths so
+// the browser has a middle rung to pick instead of jumping straight to 960w.
+const WIDTHS = [480, 640, 960];
 
 const files = (await readdir(imgDir)).filter(
   (f) =>

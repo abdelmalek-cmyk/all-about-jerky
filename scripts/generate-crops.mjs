@@ -39,6 +39,8 @@ const methodHeroes = [
   'jerky-gun-recipe',
   // vegan jerky recipe hero (RecipeCardBlock/RecipeSchema use this one)
   'vegan-jerky-recipe',
+  // low sodium beef jerky recipe hero
+  'low-sodium-beef-jerky-recipe',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

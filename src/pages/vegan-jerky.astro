@@ -1,0 +1,296 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/vegan-jerky/';
+
+const recipe = {
+  name: 'Homemade Vegan Jerky (Soy Curl Recipe)',
+  description:
+    'A dead-simple homemade vegan jerky recipe made with Butler soy curls, oven-baked at 250°F. Salty, smoky, chewy in all the right ways, and a fraction of the cost of the store-bought brands. Ready in about an hour and stores for a week.',
+  image: '/images/vegan-jerky-recipe.webp',
+  prepTime: 'PT20M',
+  cookTime: 'PT1H',
+  totalTime: 'PT1H20M',
+  recipeYield: 'About 6 oz finished vegan jerky (from one 8 oz bag of dry soy curls)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords:
+    'vegan jerky, vegan jerky recipe, how to make vegan jerky, homemade vegan jerky, soy curl jerky, vegan beef jerky',
+  ingredients: [
+    '1 (8 oz) bag Butler soy curls (dry)',
+    '1/4 cup olive oil',
+    '1/3 cup regular soy sauce (not low-sodium — the salt is doing real work here)',
+    '1/2 tablespoon liquid smoke (hickory or mesquite)',
+    '1 tablespoon white or apple cider vinegar',
+    '1 tablespoon pure maple syrup',
+    '1 tablespoon garlic powder',
+    '1 tablespoon onion powder',
+    '1 teaspoon smoked paprika',
+    '1 teaspoon ground mustard',
+    '1/2 teaspoon cayenne pepper (or omit for mild)',
+    '1/2 teaspoon coarsely ground black pepper',
+    '1/4 teaspoon kosher salt',
+  ],
+  instructions: [
+    'Preheat the oven to 250°F and line a large baking sheet with parchment paper or a silicone mat.',
+    'Cover the dry soy curls with just-off-the-boil water in a large bowl and let them rehydrate for 10 minutes. They will bloom to about triple their dry volume.',
+    'Drain the soy curls thoroughly, then squeeze out every last drop of water in batches using a nut milk bag, clean kitchen towel, or your hands. Dry soy curls take on marinade the way beef jerky can only dream of, but only if you get the water out first.',
+    'In a small bowl, whisk together the olive oil, soy sauce, liquid smoke, vinegar, maple syrup, garlic powder, onion powder, smoked paprika, ground mustard, cayenne, black pepper, and salt.',
+    'Pour the marinade over the squeezed soy curls and toss until every piece is coated. If you squeezed hard enough, the marinade will absorb almost fully in about a minute.',
+    'Spread the marinated soy curls in a single even layer on the prepared sheet, leaving space between pieces for airflow.',
+    'Bake for about 1 hour, stirring the pan every 20 minutes so the pieces dry evenly. Total time can range from 55 minutes to 1 hour 15 minutes depending on your oven and how much water made it out.',
+    'Pull the jerky when the pieces feel firm but still bend before snapping. Cool completely on the pan, then store in an airtight container overnight — the texture actually improves after resting. Keeps 5 to 7 days at room temperature.',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'What is vegan jerky and what is it made of?',
+    answer:
+      'Vegan jerky is a chewy plant-based snack designed to mimic the salty, savory, umami-rich pull of beef jerky. It is made from soy protein (textured vegetable protein or soy curls), seitan (wheat gluten), whole mushrooms (portabella, king oyster, or shiitake), pea protein, or jackfruit — each seasoned with soy sauce, liquid smoke, and spices, then dehydrated or slow-baked until firm. Different brands lean on different bases.',
+  },
+  {
+    question: 'Is beef jerky vegan?',
+    answer:
+      'No — beef jerky is not vegan. It is dried, seasoned beef, which is an animal product. It is also not vegetarian, since it contains meat. Some jerky brands sell vegan alternatives alongside their beef products (Perky Jerky, Country Archer), so double-check the label — "vegan" or "plant-based" will be clearly marked on the front of the bag if the product qualifies.',
+  },
+  {
+    question: 'Is Beyond Meat jerky vegan?',
+    answer:
+      'Beyond Meat itself does not currently make a jerky product. When people say "Beyond Meat jerky," they usually mean one of the well-known vegan jerky brands — Louisville Vegan Jerky Co, Primal Strips, or Pan\'s Mushroom Jerky are the most-cited. All three are fully vegan (no animal products, no honey, no dairy). If a package has the Certified Vegan logo, you are safe.',
+  },
+  {
+    question: 'How do you make vegan jerky at home?',
+    answer:
+      'The easiest home method uses Butler soy curls: rehydrate an 8-ounce bag in boiling water for 10 minutes, squeeze out all the water, then marinate in soy sauce, olive oil, liquid smoke, maple syrup, and spices. Spread on a baking sheet and bake at 250°F for about an hour, stirring every 20 minutes. Cool overnight for the best chewy texture.',
+  },
+  {
+    question: 'Is vegan jerky healthy?',
+    answer:
+      'Vegan jerky is generally comparable to beef jerky on protein (10–14 grams per serving) and lower in saturated fat and cholesterol. Sodium runs similarly high in both because both are cured and preserved with salt — typically 300 to 600 mg per serving. Mushroom-based vegan jerky is the lowest-calorie option; soy and seitan varieties are highest in protein. Read the label for added sugar.',
+  },
+  {
+    question: 'Where can I buy vegan jerky?',
+    answer:
+      'Whole Foods, Sprouts, and Trader Joe\'s carry the biggest selection in physical stores. Amazon and the brand websites (louisvillejerky.com, primalspiritfoods.com, pansmushroomjerky.com) ship nationwide. Larger conventional grocery chains (Kroger, Safeway) increasingly stock one or two brands in the meat-snack aisle — usually Perky Jerky or Country Archer\'s plant-based line.',
+  },
+  {
+    question: 'Is vegan jerky gluten-free?',
+    answer:
+      'Some brands are, some are not — it depends entirely on the base ingredient. Mushroom-based jerky (Pan\'s, Country Archer Plant-Based, Eat the Change), jackfruit-based (Jack & Friends), and pea-protein jerky (Off-Piste, AGRO) are usually gluten-free. Seitan-based jerky is never gluten-free because seitan IS wheat gluten. Soy-based can go either way depending on whether the soy sauce is regular or tamari — check the label.',
+  },
+  {
+    question: 'Why is vegan jerky so expensive?',
+    answer:
+      'A single 2 oz bag of vegan jerky often costs $6 to $10 — roughly the same as premium beef jerky. Three reasons drive the price: small production runs at niche plant-based manufacturers, expensive base ingredients (mushroom powder, isolated pea protein, and specialty gluten cost more per pound than commodity beef trim), and heavy R&D to nail the texture. Homemade with soy curls runs about $1.50 per finished ounce.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' },
+  { label: 'Ground Beef Jerky', href: '/ground-beef-jerky/' },
+  { label: 'Fruit Jerky (Another Non-Meat Option)', href: '/fruit-jerky/' },
+  { label: 'Best Dehydrator for Jerky', href: '/best-dehydrator-for-jerky/' },
+  { label: 'Beef Jerky Seasoning', href: '/beef-jerky-seasoning/' },
+];
+---
+<PillarLayout
+  title="Vegan Jerky Guide: What It Is, Best Brands & Recipe"
+  description="Vegan jerky guide: what it's made of, how to make it at home with soy curls, best brands (Louisville, Primal, Pan's) and how it compares to beef jerky."
+  {canonical}
+  image="/images/vegan-jerky-hero.webp"
+  breadcrumbs={[{ label: 'Vegan Jerky', href: '/vegan-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this guide"
+  datePublished="2026-08-06"
+  dateModified="2026-08-06"
+>
+  <RecipeSchema {...recipe} datePublished="2026-08-06" dateModified="2026-08-06" url={canonical} />
+
+  <h1 id="top">Vegan Jerky: The Complete Guide (What It Is, Brands & a Recipe)</h1>
+
+  <div class="answer-box">
+    <p><strong>Vegan jerky</strong> is a plant-based chewy snack designed to mimic beef jerky, made from ingredients like soy protein, seitan, mushrooms, pea protein, or jackfruit. It delivers similar salty, savory, umami-rich flavor and comparable protein per serving, and comes as both store-bought brands (Louisville Vegan Jerky, Pan's, Primal Strips) and homemade recipes made with soy curls.</p>
+  </div>
+
+  <ContentImage src="/images/vegan-jerky-hero.webp" alt="A pile of dark reddish-brown vegan jerky strips on a wooden board next to open packages of Louisville and Pan's mushroom jerky" eager={true} />
+
+  <p>I make beef jerky for a living. So when my niece went vegan last summer and asked if I could send her a care package that wasn't just a jar of cured nothing, I had to sit with the question for a minute. <em>[Switches to serious face]</em> Turns out plant-based jerky has come a genuinely long way, and the good brands are legitimately delicious in their own right — not "for a vegan product," just delicious. This is what I learned tearing through a dozen brands and building a homemade recipe with Butler soy curls. Full honest guide: what it's actually made of, how it stacks up to beef, which brands are worth your $8, and a recipe you can bang out in the oven this afternoon.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc__title">In this guide</p>
+    <ol>
+      <li><a href="#what-is-vegan-jerky">What Is Vegan Jerky</a></li>
+      <li><a href="#what-vegan-jerky-is-made-of">What Vegan Jerky Is Made Of</a></li>
+      <li><a href="#is-beef-jerky-vegan">Is Beef Jerky Vegan</a></li>
+      <li><a href="#how-to-make-vegan-jerky">How to Make Vegan Jerky</a></li>
+      <li><a href="#best-vegan-jerky-brands">Best Vegan Jerky Brands</a></li>
+      <li><a href="#is-vegan-jerky-healthy">Is Vegan Jerky Healthy</a></li>
+      <li><a href="#louisville-vegan-jerky-company">Louisville Vegan Jerky Company</a></li>
+      <li><a href="#soy-free-and-gluten-free">Soy-Free and Gluten-Free Vegan Jerky</a></li>
+      <li><a href="#why-so-expensive">Why Is Vegan Jerky So Expensive</a></li>
+      <li><a href="#where-to-buy-vegan-jerky">Where to Buy Vegan Jerky</a></li>
+      <li><a href="#vegan-jerky-vs-beef-jerky">Vegan Jerky vs Beef Jerky</a></li>
+      <li><a href="#homemade-vs-store-bought">Homemade vs Store-Bought Vegan Jerky</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="what-is-vegan-jerky">What Is Vegan Jerky</h2>
+  <p><strong>Vegan jerky</strong> is a chewy, salty, savory snack designed to fill the same role as beef jerky using entirely plant-based ingredients. The base can be soy protein, wheat gluten (seitan), whole mushrooms, pea protein, or even jackfruit — each one gets marinated in soy sauce, liquid smoke, and spices, then dehydrated or slow-baked until it develops that classic tear-and-chew texture.</p>
+  <p>The category has quietly matured. Ten years ago vegan jerky was mostly one company (Primal Strips) and a handful of small producers, and the texture was aggressively rubbery. Today there are dozens of legitimate brands, several with venture-scale backing (Pan's Mushroom Jerky raised money on Shark Tank in 2020), and the flavor and mouthfeel are close enough to the real thing that even lifelong meat eaters can enjoy a bag without feeling like they're eating a compromise.</p>
+
+  <h2 id="what-vegan-jerky-is-made-of">What Vegan Jerky Is Made Of</h2>
+  <p>Every vegan jerky brand starts from one of five base ingredients. This is the single most important thing to know about the category — the base determines the texture, the flavor ceiling, and who the product works for. Here is the honest breakdown of <strong>what vegan jerky is made of</strong>:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Base ingredient</th><th>Texture</th><th>Brands that use it</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Soy protein / TVP / soy curls</strong></td><td>Chewy, closest to real jerky pull</td><td>Louisville Vegan Jerky, Unisoy, All Vegetarian, Perky Jerky, BeLeaf</td><td>Anyone chasing the closest beef-jerky mouthfeel</td></tr>
+      <tr><td><strong>Seitan (wheat gluten)</strong></td><td>Very meaty, dense, requires real chew</td><td>Homemade seitan jerky; some UNLIMEAT products</td><td>Serious chew-lovers with no gluten issues</td></tr>
+      <tr><td><strong>Whole mushrooms</strong></td><td>Delicate, breaks apart, umami-forward</td><td>Pan's, Country Archer Plant-Based, Eat the Change, Savory Wild</td><td>Whole-food eaters, gluten-free diners</td></tr>
+      <tr><td><strong>Pea protein / fava protein</strong></td><td>Firmer than soy, slightly more crumbly</td><td>Off-Piste Provisions, AGRO Power Jerky</td><td>People avoiding both soy and gluten</td></tr>
+      <tr><td><strong>Jackfruit</strong></td><td>Fibrous, stringy, pulled-pork-like</td><td>Jack & Friends</td><td>Top-nine allergen sufferers</td></tr>
+    </tbody>
+  </table>
+  <p>If you've never had vegan jerky before, start with a soy-based option like <strong>Louisville Vegan Jerky</strong> — it's the closest to what your palate expects from the word "jerky." Then work outward: mushroom for a completely different (but genuinely great) snack, pea protein if you're avoiding soy, jackfruit if you're avoiding everything.</p>
+
+  <ContentImage src="/images/vegan-jerky-ingredients.webp" alt="Soy curls, dried portabella mushrooms, and vital wheat gluten laid out on a wooden counter as the three main vegan jerky base ingredients" />
+
+  <h2 id="is-beef-jerky-vegan">Is Beef Jerky Vegan</h2>
+  <p>Short answer: <strong>no — beef jerky is not vegan</strong>. It is dried, seasoned beef. Beef is a cow. Cows are animals. It is also not vegetarian (which excludes meat) or pescatarian (which allows fish but not land meat). This sounds obvious written out, but the question shows up in search often enough that it deserves a straight answer instead of an assumption.</p>
+  <p>Where confusion creeps in is that <strong>some jerky brands sell both</strong>. Perky Jerky, Country Archer, and Krave all have plant-based product lines that live right next to their beef lines on store shelves, in packaging that can look nearly identical. If you're vegan or shopping for a vegan friend, read the front of the bag — legitimate vegan jerky always says "vegan" or "plant-based" clearly on the front, and often carries the green Certified Vegan logo somewhere on the label.</p>
+  <p>Also worth knowing: some meat jerky uses <strong>Worcestershire sauce</strong> (which contains anchovies) or <strong>honey</strong> (a bee product), so even a jerky labeled "chicken-free" or "beef-free" isn't automatically vegan unless it says so. Beyond Meat, by the way, does not currently make jerky — when people ask "is Beyond Meat jerky vegan," they're usually thinking of Louisville Vegan Jerky or Pan's.</p>
+
+  <h2 id="how-to-make-vegan-jerky">How to Make Vegan Jerky</h2>
+  <p>The best entry point to <strong>how to make vegan jerky</strong> at home is Butler soy curls — they're the go-to home cook ingredient, they cost around $6 a bag, and they take on marinade beautifully once you squeeze the rehydration water out. This is the recipe I built for my niece and have run maybe fifteen times since. It works in a low oven; if you have a dehydrator (see our <a href="/best-dehydrator-for-jerky/">best dehydrator for jerky</a> guide), run it at 160°F for 4 to 6 hours instead.</p>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/vegan-jerky-recipe.webp" alt="Homemade vegan jerky made from marinated soy curls arranged on a baking sheet ready to go into the oven" />
+
+  <p>A few things that separate a great homemade batch from a sad one:</p>
+  <ul>
+    <li><strong>Squeeze the water out harder than feels reasonable.</strong> A nut milk bag or clean tea towel is the move. Wet soy curls repel marinade; dry soy curls inhale it.</li>
+    <li><strong>Rest the finished jerky overnight in a sealed container.</strong> The moisture redistributes and the texture goes from "pretty good" to "wait, I made this?"</li>
+    <li><strong>Use regular soy sauce, not low-sodium.</strong> The salt is doing structural work here — it's cure and flavor at the same time. This is not the recipe to health-hack.</li>
+    <li><strong>Liquid smoke is not optional if you want that campfire-jerky character.</strong> Half a tablespoon is enough; a full one gets aggressive.</li>
+  </ul>
+  <p>For more variations — seitan jerky, mushroom jerky, teriyaki soy-curl — our upcoming vegan jerky recipes collection will collect them in one place. The base marinade above holds up across every plant protein I've tried it on.</p>
+
+  <h2 id="best-vegan-jerky-brands">Best Vegan Jerky Brands</h2>
+  <p>Every "best vegan jerky" article on the internet ranks brands with star scores I do not trust, because taste is personal and star ratings are theater. So here is the honest comparison of the brands that keep showing up in reviews (and on Whole Foods shelves), organized by what makes each one distinctive:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Brand</th><th>Base</th><th>What it's known for</th><th>Best for</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Louisville Vegan Jerky Co.</strong></td><td>Textured soy protein</td><td>The category leader; closest to real jerky pull; flavor lineup includes smoked black pepper, chipotle, teriyaki</td><td>First-time buyers who want the closest match to beef jerky</td></tr>
+      <tr><td><strong>Primal Strips (Primal Spirit Foods)</strong></td><td>Seitan or shiitake</td><td>The original wide-distribution vegan jerky; multiple bases; sold in health-food stores for 15+ years</td><td>Longtime vegan shoppers, seitan fans</td></tr>
+      <tr><td><strong>Pan's Mushroom Jerky</strong></td><td>Shiitake mushrooms</td><td>Shark Tank alum; entirely different snack from soy-based; umami-forward; flavors include zesty Thai, applewood BBQ, teriyaki</td><td>Whole-food eaters, gluten-free, mushroom lovers</td></tr>
+      <tr><td><strong>All Vegetarian</strong></td><td>Non-GMO textured soy</td><td>The favorite in Make It Dairy Free's blind taste test; closest to childhood beef jerky texture</td><td>Value shoppers; texture purists</td></tr>
+      <tr><td><strong>Perky Jerky Vegan</strong></td><td>Soy powder</td><td>Wide grocery distribution (Whole Foods, some Krogers); milder flavor</td><td>Anyone who wants to buy vegan jerky in a regular grocery store</td></tr>
+      <tr><td><strong>Country Archer Plant-Based</strong></td><td>King oyster mushrooms</td><td>Best of the mushroom-based crowd per Make It Dairy Free; fruit-leather texture; coconut-aminos flavor base</td><td>Gluten-free + mushroom-tolerant shoppers</td></tr>
+      <tr><td><strong>Unisoy</strong></td><td>Soy protein</td><td>Solid all-rounder; wide flavor variety including pineapple habanero</td><td>Flavor adventurers</td></tr>
+      <tr><td><strong>Noble Jerky</strong></td><td>Soy (no wheat gluten)</td><td>Softer chew, unusual sour-and-peppercorn flavors, inconsistent piece size</td><td>Snackers who like softer textures</td></tr>
+    </tbody>
+  </table>
+  <p>Which one is <em>the</em> best? Honestly, that depends on which base you want and what flavor you like. LVJCO is the most-cited pick for people crossing over from beef jerky. Pan's is the most-cited pick for people who want a genuinely different snack. Both are worth the $6-8 to try. I am not going to fabricate star ratings — buy one bag of each of the top two, run your own taste test, and trust your own tongue over anyone else's list.</p>
+
+  <ContentImage src="/images/vegan-jerky-brands.webp" alt="A lineup of Louisville Vegan Jerky, Primal Strips, Pan's Mushroom Jerky, and Country Archer plant-based bags on a wooden counter for comparison" />
+
+  <h2 id="is-vegan-jerky-healthy">Is Vegan Jerky Healthy</h2>
+  <p><strong>Is vegan jerky healthy?</strong> It's roughly a wash with beef jerky on most macros — comparable protein, comparable sodium, generally less fat, and zero cholesterol. Here is a typical head-to-head using per-1-oz-serving averages (numbers approximate; brand-to-brand variation is real):</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Per 1 oz (28 g) serving</th><th>Vegan jerky (soy-based avg)</th><th>Beef jerky (avg)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Calories</td><td>70–100</td><td>80–120</td></tr>
+      <tr><td>Protein</td><td>10–14 g</td><td>9–12 g</td></tr>
+      <tr><td>Fat</td><td>1–3 g</td><td>2–5 g</td></tr>
+      <tr><td>Saturated fat</td><td>0 g</td><td>1–2 g</td></tr>
+      <tr><td>Cholesterol</td><td>0 mg</td><td>25–40 mg</td></tr>
+      <tr><td>Sodium</td><td>300–600 mg</td><td>400–700 mg</td></tr>
+      <tr><td>Sugar (added)</td><td>3–8 g</td><td>2–6 g</td></tr>
+    </tbody>
+  </table>
+  <p>The honest read: <strong>protein is roughly equal</strong>, vegan wins on cholesterol and saturated fat, beef edges out on the "less added sugar" line, and both are aggressively salty because both are cured with salt. If you're watching sodium for cardiovascular reasons, neither is a great daily habit. If you're eating for protein, both work. Mushroom-based vegan jerky tends to be the lowest-calorie option in the category but also lowest in protein (typically 5-7 g per serving). Verify specific numbers via the <a href="https://fdc.nal.usda.gov/" rel="noopener" target="_blank">USDA FoodData Central</a> for the specific brand or ingredient you're eating.</p>
+
+  <h2 id="louisville-vegan-jerky-company">Louisville Vegan Jerky Company</h2>
+  <p><strong>Louisville Vegan Jerky Co.</strong> (usually shortened to LVJCO) is the most-cited vegan jerky brand on the internet and the current top-ranked result for the head keyword. Based in Louisville, Kentucky, the company was founded in 2012 by Stanley Chase III and has grown from a farmers-market operation into a wide-distribution brand carried by Whole Foods, Sprouts, and hundreds of independent grocers.</p>
+  <p>What they make: textured soy protein jerky in a lineup that includes Smoked Black Pepper, Perfect Pepperoni, Chipotle Adobo, Bourbon Smoked Spice, and Carolina BBQ. Their soy comes from whole beans (not the isolate powder that gives some competitors a chalky finish), which is why the texture reads closer to real jerky than most alternatives.</p>
+  <p>Where to buy: their own site at <a href="https://louisvillejerky.com/" rel="noopener" target="_blank">louisvillejerky.com</a>, Whole Foods (usually in the meat-snack aisle rather than the vegan section — mildly funny), and Amazon. Bags run around $7-8 for 3 oz. Not cheap per ounce, but the flavor lineup and the texture make it a legitimate contender for the "one bag to try" spot if you're vegan-curious.</p>
+
+  <h2 id="soy-free-and-gluten-free">Soy-Free and Gluten-Free Vegan Jerky</h2>
+  <p>If you're vegan and also avoiding soy or gluten, most of the category is closed to you — but the good news is that the alternatives are actually excellent in their own right. Here's the breakdown:</p>
+  <ul>
+    <li><strong>Soy-free vegan jerky:</strong> Pan's Mushroom Jerky (100% mushroom), Country Archer Plant-Based (mushroom + coconut aminos), Jack & Friends (jackfruit), Off-Piste Provisions (pea + fava protein), AGRO Power Jerky (some varieties). All use coconut aminos or tamari-free bases in place of soy sauce.</li>
+    <li><strong>Gluten-free vegan jerky:</strong> All of the above soy-free brands are also gluten-free. Louisville Vegan Jerky and most soy-based brands use regular soy sauce (which contains wheat), so double-check. Some brands offer gluten-free variants — read the label.</li>
+    <li><strong>Both soy-free and gluten-free:</strong> Pan's, Country Archer Plant-Based, Jack & Friends, Off-Piste Provisions.</li>
+    <li><strong>Free of all top-9 allergens:</strong> Jack & Friends (jackfruit base) is the standout — free of wheat, soy, dairy, egg, tree nuts, peanuts, fish, shellfish, and sesame.</li>
+  </ul>
+  <p>For homemade: substitute coconut aminos for soy sauce in the recipe above to make a fully soy-free, gluten-free version using pea protein or mushroom instead of soy curls.</p>
+
+  <h2 id="why-so-expensive">Why Is Vegan Jerky So Expensive</h2>
+  <p><strong>Why is vegan jerky so expensive?</strong> A 2 oz bag routinely runs $6-10, which is on par with (or more than) premium beef jerky per ounce. Three real reasons:</p>
+  <ul>
+    <li><strong>Small-batch manufacturing.</strong> Most vegan jerky brands are still under $50M in annual revenue, which means shorter production runs, higher per-unit costs, and no economies of scale that big meat processors enjoy.</li>
+    <li><strong>Ingredient inputs cost more than commodity beef.</strong> Isolated pea protein, mushroom powder, and specialty gluten cost more per pound than the beef trim that goes into commodity jerky. Pan's shiitake mushrooms and Off-Piste's fava protein are premium inputs.</li>
+    <li><strong>R&D and texture engineering.</strong> Getting a soy or mushroom base to chew like jerky takes serious food-science work. That development cost is baked into the retail price.</li>
+  </ul>
+  <p>Homemade is the way around this. My soy-curl recipe above runs about <strong>$1.50 per finished ounce</strong> using a $6 bag of Butler soy curls and pantry-standard spices — versus $3-4 per ounce retail. If you eat vegan jerky more than twice a month, learning to make it is the highest-value hour you can spend in the kitchen.</p>
+
+  <h2 id="where-to-buy-vegan-jerky">Where to Buy Vegan Jerky</h2>
+  <p>The vegan-jerky category has gone mainstream enough that you don't need a specialty trip anymore. Here's <strong>where to buy vegan jerky</strong> in order of selection:</p>
+  <ul>
+    <li><strong>Whole Foods:</strong> The gold standard. Full lineup of LVJCO, Pan's, Country Archer Plant-Based, and usually 2-3 more. Often in the meat-snack aisle right next to beef jerky, not in the vegan section.</li>
+    <li><strong>Sprouts Farmers Market:</strong> Deep vegan jerky assortment, especially LVJCO and Pan's; often has flavors the local Whole Foods doesn't carry.</li>
+    <li><strong>Trader Joe's:</strong> Rotating vegan-jerky selection — usually one or two options at a time under the Trader Joe's brand or a rotating third-party brand. Prices tend to be $1-2 lower.</li>
+    <li><strong>Amazon:</strong> Every major brand ships nationwide; subscribe-and-save works for LVJCO, Pan's, and Primal Strips. Bulk multipacks are the best price per ounce.</li>
+    <li><strong>Direct-from-brand websites:</strong> louisvillejerky.com, pansmushroomjerky.com, primalspiritfoods.com. Best flavor variety and often bundles that beat Amazon on price.</li>
+    <li><strong>Conventional grocery (Kroger, Safeway, Publix):</strong> Growing selection — usually Perky Jerky Vegan or Country Archer Plant-Based in the meat-snack aisle. Not deep, but at least one option is usually there.</li>
+    <li><strong>Convenience stores:</strong> Almost never stocked, except in coastal-city 7-Elevens carrying LVJCO. Stock up in advance for road trips.</li>
+  </ul>
+
+  <h2 id="vegan-jerky-vs-beef-jerky">Vegan Jerky vs Beef Jerky</h2>
+  <p>Direct comparison, honestly rendered. This is not a "which is better" question — the right answer depends on why you're eating jerky in the first place. Here is the head-to-head:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Vegan jerky</th><th>Beef jerky</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Protein per serving</td><td>10–14 g (soy) · 5–7 g (mushroom)</td><td>9–12 g</td></tr>
+      <tr><td>Fat / saturated fat</td><td>Lower, mostly plant fat</td><td>Higher, mostly saturated</td></tr>
+      <tr><td>Cholesterol</td><td>0 mg</td><td>25–40 mg</td></tr>
+      <tr><td>Sodium</td><td>Similarly high — 300–600 mg</td><td>Similarly high — 400–700 mg</td></tr>
+      <tr><td>Cost per ounce (retail)</td><td>$3–4</td><td>$2–3 (mid-tier), $4–5 (premium)</td></tr>
+      <tr><td>Cost per ounce (homemade)</td><td>$1.50 (soy curls)</td><td>$1.75–2.50 (90/10 ground beef)</td></tr>
+      <tr><td>Texture fidelity to "real jerky"</td><td>Very close (soy-based); different but great (mushroom)</td><td>The reference</td></tr>
+      <tr><td>Shelf life (sealed)</td><td>6–12 months</td><td>1 year (cured)</td></tr>
+      <tr><td>Environmental footprint</td><td>Substantially lower</td><td>Substantially higher</td></tr>
+      <tr><td>Fits which diet</td><td>Vegan, vegetarian, some paleo variants</td><td>Omnivore, paleo, keto</td></tr>
+    </tbody>
+  </table>
+  <p>For the beef-jerky loyalists reading this: try one bag of Louisville Vegan Jerky Smoked Black Pepper before you form an opinion. It's not going to replace <a href="/how-to-make-beef-jerky/">homemade beef jerky</a> in my rotation — I make jerky for a living, and the real thing is the real thing — but it holds its own as its own snack, and my niece keeps a bag in her car. That counts for something.</p>
+
+  <h2 id="homemade-vs-store-bought">Homemade vs Store-Bought Vegan Jerky</h2>
+  <p>If you got this far you already know the answer: try a couple of brands to find a flavor profile you love, then learn to make it at home so you can eat it more often without going broke. Store-bought is for convenience and flavor discovery; homemade is for economics and having a bag in the fridge whenever you want one.</p>
+  <p>The recipe up top takes 20 minutes of active work and about an hour in the oven. Batch it on a Sunday, and you have vegan jerky for the whole week at a third of the retail price. If you want more ways to eat plant-based jerky, our <a href="/fruit-jerky/">fruit jerky guide</a> covers the other big non-meat category — dried fruit jerky like mango, pineapple, and apple that hits a completely different flavor profile.</p>
+
+  <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
+</PillarLayout>

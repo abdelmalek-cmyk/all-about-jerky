@@ -37,6 +37,8 @@ const methodHeroes = [
   'jamaican-jerk-seasoning',
   // jerky gun recipe hero (RecipeCardBlock/RecipeSchema use this one)
   'jerky-gun-recipe',
+  // vegan jerky recipe hero (RecipeCardBlock/RecipeSchema use this one)
+  'vegan-jerky-recipe',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

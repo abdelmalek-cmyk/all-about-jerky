@@ -24,6 +24,24 @@ const base = 'https://allaboutjerky.com';
 const pageUrl = p.url ?? base;
 const schemaImages = getSchemaImages(p.image);
 
+// Hard build gate. Twice we shipped a pillar before its recipe image landed,
+// and Google Search Console flagged Recipe rich-results as invalid ("Missing
+// field 'image'"). The doc guard in /new-article STEP 7 wasn't enough — this
+// throw makes the failure mode physical: `astro build` cannot produce a
+// broken static file. Dev mode keeps the silent-omit so writers can iterate
+// on a page before its .webp exists; PROD builds must have the image.
+if (schemaImages.length === 0 && import.meta.env.PROD) {
+  throw new Error(
+    `[RecipeSchema build gate] Recipe "${p.name}" at ${pageUrl} references ` +
+    `image "${p.image}" but no matching file was found in the image manifest ` +
+    `(neither the base .webp nor any of the -16x9 / -4x3 / -1x1 crops). ` +
+    `Fix: (1) place ${p.image} in public/images/, then ` +
+    `(2) run \`node scripts/generate-crops.mjs\` to produce the schema crops, then ` +
+    `(3) run \`npm run build\` again. Never push a pillar with a Recipe card ` +
+    `before its image files are on disk — Google penalizes empty-image Recipe schema.`
+  );
+}
+
 const schema: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': 'Recipe',

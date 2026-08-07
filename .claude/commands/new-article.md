@@ -95,7 +95,9 @@ Output the prompts as a numbered list, each labelled with its target filename.
 ### STEP 7 — Technical SEO + build (Phase 6, site-level)
 Per `references/technical-seo.md`: regenerate `sitemap.xml` to include the new page (add to `public/sitemap.xml` and the `generate-crops.mjs` `methodHeroes` list for the recipe hero), confirm `robots.txt` points at it, then run a clean build.
 
-The page ships and renders correctly **without** the images (ContentImage shows nothing until files land). Once the user drops the generated `.webp` files into `public/images/`, run the crop + responsive + build scripts:
+**Never push a pillar with a Recipe card before its recipe `.webp` is on disk and its crops are generated.** Doing so ships a Recipe schema with a missing `image` field — Google Search Console flags it as invalid and the page loses rich-results eligibility until the next crawl (which can be days). This has happened twice; `src/components/RecipeSchema.astro` now enforces the rule as a hard build gate — `astro build` will throw a clear error in PROD if the recipe image is missing, so a broken pillar physically cannot be pushed. Dev mode keeps the silent-omit so writers can iterate on a page before its `.webp` exists.
+
+The page ships and renders correctly **without** the non-recipe ContentImages (they show nothing until files land — no schema penalty). Only the recipe image is gated. Once the user drops the generated `.webp` files into `public/images/`, run the crop + responsive + build scripts:
 
 ```bash
 cd beef-jerky && node scripts/generate-crops.mjs && node scripts/generate-responsive.mjs && npm run build

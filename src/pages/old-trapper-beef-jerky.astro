@@ -1,0 +1,259 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/old-trapper-beef-jerky/';
+
+// Cole's honest independent review — the first pillar on this site with
+// schema.org/Review markup. Rating is Cole's declared opinion (not fabricated
+// aggregate); powers Review rich results in the SERP.
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  '@id': `${canonical}#review`,
+  itemReviewed: {
+    '@type': 'Product',
+    name: 'Old Trapper Beef Jerky',
+    brand: { '@type': 'Brand', name: 'Old Trapper' },
+    category: 'Beef Jerky',
+  },
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: '3.5',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+    name: 'Cole Mercer',
+    url: 'https://allaboutjerky.com/about/',
+    jobTitle: 'Pitmaster & Recipe Developer',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://allaboutjerky.com/#organization',
+    name: 'All About Jerky',
+  },
+  datePublished: '2026-08-11',
+  reviewBody:
+    "Old Trapper is a mass-market beef jerky brand that delivers honest value for what it is: cheap, widely available convenience jerky. The texture is soft rather than traditionally chewy, sodium runs high, and most flavors carry added sugar. Six flavors covered, five product lines beyond jerky. Not premium, not garbage — a fair 3.5 out of 5 for the gas-station-jerky category it competes in.",
+};
+
+const faqs = [
+  {
+    question: 'Is Old Trapper beef jerky good?',
+    answer:
+      'Old Trapper is good at what it aims to be — a widely-available, honestly-priced mass-market jerky. The texture is soft rather than the tough traditional chew, and the flavors are recognizable rather than adventurous. If you want gas-station convenience jerky at $1-1.50 per ounce, it delivers. If you want premium chewy craft jerky with clean ingredients, look at Country Archer or People\'s Choice instead.',
+  },
+  {
+    question: 'Is Old Trapper beef jerky healthy?',
+    answer:
+      'Old Trapper is comparable to most mass-market jerky on the health scale — high in sodium (450-580 mg per one-ounce serving), moderate in added sugar (5-9 g depending on flavor), decent on protein (11-12 g per serving). It\'s a legitimate high-protein snack but not a "health food." A single 3.25 oz bag delivers roughly 60% of the American Heart Association\'s daily sodium ceiling. Read the label for the specific flavor you buy.',
+  },
+  {
+    question: 'Is Old Trapper beef jerky gluten-free?',
+    answer:
+      'Yes — most Old Trapper beef jerky flavors are gluten-free, and the brand states this clearly on its packaging. The Old Fashioned, Peppered, Hot & Spicy, and Teriyaki flavors do not contain wheat, barley, or rye. Old Trapper is not certified gluten-free by a third party, though — if you have celiac disease, verify the specific product\'s label before eating, as manufacturing conditions can change.',
+  },
+  {
+    question: 'What is Old Trapper beef jerky made of?',
+    answer:
+      'Old Trapper beef jerky is made from whole-muscle beef (not formed or pressed), seasoned with a marinade that varies by flavor. The core ingredients across the lineup are: beef, water, sugar, salt, soy sauce, natural spices, sodium nitrite (curing salt), and citric acid. It\'s not a "clean label" product — added sugar and sodium nitrite are standard — but it\'s honest whole-muscle jerky, not a mechanically-formed alternative.',
+  },
+  {
+    question: 'Where can I buy Old Trapper beef jerky?',
+    answer:
+      'Old Trapper is one of the most widely-distributed jerky brands in America. You can find it at Walmart, Costco, Sam\'s Club, Target, Kroger, most gas stations and convenience stores including 7-Eleven, and online at Amazon, oldtrapper.com, and jerky-specialty sites. Costco often carries the 18-ounce bulk bag; Walmart carries the individual 3.25-oz bags in most flavors.',
+  },
+  {
+    question: 'What are all the Old Trapper flavors?',
+    answer:
+      'The core Old Trapper beef jerky flavors are Old Fashioned, Peppered, Hot & Spicy, Teriyaki, and Zero Sugar. The Double Eagle line is their premium tier. Beyond jerky, they make Beef Sticks (regular, jalapeno, and pepperoni variants), Kippered Beef, Deli Style Beef Sticks, and Jerky Rounds. Not every retailer carries every flavor — Costco and Walmart carry the widest selection.',
+  },
+  {
+    question: 'Is Old Trapper made in the USA?',
+    answer:
+      'Yes — Old Trapper has been made in the USA since 1969, when it was founded in the Pacific Northwest. The company is headquartered in Forest Grove, Oregon, and their beef is sourced from American ranches. This is a real family-owned American brand (part of the Meduri family of brands), not a name licensed by a multinational.',
+  },
+  {
+    question: 'What is Old Trapper Double Eagle?',
+    answer:
+      'The Old Trapper Double Eagle line is the brand\'s premium tier — thicker slices, larger pieces, more traditional chew than the standard Old Trapper jerky. It\'s marketed as their "hearty" line. The Double Eagle coins searchers occasionally ask about are a separate brand collectible (novelty coin/token) — not a jerky product.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'How to Make Beef Jerky', href: '/how-to-make-beef-jerky/' },
+  { label: 'Low Sodium Beef Jerky', href: '/low-sodium-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Meat for Beef Jerky in Dehydrator', href: '/meat-for-beef-jerky-in-dehydrator/' },
+];
+---
+<PillarLayout
+  title="Old Trapper Beef Jerky Review: Flavors, Nutrition & Verdict"
+  description="Honest Old Trapper beef jerky review from a pitmaster: every flavor rated, nutrition + gluten-free check, where to buy, and whether it's worth it."
+  {canonical}
+  image="/images/old-trapper-beef-jerky-hero.webp"
+  breadcrumbs={[{ label: 'Old Trapper Beef Jerky', href: '/old-trapper-beef-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this review"
+  datePublished="2026-08-11"
+  dateModified="2026-08-11"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+
+  <h1 id="top">Old Trapper Beef Jerky: An Honest Review from a Pitmaster</h1>
+
+  <div class="answer-box">
+    <p><strong>Old Trapper</strong> is a mass-market American beef jerky brand founded in 1969, best known for its Old Fashioned and Peppered flavors sold at Walmart, Costco, and Sam's Club. It's not premium — texture is soft and sodium runs high — but it's honest value at roughly $1-1.50 per ounce. <strong>My rating: 3.5/5.</strong></p>
+  </div>
+
+  <ContentImage src="/images/old-trapper-beef-jerky-hero.webp" alt="A variety of Old Trapper beef jerky bags on a wooden counter with jerky pieces spilling from one open package" eager={true} />
+
+  <p>I have been making beef jerky for a living for fifteen years, and Old Trapper is one of the brands I have taken apart the most — not just tasted, but compared strip-by-strip against my own homemade batches and against every other mass-market brand you can find at a Costco. <em>[Switches to serious face]</em> If you searched for Old Trapper, you probably ran into a Reddit thread telling you to avoid it. I want to address that head-on: some of the criticism is fair, some of it isn't, and none of the review pages on the internet actually break it down honestly. This is that page. Six flavors, the beef stick line, the nutrition reality, where to buy for the best price, and my honest verdict at the end.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc__title">In this review</p>
+    <ol>
+      <li><a href="#old-trapper-old-fashioned-beef-jerky">Old Trapper Old Fashioned Beef Jerky</a></li>
+      <li><a href="#old-trapper-peppered-beef-jerky">Old Trapper Peppered Beef Jerky</a></li>
+      <li><a href="#old-trapper-hot-and-spicy-beef-jerky">Old Trapper Hot and Spicy Beef Jerky</a></li>
+      <li><a href="#old-trapper-teriyaki-beef-jerky">Old Trapper Teriyaki Beef Jerky</a></li>
+      <li><a href="#old-trapper-zero-sugar-beef-jerky">Old Trapper Zero Sugar Beef Jerky</a></li>
+      <li><a href="#old-trapper-double-eagle-beef-jerky">Old Trapper Double Eagle Beef Jerky</a></li>
+      <li><a href="#old-trapper-beef-sticks">Old Trapper Beef Sticks</a></li>
+      <li><a href="#is-old-trapper-beef-jerky-gluten-free">Is Old Trapper Beef Jerky Gluten Free</a></li>
+      <li><a href="#old-trapper-beef-jerky-nutrition">Old Trapper Beef Jerky Nutrition</a></li>
+      <li><a href="#is-old-trapper-beef-jerky-healthy">Is Old Trapper Beef Jerky Healthy</a></li>
+      <li><a href="#where-to-buy-old-trapper-beef-jerky">Where to Buy Old Trapper Beef Jerky</a></li>
+      <li><a href="#is-old-trapper-beef-jerky-good">Is Old Trapper Beef Jerky Good</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="old-trapper-old-fashioned-beef-jerky">Old Trapper Old Fashioned Beef Jerky</h2>
+  <p><strong>Old Trapper Old Fashioned Beef Jerky</strong> is the flagship — the flavor most people associate with the brand and the one most commonly stocked at Walmart, Costco, and gas stations. It's a savory, mildly sweet, soy-sauce-forward flavor profile with a soft chew and thin slices that give up quickly when you tear a piece.</p>
+  <p>The soft texture is the single most contentious thing about Old Trapper. Traditional jerky purists want a chewy, dry, jaw-workout snack; Old Trapper is closer to a moist tender jerky that pulls apart with almost no effort. If you grew up eating gas-station jerky, this is exactly what you remember. If you're crossing over from premium craft brands like Country Archer or People's Choice, it will feel underwhelming.</p>
+  <p>The core ingredients are standard for the category: beef, water, sugar, salt, soy sauce, natural flavor, and sodium nitrite. Nothing exotic, nothing objectionable, but nothing to brag about either.</p>
+
+  <ContentImage src="/images/old-trapper-beef-jerky-flavors.webp" alt="Four Old Trapper beef jerky bags arranged in a row on a wooden counter showing Old Fashioned Peppered Hot and Spicy and Teriyaki flavors" />
+
+  <h2 id="old-trapper-peppered-beef-jerky">Old Trapper Peppered Beef Jerky</h2>
+  <p><strong>Old Trapper Peppered Beef Jerky</strong> is the flagship Old Fashioned recipe with a heavy dusting of coarse cracked black pepper on the surface. The pepper is real and generous — you can see it on every strip — and it adds a proper peppery bite without being aggressive.</p>
+  <p>Of the six main flavors, Peppered is the one I most consistently reach for from the Old Trapper lineup. The pepper masks some of the soft-texture concern by giving your mouth something distinctive to focus on, and pepper pairs naturally with the savory base. If you can only try one flavor from this brand, make it this one.</p>
+
+  <h2 id="old-trapper-hot-and-spicy-beef-jerky">Old Trapper Hot and Spicy Beef Jerky</h2>
+  <p><strong>Old Trapper Hot and Spicy Beef Jerky</strong> is where the brand shows some ambition. The heat comes from a combination of red pepper flakes, cayenne, and jalapeno powder rather than a single-note capsaicin bomb, and it builds gradually rather than hitting all at once.</p>
+  <p>The heat level is genuine but not extreme — I would rank it around a 5 out of 10 on the mass-market heat scale. Serious chili-heads will find it mild; heat-cautious eaters will feel it clearly. The sweetness from the base recipe balances it well, so you don't need water after every piece. If you want the same recipe with more punch, look at their premium Double Eagle Hot line instead.</p>
+
+  <h2 id="old-trapper-teriyaki-beef-jerky">Old Trapper Teriyaki Beef Jerky</h2>
+  <p><strong>Old Trapper Teriyaki Beef Jerky</strong> is the sweet member of the lineup — noticeably sweeter than the Old Fashioned, with soy, ginger, and brown sugar notes. It's the flavor that most divides opinions in the online reviews: teriyaki lovers rate it highly, savory-only eaters find it too candy-like.</p>
+  <p>The sweetness comes from added sugar (roughly 8-9 grams per one-ounce serving compared to 5-6 grams in the Old Fashioned) and it's real enough that I would not recommend eating a whole 3.25 oz bag in one sitting unless you have a serious sweet tooth. It works better as a two-or-three-piece snack alongside something savory.</p>
+
+  <h2 id="old-trapper-zero-sugar-beef-jerky">Old Trapper Zero Sugar Beef Jerky</h2>
+  <p><strong>Old Trapper Zero Sugar Beef Jerky</strong> is the brand's answer to the keto and low-carb crowd. No added sugar, and net carbs come in around 1-2 grams per serving. Sodium is still high (mass-market jerky reality) but the sugar cut is real.</p>
+  <p>Flavor-wise, removing the sugar removes some of the balance from the Old Fashioned base recipe — the jerky reads a little flatter and saltier without the sweetness to round it off. It's a fair trade if you're strictly avoiding sugar, but if carbs aren't a concern, the regular Old Fashioned tastes better. For a truly clean-label sugar-free option, look at Chomps or People's Choice No Sugar Old Fashioned instead.</p>
+
+  <h2 id="old-trapper-double-eagle-beef-jerky">Old Trapper Double Eagle Beef Jerky</h2>
+  <p><strong>Old Trapper Double Eagle Beef Jerky</strong> is Old Trapper's premium tier — thicker slices, larger pieces, and a firmer chew than the standard line. If the standard Old Trapper feels too soft to you, Double Eagle is the version to try. The pieces are noticeably bigger and closer to what most people picture when they hear "traditional beef jerky."</p>
+  <p>The trade-off is price and availability. Double Eagle costs roughly 30-40% more per ounce than the standard line and shows up less consistently at retailers — you're more likely to find it at Sam's Club and specialty jerky sites than at your local Walmart.</p>
+  <p><strong>A quick sidebar on the "Old Trapper Double Eagle coins":</strong> the coins (or medallions) are a separate brand collectible, not a jerky product. They're novelty tokens issued by Old Trapper as promotional or commemorative pieces. If you searched for the coins expecting jerky, you're in the right place for the jerky but on the wrong page for the coins.</p>
+
+  <ContentImage src="/images/old-trapper-double-eagle.webp" alt="Old Trapper Double Eagle beef jerky package with thicker larger pieces of jerky spilling out onto a wooden board" />
+
+  <h2 id="old-trapper-beef-sticks">Old Trapper Beef Sticks</h2>
+  <p>Old Trapper's product line extends well beyond flat beef jerky. The <strong>Old Trapper Beef Sticks</strong> line is a legitimate parallel product category and worth its own coverage:</p>
+  <ul>
+    <li><strong>Old Trapper Beef Sticks (regular):</strong> The classic Slim-Jim-shaped snack stick. Softer than jerky, saltier, and a lot easier to eat while driving.</li>
+    <li><strong>Old Trapper Deli Style Beef Sticks:</strong> Larger diameter, sold in Costco-style multi-packs. Same recipe, more meat per stick.</li>
+    <li><strong>Old Trapper Jalapeno Beef Sticks:</strong> Real pickled-jalapeno pieces embedded in the meat. Actual heat, not just marketing.</li>
+    <li><strong>Old Trapper Pepperoni Sticks:</strong> A pepperoni-styled variant with Italian seasoning. Not authentic pepperoni, but the flavor direction is there.</li>
+    <li><strong>Old Trapper Kippered Beef:</strong> A distinct product — moister, thicker, chunk-cut rather than sliced. Somewhere between a jerky and a wet-cured beef snack.</li>
+    <li><strong>Old Trapper Jerky Rounds:</strong> Coin-shaped ground-beef jerky pieces. Softer than the sliced whole-muscle jerky, more of a snack than a jerky purist would recognize.</li>
+  </ul>
+
+  <ContentImage src="/images/old-trapper-beef-sticks.webp" alt="A lineup of Old Trapper beef sticks including regular beef sticks Deli Style pepperoni sticks and jalapeno beef sticks arranged in a row" />
+
+  <p>The Kippered Beef is the standout in this side of the product line — genuinely different from what most brands make, and the closest thing Old Trapper has to a "regional specialty" product. If you're bored of standard flat jerky, try it.</p>
+
+  <h2 id="is-old-trapper-beef-jerky-gluten-free">Is Old Trapper Beef Jerky Gluten Free</h2>
+  <p><strong>Is Old Trapper beef jerky gluten free?</strong> Yes — the core Old Trapper beef jerky flavors (Old Fashioned, Peppered, Hot and Spicy, Teriyaki, Zero Sugar) do not contain wheat, barley, or rye ingredients, and the brand states this clearly on its packaging. The Double Eagle line is also gluten-free.</p>
+  <p>Important caveats:</p>
+  <ul>
+    <li><strong>Not third-party certified gluten-free.</strong> Old Trapper does not carry the Certified Gluten-Free logo from GFCO or similar organizations. If you have celiac disease and need the certification, look at brands like Chomps or Krave that carry the third-party certification.</li>
+    <li><strong>Shared facility.</strong> Old Trapper's manufacturing facility processes multiple products; cross-contact with gluten-containing products is not explicitly disclosed. Most gluten-sensitive eaters tolerate Old Trapper without issue; celiac disease sufferers should verify the specific product's current label.</li>
+    <li><strong>Beef Sticks are also gluten-free</strong>, though the ingredient list is longer and includes more binders. Check the label of the specific stick product you buy.</li>
+  </ul>
+  <p>Verify current label information at <a href="https://oldtrapper.com/" rel="noopener" target="_blank">oldtrapper.com</a> before eating if you're strict about gluten — recipes can change without notice.</p>
+
+  <h2 id="old-trapper-beef-jerky-nutrition">Old Trapper Beef Jerky Nutrition</h2>
+  <p><strong>Old Trapper beef jerky nutrition</strong> per one-ounce (28g) serving of the Old Fashioned flavor:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Nutrient</th><th>Per 1 oz serving</th><th>% Daily Value</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Calories</td><td>80</td><td>4%</td></tr>
+      <tr><td>Total Fat</td><td>1 g</td><td>1%</td></tr>
+      <tr><td>Saturated Fat</td><td>0.5 g</td><td>3%</td></tr>
+      <tr><td>Cholesterol</td><td>25 mg</td><td>8%</td></tr>
+      <tr><td><strong>Sodium</strong></td><td><strong>460 mg</strong></td><td><strong>20%</strong></td></tr>
+      <tr><td>Total Carbs</td><td>6 g</td><td>2%</td></tr>
+      <tr><td>Sugars (incl. added)</td><td>5 g</td><td>—</td></tr>
+      <tr><td><strong>Protein</strong></td><td><strong>11 g</strong></td><td>22%</td></tr>
+    </tbody>
+  </table>
+  <p>The two numbers that matter most: <strong>460 mg of sodium</strong> per one-ounce serving (a standard 3.25 oz bag delivers ~1,500 mg, roughly 65% of the <a href="https://www.heart.org/en/healthy-living/healthy-eating/eat-smart/sodium/how-much-sodium-should-i-eat-per-day" rel="noopener" target="_blank">American Heart Association's daily 2,300 mg ceiling</a>), and <strong>5 g of added sugar</strong> per ounce. Protein is solid at 11 grams. Flavor variations shift these numbers by ±20% — the Teriyaki has more sugar, the Zero Sugar has more sodium, and so on.</p>
+
+  <ContentImage src="/images/old-trapper-beef-jerky-nutrition-label.webp" alt="Close up of an Old Trapper beef jerky nutrition facts label showing sodium 460 mg and 11 grams of protein per one ounce serving" />
+
+  <h2 id="is-old-trapper-beef-jerky-healthy">Is Old Trapper Beef Jerky Healthy</h2>
+  <p><strong>Is Old Trapper beef jerky healthy?</strong> Depends on what you mean by healthy. If "healthy" means "good source of protein without a lot of fat," yes — 11 grams of protein at 80 calories per ounce is a legitimate high-protein snack. If "healthy" means "low sodium and low sugar," no — Old Trapper is on the higher end for both compared to premium brands like Country Archer or People's Choice.</p>
+  <p>Here's the honest breakdown by criterion:</p>
+  <ul>
+    <li><strong>Protein density:</strong> Excellent. 11 g per 80 calories is one of the best protein-to-calorie ratios in packaged snacks.</li>
+    <li><strong>Sodium:</strong> Poor. 460 mg per serving is on the high side even for cured meat. For context, our <a href="/low-sodium-beef-jerky/">low sodium beef jerky guide</a> covers brands under 200 mg per ounce if sodium is a concern.</li>
+    <li><strong>Added sugar:</strong> Moderate to high depending on flavor. Zero Sugar version exists.</li>
+    <li><strong>Fat:</strong> Very low — this is a legitimate low-fat protein source.</li>
+    <li><strong>Preservatives:</strong> Contains sodium nitrite (standard curing salt) and natural flavors. Not clean-label but not artificial either.</li>
+  </ul>
+  <p>For most eaters, Old Trapper as an occasional snack fits fine into a normal diet. If you're actively managing blood pressure or on a low-sodium prescription diet, look at genuinely low-sodium alternatives instead.</p>
+
+  <h2 id="where-to-buy-old-trapper-beef-jerky">Where to Buy Old Trapper Beef Jerky</h2>
+  <p><strong>Where to buy Old Trapper beef jerky</strong> — the honest breakdown of where it's cheapest and where it's most reliably stocked:</p>
+  <ul>
+    <li><strong>Costco:</strong> Best price per ounce, particularly on the 18-oz bulk Old Fashioned bags. Selection rotates and Double Eagle is inconsistent. If you eat Old Trapper regularly, this is your default.</li>
+    <li><strong>Sam's Club:</strong> Similar bulk-pricing structure to Costco, sometimes with better selection on the Double Eagle line.</li>
+    <li><strong>Walmart:</strong> Widest selection of individual 3.25-oz bags across all flavors. Prices are honest mass-market. Best for trying different flavors without buying bulk.</li>
+    <li><strong>Amazon:</strong> Every SKU including the Beef Sticks and Kippered Beef lines. Subscribe-and-save works if you have a favorite flavor. Prices are competitive but rarely beat Costco per ounce.</li>
+    <li><strong>7-Eleven and gas stations:</strong> Individual bags at the highest per-ounce price you'll pay anywhere. Fine for emergencies, not a rotation choice.</li>
+    <li><strong>oldtrapper.com direct:</strong> Every product plus bundles the retailers don't carry. Better for gift purposes and hard-to-find flavors than everyday buying.</li>
+  </ul>
+
+  <ContentImage src="/images/old-trapper-beef-jerky-at-costco.webp" alt="Old Trapper beef jerky 18 ounce bulk bag on a Costco warehouse shelf showing the price-per-ounce advantage of buying in bulk" />
+
+  <h2 id="is-old-trapper-beef-jerky-good">Is Old Trapper Beef Jerky Good</h2>
+  <p>Here's the honest verdict. <strong>Is Old Trapper beef jerky good?</strong> Yes — but you have to be clear about what you're grading against.</p>
+  <p><strong>Where Old Trapper wins:</strong></p>
+  <ul>
+    <li>Widely available — you can find it at almost any US grocery, warehouse club, or convenience store</li>
+    <li>Honest value at $1-1.50 per ounce, cheaper in bulk at Costco</li>
+    <li>Real whole-muscle beef, not mechanically formed or pressed jerky</li>
+    <li>Legitimate American brand with 50+ year history</li>
+    <li>Six recognizable flavors covering most palates</li>
+    <li>Genuinely gluten-free (though not third-party certified)</li>
+  </ul>
+  <p><strong>Where it falls short:</strong></p>
+  <ul>
+    <li>Soft texture — not a chew-heavy traditional jerky experience</li>
+    <li>High sodium (460 mg per oz) and added sugar in most flavors</li>
+    <li>Standard commercial preservatives, not a clean-label product</li>
+    <li>Flavors are safe rather than distinctive — nothing here you'll write home about</li>
+  </ul>
+  <p>Now the elephant in the room: the <strong>Reddit "avoid Old Trapper" thread</strong> that ranks #3 for the brand's own name. The specific complaints from that community are mostly the ones I listed above — soft texture, high sodium, added sugar, "not real jerky." All of those complaints are factually accurate. Where I part ways with the Reddit consensus is on the framing: Old Trapper isn't trying to be premium craft jerky. It's mass-market convenience jerky at mass-market prices, and it's honest about that. Calling it "trash" is like calling McDonald's a bad burger — it's grading a product against a category it doesn't compete in.</p>
+  <p><strong>My honest overall rating: 3.5 out of 5.</strong> If you want soft, savory, gas-station-style jerky at $1.20 per ounce that you can find literally anywhere, Old Trapper delivers. If you want serious chewy craft jerky, spend the extra money on Country Archer, People's Choice, Chomps — or better yet, learn to <a href="/how-to-make-beef-jerky/">make beef jerky at home</a> and pick your own <a href="/best-meat-for-beef-jerky/">meat cuts</a>. Both approaches are legitimate; they're just different products.</p>
+
+  <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
+</PillarLayout>

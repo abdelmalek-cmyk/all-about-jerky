@@ -18,6 +18,13 @@ import '@fontsource/playfair-display/800.css';
 import '@fontsource/anton/400.css';
 import '../styles/global.css';
 
+// LCP-critical font URLs (resolved at build time by Vite → hashed filenames in dist/_astro/).
+// Preloaded in <head> so they don't wait behind CSS discovery. Latin subset only —
+// the site is English-only and skipping other subsets saves bytes on the critical path.
+// Was: 8 woff2 files racing at 1,400-1,700 ms each. Now: these 2 start immediately.
+import latoBody from '@fontsource/lato/files/lato-latin-400-normal.woff2?url';
+import playfairH1 from '@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2?url';
+
 interface Props {
   title: string;
   description: string;
@@ -83,6 +90,12 @@ const siteSchema = JSON.stringify({
 <html lang="en">
   <head>
     <Seo {...props} />
+
+    <!-- Preload LCP-critical fonts so they start downloading in parallel with the
+         HTML parse, not after CSS is discovered. Was 8 woff2 files racing at
+         1,400-1,700 ms each; these two now start on the first byte. -->
+    <link rel="preload" href={latoBody} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={playfairH1} as="font" type="font/woff2" crossorigin />
 
     <!-- WebSite + Organization + Person schema (site-wide AEO signals) -->
     <script type="application/ld+json" set:html={siteSchema} />

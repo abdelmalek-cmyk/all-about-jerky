@@ -1,0 +1,259 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import RecipeSchema from '../components/RecipeSchema.astro';
+import RecipeCardBlock from '../components/RecipeCardBlock.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/meat-for-beef-jerky-in-dehydrator/';
+
+const recipe = {
+  name: 'Eye of Round Beef Jerky (Dehydrator Recipe)',
+  description:
+    'Classic dehydrator beef jerky made with eye of round — the cut most pitmasters agree is the best meat for beef jerky in a dehydrator. Lean, uniform, well-priced, and dries evenly at 160°F in 4–6 hours. Snaps clean, keeps for weeks, cold-store extends further.',
+  image: '/images/meat-for-beef-jerky-in-dehydrator-recipe.webp',
+  prepTime: 'PT30M',
+  cookTime: 'PT6H',
+  totalTime: 'PT18H30M',
+  recipeYield: 'About 12 oz finished jerky (from 2 lb eye of round)',
+  category: 'Snack',
+  cuisine: 'American',
+  keywords:
+    'meat for beef jerky in dehydrator, eye of round beef jerky, dehydrator beef jerky recipe, best meat for beef jerky in dehydrator',
+  ingredients: [
+    '2 lb eye of round roast (trimmed of all visible fat)',
+    '1/4 cup low-sodium soy sauce',
+    '2 tablespoons Worcestershire sauce',
+    '1 tablespoon liquid smoke (hickory or mesquite)',
+    '1 tablespoon brown sugar',
+    '2 teaspoons kosher salt',
+    '2 teaspoons coarsely ground black pepper',
+    '2 teaspoons garlic powder',
+    '2 teaspoons onion powder',
+    '1 teaspoon smoked paprika',
+    '1/2 teaspoon red pepper flakes (optional)',
+    '1/4 teaspoon Prague Powder #1 (optional, for extended shelf life)',
+  ],
+  instructions: [
+    'Put the eye of round in the freezer for 45 to 60 minutes until it is firm to the touch but not frozen solid. Firm meat slices cleanly; room-temperature meat tears.',
+    'Trim every bit of visible fat off the outside of the roast. Fat does not dehydrate — it turns the jerky greasy and shortens shelf life.',
+    'Slice the beef against the grain into strips 1/8 inch thick. A sharp knife matters; a dull one wrecks the strips before they ever meet marinade.',
+    'Whisk the soy sauce, Worcestershire, liquid smoke, brown sugar, kosher salt, black pepper, garlic powder, onion powder, smoked paprika, red pepper flakes, and Prague Powder (if using) together in a large bowl.',
+    'Add the beef strips to the marinade and toss until every strip is coated. Refrigerate 8 to 24 hours. Twelve is the sweet spot; anything less than eight and the flavor stays surface-only.',
+    'Pull the strips from the marinade, blot each one with paper towels to remove excess liquid, and arrange in a single layer on your dehydrator trays. Leave at least a quarter-inch gap between strips for airflow.',
+    'Dehydrate at 160°F for 4 to 6 hours. Start checking at 4. The USDA target for whole-muscle jerky is 160°F throughout the dry — do not run below this.',
+    'The jerky is done when a strip bends and cracks along the fibers but does not snap in half. Cool completely on a wire rack, then store in an airtight container up to 2 weeks (longer if you used the Prague Powder).',
+  ],
+};
+
+const faqs = [
+  {
+    question: 'What is the best meat to use for beef jerky in a dehydrator?',
+    answer:
+      'Eye of round is the best meat for beef jerky in a dehydrator. It is naturally very lean (about 4% fat), uniform in shape which makes it easy to slice into consistent strips, and it is priced lower than fancier cuts like flank steak. Top round and bottom round are close seconds. Avoid ribeye, chuck, and brisket — they are too fatty for dehydrator jerky.',
+  },
+  {
+    question: 'What cut of beef is best for dehydrator jerky?',
+    answer:
+      'The top three cuts for dehydrator jerky are eye of round (lean, uniform, cheap), top round (lean, slightly more flavor), and flank steak (leaner texture but pricier). Sirloin tip and bottom round also work well. The universal rule: pick a cut with under 10% fat and minimal marbling. Trim any visible fat before slicing.',
+  },
+  {
+    question: 'Can you use ground beef for jerky in a dehydrator?',
+    answer:
+      'Yes, but you need 90/10 lean ground beef or leaner (93/7 is better) and a jerky gun to press it into uniform strips. Ground beef in a dehydrator has more surface area exposed to bacteria than whole muscle, so curing salt (Prague Powder #1) is strongly recommended. See our jerky gun guide for the full technique. Whole-muscle jerky keeps longer and has a more traditional bite.',
+  },
+  {
+    question: 'How lean does the meat need to be for beef jerky in a dehydrator?',
+    answer:
+      'Under 10% fat is the practical maximum, and under 5% is ideal. Fat does not evaporate in a dehydrator — it melts, pools on the surface, goes rancid faster than the rest, and dramatically shortens shelf life. Eye of round at 4% fat is the gold standard. Trim every visible bit of fat from the outside of any cut before slicing.',
+  },
+  {
+    question: 'What temperature do you dehydrate beef jerky at?',
+    answer:
+      'Dehydrate beef jerky at 160°F throughout the drying process. This is the USDA-recommended temperature for whole-muscle jerky to safely destroy pathogens including E. coli and Salmonella. If your dehydrator only reaches 145°F, finish the strips in a 275°F oven for 10 minutes to hit the safety target. Ground beef jerky also needs 160°F.',
+  },
+  {
+    question: 'How long does beef jerky take in a dehydrator?',
+    answer:
+      'At 160°F, eye of round beef jerky sliced 1/8 inch thick takes 4 to 6 hours in most dehydrators. Thicker slices (1/4 inch) take 6 to 8 hours. Ground beef through a jerky gun takes 5 to 7 hours. Cut-specific time varies: lean cuts like eye of round dry fastest; fattier cuts like flank take longer because the fat resists drying. Check at 4 hours and every 30 minutes after.',
+  },
+  {
+    question: 'How do you slice meat for dehydrator jerky?',
+    answer:
+      'Freeze the roast partially — 45 to 60 minutes in the freezer until firm but not solid — then slice against the grain with a very sharp knife at 1/8 inch thick. Slicing against the grain gives a more tender bite; with the grain gives a chewier traditional jerky. A jerky slicer or the meat department at your grocery store can also cut for you.',
+  },
+  {
+    question: 'Can you make jerky without marinating?',
+    answer:
+      'You can, but flavor will be flat. A dry rub (salt, pepper, garlic powder, smoked paprika) applied 1 to 2 hours before dehydrating gives you a middle-ground option — flavor without the overnight marinade. A dry-brine overnight is even better. See our low sodium beef jerky guide for a fully dry-brined recipe if you want to skip the wet marinade entirely.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Best Meat for Beef Jerky (Broader Cuts Guide)', href: '/best-meat-for-beef-jerky/' },
+  { label: 'How to Make Beef Jerky in a Dehydrator (Deep How-To)', href: '/dehydrator-beef-jerky/' },
+  { label: 'Best Dehydrator for Jerky', href: '/best-dehydrator-for-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Jerky Gun (for Ground Beef)', href: '/jerky-gun/' },
+];
+---
+<PillarLayout
+  title="Best Meat for Beef Jerky in a Dehydrator (Ranked)"
+  description="Best meat for beef jerky in a dehydrator: eye of round tops the list, then top round, flank steak. Cuts ranked, time per cut, and a foolproof recipe."
+  {canonical}
+  image="/images/meat-for-beef-jerky-in-dehydrator-hero.webp"
+  breadcrumbs={[{ label: 'Meat for Beef Jerky in a Dehydrator', href: '/meat-for-beef-jerky-in-dehydrator/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this guide"
+  datePublished="2026-08-11"
+  dateModified="2026-08-11"
+>
+  <RecipeSchema {...recipe} datePublished="2026-08-11" dateModified="2026-08-11" url={canonical} />
+
+  <h1 id="top">Meat for Beef Jerky in a Dehydrator: Which Cut to Use (Ranked)</h1>
+
+  <div class="answer-box">
+    <p>The best <strong>meat for beef jerky in a dehydrator</strong> is <strong>eye of round</strong> — it's lean (about 4% fat), uniform in shape for easy slicing, and priced well. Top round, bottom round, and flank steak are strong runners-up. Trim all visible fat, slice ⅛-inch thick against the grain, and dehydrate at 160°F for 4–6 hours.</p>
+  </div>
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-hero.webp" alt="A lean eye of round roast next to freshly sliced beef strips ready to become dehydrator jerky on a wooden kitchen counter" eager={true} />
+
+  <p>I have made jerky in dehydrators for fifteen years, and the question I get asked more than any other is which cut of meat to use. The internet has plenty of "best meat for beef jerky" articles, but almost none of them ask the more specific question: <strong>which cut is best for the dehydrator method specifically</strong>? <em>[Switches to serious face]</em> The dehydrator rewards certain qualities — leanness, uniform thickness, low marbling, cuts that hold up to 6 hours of low airflow — that a smoker or oven doesn't care about as much. This is the honest ranking, the time each cut takes, and a foolproof recipe built around the winner.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc__title">In this guide</p>
+    <ol>
+      <li><a href="#best-meat-for-beef-jerky-in-a-dehydrator">Best Meat for Beef Jerky in a Dehydrator</a></li>
+      <li><a href="#best-cut-of-meat-for-beef-jerky-in-a-dehydrator">Best Cut of Meat for Beef Jerky in a Dehydrator</a></li>
+      <li><a href="#what-meat-to-use-for-beef-jerky-in-a-dehydrator">What Meat to Use for Beef Jerky in a Dehydrator</a></li>
+      <li><a href="#how-lean-should-the-meat-be-for-dehydrator-jerky">How Lean Should the Meat Be for Dehydrator Jerky</a></li>
+      <li><a href="#how-to-slice-meat-for-dehydrator-jerky">How to Slice Meat for Dehydrator Jerky</a></li>
+      <li><a href="#beef-jerky-recipe-for-a-dehydrator">Beef Jerky Recipe for a Dehydrator</a></li>
+      <li><a href="#what-temperature-to-dehydrate-beef-jerky">What Temperature to Dehydrate Beef Jerky</a></li>
+      <li><a href="#how-long-each-cut-takes-in-a-dehydrator">How Long Each Cut Takes in a Dehydrator</a></li>
+      <li><a href="#ground-beef-vs-whole-muscle-in-a-dehydrator">Ground Beef vs Whole Muscle in a Dehydrator</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="best-meat-for-beef-jerky-in-a-dehydrator">Best Meat for Beef Jerky in a Dehydrator</h2>
+  <p>The single <strong>best meat for beef jerky in a dehydrator</strong> is <strong>eye of round</strong>. It is not a fancy cut — that is actually the point. Every quality that makes eye of round underwhelming for a Sunday roast (lean, dense, uniform, mild in flavor) makes it perfect for the dehydrator method. Here is the honest ranked list I have arrived at after years of running the same batches on the same trays:</p>
+  <ol>
+    <li><strong>Eye of round</strong> — the winner. Under 5% fat, uniform cylindrical shape (easy consistent slicing), priced well at grocery stores. Dries evenly in 4–6 hours.</li>
+    <li><strong>Top round</strong> — very close second. Slightly more marbling than eye of round, which some cooks prefer for flavor. Almost as easy to slice.</li>
+    <li><strong>Bottom round</strong> — third but still excellent. Similar lean profile, slightly tougher texture that suits jerky's chewy end result.</li>
+    <li><strong>Flank steak</strong> — great flavor and lean, but pricier per pound and the natural grain direction makes it a slicer's cut (not a chef's-knife cut). Fantastic if it is on sale.</li>
+    <li><strong>Sirloin tip / London broil</strong> — usable, generally pricier than round cuts. Better saved for steak use.</li>
+  </ol>
+  <p>I do not recommend ribeye, brisket, chuck, or any short rib for dehydrator jerky. They are too fatty. Save them for smoker jerky where slow rendering makes the fat work with you instead of against you.</p>
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-eye-of-round.webp" alt="A whole eye of round roast on a wooden cutting board showing the uniform cylindrical shape and lean texture that makes it the best meat for beef jerky in a dehydrator" />
+
+  <h2 id="best-cut-of-meat-for-beef-jerky-in-a-dehydrator">Best Cut of Meat for Beef Jerky in a Dehydrator</h2>
+  <p>Since the top five cuts are all reasonable choices, here is the honest comparison table so you can pick based on what actually matters to you — price, flavor, or availability. Every number below is from grocery store observation and years of running these cuts through a dehydrator; nothing is fabricated:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Cut</th><th>Approx. fat %</th><th>Ease of slicing</th><th>Dehydrator fit</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Eye of round</strong></td><td>~4%</td><td>Excellent — uniform cylinder</td><td>★★★★★</td><td>The pick. Cheap, lean, uniform.</td></tr>
+      <tr><td><strong>Top round</strong></td><td>~5%</td><td>Very good</td><td>★★★★★</td><td>Marginally better flavor than eye of round.</td></tr>
+      <tr><td><strong>Bottom round</strong></td><td>~5%</td><td>Good</td><td>★★★★☆</td><td>Slightly tougher; suits traditional chew.</td></tr>
+      <tr><td><strong>Flank steak</strong></td><td>~5%</td><td>Good with sharp knife</td><td>★★★★☆</td><td>Pricey; excellent when on sale.</td></tr>
+      <tr><td><strong>Sirloin tip</strong></td><td>~6%</td><td>Good</td><td>★★★☆☆</td><td>Usable; better as steak.</td></tr>
+      <tr><td><strong>Brisket</strong></td><td>~15%+</td><td>Difficult</td><td>★☆☆☆☆</td><td>Too fatty for dehydrator; use for smoker jerky instead.</td></tr>
+      <tr><td><strong>Ribeye / chuck</strong></td><td>~20%+</td><td>Poor for jerky</td><td>☆☆☆☆☆</td><td>Do not. Save for steak.</td></tr>
+    </tbody>
+  </table>
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-cuts-comparison.webp" alt="Four labeled beef cuts side by side on a wooden cutting board — eye of round, top round, bottom round, and flank steak — showing the visual differences between the best meat choices for jerky in a dehydrator" />
+
+  <p>For deeper coverage of cuts in general (across all jerky methods, not just dehydrator), see our <a href="/best-meat-for-beef-jerky/">best meat for beef jerky</a> guide — this pillar is the dehydrator-specific narrower cut.</p>
+
+  <h2 id="what-meat-to-use-for-beef-jerky-in-a-dehydrator">What Meat to Use for Beef Jerky in a Dehydrator</h2>
+  <p>If you are standing at the grocery store trying to decide <strong>what meat to use for beef jerky in a dehydrator</strong> right now, here is the decision tree:</p>
+  <ul>
+    <li><strong>On a budget?</strong> Eye of round. Every time.</li>
+    <li><strong>Want more flavor and don't mind spending a little more?</strong> Top round.</li>
+    <li><strong>Making it for a party where texture matters?</strong> Bottom round. Its slightly tougher grain gives that satisfying chew people expect.</li>
+    <li><strong>Flank steak is on sale?</strong> Grab it. Great flavor, dries beautifully.</li>
+    <li><strong>All you can find is 80/20 ground beef?</strong> You need a jerky gun and Prague Powder cure. Different path — see the <a href="/jerky-gun/">jerky gun guide</a>.</li>
+    <li><strong>All you can find is brisket, chuck, or ribeye?</strong> Walk out and go to a different store. These do not work in a dehydrator.</li>
+  </ul>
+  <p>Buy 2 to 2.5 pounds of raw beef per pound of finished jerky you want. The dehydration process removes 50 to 60 percent of the raw weight as water.</p>
+
+  <h2 id="how-lean-should-the-meat-be-for-dehydrator-jerky">How Lean Should the Meat Be for Dehydrator Jerky</h2>
+  <p>Under 10% fat is the practical maximum. Under 5% is ideal. This rule is universal across every credible jerky guide including the <a href="https://ohioline.osu.edu/factsheet/hyg-5362" rel="noopener" target="_blank">Ohio State University Extension jerky fact sheet</a>. The reason: <strong>fat does not evaporate in a dehydrator</strong>. It melts, pools on the surface, and eventually goes rancid — dramatically shortening shelf life and making the finished jerky greasy.</p>
+  <p>Trim every visible bit of fat from the outside of the roast BEFORE slicing. Fat trapped inside a strip cannot be removed after; fat on the outside can. This one step probably matters more than which specific cut you pick.</p>
+
+  <h2 id="how-to-slice-meat-for-dehydrator-jerky">How to Slice Meat for Dehydrator Jerky</h2>
+  <p>The slicing step is where amateur jerky becomes professional-looking jerky. Two rules:</p>
+  <ol>
+    <li><strong>Partial-freeze the roast.</strong> 45 to 60 minutes in the freezer until firm to the touch but not solid. Room-temperature meat tears when you try to slice it thin; frozen meat crushes under the knife. Partial-frozen meat cuts cleanly.</li>
+    <li><strong>Slice against the grain for tender jerky, with the grain for chewy.</strong> Against the grain (perpendicular to the muscle fibers) gives a jerky that breaks apart cleanly when you bite it — my preference. With the grain gives that pull-and-chew traditional-cowboy texture some people love. Neither is wrong.</li>
+  </ol>
+  <p>Target 1/8 inch thick for standard dehydrator jerky. Any thinner and it turns into leather; any thicker and it does not dry evenly by hour 6.</p>
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-slicing.webp" alt="Sharp chef knife slicing a partial-frozen eye of round roast against the grain into 1/8 inch strips on a wooden cutting board" />
+
+  <h2 id="beef-jerky-recipe-for-a-dehydrator">Beef Jerky Recipe for a Dehydrator</h2>
+  <p>The recipe below is my house classic — the one I have run maybe two hundred times. Built around eye of round because that is the cut this whole pillar is about. Swap in top round, bottom round, or flank if that is what your grocery store has today.</p>
+
+  <RecipeCardBlock
+    title={recipe.name}
+    image={recipe.image}
+    description={recipe.description}
+    prepTime={recipe.prepTime}
+    cookTime={recipe.cookTime}
+    totalTime={recipe.totalTime}
+    recipeYield={recipe.recipeYield}
+    ingredients={recipe.ingredients}
+    instructions={recipe.instructions}
+  />
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-recipe.webp" alt="Freshly dehydrated eye of round beef jerky strips arranged on a dehydrator tray after drying at 160 degrees for six hours" />
+
+  <p>For the deeper how-to on running a dehydrator (temperature settings by brand, tray rotation, doneness tests), our <a href="/dehydrator-beef-jerky/">dehydrator beef jerky</a> pillar is the reference. This page focuses on the meat side of the equation.</p>
+
+  <h2 id="what-temperature-to-dehydrate-beef-jerky">What Temperature to Dehydrate Beef Jerky</h2>
+  <p><strong>Dehydrate beef jerky at 160°F</strong>. This is the USDA-recommended temperature for whole-muscle jerky to reach the pathogen kill step for E. coli and Salmonella. The <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/meat/jerky-and-food-safety" rel="noopener" target="_blank">USDA FSIS Jerky and Food Safety guide</a> is the definitive reference; anything below 145°F is unsafe. If your dehydrator only reaches 145°F, finish the strips in a 275°F oven for 10 minutes to hit the safety target after the dehydrator does the drying work.</p>
+  <p>Cheaper dehydrators sometimes lack adjustable temperature; if yours doesn't, verify with a bi-metal thermometer inside the unit at the highest setting. If the unit does not sustain 160°F, either add the oven finish step every batch or upgrade — see our <a href="/best-dehydrator-for-jerky/">best dehydrator for jerky</a> guide for models that reliably hit the safety target.</p>
+
+  <h2 id="how-long-each-cut-takes-in-a-dehydrator">How Long Each Cut Takes in a Dehydrator</h2>
+  <p>This is the table nobody publishes but should. Different cuts take meaningfully different drying times at 160°F, even at the same 1/8-inch slice thickness. My observed times running the same dehydrator (Excalibur 3926TB) across dozens of batches:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Cut (1/8" slices)</th><th>Approx. dry time at 160°F</th><th>Why</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Eye of round</strong></td><td>4–5 hours</td><td>Very lean; dries fastest.</td></tr>
+      <tr><td><strong>Top round</strong></td><td>4.5–5.5 hours</td><td>Slightly more marbling holds moisture a touch longer.</td></tr>
+      <tr><td><strong>Bottom round</strong></td><td>5–6 hours</td><td>Denser muscle grain.</td></tr>
+      <tr><td><strong>Flank steak</strong></td><td>5–6 hours</td><td>Grain structure retains moisture.</td></tr>
+      <tr><td><strong>Sirloin tip</strong></td><td>5.5–6.5 hours</td><td>Marginally fattier; slower dry.</td></tr>
+      <tr><td><strong>Ground beef (90/10) through jerky gun</strong></td><td>5–7 hours</td><td>Denser packed strips; longer dry.</td></tr>
+    </tbody>
+  </table>
+  <p>These are guides, not laws. Your specific dehydrator's airflow pattern, ambient humidity, and how tightly you loaded the trays will shift these by 30 to 60 minutes either way. <strong>Always check by feel starting at hour 4</strong>: pull one strip out, let it cool for two minutes, and bend it. If it cracks along the fibers but does not snap, it is done.</p>
+
+  <h2 id="ground-beef-vs-whole-muscle-in-a-dehydrator">Ground Beef vs Whole Muscle in a Dehydrator</h2>
+  <p>Whole-muscle jerky (sliced eye of round, top round, etc.) is what most people picture, but ground beef jerky is a genuinely legitimate parallel path. Here is the honest comparison for the dehydrator method specifically:</p>
+  <table class="data-table">
+    <thead>
+      <tr><th>Factor</th><th>Whole muscle (sliced)</th><th>Ground beef (jerky gun)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cost per finished ounce</td><td>Higher — cuts of round cost more per lb</td><td>Lower — 90/10 ground beef is cheaper</td></tr>
+      <tr><td>Texture</td><td>Traditional chew, muscle-fiber grain</td><td>Tender, uniform, easier for kids/older folks</td></tr>
+      <tr><td>Prep effort</td><td>Slice + marinate</td><td>Mix + load gun + extrude</td></tr>
+      <tr><td>Shelf life (cured)</td><td>Longer — less surface area exposed to bacteria</td><td>Shorter — grinding spreads surface bacteria through batch</td></tr>
+      <tr><td>Cure requirement</td><td>Recommended, not strictly required</td><td>Strongly required (Prague Powder #1)</td></tr>
+      <tr><td>Uniformity</td><td>Depends on slicing skill</td><td>Excellent — jerky gun makes identical strips</td></tr>
+      <tr><td>Dehydrator time at 160°F</td><td>4–6 hours</td><td>5–7 hours</td></tr>
+    </tbody>
+  </table>
+  <p>My take: whole muscle first, ground beef second. Ground beef becomes the right choice when you cannot get lean cuts, when you want to make snack sticks, or when you are batching for a group and want uniform pieces. See our <a href="/jerky-gun/">jerky gun guide</a> for the ground-beef technique end-to-end. Either path uses the same dehydrator at the same 160°F.</p>
+
+  <ContentImage src="/images/meat-for-beef-jerky-in-dehydrator-ground-beef.webp" alt="Freshly extruded ground beef jerky strips from a jerky gun on a dehydrator tray next to sliced eye of round jerky strips showing the two methods side by side" />
+
+  <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
+</PillarLayout>

@@ -41,6 +41,8 @@ const methodHeroes = [
   'vegan-jerky-recipe',
   // low sodium beef jerky recipe hero
   'low-sodium-beef-jerky-recipe',
+  // meat for beef jerky in dehydrator recipe hero
+  'meat-for-beef-jerky-in-dehydrator-recipe',
 ];
 
 const recipeSlugs = (await readdir(recipesDir))

@@ -10,11 +10,11 @@ import '@fontsource/lato/400.css';
 import '@fontsource/lato/400-italic.css';
 import '@fontsource/lato/700.css';
 import '@fontsource/lato/900.css';
-import '@fontsource/playfair-display/400.css';
-import '@fontsource/playfair-display/400-italic.css';
-import '@fontsource/playfair-display/600.css';
-import '@fontsource/playfair-display/700.css';
-import '@fontsource/playfair-display/800.css';
+// Playfair Display as a variable font — one woff2 file covers weights 400-900
+// (instead of 5 static-weight CSS files pulling 5 separate woff2 files each).
+// Same weight coverage; 3 fewer woff2 requests on the critical path.
+import '@fontsource-variable/playfair-display/wght.css';
+import '@fontsource-variable/playfair-display/wght-italic.css';
 import '@fontsource/anton/400.css';
 import '../styles/global.css';
 
@@ -23,7 +23,8 @@ import '../styles/global.css';
 // the site is English-only and skipping other subsets saves bytes on the critical path.
 // Was: 8 woff2 files racing at 1,400-1,700 ms each. Now: these 2 start immediately.
 import latoBody from '@fontsource/lato/files/lato-latin-400-normal.woff2?url';
-import playfairH1 from '@fontsource/playfair-display/files/playfair-display-latin-700-normal.woff2?url';
+// Variable-font preload — this single file serves every Playfair weight we use.
+import playfairH1 from '@fontsource-variable/playfair-display/files/playfair-display-latin-wght-normal.woff2?url';
 
 interface Props {
   title: string;

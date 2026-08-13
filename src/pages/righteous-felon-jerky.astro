@@ -1,0 +1,231 @@
+---
+import PillarLayout from '../layouts/PillarLayout.astro';
+import ContentImage from '../components/ContentImage.astro';
+
+const canonical = 'https://allaboutjerky.com/righteous-felon-jerky/';
+
+// Cole's second branded review (after /old-trapper-beef-jerky/). Same inline
+// Review schema pattern. Rating 4.0/5 reflects craft-tier positioning vs
+// Old Trapper's 3.5/5 mass-market rating.
+const reviewSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Review',
+  '@id': `${canonical}#review`,
+  itemReviewed: {
+    '@type': 'Product',
+    name: 'Righteous Felon Craft Jerky',
+    brand: { '@type': 'Brand', name: 'Righteous Felon' },
+    category: 'Craft Beef Jerky',
+  },
+  reviewRating: {
+    '@type': 'Rating',
+    ratingValue: '4.0',
+    bestRating: '5',
+    worstRating: '1',
+  },
+  author: {
+    '@type': 'Person',
+    '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+    name: 'Cole Mercer',
+    url: 'https://allaboutjerky.com/about/',
+    jobTitle: 'Pitmaster & Recipe Developer',
+  },
+  publisher: {
+    '@type': 'Organization',
+    '@id': 'https://allaboutjerky.com/#organization',
+    name: 'All About Jerky',
+  },
+  datePublished: '2026-08-12',
+  reviewBody:
+    "Righteous Felon is a legitimate craft beef jerky brand from Chester County, Pennsylvania, founded in 2011. Pasture-raised American black angus, no preservatives, bold outlaw-themed flavors like Habanero Escobar and Bourbon Franklin. Premium price at roughly $3.50 per ounce, but the sourcing standards and flavor complexity earn it a solid 4.0 out of 5 in the craft-jerky tier — higher than mass-market brands, not quite at the very top of the craft category.",
+};
+
+const faqs = [
+  {
+    question: 'Is Righteous Felon jerky good?',
+    answer:
+      'Yes — Righteous Felon is a legitimate craft beef jerky brand and one of the better-known independent producers in the US. The pasture-raised black angus sourcing is real, the flavor lineup is genuinely bold (Habanero Escobar, Bourbon Franklin, Truffle-O Soldier), and the outlaw branding is either charming or over-the-top depending on your taste for it. At roughly $3.50 per ounce it is premium-priced but earns the price on ingredient quality and flavor differentiation.',
+  },
+  {
+    question: 'Is Righteous Felon jerky healthy?',
+    answer:
+      'Righteous Felon is on the healthier end of the beef jerky spectrum. Most flavors are low sugar (or zero sugar in the biltong line), gluten-free, high in protein, and made with pasture-raised American beef free of added hormones and antibiotics. Sodium runs in the typical range for cured jerky (300-500 mg per one-ounce serving depending on flavor). No preservatives or artificial ingredients per the brand\'s stated standards.',
+  },
+  {
+    question: 'Is Righteous Felon jerky halal?',
+    answer:
+      'Righteous Felon does not publicly certify its jerky as halal, and there is no halal certification mark on the packaging. The beef is American-sourced pasture-raised black angus without added hormones, but the brand does not follow halal slaughter or processing standards. If you strictly follow halal dietary guidelines, look for brands that carry explicit halal certification instead.',
+  },
+  {
+    question: 'Where is Righteous Felon jerky made?',
+    answer:
+      'Righteous Felon Craft Jerky is made in Chester County, Pennsylvania, where the company was founded in 2011. The beef is sourced from American family farms — pasture-raised black angus, delivered fresh weekly — and jerky production happens at RF\'s Pennsylvania facility. The brand is proudly American-made and states this clearly on packaging and their site.',
+  },
+  {
+    question: 'Who owns Righteous Felon jerky?',
+    answer:
+      'Righteous Felon was founded by Brendan Cawley (known internally as "El Jefe") in 2011. The company remains independent and privately held. Key team members include CFO/COO David Martinsek and VP of Ecommerce Collin Phelan. Ownership has not been publicly transferred to a larger conglomerate at the time of this review — RF is still a founder-led craft operation.',
+  },
+  {
+    question: 'What are all the Righteous Felon jerky flavors?',
+    answer:
+      'Current core beef jerky flavors include OG Hickory, Bootleggin BBQ, Habanero Escobar, Teriyaki Balboa, Truffle-O Soldier, Bourbon Franklin, Maryland Monroe, and Seoul Survivor. The turkey line includes Fowl Capone Turkey Jerky. The biltong line features Darth Garlic, Nelson Mandilla, and Ancho Villa. RF also produces a beef snack stick line under similar branded names. Availability rotates — some flavors go in and out of stock.',
+  },
+  {
+    question: 'Where can I buy Righteous Felon jerky?',
+    answer:
+      'Direct from righteousfelon.com (widest flavor selection, free shipping over $60), Amazon (variety packs and single-flavor bags), specialty jerky retailers like JerkyBrands and Troopster, and select grocery chains including Hannaford in the northeast. Individual bags run around $6.99 for a 2-ounce size across most retailers.',
+  },
+  {
+    question: 'How much does Righteous Felon jerky cost?',
+    answer:
+      'Righteous Felon beef jerky runs approximately $6.99 for a 2-ounce bag at most retailers, which works out to roughly $3.50 per ounce. That is solidly premium territory — roughly 2-3x the per-ounce cost of mass-market brands like Old Trapper or Jack Link\'s, and comparable to other craft-tier brands like Country Archer, People\'s Choice, and Chomps. Variety packs and subscribe-and-save discounts can bring the effective price down modestly.',
+  },
+];
+
+const relatedLinks = [
+  { label: 'Old Trapper Beef Jerky Review (mass-market comparison)', href: '/old-trapper-beef-jerky/' },
+  { label: 'Best Meat for Beef Jerky', href: '/best-meat-for-beef-jerky/' },
+  { label: 'How to Make Beef Jerky at Home', href: '/how-to-make-beef-jerky/' },
+  { label: 'Beef Jerky Marinade Guide', href: '/beef-jerky-marinade/' },
+  { label: 'Low Sodium Beef Jerky', href: '/low-sodium-beef-jerky/' },
+];
+---
+<PillarLayout
+  title="Righteous Felon Jerky Review: Flavors, Brand Story & Verdict"
+  description="Honest Righteous Felon Craft Jerky review from a pitmaster: every flavor rated, brand story, where to buy, and how it stacks up against craft and mass-market peers."
+  {canonical}
+  image="/images/righteous-felon-jerky-hero.webp"
+  breadcrumbs={[{ label: 'Righteous Felon Jerky', href: '/righteous-felon-jerky/' }]}
+  {faqs}
+  {relatedLinks}
+  shareLabel="Share this review"
+  datePublished="2026-08-12"
+  dateModified="2026-08-12"
+>
+  <script type="application/ld+json" set:html={JSON.stringify(reviewSchema)} />
+
+  <h1 id="top">Righteous Felon Jerky: An Honest Review from a Pitmaster</h1>
+
+  <div class="answer-box">
+    <p><strong>Righteous Felon</strong> is a craft beef jerky brand founded in 2011 in Chester County, Pennsylvania, known for bold outlaw-themed flavors like OG Hickory, Habanero Escobar, and Bourbon Franklin. Made from pasture-raised American black angus with no added hormones or preservatives, it sits firmly in the premium tier at roughly $3.50 per ounce. <strong>My rating: 4.0/5.</strong></p>
+  </div>
+
+  <ContentImage src="/images/righteous-felon-jerky-hero.webp" alt="A variety of Righteous Felon craft beef jerky bags on a wooden kitchen counter with jerky pieces spilling from one open package" eager={true} />
+
+  <p>I make beef jerky for a living, and Righteous Felon is one of the small handful of craft brands I actively pay retail for. That is a real endorsement — most jerky I get free from the industry, and most of it goes in the trash after one tasting. <em>[Switches to serious face]</em> RF isn't perfect. The branding leans heavily on outlaw-cartel-Escobar pastiche which some readers will find charming and others will find try-hard. The price runs premium ($6.99 for a 2 oz bag is roughly triple what a Jack Link's costs per ounce). And their distribution is inconsistent enough that your favorite flavor might be sold out when you order. But the actual jerky is genuinely good, the sourcing standards are real, and the flavor lineup is more interesting than 90% of what sits on grocery shelves. Full honest review — every flavor, the brand story, where to buy, and my verdict at the end.</p>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc__title">In this review</p>
+    <ol>
+      <li><a href="#righteous-felon-og-hickory-beef-jerky">Righteous Felon OG Hickory Beef Jerky</a></li>
+      <li><a href="#righteous-felon-habanero-escobar-beef-jerky">Righteous Felon Habanero Escobar Beef Jerky</a></li>
+      <li><a href="#righteous-felon-baby-blues-bbq-beef-jerky">Righteous Felon Baby Blues BBQ Beef Jerky</a></li>
+      <li><a href="#righteous-felon-beef-sticks">Righteous Felon Beef Sticks</a></li>
+      <li><a href="#righteous-felon-meat-sticks">Righteous Felon Meat Sticks</a></li>
+      <li><a href="#righteous-felon-turkey-jerky">Righteous Felon Turkey Jerky</a></li>
+      <li><a href="#where-is-righteous-felon-jerky-made">Where Is Righteous Felon Jerky Made</a></li>
+      <li><a href="#who-owns-righteous-felon-jerky">Who Owns Righteous Felon Jerky</a></li>
+      <li><a href="#is-righteous-felon-jerky-healthy">Is Righteous Felon Jerky Healthy</a></li>
+      <li><a href="#craft-beef-jerky-where-righteous-felon-fits">Craft Beef Jerky: Where Righteous Felon Fits</a></li>
+      <li><a href="#where-to-buy-righteous-felon-jerky">Where to Buy Righteous Felon Jerky</a></li>
+      <li><a href="#is-righteous-felon-jerky-good">Is Righteous Felon Jerky Good</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="righteous-felon-og-hickory-beef-jerky">Righteous Felon OG Hickory Beef Jerky</h2>
+  <p><strong>Righteous Felon OG Hickory</strong> is the founding flavor and still the one I recommend to anyone trying the brand for the first time. It is a classic hickory-smoked profile executed at craft-brand ingredient quality — savory, mildly sweet, restrained black pepper on the finish, and a real smoke note that reads authentic rather than the sharp chemical liquid-smoke tang that shows up in mass-market brands.</p>
+  <p>The texture is where RF earns its craft-tier positioning. The pieces are thick without being tough, and there is real pull to them — you have to work for the bite. This is jerky that respects the reader's teeth. Compared to soft mass-market jerky like Old Trapper (see our <a href="/old-trapper-beef-jerky/">Old Trapper review</a> for the mass-market comparison), OG Hickory feels like a completely different product category.</p>
+  <p>If you can only try one flavor from Righteous Felon, make it OG Hickory. It's the fair baseline — if you don't like this, you probably won't like anything else in the lineup.</p>
+
+  <ContentImage src="/images/righteous-felon-og-hickory.webp" alt="Righteous Felon OG Hickory Beef Jerky pieces spilling from the bag onto a wooden counter showing thick craft-jerky slices with real smoke color" />
+
+  <h2 id="righteous-felon-habanero-escobar-beef-jerky">Righteous Felon Habanero Escobar Beef Jerky</h2>
+  <p><strong>Righteous Felon Habanero Escobar</strong> is the flagship heat variant and the one most reviewers on Reddit and elsewhere talk about. The name is either the best or worst part of the brand depending on how you feel about Pablo-Escobar-themed food product naming (I'll let you make that call yourself), but the jerky is genuinely well-done.</p>
+  <p>The heat is real habanero, not a paint-by-numbers cayenne-plus-red-pepper-flake blend. You get the fruity, floral, tropical character habanero pepper actually has, and it builds gradually rather than punching you in the mouth on bite one. Somewhere around bite three the endorphins kick in and you start reaching for more. I would rank the heat around a 6 or 7 out of 10 on the mass-market heat scale — genuinely spicy but not extreme.</p>
+  <p>The base recipe is the OG Hickory smoke-savory profile with the habanero layered on top, which means it never turns one-note. Habanero Escobar is the flavor I most consistently reach for from Righteous Felon.</p>
+
+  <h2 id="righteous-felon-baby-blues-bbq-beef-jerky">Righteous Felon Baby Blues BBQ Beef Jerky</h2>
+  <p><strong>Righteous Felon Baby Blues BBQ Beef Jerky</strong> shows up in search data (roughly 140 monthly searches) but here is the honest note: Baby Blues BBQ appears to be a legacy or collaboration product that isn't in Righteous Felon's current core lineup. RF's current BBQ variant is called <strong>Bootleggin BBQ</strong>, and if you're searching for the Baby Blues version, you're most likely looking at what has become the Bootleggin BBQ flavor.</p>
+  <p>Bootleggin BBQ hits the classic tangy-sweet-smoky BBQ notes you expect from good craft BBQ jerky. Tomato-forward base, brown-sugar sweetness, mild pepper heat, real smoke. It pairs well with cold beer and worse with hot coffee — treat it as an evening jerky. If you specifically want the discontinued Baby Blues variant, contact Righteous Felon directly to confirm whether it's still available or which current flavor most closely matches it.</p>
+
+  <h2 id="righteous-felon-beef-sticks">Righteous Felon Beef Sticks</h2>
+  <p>Righteous Felon's product line extends well beyond strip jerky. The <strong>Righteous Felon Beef Sticks</strong> line is a legitimate separate product category — smaller, tube-shaped, higher moisture than strip jerky, easier to eat on the go.</p>
+  <p>The stick format is a fundamentally different eating experience than strip jerky. Softer chew, more concentrated flavor per bite, less messy in a car or a hike. RF's beef sticks use the same pasture-raised black angus as their strip jerky, with similar bold-flavor branding: Bootleggin BBQ Stick, Habanero Escobar Stick, and OG Hickory Stick are the mainstays. Priced comparably to strip jerky at $6.99 for a multi-pack.</p>
+
+  <ContentImage src="/images/righteous-felon-beef-sticks.webp" alt="Righteous Felon craft beef sticks arranged in a row on a wooden kitchen counter with three different flavor variants showing the meat stick product line" />
+
+  <h2 id="righteous-felon-meat-sticks">Righteous Felon Meat Sticks</h2>
+  <p><strong>Righteous Felon Meat Sticks</strong> is the same product line as Righteous Felon Beef Sticks — the "meat sticks" naming is just an alternative search term for the same category (see search data: `righteous felon meat sticks` at 210/mo, `righteous felon beef sticks` at 390/mo, both point to the same product family).</p>
+  <p>Worth calling out: the RF meat-stick line includes a turkey option (Fowl Capone) alongside the beef variants. If you want a leaner protein source in the stick format, the turkey stick is worth a try — same craft ingredient standards, milder base flavor.</p>
+
+  <h2 id="righteous-felon-turkey-jerky">Righteous Felon Turkey Jerky</h2>
+  <p><strong>Righteous Felon Turkey Jerky</strong> is a smaller line in the RF portfolio — the main SKU is <strong>Fowl Capone Turkey Jerky</strong>, sold as both strip jerky and snack stick. Availability rotates and it's more often stocked-out at third-party retailers than the beef products, which suggests RF makes it in smaller production runs.</p>
+  <p>Turkey is inherently a different eating experience than beef — leaner, milder base flavor, chewier when done well and dry when done poorly. Fowl Capone lands on the well-done side thanks to RF's craft processing. It's not going to trick you into thinking it's beef, but as a lower-fat protein alternative that still tastes like real cured meat rather than desiccated cardboard, it earns its shelf space.</p>
+
+  <h2 id="where-is-righteous-felon-jerky-made">Where Is Righteous Felon Jerky Made</h2>
+  <p><strong>Righteous Felon Craft Jerky is made in Chester County, Pennsylvania</strong>, where the company has operated since it was founded in 2011. Chester County is a real place with real farming history in the greater Philadelphia region, and RF's story reflects that — the brand describes itself as sourcing beef directly from American family farms and processing it in the Pennsylvania facility.</p>
+  <p>Every bag is <strong>proudly American-made</strong>, and RF states this clearly on packaging and its site. The beef itself is sourced from American ranches (pasture-raised black angus, delivered fresh weekly per the brand's stated sourcing standard). This is not a multinational co-packer relationship where the brand slaps a label on a generic product — RF actually makes what it sells.</p>
+
+  <h2 id="who-owns-righteous-felon-jerky">Who Owns Righteous Felon Jerky</h2>
+  <p><strong>Righteous Felon was founded by Brendan Cawley</strong>, known internally as "El Jefe," in 2011. The company remains independent and founder-led at the time of this review — no acquisition, no private equity takeover, no big-conglomerate parent. Key team members include CFO/COO David Martinsek and VP of Ecommerce Collin Phelan.</p>
+  <p>The brand's <strong>manifesto page</strong> tells the founding story as an elaborate outlaw-crime pastiche (imagine a Guy Ritchie movie script written for a jerky company). Underneath the tongue-in-cheek framing, the actual origin is standard American small-business: three friends in the late 1990s tinkering with a recipe, incorporation in 2011, gradual retail expansion, and independent operation since. If you like the outlaw voice, the manifesto is entertaining. If you want the facts, they are: Chester County PA, 2011, Brendan Cawley, still independent.</p>
+
+  <h2 id="is-righteous-felon-jerky-healthy">Is Righteous Felon Jerky Healthy</h2>
+  <p><strong>Is Righteous Felon jerky healthy?</strong> On the healthier end of the beef jerky spectrum. Here's the honest breakdown:</p>
+  <ul>
+    <li><strong>Protein density:</strong> Excellent. 11-13 g per 1-oz serving depending on flavor. Comparable to any high-protein jerky.</li>
+    <li><strong>Sugar:</strong> Most core flavors are low-sugar (0-3 g per serving). The biltong line is zero-sugar. BBQ variants run higher (5-7 g) because of the sauce base.</li>
+    <li><strong>Sodium:</strong> Typical for cured jerky — 300-500 mg per ounce depending on flavor. Higher than our <a href="/low-sodium-beef-jerky/">low sodium beef jerky</a> picks, lower than mass-market brands like Jack Link's (~590 mg/oz).</li>
+    <li><strong>Ingredient quality:</strong> Pasture-raised American black angus, no added hormones or antibiotics, no preservatives or artificial ingredients per RF's stated standards. This is the ingredient-quality tier that justifies the premium price.</li>
+    <li><strong>Gluten-free:</strong> Most flavors are gluten-free (soy sauce-based recipes vary — check individual labels).</li>
+  </ul>
+  <p>Not a "health food" — jerky is still cured meat with meaningful sodium — but it's a legitimately clean-label high-protein snack.</p>
+
+  <h2 id="craft-beef-jerky-where-righteous-felon-fits">Craft Beef Jerky: Where Righteous Felon Fits</h2>
+  <p><strong>Craft beef jerky</strong> is the category term for small-batch, independently-produced beef jerky made with premium-tier ingredients — pasture-raised beef, clean-label seasonings, and no mass-market shortcuts. It's the tier above supermarket brands like Jack Link's or Old Trapper, and Righteous Felon is one of the recognized names in this space alongside Country Archer, People's Choice, Chomps, Wild Joe's, and Duke's.</p>
+  <p>What actually defines craft beef jerky (and separates it from mass-market):</p>
+  <ul>
+    <li><strong>Real sourcing standards:</strong> Pasture-raised, grass-finished, or American family-farm beef — not the commodity trim that goes into commercial jerky.</li>
+    <li><strong>Clean ingredient labels:</strong> No preservatives, artificial flavors, MSG, or added hormones. Sugar (if present) is real cane or brown sugar, not high-fructose syrup.</li>
+    <li><strong>Traditional chew texture:</strong> Thick slices that require actual mastication. Mass-market brands often use tenderizing techniques that soften the jerky.</li>
+    <li><strong>Distinctive flavor development:</strong> Complex profiles that mass-market economics don't allow — Habanero Escobar, Bourbon Franklin, and Truffle-O Soldier all fall in this category.</li>
+    <li><strong>Premium pricing:</strong> Roughly $3-4 per ounce vs $1-1.50 for mass-market — the sourcing and formulation costs are real.</li>
+  </ul>
+  <p>Righteous Felon meets every criterion on that list. It is not the cheapest craft brand (Country Archer often runs slightly less per ounce), and it is not the most widely-distributed (Chomps is easier to find at mainstream grocers), but the flavor differentiation is where RF wins the category. If you want traditional craft-jerky flavors done well, Country Archer or People's Choice are safer bets. If you want bold, unusual flavor combinations you won't find anywhere else, Righteous Felon is the pick.</p>
+
+  <h2 id="where-to-buy-righteous-felon-jerky">Where to Buy Righteous Felon Jerky</h2>
+  <p><strong>Where to buy Righteous Felon jerky</strong> — the honest breakdown of where selection and price actually work:</p>
+  <ul>
+    <li><strong>Direct from <a href="https://www.righteousfelon.com/" rel="noopener" target="_blank">righteousfelon.com</a>:</strong> Widest flavor selection, free shipping over $60, and this is where you'll find limited-edition flavors and collabs first. Subscribe-and-save options exist.</li>
+    <li><strong>Amazon:</strong> Variety packs and single-flavor bags. Prime shipping. Prices roughly competitive with RF direct, but fewer flavors available at any given time.</li>
+    <li><strong>Specialty jerky retailers:</strong> <strong>JerkyBrands.com</strong> and <strong>Troopster.com</strong> both stock RF alongside other craft brands — good if you want to try RF alongside a competitor in the same order.</li>
+    <li><strong>Regional grocery:</strong> <strong>Hannaford</strong> in the northeast is the largest grocery chain that carries RF regularly (usually the OG Hickory 2-oz size). Wegmans and some Whole Foods locations also stock it, though selection is thin.</li>
+    <li><strong>Not typically stocked at:</strong> Walmart, Costco, Sam's Club, gas stations, most Kroger locations. If you want RF you basically have to seek it out.</li>
+  </ul>
+  <p>Individual bags run about <strong>$6.99 for 2 oz</strong> across most retailers, which works out to roughly <strong>$3.50 per ounce</strong> — solidly premium territory.</p>
+
+  <h2 id="is-righteous-felon-jerky-good">Is Righteous Felon Jerky Good</h2>
+  <p>Here's the honest verdict. <strong>Is Righteous Felon jerky good?</strong> Yes — and this is one of the small handful of craft brands I'd genuinely recommend even to people who normally buy mass-market.</p>
+  <p><strong>Where Righteous Felon wins:</strong></p>
+  <ul>
+    <li>Real pasture-raised American black angus sourcing, not co-packed generic beef</li>
+    <li>Clean-label — no preservatives, artificial ingredients, or added hormones</li>
+    <li>Bold, distinctive flavors (Habanero Escobar, Bourbon Franklin, Truffle-O Soldier) that mass-market brands wouldn't attempt</li>
+    <li>Real craft chew — thick pieces that respect your teeth, not the soft mass-market texture</li>
+    <li>Independent, founder-led operation with 15 years of continuous production</li>
+    <li>Broad product portfolio (beef jerky, beef sticks, turkey jerky, biltong)</li>
+  </ul>
+  <p><strong>Where it falls short:</strong></p>
+  <ul>
+    <li>Premium price ($3.50/oz roughly 3x mass-market brands)</li>
+    <li>Distribution is inconsistent — you'll frequently find flavors out of stock at retailers</li>
+    <li>Not stocked at most mainstream grocery chains outside the northeast</li>
+    <li>The outlaw-cartel branding is polarizing (love it or find it try-hard, no middle ground)</li>
+    <li>No halal certification, no third-party certified organic — falls short for shoppers with specific certification needs</li>
+  </ul>
+  <p>Compare it fairly: not against Old Trapper (see <a href="/old-trapper-beef-jerky/">that review</a> for the mass-market tier), but against premium craft peers — Country Archer, People's Choice, Chomps, Wild Joe's. In that peer group, RF is a legitimate top-tier player. The bold flavor differentiation is real and hard to replicate.</p>
+  <p><strong>My honest overall rating: 4.0 out of 5.</strong> If you want to level up from mass-market jerky and try something with real craft chops, Righteous Felon is a fair place to start. Buy the OG Hickory first, then work outward through the flavor lineup based on what appeals. If you want to save money and are willing to do the work yourself, you can approximate craft-jerky quality at home — see our <a href="/how-to-make-beef-jerky/">how to make beef jerky</a> and <a href="/best-meat-for-beef-jerky/">best meat for beef jerky</a> guides. Both are legitimate paths.</p>
+
+  <p class="back-to-top"><a href="#top">↑ Back to top</a></p>
+</PillarLayout>

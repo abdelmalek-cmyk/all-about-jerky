@@ -7,37 +7,45 @@ const canonical = 'https://allaboutjerky.com/righteous-felon-jerky/';
 // Cole's second branded review (after /old-trapper-beef-jerky/). Same inline
 // Review schema pattern. Rating 4.0/5 reflects craft-tier positioning vs
 // Old Trapper's 3.5/5 mass-market rating.
+// Product-primary structure with nested Review — the previous Review-primary
+// structure with nested Product failed Google's Rich Results Test with
+// "Either offers, review, or aggregateRating should be specified" because the
+// nested Product was being detected as a standalone Product snippet without
+// any of the required qualifiers. Making Product top-level and putting the
+// Review inside its `review` field satisfies the requirement (the Product has
+// a review) AND still exposes the Review schema for the Review rich result.
 const reviewSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  '@id': `${canonical}#review`,
-  itemReviewed: {
-    '@type': 'Product',
-    name: 'Righteous Felon Craft Jerky',
-    brand: { '@type': 'Brand', name: 'Righteous Felon' },
-    category: 'Craft Beef Jerky',
+  '@type': 'Product',
+  '@id': `${canonical}#product`,
+  name: 'Righteous Felon Craft Jerky',
+  brand: { '@type': 'Brand', name: 'Righteous Felon' },
+  category: 'Craft Beef Jerky',
+  review: {
+    '@type': 'Review',
+    '@id': `${canonical}#review`,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '4.0',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+      name: 'Cole Mercer',
+      url: 'https://allaboutjerky.com/about/',
+      jobTitle: 'Pitmaster & Recipe Developer',
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://allaboutjerky.com/#organization',
+      name: 'All About Jerky',
+    },
+    datePublished: '2026-08-12',
+    reviewBody:
+      "Righteous Felon is a legitimate craft beef jerky brand from Chester County, Pennsylvania, founded in 2011. Pasture-raised American black angus, no preservatives, bold outlaw-themed flavors like Habanero Escobar and Bourbon Franklin. Premium price at roughly $3.50 per ounce, but the sourcing standards and flavor complexity earn it a solid 4.0 out of 5 in the craft-jerky tier — higher than mass-market brands, not quite at the very top of the craft category.",
   },
-  reviewRating: {
-    '@type': 'Rating',
-    ratingValue: '4.0',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://allaboutjerky.com/about/#cole-mercer',
-    name: 'Cole Mercer',
-    url: 'https://allaboutjerky.com/about/',
-    jobTitle: 'Pitmaster & Recipe Developer',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://allaboutjerky.com/#organization',
-    name: 'All About Jerky',
-  },
-  datePublished: '2026-08-12',
-  reviewBody:
-    "Righteous Felon is a legitimate craft beef jerky brand from Chester County, Pennsylvania, founded in 2011. Pasture-raised American black angus, no preservatives, bold outlaw-themed flavors like Habanero Escobar and Bourbon Franklin. Premium price at roughly $3.50 per ounce, but the sourcing standards and flavor complexity earn it a solid 4.0 out of 5 in the craft-jerky tier — higher than mass-market brands, not quite at the very top of the craft category.",
 };
 
 const faqs = [

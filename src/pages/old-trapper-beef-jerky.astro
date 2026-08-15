@@ -7,37 +7,44 @@ const canonical = 'https://allaboutjerky.com/old-trapper-beef-jerky/';
 // Cole's honest independent review — the first pillar on this site with
 // schema.org/Review markup. Rating is Cole's declared opinion (not fabricated
 // aggregate); powers Review rich results in the SERP.
+// Product-primary structure with nested Review — see the Righteous Felon
+// pillar for the full rationale. Google's Rich Results Test flagged the
+// previous Review-with-nested-Product pattern with a critical issue because
+// the inner Product was missing offers/review/aggregateRating. Making Product
+// the top-level entity and putting the Review inside its `review` field
+// satisfies the requirement AND exposes both Product and Review rich results.
 const reviewSchema = {
   '@context': 'https://schema.org',
-  '@type': 'Review',
-  '@id': `${canonical}#review`,
-  itemReviewed: {
-    '@type': 'Product',
-    name: 'Old Trapper Beef Jerky',
-    brand: { '@type': 'Brand', name: 'Old Trapper' },
-    category: 'Beef Jerky',
+  '@type': 'Product',
+  '@id': `${canonical}#product`,
+  name: 'Old Trapper Beef Jerky',
+  brand: { '@type': 'Brand', name: 'Old Trapper' },
+  category: 'Beef Jerky',
+  review: {
+    '@type': 'Review',
+    '@id': `${canonical}#review`,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: '3.5',
+      bestRating: '5',
+      worstRating: '1',
+    },
+    author: {
+      '@type': 'Person',
+      '@id': 'https://allaboutjerky.com/about/#cole-mercer',
+      name: 'Cole Mercer',
+      url: 'https://allaboutjerky.com/about/',
+      jobTitle: 'Pitmaster & Recipe Developer',
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': 'https://allaboutjerky.com/#organization',
+      name: 'All About Jerky',
+    },
+    datePublished: '2026-08-11',
+    reviewBody:
+      "Old Trapper is a mass-market beef jerky brand that delivers honest value for what it is: cheap, widely available convenience jerky. The texture is soft rather than traditionally chewy, sodium runs high, and most flavors carry added sugar. Six flavors covered, five product lines beyond jerky. Not premium, not garbage — a fair 3.5 out of 5 for the gas-station-jerky category it competes in.",
   },
-  reviewRating: {
-    '@type': 'Rating',
-    ratingValue: '3.5',
-    bestRating: '5',
-    worstRating: '1',
-  },
-  author: {
-    '@type': 'Person',
-    '@id': 'https://allaboutjerky.com/about/#cole-mercer',
-    name: 'Cole Mercer',
-    url: 'https://allaboutjerky.com/about/',
-    jobTitle: 'Pitmaster & Recipe Developer',
-  },
-  publisher: {
-    '@type': 'Organization',
-    '@id': 'https://allaboutjerky.com/#organization',
-    name: 'All About Jerky',
-  },
-  datePublished: '2026-08-11',
-  reviewBody:
-    "Old Trapper is a mass-market beef jerky brand that delivers honest value for what it is: cheap, widely available convenience jerky. The texture is soft rather than traditionally chewy, sodium runs high, and most flavors carry added sugar. Six flavors covered, five product lines beyond jerky. Not premium, not garbage — a fair 3.5 out of 5 for the gas-station-jerky category it competes in.",
 };
 
 const faqs = [
